@@ -1,0 +1,148 @@
+.root {
+    composes: justify-items-start from global;
+    composes: items-center from global;
+    composes: grid from global;
+    composes: lg_grid-flow-col from global;
+    composes: gap-4 from global;
+    composes: xl_gap-6 from global;
+    composes: items-center from global;
+    composes: px-6 from global;
+    composes: xl_px-6 from global;
+    composes: pt-2 from global;
+    composes: pb-6 from global;
+    composes: lg_py-0 from global;
+    composes: font-semibold from global;
+    composes: lg_text-white from global;
+
+    /* Large screen styes */
+    composes: lg_text-xs from global;
+}
+
+.trigger {
+    composes: grid from global;
+    composes: gap-1 from global;
+    composes: grid-cols-2 from global;
+    composes: items-center from global;
+    composes: font-semibold from global;
+    composes: lg_hover_text-grey-lighter from global;
+}
+
+.languageTrigger button span {
+    @apply lg_hover_text-grey-lighter
+        uppercase
+        text-xs;
+}
+
+.storeTriggerContainer {
+    composes: grid from global;
+    composes: grid-flow-col from global;
+    composes: gap-1 from global;
+}
+
+.trigger svg {
+    @apply stroke-[white] p-0;
+}
+
+.menu {
+    composes: bg-white from global;
+    composes: border from global;
+    composes: border-solid from global;
+    composes: border-grey from global;
+    composes: rounded-md from global;
+    composes: shadow-sm from global;
+
+    composes: opacity-0 from global;
+    composes: max-w-[90vw] from global;
+    composes: py-1 from global;
+    composes: absolute from global;
+
+    composes: ltr_right-4 from global;
+    composes: rtl_left-4 from global;
+
+    composes: bottom-10 from global;
+
+    composes: duration-200 from global;
+    composes: ease-in from global;
+    composes: transition-all from global;
+
+    composes: hidden from global;
+    composes: w-max from global;
+    composes: z-3 from global;
+
+    /* Large screen styles */
+    composes: lg_top-10 from global;
+}
+
+.menu_open {
+    composes: menu;
+    composes: text-black from global;
+
+    composes: duration-200 from global;
+    composes: ease-in from global;
+    composes: visible from global;
+
+    /* Large screen styles */
+    composes: lg_flex from global;
+    composes: lg_opacity-100 from global;
+    composes: lg_h-min from global;
+    composes: lg_top-0 from global;
+    composes: lg_border-none from global;
+    composes: lg_left-0 from global;
+    composes: lg_right-0 from global;
+}
+
+/* Added using apply to override 'hidden' from .menu */
+div.menu_open {
+    @apply contents;
+
+    /* Large screen styles */
+    @apply lg_flex;
+}
+
+.menuItemBtn {
+    composes: px-4 from global;
+    composes: w-full from global;
+}
+
+.menuItem::before {
+    @apply hidden;
+}
+
+.menuItem:hover {
+    @apply bg-grey text-white;
+}
+
+.groupList .menuItemBtn:first-child {
+    @apply pt-2;
+}
+
+.groupList .menuItemBtn:last-child {
+    @apply pb-2;
+}
+
+.groupList {
+    composes: grid from global;
+}
+
+.groups {
+    composes: no whitespace-nowrap from global;
+    composes: groupList;
+    composes: py-0 from global;
+    composes: px-0 from global;
+    composes: max-h-[min-content] from global;
+    composes: absolute from global;
+    composes: bg-white from global;
+
+    composes: border from global;
+    composes: border-solid from global;
+    composes: border-[#bbb] from global;
+    composes: bottom-[92px] from global;
+
+    composes: lg_top-[41px] from global;
+    composes: lg_min-h-[min-content] from global;
+    composes: lg_h-fit from global;
+}
+
+.iconRoot {
+    composes: m-0 from global;
+}

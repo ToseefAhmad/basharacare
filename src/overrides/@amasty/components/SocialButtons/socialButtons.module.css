@@ -1,0 +1,26 @@
+.list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.item {
+    margin: 0 1.25rem 0 0;
+}
+
+.btn {
+    composes: font-sans from global;
+    composes: font-semibold from global;
+    composes: text-base from global;
+    composes: hover_no-underline from global;
+    composes: hover_text-grey from global;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    margin: auto;
+    display: block;
+    background-position: center center;
+    background-repeat: no-repeat;
+}

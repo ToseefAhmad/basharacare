@@ -1,0 +1,11 @@
+.ratingContainer {
+    composes: grid from global;
+    composes: grid-cols-auto1fr from global;
+    composes: items-center from global;
+    composes: gap-2.5 from global;
+    composes: mt-2.5 from global;
+}
+
+.productName {
+    composes: font-semibold from global;
+}

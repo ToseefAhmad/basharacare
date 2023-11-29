@@ -1,0 +1,74 @@
+.root {
+    grid-area: list;
+}
+
+.gridRoot {
+    grid-area: grid;
+    composes: min-w-full from global;
+    composes: md_min-w-0 from global;
+    composes: md_w-full from global;
+    composes: container from global;
+}
+
+.posts {
+    composes: flex from global;
+    composes: flex-wrap from global;
+}
+
+.postsContainer {
+    composes: w-full from global;
+    composes: flex from global;
+    composes: justify-center from global;
+}
+
+.post {
+    composes: min-w-full from global;
+    composes: md_min-w-0 from global;
+    composes: md_w-full from global;
+
+    @apply pb-10 px-5;
+    @apply md_w-[50%];
+    @apply largeTablet_w-[33.33%];
+    @apply md_px-8;
+    @apply largeTablet_px-6;
+    @apply md_pb-25;
+}
+
+.noItems {
+    composes: bg-cream from global;
+    composes: p-2 from global;
+    composes: text-yellow-dark from global;
+}
+
+.pagination {
+    composes: root from '@magento/venia-ui/lib/components/Pagination/pagination.module.css';
+    composes: border-0 from global;
+    composes: pb-25 from global;
+
+    @apply md_pb-37;
+    @apply md_mx-10;
+    @apply lg_mx-65;
+    @apply xl_mx-90;
+}
+
+.paginationShimmer {
+    composes: border-0 from global;
+    composes: mt-15 from global;
+    composes: pb-25 from global;
+    composes: flex from global;
+    composes: justify-center from global;
+
+    @apply md_pb-37;
+    @apply md_mx-10;
+    @apply lg_mx-65;
+    @apply xl_mx-90;
+}
+
+.paginationShimmerblock {
+    @apply w-75;
+    @apply lg_w-120;
+}
+
+.hidden {
+    composes: hidden from global;
+}

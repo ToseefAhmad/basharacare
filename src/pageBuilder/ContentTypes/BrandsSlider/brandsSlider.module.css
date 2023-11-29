@@ -1,0 +1,70 @@
+.brandsSlider {
+    composes: full-bleed from global;
+    composes: bg-white from global;
+    composes: py-5 from global;
+    composes: lg_py-6 from global;
+    composes: px-5 from global;
+    composes: lg_px-16 from global;
+    composes: grid from global;
+    composes: grid-flow-col from global;
+    composes: grid-cols-frAuto from global;
+    composes: gap-2.5 from global;
+}
+.slider {
+    composes: md_grid from global;
+    composes: grid-flow-col from global;
+    composes: gap-5 from global;
+    composes: whitespace-nowrap from global;
+    composes: items-center from global;
+    composes: overflow-x-auto from global;
+}
+
+.brandsSlider .slider img {
+    @apply max-h-7.5
+        m-0;
+}
+.imageContainer {
+    composes: justify-self-center from global;
+    composes: inline-block from global;
+    composes: max-w-[30%] from global;
+    composes: sm_max-w-[20%] from global;
+    composes: md_max-w-full from global;
+    composes: mr-2.5 from global;
+    composes: lg_mr-0 from global;
+    composes: hover_opacity-80 from global;
+}
+
+.brandsLink {
+    composes: whitespace-nowrap from global;
+    composes: font-normal from global;
+    composes: lg_no-underline from global;
+    composes: text-sm from global;
+    composes: self-center from global;
+}
+
+.brandsLink a {
+    @apply text-sm
+        items-center
+        gap-4
+        grid
+        grid-flow-col
+        underline
+        lg_no-underline
+        hover_text-black/80;
+}
+
+.brandsLink svg {
+    @apply w-7 h-auto text-red;
+}
+
+.brandsLink svg > * {
+    stroke: black;
+}
+
+.brandsShimmer {
+    composes: root_rectangle from '~@magento/venia-ui/lib/components/Shimmer/shimmer.module.css';
+    composes: h-[64px] from global;
+    composes: md_h-[72px] from global;
+
+    composes: full-bleed from global;
+}

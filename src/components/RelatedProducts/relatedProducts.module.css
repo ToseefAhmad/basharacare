@@ -1,0 +1,19 @@
+.sliderTitle {
+    composes: flex from global;
+    composes: font-sans from global;
+    composes: pt-0.5 from global;
+    composes: mt-15 from global;
+    composes: md_mt-35 from global;
+}
+
+.sliderTitleBold {
+    composes: font-headingBold from global;
+    composes: mx-2 from global;
+    composes: pt-0.5 from global;
+}
+
+.sliderTitleShimmer {
+    composes: mx-4 from global;
+    composes: mb-5 from global;
+    composes: md_mt-[8.75rem] from global;
+}

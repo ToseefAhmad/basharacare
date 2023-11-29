@@ -1,0 +1,110 @@
+.headerContentWrapper {
+    composes: bg-purple-lighter from global;
+    composes: full-bleed from global;
+    composes: pb-3 from global;
+}
+
+.headerContent {
+    composes: container from global;
+}
+
+.listItem {
+    composes: block from global;
+}
+
+.content {
+    composes: py-10 from global;
+    composes: lg_py-30 from global;
+}
+.title {
+    composes: pt-20 from global;
+    composes: lg_pt-[115px] from global;
+    composes: pb-[44px] from global;
+}
+
+.title h1 {
+    @apply inline-block
+        first_pr-1
+        first_rtl_pl-1;
+}
+
+.headingRegular {
+    composes: font-light from global;
+
+    @apply font-sans;
+}
+
+/* Custom scroll bar */
+.accountMenu {
+    composes: overflow-x-scroll from global;
+    composes: hover_cursor-pointer from global;
+    -ms-overflow-style: scrollbar; /* for Internet Explorer, Edge */
+    scrollbar-width: thin; /* for Firefox */
+}
+.accountMenu::-webkit-scrollbar {
+    @apply h-1; /* for Chrome, Safari, and Opera */
+}
+
+.accountMenu::-webkit-scrollbar-thumb {
+    @apply bg-black
+        rounded;
+}
+
+.accountMenu ul {
+    @apply grid
+        grid-flow-col
+        gap-5
+        uppercase
+        pb-2;
+}
+
+.accountMenu ul li::before {
+    @apply content-none;
+}
+
+.accountMenu ul li a {
+    @apply grid
+        whitespace-nowrap
+        hover_no-underline
+        hover_opacity-80;
+}
+
+.accountMenu ul li .menuItemActive {
+    @apply font-bold;
+}
+
+.accountMenuWrapper {
+    composes: relative from global;
+}
+
+.accountMenuOverlay {
+    composes: absolute from global;
+    composes: w-5 from global;
+    composes: h-6 from global;
+    composes: top-0 from global;
+}
+
+.accountMenuOverlayRight {
+    composes: accountMenuOverlay;
+    composes: right-0 from global;
+    background: linear-gradient(67deg, rgb(255 255 255 / 0%), #d9d4ee);
+}
+
+.accountMenuOverlayLeft {
+    composes: accountMenuOverlay;
+    composes: left-0 from global;
+    background: linear-gradient(280deg, rgb(255 255 255 / 0%), #d9d4ee);
+}
+
+.accountMenuWrapper ul li {
+    @apply last_pr-4
+        rtl_last_pl-5
+        first_pl-4
+        rtl_first_pr-4;
+}
+
+/* Tailwind now working with fill */
+
+.circleIcon {
+    fill: black;
+}

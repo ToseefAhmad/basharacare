@@ -1,0 +1,26 @@
+query amBlogRecentCommentsWidget($id: Int) {
+  amBlogRecentCommentsWidget(id: $id) {
+    header_text
+    comments_limit
+    display_date
+    date_manner
+    items {
+      comment_id
+      post_id
+      store_id
+      status
+      customer_id
+      reply_to
+      message
+      name
+      email
+      session_id
+      updated_at
+      created_at
+      post {
+        title
+        url_key
+      }
+    }
+  }
+}

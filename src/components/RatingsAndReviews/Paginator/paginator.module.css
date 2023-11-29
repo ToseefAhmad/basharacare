@@ -1,0 +1,30 @@
+.paginatorBlock {
+    composes: max-w-[700px] from global;
+    composes: mt-10 from global;
+    composes: mb-15 from global;
+    composes: flex from global;
+    composes: md_block from global;
+    composes: justify-center from global;
+}
+
+.paginator {
+    composes: flex from global;
+    composes: text-sm from global;
+}
+
+.paginatorIcon {
+    composes: content-center from global;
+}
+
+.paginatorNumber {
+    composes: mx-2 from global;
+    composes: font-semibold from global;
+}
+
+.active {
+    composes: text-black from global;
+}
+
+.inactive {
+    composes: text-grey-light from global;
+}

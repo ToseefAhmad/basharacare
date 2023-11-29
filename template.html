@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html
+    lang="<%= global.LOCALE %>"
+    data-image-optimizing-origin="<%= process.env.IMAGE_OPTIMIZING_ORIGIN %>"
+    data-media-backend="<%= global.MAGENTO_MEDIA_BACKEND_URL %>"
+>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0 ,viewport-fit=cover, maximum-scale=1" />
+        <meta name="theme-color" content="#efefee" />
+        <link rel="manifest" href="/pwa/static-files/manifest.json" crossorigin="use-credentials" />
+
+        <!-- //favicon -->
+        <link rel="shortcut icon" type="image/png" size="16*16 " href="/pwa/static-files/icons/Favicon_16x16.ico" />
+        <link rel="icon" href="/pwa/static-files/icons/Favicon_16x16.ico" type="image/x-icon" />
+
+        <link rel="shortcut icon" type="image/png" size="32*32 " href="/pwa/static-files/icons/Favicon_32x32.ico" />
+        <link rel="icon" href="/pwa/static-files/icons/Favicon_32x32.ico" type="image/x-icon" />
+
+        <!--
+            Apple Specific Tags
+
+            To be included until Safari supports WebAppManifest
+            See Docs:
+            - https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html
+            - https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html
+        -->
+        <!--
+            Apple Icons for Homescreen
+            Sizes: https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/app-icon/
+        -->
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-touch-fullscreen" content="yes" />
+        <meta name="apple-mobile-web-app-title" content="Expo" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+
+        <link rel="apple-touch-icon" sizes="180x180" href="/pwa/static-files/icons/Apple_touch_icon.png" />
+        <script async src="https://checkout.tabby.ai/tabby-promo.js"></script>
+        <script async src="https://applepay.cdn-apple.com/jsapi/v1/apple-pay-sdk.js"></script>
+        <link
+            rel="apple-touch-startup-image"
+            media="screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+            href="/pwa/static-files/icons/apple_splash_640x1136.png"
+        />
+
+        <link
+            rel="apple-touch-startup-image"
+            media="screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+            href="/pwa/static-files/icons/apple_splash_750x1334.png"
+        />
+        <link
+            rel="apple-touch-startup-image"
+            media="screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+            href="/pwa/static-files/icons/apple_splash_1125x2436.png"
+        />
+        <link
+            rel="apple-touch-startup-image"
+            media="screen and (device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+            href="/pwa/static-files/icons/apple_splash_1242x2208.png"
+        />
+        <link
+            rel="apple-touch-startup-image"
+            media="screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+            href="/pwa/static-files/icons/apple_splash_1536x2048.png"
+        />
+        <link
+            rel="apple-touch-startup-image"
+            media="screen and (device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+            href="/pwa/static-files/icons/apple_splash_1668x2224.png"
+        />
+        <link
+            rel="apple-touch-startup-image"
+            media="screen and (device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+            href="/pwa/static-files/icons/apple_splash_2048x2732.png"
+        />
+
+        <link rel="preconnect" href="<%= process.env.MAGENTO_BACKEND_URL %>" />
+
+        <link rel="dns-prefetch" href="https://use.typekit.net" />
+        <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://storage.googleapis.com" />
+        <link rel="dns-prefetch" href="https://www.gstatic.com" />
+        <link rel="dns-prefetch" href="https://www.google.com" />
+        <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+
+        <link rel="preload" href="https://use.typekit.net/af/efe4a5/00000000000000007735e609/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3" as="font" type="font/woff2" crossorigin />
+        <link rel="preload" href="https://use.typekit.net/af/78aca8/00000000000000007735e60d/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3" as="font" type="font/woff2" crossorigin />
+        <link rel="preload" href="https://use.typekit.net/af/2555e1/00000000000000007735e603/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3" as="font" type="font/woff2" crossorigin />
+        <link rel="preload" href="https://fonts.gstatic.com/s/tajawal/v8/Iurf6YBj_oCad4k1l8KiHrRpiYlJ.woff2" as="font" type="font/woff2" crossorigin />
+        <link rel="preload" href="<%= webpackConfig.output.publicPath %>AlbraBold.woff2" as="font" type="font/woff2" crossorigin />
+        <link rel="preload" href="<%= webpackConfig.output.publicPath %>albra-semi.woff2" as="font" type="font/woff2" crossorigin />
+
+        <!--
+            This following CSS is a copy of the css returned by Google's font API that
+            allows us to "skip" a network round trip.
+
+            CSS requests are _render_ blocking, while font requests are only _text_
+            blocking. By removing the link request we only wait for font request, to
+            shave off a few ms :)
+
+            The CSS below this comment is the response copied wholesale from Google's font
+            API. If you ever need to update it, get the response and replace what is below
+            this comment. Remember to replace the preload link above with the src URL!
+
+            Example API responses:
+            https://fonts.googleapis.com/css?family=Muli:400&display=swap
+            https://fonts.googleapis.com/css?family=Source+Serif+Pro:600&display=swap
+        -->
+        <style type="text/css">
+            @font-face {
+                font-family: 'Proxima Nova';
+                src: url('https://use.typekit.net/af/2555e1/00000000000000007735e603/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3')
+                        format('woff2'),
+                    url('https://use.typekit.net/af/2555e1/00000000000000007735e603/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3')
+                        format('woff'),
+                    url('https://use.typekit.net/af/2555e1/00000000000000007735e603/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3')
+                        format('opentype');
+                font-display: swap;
+                font-style: normal;
+                font-weight: 700;
+            }
+            @font-face {
+                font-family: 'Proxima Nova';
+                src: url('https://use.typekit.net/af/78aca8/00000000000000007735e60d/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3')
+                        format('woff2'),
+                    url('https://use.typekit.net/af/78aca8/00000000000000007735e60d/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3')
+                        format('woff'),
+                    url('https://use.typekit.net/af/78aca8/00000000000000007735e60d/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3')
+                        format('opentype');
+                font-display: swap;
+                font-style: normal;
+                font-weight: 600;
+            }
+            @font-face {
+                font-family: 'Proxima Nova';
+                src: url('https://use.typekit.net/af/efe4a5/00000000000000007735e609/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3')
+                        format('woff2'),
+                    url('https://use.typekit.net/af/efe4a5/00000000000000007735e609/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3')
+                        format('woff'),
+                    url('https://use.typekit.net/af/efe4a5/00000000000000007735e609/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3')
+                        format('opentype');
+                font-display: swap;
+                font-style: normal;
+                font-weight: 400;
+            }
+            @font-face {
+                font-family: 'Proxima Nova';
+                src: url('https://use.typekit.net/af/3322cc/00000000000000007735e616/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3')
+                        format('woff2'),
+                    url('https://use.typekit.net/af/3322cc/00000000000000007735e616/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3')
+                        format('woff'),
+                    url('https://use.typekit.net/af/3322cc/00000000000000007735e616/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3')
+                        format('opentype');
+                font-display: swap;
+                font-style: italic;
+                font-weight: 400;
+            }
+            @font-face {
+                font-family: 'Proxima Nova';
+                src: url('https://use.typekit.net/af/23e139/00000000000000007735e605/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3')
+                        format('woff2'),
+                    url('https://use.typekit.net/af/23e139/00000000000000007735e605/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3')
+                        format('woff'),
+                    url('https://use.typekit.net/af/23e139/00000000000000007735e605/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3')
+                        format('opentype');
+                font-display: swap;
+                font-style: normal;
+                font-weight: 500;
+            }
+            /* arabic */
+            @font-face {
+                font-family: 'Tajawal';
+                font-style: normal;
+                font-weight: 300;
+                font-display: swap;
+                src: url(https://fonts.gstatic.com/s/tajawal/v8/Iurf6YBj_oCad4k1l5qjHrRpiYlJ.woff2) format('woff2');
+                unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE80-FEFC;
+            }
+            /* arabic */
+            @font-face {
+                font-family: 'Tajawal';
+                font-style: normal;
+                font-weight: 500;
+                font-display: swap;
+                src: url(https://fonts.gstatic.com/s/tajawal/v8/Iurf6YBj_oCad4k1l8KiHrRpiYlJ.woff2) format('woff2');
+                unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE80-FEFC;
+            }
+            /* arabic */
+            @font-face {
+                font-family: 'Tajawal';
+                font-style: normal;
+                font-weight: 700;
+                font-display: swap;
+                src: url(https://fonts.gstatic.com/s/tajawal/v8/Iurf6YBj_oCad4k1l4qkHrRpiYlJ.woff2) format('woff2');
+                unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE80-FEFC;
+            }
+        </style>
+
+        <!-- GTM -->
+        {{#gtmId}}
+        <script>
+            (function(w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+                var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s),
+                    dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true;
+                j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', '{{gtmId}}');
+        </script>
+        {{/gtmId}}
+        <!-- /GTM -->
+
+        <!-- FB PIXEL -->
+        {{#fbPixelId}}
+        <script>
+            !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+                n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+                n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+                t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+                document,'script','//connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '{{fbPixelId}}');
+        </script>
+        {{/fbPixelId}}
+        <!-- /FB PIXEL -->
+
+        <!-- TikTok PIXEL -->
+        {{#tikTokPixelId}}
+        <script>
+            !function (w, d, t) {
+                w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++
+                )ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var i="https://analytics.tiktok.com/i18n/pixel/events.js";ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=i,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script");n.type="text/javascript",n.async=!0,n.src=i+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
+                ttq.load('{{tikTokPixelId}}');
+            }(window, document, 'ttq');
+        </script>
+        {{/tikTokPixelId}}
+        <!-- /TikTok PIXEL -->
+    </head>
+    <body>
+        <!-- GTM NS -->
+        {{#gtmId}}
+        <noscript
+            ><iframe
+                src="https://www.googletagmanager.com/ns.html?id={{gtmId}}"
+                height="0"
+                width="0"
+                style="display:none;visibility:hidden"
+            ></iframe
+        ></noscript>
+        {{/gtmId}}
+        <!-- /GTM NS -->
+
+        <!-- FB PIXEL NS -->
+        {{#fbPixelId}}
+        <noscript>
+            <img height="1" width="1" style="display:none"
+                 src="https://www.facebook.com/tr?id={{fbPixelId}}&ev=PageView&noscript=1"/>
+        </noscript>
+        {{/fbPixelId}}
+        <!-- /FB PIXEL NS -->
+
+        <div id="root"></div>
+
+        <!-- Fallback for when JavaScript is disabled. -->
+        <noscript>
+            <style>
+                .fallback-nojs {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                }
+                .fallback-nojs a {
+                    color: currentColor;
+                }
+                .fallback-closed {
+                    height: 40vh;
+                }
+                .fallback-heading {
+                    font-family: 'Source Serif Pro';
+                    font-weight: 600;
+                    padding-bottom: 16px;
+                    font-size: xx-large;
+                }
+                .fallback-message {
+                    font-family: 'Muli';
+                }
+                @media only screen and (max-width: 768px) {
+                    .fallback-heading {
+                        font-size: x-large;
+                    }
+                }
+            </style>
+            <div class="fallback-nojs">
+                <img class="fallback-closed" alt="JavaScript is disabled" src="/pwa/static-files/veniaClosed.png" />
+                <div class="fallback-heading">Oops! JavaScript is disabled</div>
+                <div class="fallback-message">
+                    To browse the Basharacare store,<br />
+                    <a href="https://www.enable-javascript.com">enable JavaScript in your browser.</a>
+                </div>
+            </div>
+        </noscript>
+        <!-- Inlined Data -->
+        {{#pageTypeNonce}}
+        <script nonce="{{pageTypeNonce}}">
+            try {
+                var INLINED_PAGE_TYPE = JSON.parse('{{pageType}}'.replace(/&quot;/g, '"'));
+            } catch (error) {}
+        </script>
+        {{#webpackChunks}}
+        <script type="text/javascript" src="/{{.}}"></script>
+        {{/webpackChunks}} {{/pageTypeNonce}}
+        <!-- /Inlined Data -->
+    </body>
+</html>

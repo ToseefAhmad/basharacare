@@ -1,0 +1,8 @@
+.root {
+    composes: mt-7.5 from global;
+}
+
+.checkbox {
+    composes: root from '@app/components/overrides/Checkbox/checkbox.module.css';
+    composes: mt-5 from global;
+}

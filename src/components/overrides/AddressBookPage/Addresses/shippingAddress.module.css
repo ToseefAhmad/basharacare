@@ -1,0 +1,35 @@
+.root p {
+    @apply opacity-100;
+}
+
+.title {
+    composes: font-semibold from global;
+    composes: text-lg from global;
+}
+
+.title span {
+    @apply  last_font-light
+        last_font-sans
+        text-2xl
+        first_pr-1
+        first_rtl_pl-1
+        font-headingBold;
+}
+
+.content {
+    composes: mb-1.25 from global;
+}
+
+.action {
+    composes: text-sm from global;
+    composes: underline from global;
+}
+
+.editButton {
+    composes: text-sm from global;
+    composes: underline from global;
+}
+
+.actionLabel {
+    composes: hover_opacity-80 from global;
+}

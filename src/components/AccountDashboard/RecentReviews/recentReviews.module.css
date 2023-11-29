@@ -1,0 +1,14 @@
+.title h2 {
+    @apply inline-block
+        first_pr-2
+        first_rtl_pl-2
+        last_font-light
+        last_font-sans;
+}
+
+.productReviews {
+    composes: grid from global;
+    composes: gap-7.5 from global;
+    composes: mt-7.5 from global;
+    composes: lg_mt-12.5 from global;
+}

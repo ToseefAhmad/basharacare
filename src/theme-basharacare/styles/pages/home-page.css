@@ -1,0 +1,19 @@
+.cms-home article {
+    @apply px-0;
+}
+
+.cms-home .slick-slider .slick-line {
+    @apply lg_mt-0;
+}
+
+.cms-home .slick-slider .slick-dots li button {
+    @apply text-[0px];
+}
+
+.cms-home #main > article {
+    @apply pb-0;
+}
+
+.instagram-feed {
+    @apply bg-blue-lightest;
+}

@@ -1,0 +1,81 @@
+.header {
+    composes: flex from global;
+    composes: justify-between from global;
+    composes: min-h-[75px] from global;
+    composes: items-center from global;
+}
+
+.name {
+    composes: text-xl from global;
+    composes: font-headingBold from global;
+    composes: font-semibold from global;
+}
+
+.list:empty {
+    @apply hidden;
+}
+.trigger {
+    composes: w-full from global;
+}
+
+.items {
+    composes: max-h-[196px] from global;
+    composes: overflow-y-auto from global;
+    composes: pb-[30px] from global;
+    composes: grid from global;
+    composes: mb-10 from global;
+    composes: overscroll-contain from global;
+
+    composes: lg_max-h-[220px] from global;
+    composes: rtl_overflow-x-hidden from global;
+}
+
+.items::-webkit-scrollbar {
+    @apply w-[2px];
+}
+
+.items::-webkit-scrollbar-track {
+    @apply bg-grey-lighter;
+}
+
+.items::-webkit-scrollbar-thumb {
+    @apply bg-black;
+}
+
+.item {
+    composes: flex from global;
+    composes: gap-1 from global;
+    composes: text-sm from global;
+}
+
+.item span {
+    @apply ltr_text-left
+        rtl_text-right
+        whitespace-nowrap;
+}
+
+.label {
+    composes: h-6 from global;
+    composes: w-[min-content] from global;
+    composes: uppercase from global;
+    composes: whitespace-nowrap from global;
+    composes: font-semibold from global;
+    composes: text-xs from global;
+    composes: py-[3px] from global;
+    composes: px-4 from global;
+    composes: border from global;
+    composes: border-grey-border from global;
+    composes: flex from global;
+    composes: items-center from global;
+    composes: outline-none from global;
+}
+
+.label_selected {
+    composes: label;
+
+    @apply bg-black text-white;
+}
+
+.list {
+    composes: h-full from global;
+}

@@ -1,0 +1,125 @@
+[
+    {
+        "name": "Style Guide",
+        "pattern": "/style-guide",
+        "exact": true,
+        "path": "@app/components/StyleGuide"
+    },
+    {
+        "name": "Rewards Account",
+        "pattern": "/rewards-account",
+        "exact": true,
+        "path": "@app/components/RewardsAccountPage",
+        "authed": true,
+        "redirectTo": "/sign-in"
+    },
+    {
+        "name": "Contact Us",
+        "pattern": "/contact",
+        "exact": true,
+        "path": "@app/components/overrides/ContactPage/contactPage.js"
+    },
+    {
+        "name": "Rewards Account",
+        "pattern": "/exchange-and-return",
+        "exact": true,
+        "path": "@app/components/ExchangeAndReturnPage/exchangeAndReturn.js"
+    },
+    {
+        "name": "Blog",
+        "pattern": "/blog/:slug?/:id?",
+        "path": "@amasty/blog-pro/src/RootComponents/Blog",
+        "exact": true
+    },
+    {
+        "name": "Reviews",
+        "pattern": "/reviews",
+        "exact": true,
+        "path": "@app/components/ProductReviews/productReviewPage.js",
+        "authed": true,
+        "redirectTo": "/sign-in"
+    },
+    {
+        "name": "Store Credit",
+        "pattern": "/store-credit",
+        "exact": true,
+        "path": "@app/components/StoreCredit/storeCreditPage.js",
+        "authed": true,
+        "redirectTo": "/sign-in"
+    },
+    {
+        "name": "Order Success Page",
+        "pattern": "/checkout/success",
+        "exact": true,
+        "path": "@app/components/overrides/CheckoutPage/OrderConfirmationPage"
+    },
+    {
+        "name": "Dashboard",
+        "pattern": "/account-dashboard",
+        "exact": true,
+        "path": "@app/components/AccountDashboard",
+        "authed": true,
+        "redirectTo": "/sign-in"
+    },
+    {
+        "name": "Survey",
+        "pattern": "/survey/:slug?",
+        "exact": true,
+        "path": "@app/components/SurveyPage"
+    },
+    {
+        "name": "Sign In",
+        "pattern": "/sign-in",
+        "exact": true,
+        "path": "@app/components/overrides/SignInPage"
+    },
+    {
+        "name": "Create Account",
+        "pattern": "/create-account",
+        "exact": true,
+        "path": "@app/components/overrides/CreateAccountPage"
+    },
+    {
+        "name": "Forgot Password",
+        "pattern": "/forgot-password",
+        "exact": true,
+        "path": "@app/components/overrides/ForgotPasswordPage"
+    },
+    {
+        "name": "WishlistSharePage",
+        "pattern": "/wishlistShared/:sharingCode?",
+        "exact": true,
+        "path": "@app/components/overrides/WishlistPage/SharedWishlists",
+        "authed": false
+    },
+    {
+        "name": "SharedWishlistPage",
+        "pattern": "/wishlist/:wishlistId?",
+        "exact": true,
+        "path": "@app/components/overrides/WishlistPage/wishlistPage.js",
+        "authed": true,
+        "redirectTo": "/sign-in"
+    },
+    {
+        "name": "ReferralsPage",
+        "pattern": "/rewards-account/referrals",
+        "exact": true,
+        "path": "@app/components/RewardsAccount/ReferralsPage",
+        "authed": true,
+        "redirectTo": "/sign-in"
+    },
+    {
+        "name": "SiteMap",
+        "pattern": "/sitemap",
+        "exact": true,
+        "path": "@app/components/SiteMap"
+    },
+    {
+        "name": "My Personalized Routine",
+        "pattern": "/personalized-routine",
+        "exact": true,
+        "path": "@app/components/PersonalizedRoutine",
+        "authed": true,
+        "redirectTo": "/sign-in"
+    }
+]

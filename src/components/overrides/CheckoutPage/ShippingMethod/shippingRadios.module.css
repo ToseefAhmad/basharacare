@@ -1,0 +1,20 @@
+.error {
+    composes: text-red from global;
+}
+
+.radioLabel {
+    composes: flex from global;
+    composes: gap-x-4 from global;
+    composes: gap-y-2 from global;
+    composes: justify-start from global;
+}
+
+.radioMessage {
+    composes: hidden from global;
+}
+
+.radioRoot {
+    composes: flex from global;
+    composes: flex-col from global;
+    composes: gap-y-2 from global;
+}

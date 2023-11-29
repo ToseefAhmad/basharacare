@@ -1,0 +1,49 @@
+.root {
+    composes: lg_w-3/4 from global;
+    composes: mb-17 from global;
+    composes: sm_mb-0 from global;
+}
+
+.descriptionText {
+    composes: text-black from global;
+    composes: mt-4 from global;
+    composes: mb-8 from global;
+}
+
+.title {
+    composes: text-3xl from global;
+    composes: font-medium from global;
+    composes: text-2.5xl from global;
+    composes: lg_text-3xl from global;
+}
+
+.emailWrapper {
+    composes: mb-7.5 from global;
+}
+
+.signInButtonContainer {
+    composes: w-full from global;
+    composes: min-h-15 from global;
+    composes: pt-7.5 from global;
+}
+
+.signInButtonContainer button {
+    @apply w-full
+        h-15;
+}
+
+.forgotPasswordButton {
+    composes: text-xs from global;
+    composes: font-semibold from global;
+    composes: font-semibold from global;
+    composes: mt-4 from global;
+}
+
+.requiredFieldsText {
+    composes: text-red from global;
+    composes: pt-7.5 from global;
+}
+
+.formErrors {
+    composes: py-4 from global;
+}

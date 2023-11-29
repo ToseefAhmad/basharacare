@@ -1,0 +1,115 @@
+.root {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9;
+    display: block;
+    pointer-events: none;
+    user-select: none;
+}
+
+.rootCat {
+    composes: root;
+    width: 90%;
+}
+
+.groupRoot {
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    font-size: 1em;
+}
+
+.vertical {
+    flex-direction: column;
+}
+
+.horizontal {
+    flex-direction: row;
+}
+
+.topLeft {
+    top: 0;
+    left: 0;
+}
+
+.topCenter {
+    top: 0;
+    left: 0;
+    right: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.topRight {
+    top: 0;
+    right: 0;
+    text-align: right;
+}
+
+.middleLeft {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.middleCenter {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.middleRight {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: right;
+}
+
+.bottomLeft {
+    bottom: 0;
+    left: 0;
+}
+
+.bottomCenter {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.bottomRight {
+    right: 0;
+    bottom: 0;
+    text-align: right;
+}
+
+.vertical.bottomRight,
+.vertical.topRight,
+.vertical.middleRight,
+.horizontal.bottomRight,
+.horizontal.bottomCenter,
+.horizontal.bottomLeft {
+    align-items: flex-end;
+}
+
+.vertical.bottomLeft,
+.vertical.topLeft,
+.vertical.middleLeft {
+    align-items: flex-start;
+}

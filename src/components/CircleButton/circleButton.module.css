@@ -1,0 +1,26 @@
+.root {
+    composes: rounded-full from global;
+    composes: text-black from global;
+    composes: border from global;
+    composes: border-1.5 from global;
+    composes: border-white from global;
+    composes: border-solid from global;
+    composes: bg-transparent from global;
+    compsoes: duration-[250ms] from global;
+    composes: transition-colors from global;
+    composes: p-1.25 from global;
+    composes: w-9 from global;
+    composes: h-9 from global;
+    composes: flex from global;
+    composes: flex-col from global;
+    composes: justify-center from global;
+    composes: items-center from global;
+    composes: outline-none from global;
+
+    /* Hover */
+    composes: md_hover_border-black from global;
+
+    /* Active */
+    composes: active_text-white from global;
+    composes: active_bg-black from global;
+}

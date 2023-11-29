@@ -1,0 +1,11 @@
+.heading {
+    composes: text-3xl from global;
+    composes: container from global;
+
+    /* Medium */
+    composes: md_text-5xl from global;
+}
+
+.headingNormal {
+    @apply font-sans;
+}

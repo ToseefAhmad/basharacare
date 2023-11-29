@@ -1,0 +1,77 @@
+.root {
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto 1fr;
+
+    composes: delay-75 from global;
+    composes: duration-300 from global;
+    composes: transition-all from global;
+    composes: ease-linear from global;
+    composes: grid from global;
+    composes: gap-x-4 from global;
+    composes: gap-y-2 from global;
+    composes: opacity-100 from global;
+    composes: visible from global;
+    composes: mt-6 from global;
+}
+
+.root_hidden {
+    composes: root;
+    composes: opacity-0 from global;
+    composes: hidden from global;
+    composes: h-0 from global;
+    composes: m-0 from global;
+}
+
+.imageContainer {
+    composes: col-span-1 from global;
+    composes: row-span-full from global;
+    composes: border from global;
+    composes: border-grey-border from global;
+    composes: w-[100px] from global;
+
+    composes: hover_scale-125 from global;
+    composes: hover_opacity-80 from global;
+    composes: cursor-text from global;
+}
+
+.image {
+    transition: opacity 512ms ease-out;
+
+    composes: block from global;
+    composes: h-full from global;
+    composes: object-contain from global;
+    composes: w-full from global;
+}
+
+.imageLoaded {
+    composes: loaded from '@magento/venia-ui/lib/components/Image/image.module.css';
+    composes: opacity-100 from global;
+}
+
+.imageNotLoaded {
+    composes: notLoaded from '@magento/venia-ui/lib/components/Image/image.module.css';
+    composes: opacity-0 from global;
+}
+
+.name {
+    composes: font-semibold from global;
+    composes: col-span-1 from global;
+    composes: row-span-1 from global;
+}
+
+.itemTotalPrice {
+    composes: name;
+}
+
+.quantity {
+    composes: name;
+}
+
+.options {
+    composes: grid from global;
+    composes: col-span-1 from global;
+    composes: row-span-1 from global;
+    composes: gap-2 from global;
+    composes: mt-4 from global;
+    composes: text-sm from global;
+}

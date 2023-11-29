@@ -1,0 +1,17 @@
+.root {
+    composes: relative from global;
+}
+
+.indicator {
+    composes: indicator from '@magento/venia-ui/lib/components/LoadingIndicator/indicator.module.css';
+}
+
+.loading {
+    composes: absolute from global;
+    composes: flex from global;
+    composes: justify-center from global;
+    composes: bg-white/60 from global;
+    composes: z-10 from global;
+    composes: w-full from global;
+    composes: h-[66%] from global;
+}

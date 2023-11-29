@@ -1,0 +1,77 @@
+.root {
+    composes: mt-0 from global;
+}
+
+.checkoutProductlistingRoot {
+    composes: max-h-[245px] from global;
+    composes: lg_max-h-[196px] from global;
+    composes: overflow-y-auto from global;
+    composes: grid from global;
+    composes: overscroll-contain from global;
+    composes: overflow-x-hidden from global;
+    composes: pr-4 from global;
+}
+
+.checkoutProductlistingRoot::-webkit-scrollbar {
+    @apply w-[2px];
+}
+
+.checkoutProductlistingRoot::-webkit-scrollbar-track {
+    @apply bg-grey-lighter;
+}
+
+.checkoutProductlistingRoot::-webkit-scrollbar-thumb {
+    @apply bg-black;
+}
+
+.productRoot {
+    composes: grid from global;
+    composes: min-h-[px] from global;
+    composes: py-2 from global;
+
+    composes: lg_px-2 from global;
+}
+
+.productItem {
+    grid-template-rows: min-content 1fr;
+
+    composes: grid from global;
+}
+
+.productItemUpdating {
+    composes: productItem;
+    composes: opacity-50 from global;
+}
+
+.sectionRoot {
+    composes: sectionRoot from '@app/components/overrides/CartPage/PriceAdjustments/priceAdjustments.module.css';
+}
+
+.sectionTitleContainer {
+    /* stylelint-disable-next-line */
+    composes: sectionTitleContainer from '@app/components/overrides/CartPage/PriceAdjustments/priceAdjustments.module.css';
+}
+
+.sectionTitleWrapper {
+    /* stylelint-disable-next-line */
+    composes: sectionTitleWrapper from '@app/components/overrides/CartPage/PriceAdjustments/priceAdjustments.module.css';
+}
+.sectionTitle {
+    composes: sectionTitle from '@app/components/overrides/CartPage/PriceAdjustments/priceAdjustments.module.css';
+}
+
+.sectionContents {
+    composes: sectionContents from '@app/components/overrides/CartPage/PriceAdjustments/priceAdjustments.module.css';
+}
+.productActions {
+    composes: actions from '@app/components/overrides/CartPage/ProductListing/product.module.css';
+    composes: py-2 from global;
+}
+
+.productWishlist {
+    composes: hidden from global;
+}
+
+.summaryTitle {
+    composes: summaryTitle from '@app/components/overrides/CartPage/cartPage.module.css';
+}

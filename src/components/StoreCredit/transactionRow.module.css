@@ -1,0 +1,39 @@
+.root {
+    composes: grid from global;
+    composes: lg_grid-cols-5 from global;
+    composes: gap-4 from global;
+    composes: border-t from global;
+    composes: lg_border-0 from global;
+    composes: border-black/20 from global;
+    composes: pt-7.5 from global;
+    composes: lg_pt-0 from global;
+    composes: text-sm from global;
+}
+
+.transactionIdLabel,
+.transactionDateLabel,
+.balanceChangeLabel,
+.balanceLeftLabel,
+.additionalMessageLabel {
+    composes: grid from global;
+    composes: lg_hidden from global;
+    composes: font-semibold from global;
+    composes: text-black/40 from global;
+}
+
+.negativeBalance {
+    composes: text-red from global;
+}
+
+.positiveBalance {
+    composes: text-green-whatsapp from global;
+}
+.transactionIdContainer,
+.transactionDateContainer,
+.balanceChangeContainer,
+.balanceLeftContainer,
+.additionalMessageContainer {
+    composes: grid from global;
+    composes: grid-cols-2 from global;
+    composes: lg_grid-cols-1 from global;
+}

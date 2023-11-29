@@ -1,0 +1,43 @@
+.root {
+  composes: widgetRoot from '../root.module.css';
+}
+
+.title {
+  composes: widgetTitle from '../root.module.css';
+}
+
+.comments {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.commentRoot + .commentRoot {
+  margin-top: 1.25rem;
+}
+
+.commentTitle {
+  font-weight: 600;
+}
+
+.commentTitle:hover {
+  text-decoration: underline;
+}
+
+.message {
+  padding-top: 0.25rem;
+}
+
+.date {
+  composes: date from '../PostPage/post.module.css';
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  padding-top: 0.25rem;
+}
+
+.icon {
+  composes: authorIcon from '../PostPage/post.module.css';
+  margin-left: -2px;
+}

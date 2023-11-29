@@ -1,0 +1,75 @@
+.root {
+    composes: widgetRoot from '../root.module.css';
+}
+
+.title {
+    composes: widgetTitle from '../root.module.css';
+}
+
+.tree {
+    composes: flex from global;
+    composes: flex-wrap from global;
+}
+
+.item {
+    composes: flex from global;
+    composes: text-sm from global;
+    composes: border from global;
+    composes: px-2 from global;
+    composes: mb-3 from global;
+    composes: font-semibold from global;
+    composes: uppercase from global;
+
+    @apply ltr_mr-2 rtl_ml-2;
+    @apply border-grey-border2;
+    @apply rounded-2xl;
+    @apply py-0.5;
+}
+
+.itemInactive {
+    composes: item;
+    composes: bg-white from global;
+}
+
+.itemActive {
+    composes: item;
+    composes: bg-black from global;
+    composes: text-white from global;
+}
+
+.linkText {
+    @apply hover_text-grey-dark;
+    composes: hover_no-underline from global;
+}
+
+.linkTextOpened {
+    @apply hover_text-grey-lighter;
+    composes: hover_no-underline from global;
+}
+
+.linkIcon {
+    composes: stroke-current from global;
+    composes: text-white from global;
+
+    @apply ltr_ml-2 rtl_mr-2;
+}
+
+.tree .tree {
+    margin-left: 1.25rem;
+    color: rgb(var(--venia-global-color-text-alt));
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+.count {
+    margin-left: 0.25rem;
+}
+
+.shimmerBlock {
+    composes: w-full from global;
+    composes: mb-15 from global;
+
+    @apply ltr_mr-2 rtl_ml-2;
+}

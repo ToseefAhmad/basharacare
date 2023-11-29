@@ -1,0 +1,23 @@
+.root {
+    composes: items-center from global;
+    composes: hidden from global;
+    composes: h-[inherit] from global;
+
+    /* Large screen styles */
+    composes: lg_grid from global;
+}
+
+.root_open {
+    composes: root;
+
+    composes: shadow-md from global;
+}
+
+.trigger {
+    composes: root from '@magento/venia-ui/lib/components/clickable.module.css';
+
+    composes: h-12 from global;
+    composes: z-1 from global;
+
+    composes: hover_opacity-75 from global;
+}

@@ -1,0 +1,238 @@
+.root {
+    composes: bg-black from global;
+    composes: px-4.5 from global;
+    composes: xl_px-0 from global;
+    composes: sticky from global;
+    composes: w-full from global;
+    composes: top-0 from global;
+    composes: h-15 from global;
+
+    composes: lg_h-12.5 from global;
+    composes: z-[50] from global;
+}
+
+.switchers {
+    composes: hidden from global;
+    composes: auto-cols-max from global;
+
+    composes: grid-flow-col from global;
+    composes: justify-end from global;
+    composes: mx-auto from global;
+    composes: relative from global;
+    composes: z-11 from global;
+
+    composes: lg_grid from global;
+}
+
+.open {
+    composes: root;
+}
+
+.toolbar {
+    composes: h-full from global;
+    composes: grid from global;
+    composes: grid-cols-3 from global;
+    composes: items-center from global;
+
+    composes: lg_flex from global;
+    composes: justify-between from global;
+    composes: gap-2 from global;
+    composes: md_gap-2 from global;
+    composes: xl_gap-4 from global;
+    composes: container from global;
+
+    @apply !px-0 lg_px-[18px];
+}
+
+.logo {
+    composes: h-full from global;
+    composes: min-w-[161px] from global;
+}
+
+.primaryActions {
+    composes: lg_hidden from global;
+    composes: h-full from global;
+    composes: items-center from global;
+    composes: hover_opacity-70 from global;
+}
+
+.logoContainer {
+    composes: justify-self-center from global;
+    composes: lg_justify-self-start from global;
+    composes: hover_opacity-70 from global;
+}
+
+.secondaryActions {
+    composes: flex from global;
+    composes: items-center from global;
+    composes: justify-end from global;
+}
+
+.searchFallback {
+    composes: flex from global;
+    composes: justify-center from global;
+    composes: mb-2 from global;
+    composes: px-4 from global;
+    composes: w-[197px] from global;
+    composes: h-5 from global;
+}
+
+.input {
+    composes: input from '../TextInput/textInput.module.css';
+    composes: max-w-sm from global;
+
+    composes: lg_py-2.5 from global;
+}
+
+.loader,
+.loader::before,
+.loader::after {
+    --dot-size: 2em;
+    --dot-font-size: 6px;
+    --dot-shadow-offset: calc(-1 * var(--dot-size) + var(--dot-font-size));
+    border-radius: 50%;
+    width: var(--dot-size);
+    height: var(--dot-size);
+    animation: pulse 1.8s infinite ease-in-out;
+    animation-fill-mode: both;
+
+    /* Large screen styles */
+    @apply lg_bottom-3;
+}
+
+.search {
+    composes: lg_block from global;
+    composes: hidden from global;
+    composes: relative from global;
+    composes: h-[24px] from global;
+    composes: ltr_pr-[150px] from global;
+    composes: rtl_pl-[150px] from global;
+}
+
+.search input {
+    @apply hover_border-grey;
+}
+
+.searchBoxRoot {
+    composes: root from '@app/components/SearchBox/searchBox.module.css';
+
+    composes: z-[20] from global;
+
+    @apply absolute;
+}
+
+.searchBoxInput {
+    composes: input from '@app/components/SearchBox/searchBox.module.css';
+
+    composes: focus_w-[385px] from global;
+    composes: focus_bg-white from global;
+    composes: focus_text-black from global;
+    composes: focus_border-none from global;
+    composes: transition-all from global;
+    composes: z-10 from global;
+}
+
+.searchBoxIcon {
+    composes: icon from '@app/components/SearchBox/searchBox.module.css';
+}
+
+.searchBoxReset {
+    composes: resetIcon from '@app/components/SearchBox/searchBox.module.css';
+    --stroke: white;
+    composes: transition-all from global;
+    composes: md_top-[60%] from global;
+}
+
+.searchBoxInput:focus ~ .searchBoxReset {
+    --stroke: black;
+
+    @apply ltr_right-[-230px] rtl_left-[-230px];
+}
+
+.searchBoxInput:focus ~ .searchBoxIcon {
+    @apply text-black transition-all;
+}
+
+.mobileSearch {
+    composes: lg_hidden from global;
+    --stroke: white;
+    composes: sm_mt-0 from global;
+    composes: left-0 from global;
+    composes: px-[20px] from global;
+    composes: py-[16px] from global;
+    composes: pt-2 from global;
+    composes: bg-black from global;
+    composes: w-full from global;
+    composes: top-14 from global;
+    composes: z-10 from global;
+    composes: flex from global;
+}
+
+.mobileSearchRoot {
+    composes: w-full from global;
+    composes: relative from global;
+}
+
+.mobileSearchInput {
+    composes: input from '@app/components/SearchBox/searchBox.module.css';
+    composes: bg-black from global;
+    composes: border-white from global;
+    composes: text-white from global;
+}
+
+.mobileSearchRoot .mobileSearchInput {
+    @apply ltr_pl-2 rtl_pr-2;
+}
+
+.mobileSearchIcon {
+    composes: root from '@magento/venia-ui/lib/components/Icon/icon.module.css';
+    composes: ltr_ml-3 from global;
+    composes: rtl_mr-3 from global;
+}
+
+.mobileResetIcon {
+    composes: resetIcon from '@app/components/SearchBox/searchBox.module.css';
+    --stroke: white;
+}
+
+.hidden {
+    composes: hidden from global;
+}
+
+.loader {
+    composes: relative from global;
+    color: rgb(var(--venia-global-color-gray-dark));
+    font-size: var(--dot-font-size);
+    margin: var(--dot-shadow-offset) auto 0;
+    transform: translateZ(0);
+    animation-delay: -0.16s;
+}
+
+.loader::before,
+.loader::after {
+    content: '';
+    position: absolute;
+    top: 0;
+}
+
+.loader::before {
+    color: rgb(var(--venia-global-color-gray));
+    left: -3.5em;
+    animation-delay: -0.32s;
+}
+
+.loader::after {
+    color: rgb(var(--venia-global-color-gray-darker));
+    left: 3.5em;
+}
+
+@keyframes pulse {
+    0%,
+    80%,
+    100% {
+        box-shadow: 0 var(--dot-size) 0 -1.3em;
+    }
+    40% {
+        box-shadow: 0 var(--dot-size) 0 0;
+    }
+}

@@ -1,0 +1,75 @@
+.root {
+    composes: grid from global;
+    composes: lg_grid-cols-6 from global;
+    composes: gap-1.5 from global;
+    composes: lg_gap-0 from global;
+    composes: border-t from global;
+    composes: lg_border-0 from global;
+    composes: border-black/20 from global;
+    composes: pt-7.5 from global;
+    composes: lg_pt-0 from global;
+    composes: text-sm from global;
+}
+
+.root_expanded {
+    composes: root;
+}
+
+.root_expanded .stackedCell {
+    @apply font-semibold;
+}
+
+.stackedCell {
+    composes: overflow-hidden from global;
+    composes: grid from global;
+    composes: grid-cols-[40%1fr] from global;
+    composes: lg_grid-cols-1 from global;
+}
+
+.orderNumberContainer,
+.orderDateContainer,
+.orderShipToContainer,
+.orderTotalContainer,
+.orderStatusContainer {
+    composes: stackedCell;
+}
+
+.orderNumberLabel,
+.orderDateLabel,
+.orderTotalLabel,
+.orderShipToLabel,
+.orderStatusLabel,
+.orderActionLabel {
+    composes: lg_hidden from global;
+    composes: text-black/40 from global;
+    composes: font-semibold from global;
+    composes: text-sm from global;
+}
+
+.orderActionContainer {
+    composes: grid from global;
+    composes: grid-cols-[40%1fr] from global;
+    composes: lg_grid-cols-1 from global;
+}
+.actionButtons {
+    composes: grid from global;
+    composes: grid-flow-col from global;
+    composes: gap-4 from global;
+    composes: justify-self-start from global;
+    composes: underline from global;
+    composes: justify-items-start from global;
+}
+
+.content {
+    composes: my-5 from global;
+    composes: lg_pb-10 from global;
+    composes: lg_my-10 from global;
+    composes: lg_border-t-0 from global;
+    composes: lg_border-b from global;
+    composes: border-black/20 from global;
+    grid-column: 1 / -1;
+}
+
+.content_collapsed {
+    composes: hidden from global;
+}

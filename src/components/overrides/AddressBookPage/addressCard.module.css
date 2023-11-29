@@ -1,0 +1,42 @@
+.root {
+    composes: mt-10 from global;
+}
+
+.root_updated {
+    composes: root;
+    animation: flash var(--venia-global-anim-bounce) 640ms 2;
+}
+
+.contentContainer {
+    composes: grid from global;
+    composes: gap-0.5 from global;
+}
+
+.actionContainer {
+    composes: text-sm from global;
+    composes: underline from global;
+    composes: mt-1.25 from global;
+    composes: active_outline-none from global;
+}
+
+.actionContainer span {
+    @apply hover_opacity-80
+        active_outline-none;
+}
+
+.deleteButton {
+    composes: ml-2.5 from global;
+    composes: rtl_mr-2.5 from global;
+}
+
+.linkButton {
+    composes: root from '../LinkButton/linkButton.module.css';
+}
+
+.editButton {
+    composes: linkButton;
+}
+
+.deleteButton {
+    composes: linkButton;
+}

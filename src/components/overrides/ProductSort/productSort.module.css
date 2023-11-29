@@ -1,0 +1,74 @@
+.root {
+    composes: relative from global;
+    composes: w-full from global;
+}
+
+.menu {
+    composes: absolute from global;
+    composes: w-[inherit] from global;
+    composes: z-10 from global;
+    composes: top-[130%] from global;
+    composes: right-0 from global;
+    composes: text-sm from global;
+    composes: bg-white from global;
+    composes: rounded-sm from global;
+    composes: shadow-md from global;
+}
+
+.menu div {
+    @apply divide-y
+        divide-black
+        divide-opacity-20;
+}
+
+.menuItem {
+    composes: hover_bg-grey-lightest from global;
+}
+
+.sortButton {
+    composes: root_normalPriority from '@app/components/overrides/Button/button.module.css';
+    composes: w-full from global;
+    composes: text-sm from global;
+    composes: border-opacity-20 from global;
+
+    composes: flex-nowrap from global;
+
+    composes: lg_max-h-[41px] from global;
+    composes: lg_min-w-[190px] from global;
+}
+
+.desktopText {
+    composes: hidden from global;
+
+    composes: lg_flex from global;
+    composes: gap-[10px] from global;
+}
+
+.sortText {
+    composes: text-sm from global;
+    composes: flex from global;
+    composes: gap-1 from global;
+    composes: whitespace-nowrap from global;
+}
+.currentSort {
+    composes: normal-case from global;
+    composes: font-normal from global;
+}
+
+.mobileText {
+    composes: flex from global;
+    composes: items-center from global;
+    composes: gap-[10px] from global;
+    composes: text-base from global;
+
+    composes: lg_hidden from global;
+}
+
+.desktopIconWrapper {
+    composes: root from '@magento/venia-ui/lib/components/Icon/icon.module.css';
+}
+
+.desktopIcon {
+    stroke: grey;
+    composes: icon from '@magento/venia-ui/lib/components/Icon/icon.module.css';
+}

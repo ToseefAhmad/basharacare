@@ -1,0 +1,45 @@
+.cms-faq [class*='cms-root'] {
+    @apply max-w-desktop
+        mx-auto;
+}
+
+.cms-faq .faq-section,
+.cms-faq .contact-us-section {
+    @apply max-w-[1200px];
+}
+
+.cms-faq[dir='ltr'] .faq-section,
+.cms-faq[dir='ltr'] .contact-us-section {
+    @apply lg_pl-[5%]
+        lg_pr-[11%];
+}
+
+.cms-faq[dir='rtl'] .faq-section,
+.cms-faq[dir='rtl'] .contact-us-section {
+    @apply lg_pr-[5%]
+        lg_pl-[11%];
+}
+
+.cms-faq .contact-us-section .block {
+    @apply mt-[15%];
+}
+
+.cms-faq[dir='ltr'] .contact-us-section .block {
+    @apply lg_ml-[9%];
+}
+
+.cms-faq[dir='rtl'] .contact-us-section .block {
+    @apply lg_mr-[9%];
+}
+
+.cms-faq .faq-section [class*='section-title_container'] {
+    @apply cursor-pointer
+        w-full;
+}
+
+.cms-faq .faq-section [class*='section-root'] {
+    @apply
+        w-full
+        border-b
+        border-solid;
+}

@@ -1,0 +1,84 @@
+.root {
+    composes: lg_w-[37.5%] from global;
+}
+
+.message {
+    composes: text-sm from global;
+}
+
+.cancelButton {
+    composes: root_normalPriority from '@app/components/overrides/Button/button.module.css';
+}
+
+.submitButton {
+    composes: root_highPriority from '@app/components/overrides/Button/button.module.css';
+    composes: w-full from global;
+    composes: h-15 from global;
+}
+
+.genderWrapper select {
+    @apply w-full
+        outline-none
+        bg-transparent;
+}
+
+.subscribe {
+    composes: -ml-1.25 from global;
+    composes: rtl_-mr-1.25 from global;
+}
+
+.title h3 {
+    @apply inline-block
+        text-3xl
+        lg_text-4xl
+        first_pr-2
+        first_rtl_pl-2
+        last_font-light
+        last_font-sans;
+}
+
+.title {
+    composes: lg_pt-12.5 from global;
+    composes: py-7.5 from global;
+}
+
+.nameWrapper,
+.lastNameWrapper,
+.subscribe,
+.dobWrapper,
+.genderWrapper,
+.emailWrapper,
+.passwordWrapper,
+.confirmPasswordWrapper {
+    composes: mb-4 from global;
+}
+
+.requiredFieldsText {
+    composes: text-red from global;
+    composes: pt-7.5 from global;
+}
+
+.root input::placeholder {
+    @apply text-black;
+}
+
+.formErrors {
+    composes: py-4 from global;
+}
+
+.submitButtonWrapper {
+    composes: mt-7.5 from global;
+}
+
+.backButton {
+    composes: ltr_ml-auto from global;
+    composes: rtl_mr-auto from global;
+    composes: pt-7.5 from global;
+    composes: text-black from global;
+    composes: hover_text-black/70 from global;
+    composes: hover_underline from global;
+}
+
+.actions {
+    composes: flex from global;
+}

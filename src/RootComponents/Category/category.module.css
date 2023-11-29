@@ -1,0 +1,348 @@
+.root {
+    composes: pb-[160px] from global;
+
+    composes: container from global;
+
+    composes: pb-[160px] from global;
+}
+
+.heading {
+    grid-template-columns: 1fr min-content;
+    composes: col-span-full from global;
+    composes: lg_grid from global;
+    composes: lg_gap-5 from global;
+    composes: flex-nowrap from global;
+    composes: content-center from global;
+
+    composes: lg_justify-between from global;
+    composes: lg_flex-nowrap from global;
+    composes: lg_items-center from global;
+
+    composes: mb-[33px] from global;
+}
+
+.categoryInfo {
+    flex-basis: 100%;
+
+    composes: text-center from global;
+
+    composes: lg_m-0 from global;
+    composes: lg_text-left from global;
+
+    composes: rtl_lg_text-right from global;
+}
+
+.headerButtons {
+    flex-basis: 100%;
+    composes: h-[41px] from global;
+
+    composes: grid from global;
+    composes: grid-cols-2 from global;
+    composes: lg_flex from global;
+    composes: content-center from global;
+    composes: gap-x-[10px] from global;
+
+    composes: lg_justify-end from global;
+    composes: mt-7.5 from global;
+    composes: mb-5 from global;
+    composes: lg_mb-0 from global;
+    composes: lg_mt-0 from global;
+}
+
+.contentWrapper {
+    composes: w-full from global;
+
+    composes: lg_grid from global;
+    composes: lg_gap-x-[111px] from global;
+}
+
+@media (min-width: 1024px) {
+    .contentWrapper {
+        grid-template-columns: min-content 1fr;
+    }
+}
+
+.sidebar {
+    composes: hidden from global;
+
+    composes: lg_flex from global;
+    composes: lg_self-start from global;
+    composes: lg_w-[220px] from global;
+}
+
+.categoryHeader {
+    composes: max-h-[min-content] from global;
+    composes: mb-7.5 from global;
+    composes: lg_mb-[90px] from global;
+    composes: border-b-[5px] from global;
+    composes: border-white from global;
+
+    @apply bg-blue-lightest;
+}
+
+.categoryHeaderBody {
+    composes: categoryHeader;
+
+    @apply bg-category-body;
+}
+
+.categoryHeaderHair {
+    composes: categoryHeader;
+
+    @apply bg-category-hair;
+}
+.categoryHeaderFace {
+    composes: categoryHeader;
+
+    @apply bg-category-face;
+}
+
+.categoryHeaderNewArrivals {
+    composes: categoryHeader;
+
+    @apply bg-blue-lightest;
+}
+
+.categoryHeaderContainer {
+    composes: container from global;
+    composes: max-h-[min-content] from global;
+    composes: pt-[64px] from global;
+
+    composes: bg-no-repeat from global;
+    composes: bg-center from global;
+    composes: ltr_bg-right from global;
+    composes: rtl_bg-left from global;
+    composes: bg-contain from global;
+    composes: mix-blend-multiply from global;
+
+    @apply px-[18px] lg_px-[63px];
+}
+
+.categoryHeaderContainerFace {
+    composes: categoryHeaderContainer;
+    background-image: url('/static-files/categoryPageImages/face_category.png');
+}
+
+.categoryHeaderContainerBody {
+    composes: categoryHeaderContainer;
+    background-image: url('/static-files/categoryPageImages/body_category.png');
+}
+
+.categoryHeaderContainerHair {
+    composes: categoryHeaderContainer;
+    background-image: url('/static-files/categoryPageImages/hair_category.png');
+}
+
+.categoryHeaderContainerNewArrivals {
+    composes: categoryHeaderContainer;
+}
+
+.categoryDescription {
+    composes: inline-block from global;
+    composes: max-w-[750px] from global;
+    composes: mb-[45px] from global;
+}
+
+.categoryShortDescription {
+    composes: categoryDescription;
+    composes: hover_text-grey-dark from global;
+}
+
+.expandIcon {
+    composes: inline-grid from global;
+    composes: place-content-center from global;
+}
+
+.expandIconHidden {
+    composes: hidden from global;
+}
+
+.categoryContent {
+    composes: lg_grow from global;
+}
+
+.descriptionTitleShimmer {
+    composes: root from '@magento/venia-ui/lib/components/Shimmer/shimmer.module.css';
+    composes: w-4/12 from global;
+    composes: h-[70px] from global;
+    composes: mb-[10px] from global;
+}
+
+.descriptionShimmer {
+    composes: root from '@magento/venia-ui/lib/components/Shimmer/shimmer.module.css';
+    composes: w-full from global;
+    composes: h-[62px] from global;
+    composes: xxxxs_h-[38px] from global;
+    composes: xs_h-[19px] from global;
+    composes: mb-[45px] from global;
+}
+
+.breadcrumbContainer {
+    composes: container from global;
+
+    @apply px-[18px]
+        lg_px-[58px]
+        py-2;
+}
+.breadcrumbRoot {
+    composes: root from '@app/components/overrides/Breadcrumbs/breadcrumbs.module.css';
+
+    @apply p-0 mb-0 bg-blue-lightest;
+}
+
+.breadcrumbRootBody {
+    composes: breadcrumbRoot;
+
+    @apply bg-category-body;
+}
+.breadcrumbRootHair {
+    composes: breadcrumbRoot;
+
+    @apply bg-category-hair;
+}
+.breadcrumbRootFace {
+    composes: breadcrumbRoot;
+
+    @apply bg-category-face;
+}
+
+.breadcrumbRoot span:last-child {
+    @apply font-semibold text-sm;
+}
+
+.categoryContentCurrentFilterRoot {
+    composes: hidden from global;
+    composes: lg_flex from global;
+    composes: flex-wrap from global;
+    composes: gap-x-2 from global;
+    composes: gap-y-1 from global;
+    composes: items-center from global;
+    composes: uppercase from global;
+    composes: font-semibold from global;
+
+    composes: self-start from global;
+    grid-area: 2;
+}
+
+.metaTitle {
+    grid-area: 1;
+}
+
+.productSortRoot button {
+    @apply h-full
+        w-full;
+}
+
+.sortedByRoot {
+    composes: hidden from global;
+}
+
+.gallery {
+    composes: mb-[100px] from global;
+}
+
+:global(.category-page #main) {
+    @apply px-0
+        mx-0
+        max-w-full
+        bg-grey-lightest;
+}
+
+.breadcrumbShimmerRoot {
+    composes: breadcrumbContainer;
+}
+
+.categoryTitle {
+    composes: mb-[2px] from global;
+    composes: flex from global;
+    composes: items-center from global;
+    composes: gap-2 from global;
+    composes: lg_gap-4 from global;
+    composes: font-sans from global;
+}
+
+.categoryTitle :first-child {
+    @apply font-headingBold mt-[5px];
+}
+
+.categoryIcon {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+
+    composes: h-[82px] from global;
+    composes: w-15 from global;
+}
+.categoryIconBody {
+    composes: categoryIcon;
+    background-image: url('/static-files/bodyCategory.svg');
+}
+.categoryIconHair {
+    composes: categoryIcon;
+    background-image: url('/static-files/hairCategory.svg');
+}
+.categoryIconFace {
+    composes: categoryIcon;
+    background-image: url('/static-files/faceCategory.svg');
+}
+.categoryIconNewArrivals {
+    composes: categoryIcon;
+    background-image: url('/static-files/newArrivalsCategory.svg');
+}
+
+.breadCrumbRoot {
+    composes: container from global;
+
+    @apply px-0 lg_px-[42px] py-5 !important;
+}
+
+.breadCrumbRoot span:last-child {
+    @apply font-semibold text-sm;
+}
+
+.productAddedConteiner {
+    composes: bg-grey-lighter2 from global;
+}
+
+.productAdded {
+    composes: container from global;
+    composes: lg_px-[60px] from global;
+}
+
+.productAddedCart {
+    composes: font-semibold from global;
+    composes: mr-2.5 from global;
+}
+
+.starsIcon svg {
+    @apply w-5
+        h-5
+        mr-2.5
+        inline;
+}
+
+.notificationRoot > span {
+    @apply block;
+}
+
+.filterButtonFixedContainer {
+    composes: fixed from global;
+    composes: bottom-[15px] from global;
+    composes: w-[33%] from global;
+    composes: left-[50%] from global;
+    composes: -translate-x-1/2 from global;
+    composes: z-20 from global;
+    composes: transition-all from global;
+}
+
+.filterButtonFixed {
+    composes: filterButton from '@app/components/overrides/FilterModalOpenButton/filterModalOpenButton.module.css';
+}
+
+.filterButtonFixedContainer .filterButtonFixed {
+    @apply bg-black text-white;
+}
+
+.filterButtonFixedHidden {
+    composes: bottom-[-50px] from global;
+}

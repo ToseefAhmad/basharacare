@@ -1,0 +1,7 @@
+.root {
+    composes: categoryContentCurrentFilterRoot from '@app/RootComponents/Category/category.module.css';
+}
+
+.action {
+    composes: action from '@app/RootComponents/Category/category.module.css';
+}

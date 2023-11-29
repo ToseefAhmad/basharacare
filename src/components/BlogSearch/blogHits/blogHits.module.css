@@ -1,0 +1,12 @@
+.posts {
+    composes: posts from '@app/overrides/@amasty/components/List/list.module.css';
+}
+
+.post {
+    composes: post from '@app/overrides/@amasty/components/List/list.module.css';
+}
+
+.noHits {
+    composes: text-center from global;
+    composes: mb-8 from global;
+}

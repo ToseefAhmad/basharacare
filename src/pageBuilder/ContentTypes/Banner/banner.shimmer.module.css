@@ -1,0 +1,23 @@
+.shimmerRoot {
+    composes: root_rectangle from '~@magento/venia-ui/lib/components/Shimmer/shimmer.module.css';
+    composes: root from '~@magento/pagebuilder/lib/ContentTypes/Banner/banner.module.css';
+    composes: block from global;
+    composes: h-[582px] from global;
+    composes: lg_h-[652px] from global;
+    composes: bg-purple-lighter from global;
+}
+
+.wrapper {
+    composes: wrapper from '~@magento/pagebuilder/lib/ContentTypes/Banner/banner.module.css';
+}
+
+.overlay {
+    composes: overlay from '~@magento/pagebuilder/lib/ContentTypes/Banner/banner.module.css';
+}
+
+.content {
+    composes: content from '~@magento/pagebuilder/lib/ContentTypes/Banner/banner.module.css';
+}
+.shimmer {
+    composes: w-full h-full from global;
+}

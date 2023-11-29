@@ -1,0 +1,190 @@
+.root {
+    composes: pt-7.5 from global;
+    composes: lg_pt-[70px] from global;
+}
+
+.topBar {
+    composes: h-[70px] from global;
+    composes: bg-black from global;
+    composes: text-white from global;
+    composes: text-2xl from global;
+    composes: font-headingBold from global;
+    composes: fixed from global;
+    composes: top-0 from global;
+    composes: right-0 from global;
+    composes: left-0 from global;
+    composes: z-10 from global;
+
+    composes: grid from global;
+    composes: place-content-center from global;
+}
+
+.topBar a {
+    @apply no-underline;
+}
+
+.checkoutContent {
+    grid-template-columns: 1fr 480px;
+    composes: min-h-screen from global;
+    composes: lg_mt-[70px] from global;
+    composes: px-[18px] from global;
+    composes: grid from global;
+    composes: gap-x-[121px] from global;
+    composes: gap-y-5 from global;
+    composes: py-10 from global;
+    composes: pt-[60px] from global;
+    composes: md_pt-0 from global;
+    composes: container from global;
+}
+
+@media (max-width: 1024px) {
+    .checkoutContent {
+        grid-template-columns: 1fr;
+        composes: pt-0 from global;
+    }
+}
+
+.border {
+    composes: border-2 from global;
+    composes: border-solid from global;
+    composes: border-grey-light from global;
+    composes: rounded-md from global;
+}
+
+.checkoutContent_hidden {
+    composes: checkoutContent;
+    composes: hidden from global;
+}
+
+.cartLink {
+    composes: root from '@app/components/overrides/LinkButton/linkButton.module.css';
+    composes: text-[inherit] from global;
+}
+
+.stepper_heading {
+    composes: pb-4 from global;
+    composes: borderb from global;
+    composes: border-solid from global;
+    composes: border-black from global;
+    composes: border-opacity-20 from global;
+    composes: uppercase from global;
+    composes: text-lg from global;
+
+    composes: lg_pb-0 from global;
+}
+
+.shipping_method_heading {
+    composes: stepper_heading;
+}
+
+.payment_information_heading {
+    composes: stepper_heading;
+}
+
+.signInContainer {
+    composes: items-center from global;
+    composes: border-2 from global;
+    composes: border-solid from global;
+    composes: border-grey-border from global;
+    composes: rounded-md from global;
+    composes: grid from global;
+    composes: gap-4 from global;
+    composes: grid-flow-col from global;
+    composes: p-4 from global;
+}
+
+.signInLabel {
+    composes: font-semibold from global;
+}
+
+.signInButton {
+    composes: root_normalPriority from '@app/components/overrides/Button/button.module.css';
+}
+
+.empty_cart_container {
+    composes: mb-6 from global;
+}
+
+.summaryContainer {
+    composes: border-2 from global;
+    composes: border-grey-border from global;
+    composes: rounded-md from global;
+    composes: lg_p-8 from global;
+    composes: p-3 from global;
+    composes: h-[min-content] from global;
+
+    composes: lg_sticky from global;
+    composes: top-20 from global;
+}
+
+.formErrors {
+    composes: border;
+    composes: border-grey-border from global;
+    composes: mb-4 from global;
+    composes: p-4 from global;
+    composes: grid from global;
+}
+
+.review_order_button {
+    composes: root_highPriority from '@app/components/overrides/Button/button.module.css';
+
+    @apply h-[46px] w-full;
+}
+
+.place_order_button {
+    composes: root_highPriority from '@app/components/overrides/Button/button.module.css';
+    composes: mt-5 from global;
+    composes: w-full from global;
+}
+
+.formColumn {
+    composes: grid from global;
+    composes: gap-4 from global;
+    composes: content-start from global;
+}
+
+:global(.checkout-page #header) {
+    @apply hidden;
+}
+
+:global(.checkout-page #switchers) {
+    @apply hidden;
+}
+
+:global(.checkout-page #newsletter) {
+    @apply hidden;
+}
+
+:global(.checkout-page #footer) {
+    @apply hidden;
+}
+
+:global(.checkout-page #main) {
+    @apply px-0 max-w-full bg-white;
+}
+
+.addressBookContent {
+    grid-auto-rows: minmax(6rem, max-content);
+    grid-template-columns: 1fr 1fr 1fr;
+
+    composes: border-t from global;
+    composes: grid from global;
+    composes: gap-4 from global;
+    composes: pt-8 from global;
+}
+
+.addressBookRoot {
+    composes: container from global;
+    composes: items-center from global;
+}
+
+.shipping_method_container,
+.shipping_information_container,
+.payment_information_container {
+    @apply relative;
+}
+
+.heading {
+    composes: leading-[3.75rem] from global;
+    composes: mb-2.5 from global;
+}

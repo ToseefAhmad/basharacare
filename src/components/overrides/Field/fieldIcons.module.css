@@ -1,0 +1,46 @@
+.root {
+    grid-template-areas: 'before input after';
+    grid-template-columns: auto 1fr auto;
+
+    composes: inline-grid from global;
+    composes: grid-flow-col from global;
+}
+
+.input {
+    grid-column: before-start / after-end;
+    grid-row: input-start / input-end;
+
+    composes: items-center from global;
+    composes: flex from global;
+}
+
+.input > input {
+    padding-left: calc(1.875rem * var(--iconsBefore) + 0.625rem);
+    padding-right: calc(1.875rem * var(--iconsAfter) + 0.625rem);
+}
+
+.before,
+.after {
+    composes: items-center from global;
+    composes: flex from global;
+    composes: justify-content from global;
+    composes: pointer-events-none from global;
+    composes: w-7 from global;
+}
+
+.before:empty,
+.after:empty {
+    @apply hidden;
+}
+
+.before {
+    grid-area: before;
+}
+
+.after {
+    grid-area: after;
+}
+
+.before svg {
+    stroke: grey;
+}

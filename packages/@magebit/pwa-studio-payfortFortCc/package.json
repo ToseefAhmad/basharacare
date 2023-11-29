@@ -1,0 +1,21 @@
+{
+  "name": "@magebit/pwa-studio-payfortFortCc",
+  "version": "0.0.1",
+  "description": "Provides PayFort Payment Method for PWA Studio.",
+  "author": "Kostiantyn<konstantin.sproge@magebit.com>",
+  "license": "MIT",
+  "main": "intercept.js",
+  "peerDependencies": {
+    "@magento/peregrine": "*",
+    "@magento/pwa-buildpack": "*",
+    "@magento/venia-ui": "*",
+    "react": "*",
+    "react-intl": "*",
+    "react-router-dom": "*"
+  },
+  "pwa-studio": {
+    "targets": {
+      "intercept": "./intercept.js"
+    }
+  }
+}

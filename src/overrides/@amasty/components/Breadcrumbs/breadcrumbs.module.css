@@ -1,0 +1,167 @@
+.root {
+    composes: flex from global;
+    composes: flex-col from global;
+    composes: w-full from global;
+    composes: justify-center from global;
+    composes: bg-purple-lighter from global;
+    composes: py-2 from global;
+    composes: text-sm from global;
+    composes: h-auto from global;
+    composes: relative from global;
+}
+
+.breadcrumbsContainer {
+    composes: container from global;
+    composes: z-10 from global;
+    composes: pt-3 from global;
+
+    @apply px-4 lg_px-12;
+}
+
+.text {
+    composes: p-0.5 from global;
+    composes: font-semibold from global;
+}
+
+.divider {
+    composes: text;
+}
+
+.link {
+    composes: text;
+    composes: font-normal from global;
+}
+
+.currentCategory {
+    composes: text;
+}
+
+.banner {
+    composes: container from global;
+    composes: pb-0 from global;
+    composes: lg_mb-20 from global;
+    composes: relative from global;
+    composes: pt-5 from global;
+
+    @apply px-24 lg_px-12;
+}
+
+.bannerShimmer {
+    composes: container from global;
+    composes: w-full from global;
+    composes: lg_w-auto from global;
+    composes: pb-0 lg_mb-20 from global;
+    composes: relative from global;
+    composes: lg_pt-5 from global;
+    composes: px-0 from global;
+    composes: lg_px-12 from global;
+}
+
+:global(.blogBanner) {
+    @apply bg-transparent;
+    @apply lg_bg-white;
+    @apply px-0;
+}
+
+:global(.blogBannerImage) {
+    @apply bg-white;
+    @apply z-0;
+    @apply absolute lg_static;
+    @apply w-full !important;
+}
+
+@media (min-width: 1024px) {
+    :global(.blogBannerImage) {
+        @apply w-[58.3333%] !important;
+    }
+}
+
+:global(.blogBannerImage img) {
+    @apply m-0;
+    @apply max-h-none;
+    @apply absolute
+        lg_static;
+    @apply top-[-4rem]
+        lg_top-auto;
+    @apply left-[-6rem]
+        rtl_left-auto
+        lg_left-auto;
+    @apply rtl_right-[-6rem]
+        ltr_right-auto
+        lg_right-auto;
+    @apply object-cover
+        lg_object-contain;
+    @apply w-250
+        lg_w-auto;
+    @apply h-[375px]
+        lg_h-auto;
+}
+
+:global(.blogBannerText) {
+    @apply bg-transparent
+        lg_bg-white;
+    @apply self-center !important;
+    @apply text-left
+        rtl_text-right
+        lg_text-center
+        rtl_lg_text-center;
+    @apply px-6;
+    @apply ml-[-7.5rem]
+        rtl_ml-0
+        rtl_mr-[-7.5rem]
+        lg_ml-0
+        rtl_lg_mr-0;
+    @apply mt-[248px]
+        lg_mt-0;
+    @apply z-1;
+}
+
+:global(.blogBannerText h1) {
+    @apply font-headingBold;
+    @apply bg-white;
+    @apply text-lg
+        lg_text-4xl;
+    @apply w-[calc(65vw+1%)]
+        max-w-[300px]
+        lg_max-w-none
+        lg_w-auto;
+    @apply m-0
+        px-4
+        lg_px-0
+        pt-1 !important;
+}
+
+:global(.blogBannerText h2) {
+    @apply text-left
+        rtl_text-right
+        lg_text-center
+        rtl_lg_text-center;
+    @apply normal-case;
+    @apply font-sans;
+    @apply bg-white;
+    @apply font-normal;
+    @apply text-lg
+        lg_text-2.7xl;
+    @apply w-[calc(65vw+1%)]
+        max-w-[300px]
+        lg_max-w-none
+        lg_w-auto;
+    @apply m-0
+        pt-0
+        pb-2.5
+        px-4
+        lg_px-0
+        lg_py-3.5;
+}
+
+:global(.blogBannerText p) {
+    @apply text-xs;
+    @apply font-sans;
+    @apply w-[calc(100%+94vw)]
+        max-w-[99vw]
+        lg_w-auto;
+    @apply px-4
+        lg_px-0;
+    @apply mt-4
+        lg_mt-0;
+}

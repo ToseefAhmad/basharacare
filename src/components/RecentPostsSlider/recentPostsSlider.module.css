@@ -1,0 +1,203 @@
+.root {
+    composes: rtl_justify-right from global;
+    composes: full-bleed from global;
+    composes: bg-white from global;
+    composes: pt-20 from global;
+    composes: lg_pt-[150px] from global;
+    composes: overflow-hidden from global;
+    composes: w-full from global;
+    composes: pb-25 from global;
+}
+
+.contentWrapper {
+    composes: container from global;
+    composes: relative from global;
+}
+
+.root img {
+    @apply m-0;
+}
+
+.root :global .slick-track {
+    @apply grid
+        grid-flow-col
+        pb-5;
+}
+
+.root :global .slick-track > div {
+    @apply overflow-hidden;
+}
+
+.headerWrapper {
+    composes: grid from global;
+    composes: grid-flow-col from global;
+}
+
+.title {
+    composes: text-4xl from global;
+    composes: font-sans from global;
+    composes: mx-4 from global;
+    composes: mb-5 from global;
+    composes: flex from global;
+    composes: font-normal from global;
+    composes: items-center from global;
+}
+
+.secondaryTitle {
+    composes: pb-1 from global;
+    composes: mx-2 from global;
+}
+
+.title span {
+    @apply first_font-albraSemibold;
+}
+
+.products {
+    composes: flex from global;
+    composes: justify-start from global;
+    composes: w-full from global;
+    composes: min-w-min from global;
+}
+
+.products div:first-of-type {
+    @apply ml-0 rtl_mr-0;
+}
+
+.root a {
+    @apply no-underline;
+}
+
+.root {
+    composes: root from '~@magento/pagebuilder/lib/ContentTypes/Slider/slider.module.css';
+    composes: !px-0 from global;
+}
+
+.root :global .slick-slide {
+    @apply xxxs_mx-2
+        bg-white
+        xxxs_my-4
+        visible !important;
+}
+
+.root :global ul > li > button {
+    @apply p-0
+        block
+        w-full
+        h-[2px]
+        text-[0px]
+        bg-grey-lighter
+        rounded-[2px]
+        outline-none
+        shadow-none
+        cursor-pointer
+        duration-300;
+}
+
+.root :global .slick-slide {
+    @apply h-auto shadow-xl;
+}
+
+.root :global .slick-center {
+    @apply z-10;
+}
+
+.root :global .slick-slider .slick-list {
+    @apply pb-0 !important;
+    @apply pt-5 !important;
+}
+
+.root :global .slick-active {
+    @apply scale-110 xxxs_scale-100 transition-all duration-300;
+}
+
+.root :global .slick-arrow {
+    @apply bg-transparent;
+}
+
+.root:hover :global .slick-arrow {
+    @apply lg_opacity-100;
+}
+
+.root :global ul {
+    @apply p-0;
+}
+
+.root :global ul li {
+    @apply p-0
+        flex
+        h-auto
+        flex-grow;
+}
+
+.root :global ul li::before {
+    @apply bg-none w-0 mr-0 ml-0;
+}
+
+.root :global .slick-line {
+    @apply mb-[-10px]
+        !flex
+        py-5
+        px-[10%];
+}
+
+.root :global .slick-line .slick-active button {
+    @apply bg-black lg_hover_bg-black;
+}
+
+.root :global .slick-line button {
+    @apply md_hover_bg-black;
+}
+
+.rootProduct :global .slick-line {
+    @apply mt-[4px]
+        py-10
+        mb-0;
+}
+
+.root :global .slick-slider .slick-arrow {
+    @apply w-[33px]
+        xs_opacity-100
+        lg_opacity-100
+        h-[32px]
+        top-[96%]
+        md_top-[96.5%]
+        z-[9];
+}
+
+.root :global .slick-slider .slick-arrow::before {
+    content: '';
+}
+
+.root :global .slick-slider .slick-prev {
+    @apply left-[1%]
+        h-[33px];
+}
+
+.root :global .slick-slider .slick-next {
+    @apply right-[3%];
+}
+
+.exploreButton {
+    composes: root_normalPriority from '@app/components/overrides/Button/button.module.css';
+    composes: lg_w-[200px] from global;
+    composes: lg_max-w-[200px] from global;
+    composes: w-fit from global;
+    composes: h-fit from global;
+    composes: justify-self-end from global;
+    composes: gap-2 from global;
+    composes: hidden from global;
+    composes: xs_grid from global;
+    composes: grid-flow-col from global;
+}
+
+.exploreButtonTitle {
+    composes: hidden from global;
+}
+
+.mobileExploreButtonWrapper .exploreButton {
+    @apply ml-auto
+        mr-auto
+        mt-10
+        grid
+        xs_hidden;
+}

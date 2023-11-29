@@ -1,0 +1,86 @@
+.root {
+    composes: flex from global;
+    composes: flex-wrap from global;
+    composes: justify-center from global;
+    composes: sm_justify-start from global;
+}
+
+.sampleProductRoot {
+    composes: min-h-[fit-content] from global;
+    composes: p-2 from global;
+    composes: grid from global;
+    composes: items-center from global;
+    composes: gap-1 from global;
+    composes: bg-white from global;
+    composes: rounded-sm from global;
+    composes: shadow-md from global;
+    composes: justify-between from global;
+    composes: w-[160px] from global;
+    composes: mx-1 from global;
+    composes: mb-2 from global;
+}
+
+.sampleInfoContainer div {
+    @apply flex justify-center;
+}
+
+.sampleName {
+    composes: text-xs from global;
+    composes: font-semibold from global;
+}
+
+.image {
+    composes: h-full from global;
+    composes: object-contain from global;
+    composes: object-center from global;
+    composes: bg-white from global;
+    composes: hover_text-black from global;
+    composes: hover_opacity-60 from global;
+}
+
+.buttonRoot {
+    composes: root_highPriority from '@app/components/overrides/Button/button.module.css';
+    composes: text-xs from global;
+    composes: px-0 from global;
+    composes: w-full from global;
+
+    @apply h-5;
+}
+
+.buttonRoot button {
+    @apply p-0;
+}
+
+.accordionRoot {
+    composes: border-grey-border from global;
+    composes: border-t from global;
+}
+
+.sectionRoot {
+    composes: root from '@app/components/overrides/Accordion/section.module.css';
+
+    @apply border-b;
+}
+
+.sectionTitleWrapper {
+    composes: grid from global;
+    composes: grid-flow-col from global;
+    composes: justify-between from global;
+    composes: min-h-[80px] from global;
+    composes: gap-x-6 from global;
+}
+
+.sectionTitle {
+    composes: grid from global;
+    composes: items-center from global;
+    composes: text-lg from global;
+    composes: lg_text-2xl from global;
+}
+
+.sectionContents {
+    composes: py-4 from global;
+}
+.iconRoot {
+    composes: grid from global;
+    composes: items-center from global;
+}

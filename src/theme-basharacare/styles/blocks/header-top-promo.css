@@ -1,0 +1,55 @@
+.header-top-promo-wrapper {
+    @apply bg-black
+        mb-12.5
+        lg_mb-37;
+}
+
+.header-top-promo {
+    @apply py-2.5;
+}
+
+/* Important for overriding page-builder styles */
+.header-top-promo > div {
+    @apply lg_px-[10%]  !important;
+}
+
+.header-top-promo > div > div {
+    @apply flex-nowrap !important;
+}
+
+/* Important for overriding page-builder styles */
+.header-top-promo .pagebuilder-column {
+    @apply grid
+        gap-1.25
+        lg_gap-2.5
+        place-content-center
+        grid-flow-col !important;
+}
+
+/* Important for overriding page-builder styles */
+.header-top-promo .pagebuilder-column p {
+    @apply mb-0
+        text-xs  !important;
+}
+
+/* Important for overriding page-builder styles */
+.header-top-promo .pagebuilder-column p span {
+    @apply text-xs
+        md_text-xl
+        capitalize
+        font-semibold !important;
+}
+
+.header-top-promo .pagebuilder-column > div {
+    @apply self-center;
+}
+
+.header-top-promo .pagebuilder-column img {
+    @apply h-3
+        lg_h-5
+        m-0;
+}
+
+.header-top-promo .pagebuilder-column figure {
+    @apply self-center;
+}

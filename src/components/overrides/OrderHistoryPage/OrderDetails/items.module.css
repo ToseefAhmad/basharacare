@@ -1,0 +1,14 @@
+.itemsHeader {
+    composes: hidden from global;
+    composes: lg_grid from global;
+    composes: border-b from global;
+    composes: border-black/20 from global;
+    composes: mb-7.5 from global;
+    composes: font-semibold from global;
+    composes: text-sm from global;
+    composes: grid-cols-orderItems from global;
+}
+
+.itemsHeader span {
+    @apply opacity-40;
+}

@@ -1,0 +1,13 @@
+.root {
+    composes: root from './productSort.module.css';
+    composes: h-[64px] from global;
+}
+
+.sortButtonShimmer {
+    composes: root_button from '@magento/venia-ui/lib/components/Shimmer/shimmer.module.css';
+    composes: sortButton from './productSort.module.css';
+    composes: h-[64px] from global;
+    composes: border-0 from global;
+
+    composes: lg_min-w[190px] from global;
+}

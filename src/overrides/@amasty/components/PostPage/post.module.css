@@ -1,0 +1,388 @@
+.title {
+    composes: text-2xl from global;
+    composes: font-headingBold from global;
+    composes: font-semibold from global;
+    composes: flex from global;
+    composes: justify-start from global;
+    composes: flex-wrap from global;
+}
+
+.images {
+    composes: block from global;
+}
+
+.imageContainer {
+    composes: flex from global;
+    composes: justify-center from global;
+    composes: bg-grey-lighter2 from global;
+    composes: animate-none from global;
+}
+
+.imageContainerShimmer {
+    composes: flex from global;
+    composes: justify-center from global;
+    composes: bg-grey-lighter2 from global;
+    composes: animate-pulse from global;
+}
+
+.image {
+    composes: w-full from global;
+    composes: h-full from global;
+    composes: relative from global;
+    composes: block from global;
+    composes: my-0 from global;
+    composes: mx-auto from global;
+    composes: lg_m-0 from global;
+
+    @apply hover_scale-110
+        duration-200;
+}
+
+.image:first-of-type {
+    @apply hidden;
+}
+
+.tagsContainer {
+    composes: mt-3.5 from global;
+    composes: mb-3.5 from global;
+    composes: overflow-scroll from global;
+    composes: min-w-full from global;
+
+    @apply lg_mt-2.5;
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.tagsContainer::-webkit-scrollbar {
+    @apply hidden;
+}
+
+.tags {
+    composes: flex from global;
+    composes: w-max from global;
+}
+
+.tagsItem {
+    composes: uppercase from global;
+    composes: text-xs from global;
+    composes: font-sans from global;
+    composes: text-grey-light from global;
+    composes: py-1 from global;
+    composes: hover_no-underline from global;
+    composes: hover_text-black from global;
+
+    @apply leading-4;
+}
+
+.tags .tagsItem:first-of-type {
+    @apply ltr_pl-0;
+    @apply rtl_pr-0;
+}
+
+.tags .tagsItem::after {
+    content: '•';
+
+    @apply mx-2;
+    @apply text-grey-light;
+}
+
+.tags .tagsItem:last-of-type::after {
+    content: none;
+}
+
+.shortContent {
+    composes: text-base from global;
+    composes: leading-7 from global;
+    composes: pt-3 from global;
+}
+
+.content {
+    composes: text-base from global;
+    composes: leading-7 from global;
+    composes: pt-5 from global;
+    composes: px-4 from global;
+
+    @apply lg_px-0;
+}
+
+.content ul {
+    @apply ltr_ml-4
+        rtl_mr-4;
+    list-style: initial;
+}
+
+.content ol {
+    @apply ml-4;
+    list-style: decimal;
+}
+
+.content p:not(:last-child),
+.content h1:not(:last-child),
+.content h2:not(:last-child),
+.content h3:not(:last-child),
+.content h4:not(:last-child),
+.content h5:not(:last-child),
+.content h6:not(:last-child),
+.content ul:not(:last-child),
+.content ol:not(:last-child) {
+    @apply mb-4;
+}
+
+.date {
+    composes: text-xs from global;
+    composes: text-grey-light from global;
+    composes: font-sans from global;
+    composes: uppercase from global;
+    composes: mt-3 from global;
+    composes: lg_mt-2.5 from global;
+}
+
+.date::first-letter {
+    @apply uppercase;
+}
+
+.footer {
+    composes: pt-1 from global;
+}
+
+.more {
+    composes: text-base from global;
+    composes: font-semibold from global;
+    composes: text-black from global;
+
+    @apply hover_text-grey-dark;
+    composes: hover_no-underline from global;
+}
+
+.features {
+    composes: text-sm from global;
+    composes: leading-5 from global;
+    composes: flex from global;
+    composes: items-center from global;
+    composes: flex-wrap from global;
+    composes: pb-4 from global;
+}
+
+.featuresItem {
+    composes: flex from global;
+    composes: items-center from global;
+    composes: mr-[2.7rem] from global;
+    composes: py-2.5 from global;
+    composes: px-0 from global;
+}
+
+@media (min-width: 768px) {
+    .featuresItem {
+        @apply p-0;
+    }
+}
+
+.featuresLabel {
+    composes: mr-2 from global;
+}
+
+.featuresLink {
+    color: rgb(var(--blog-pro-main-color));
+}
+
+.featuresLink:hover {
+    @apply underline;
+}
+
+.featuresIcon {
+    composes: block from global;
+    composes: mr-2 from global;
+    composes: w-[26px] from global;
+    composes: h-[26px] from global;
+    composes: bg-no-repeat from global;
+    composes: ml-[-2px] from global;
+}
+
+.categories {
+    composes: featuresItem;
+    composes: w-full from global;
+}
+
+@media (min-width: 768px) {
+    .categories {
+        @apply w-auto;
+    }
+}
+
+.categoriesItem {
+    composes: featuresLink;
+}
+
+.categoriesItem:not(:first-child)::before {
+    content: ', ';
+}
+
+.authorIcon {
+    composes: featuresIcon;
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjYiIGhlaWdodD0iMjYiIHZpZXdCb3g9IjAgMCAyNiAyNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjAuMTcyNiAxOC40MzcxQzIxLjMxOTQgMTYuOTI2NiAyMiAxNS4wNDI4IDIyIDEzQzIyIDguMDI5NDQgMTcuOTcwNiA0IDEzIDRDOC4wMjk0NCA0IDQgOC4wMjk0NCA0IDEzQzQgMTUuMDQyOCA0LjY4MDU4IDE2LjkyNjYgNS44MjczNiAxOC40MzcxQzcuMDU3NDcgMTYuNTA3MyA5LjA0NTg3IDE1LjEwNjYgMTEuMzczNSAxNC42NTU1QzkuOTc0OTQgMTQuMDMyMiA5IDEyLjYzIDkgMTFDOSA4Ljc5MDg2IDEwLjc5MDkgNyAxMyA3QzE1LjIwOTEgNyAxNyA4Ljc5MDg2IDE3IDExQzE3IDEyLjYzIDE2LjAyNTEgMTQuMDMyMiAxNC42MjY1IDE0LjY1NTVDMTYuOTU0MSAxNS4xMDY2IDE4Ljk0MjUgMTYuNTA3MyAyMC4xNzI2IDE4LjQzNzFaTTE5LjQ4ODkgMTkuMjM2NUMxOC4xODk1IDE3LjAwMTIgMTUuNzY5NyAxNS41IDEzIDE1LjVDMTAuMjMwMyAxNS41IDcuODEwNTEgMTcuMDAxMiA2LjUxMTA5IDE5LjIzNjVDOC4xNDg2NSAyMC45Mzk5IDEwLjQ1MDUgMjIgMTMgMjJDMTUuNTQ5NSAyMiAxNy44NTE0IDIwLjkzOTkgMTkuNDg4OSAxOS4yMzY1Wk0xMyAyM0MxOC41MjI4IDIzIDIzIDE4LjUyMjggMjMgMTNDMjMgNy40NzcxNSAxOC41MjI4IDMgMTMgM0M3LjQ3NzE1IDMgMyA3LjQ3NzE1IDMgMTNDMyAxOC41MjI4IDcuNDc3MTUgMjMgMTMgMjNaTTEzIDE0QzE0LjY1NjkgMTQgMTYgMTIuNjU2OSAxNiAxMUMxNiA5LjM0MzE1IDE0LjY1NjkgOCAxMyA4QzExLjM0MzEgOCAxMCA5LjM0MzE1IDEwIDExQzEwIDEyLjY1NjkgMTEuMzQzMSAxNCAxMyAxNFoiIGZpbGw9IiMyMTIxMjEiLz4KPC9zdmc+Cg==');
+}
+
+.author {
+    composes: featuresItem;
+    composes: mr-0.5 from global;
+}
+
+.authorPosts {
+    composes: featuresItem;
+}
+
+.authorItem {
+    composes: featuresLink;
+}
+
+.comments {
+    composes: featuresItem;
+}
+
+.commentsLink {
+    composes: featuresLink;
+}
+
+.commentsIcon {
+    composes: featuresIcon;
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjYiIGhlaWdodD0iMjYiIHZpZXdCb3g9IjAgMCAyNiAyNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjMgNVYxNUgyMVY4QzIxIDcuNDQ3NzIgMjAuNTUyMyA3IDIwIDdINlY1SDIzWk01IDdIM0MyLjQ0NzcyIDcgMiA3LjQ0NzcyIDIgOFYxOEMyIDE4LjU1MjMgMi40NDc3MiAxOSAzIDE5SDExTDE1LjQ0NTMgMjEuOTYzNUMxNi4xMDk5IDIyLjQwNjYgMTcgMjEuOTMwMiAxNyAyMS4xMzE1VjIwVjE5SDE4SDIwQzIwLjU1MjMgMTkgMjEgMTguNTUyMyAyMSAxOFYxNkgyM0MyMy41NTIzIDE2IDI0IDE1LjU1MjMgMjQgMTVWNUMyNCA0LjQ0NzcyIDIzLjU1MjMgNCAyMyA0SDZDNS40NDc3MiA0IDUgNC40NDc3MiA1IDVWN1pNMTEuNTU0NyAxOC4xNjc5TDExLjMwMjggMThIMTFIM1Y4SDIwVjE4SDE3SDE2VjE5VjIxLjEzMTVMMTEuNTU0NyAxOC4xNjc5WiIgZmlsbD0iIzIxMjEyMSIvPgo8L3N2Zz4K');
+}
+
+.printButton {
+    composes: featuresLink;
+    composes: outline-none from global;
+}
+
+.printIcon {
+    composes: featuresIcon;
+    color: rgb(var(--venia-global-color-text));
+    composes: mr-0 from global;
+}
+
+.printIcon svg {
+    @apply stroke-1;
+}
+
+.printButton:hover {
+    @apply underline;
+}
+
+.breadcrumbs {
+    composes: breadcrumbs from '../root.module.css';
+}
+
+.heading {
+    composes: heading from '../root.module.css';
+}
+
+.main {
+    composes: main from '../root.module.css';
+    composes: container from global;
+    composes: mt-10 from global;
+    composes: lg_mt-15 from global;
+
+    @apply px-0
+        lg_px-12;
+    grid-area: post;
+}
+
+.postBreadcrumbs {
+    composes: root from '../Breadcrumbs/breadcrumbs.module.css';
+    composes: bg-transparent from global;
+    composes: p-0 from global;
+    composes: z-0 from global;
+}
+
+.postBreadCrumbsShimmer {
+    composes: container from global;
+
+    @apply px-4 lg_px-12;
+}
+
+.postTags {
+    composes: tags;
+    composes: px-4 from global;
+
+    @apply lg_px-0;
+    @apply mt-0 mb-3
+        lg_mb-6;
+}
+
+.postTitle {
+    composes: font-headingBold from global;
+    composes: font-semibold from global;
+    composes: flex from global;
+    composes: justify-start from global;
+    composes: flex-wrap from global;
+    composes: px-4 from global;
+
+    @apply lg_px-0;
+}
+
+.postDate {
+    composes: date;
+    composes: mt-3 from global;
+    composes: mb-7.5 from global;
+    composes: lg_mb-7.5 from global;
+    composes: px-4 from global;
+
+    @apply lg_px-0;
+    @apply lg_mt-2.5;
+}
+
+.postImages {
+    composes: block from global;
+}
+
+.postImageContainer {
+    composes: h-auto from global;
+    composes: flex from global;
+    composes: relative from global;
+    composes: justify-center from global;
+}
+
+.postImage {
+    composes: w-full from global;
+    composes: h-full from global;
+    composes: relative from global;
+    composes: block from global;
+    composes: my-0 from global;
+}
+
+.postImagePlaceholder {
+    composes: hidden from global;
+}
+
+.shareBlockTop {
+    composes: flex from global;
+    composes: flex-wrap from global;
+    composes: mt-10 from global;
+    composes: lg_mt-12.5 from global;
+    composes: px-4 from global;
+
+    @apply lg_px-0;
+}
+
+.shareBlockBottom {
+    composes: flex from global;
+    composes: flex-wrap from global;
+    composes: px-4 from global;
+
+    @apply lg_px-0;
+    @apply mt-10
+        lg_mt-17
+        mb-20
+        lg_mb-27;
+}
+
+.shareTitle {
+    composes: uppercase from global;
+    composes: text-center from global;
+    composes: text-grey-light from global;
+    composes: font-semibold from global;
+
+    @apply ltr_mr-4
+        rtl_ml-4;
+    @apply mt-[4px];
+}

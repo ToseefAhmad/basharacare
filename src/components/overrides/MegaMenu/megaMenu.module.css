@@ -1,0 +1,7 @@
+.megaMenu {
+    composes: hidden from global;
+    composes: whitespace-nowrap from global;
+    composes: lg_flex from global;
+    composes: h-full from global;
+    composes: items-center from global;
+}

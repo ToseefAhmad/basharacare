@@ -1,0 +1,5 @@
+.textInput {
+    composes: input from '@app/components/overrides/TextInput/textInput.module.css';
+
+    @apply h-10;
+}

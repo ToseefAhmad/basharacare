@@ -1,0 +1,10 @@
+.root {
+    composes: grid from global;
+    compsoes: content-start from global;
+    composes: mb-3.5 from global;
+}
+
+.label {
+    composes: items-center from global;
+    composes: flex from global;
+}

@@ -1,0 +1,73 @@
+.root {
+    composes: grid-cols-1 from global;
+    composes: pt-[88px] from global;
+    composes: pb-12 from global;
+    composes: container from global;
+    composes: grid from global;
+    composes: md_gap-[60px] from global;
+
+    composes: md_grid-cols-3 from global;
+}
+
+.topBar {
+    composes: topBar from '@app/components/overrides/CheckoutPage/checkoutPage.module.css';
+}
+
+.mainContainer {
+    composes: col-span-2 from global;
+    composes: grid from global;
+    composes: gap-y-8 from global;
+}
+
+.orderNumber {
+    composes: font-semibold from global;
+}
+
+.orderSucessText {
+    composes: font-semibold from global;
+}
+
+.shippingInfoHeading {
+    composes: font-semibold from global;
+}
+
+.deliveryInfoHeading {
+    composes: font-semibold from global;
+}
+
+.shippingInfo {
+    composes: grid from global;
+}
+
+.deliveryInfo {
+    composes: grid from global;
+    composes: gap-2 from global;
+}
+
+.deliveryInfoLabel {
+    composes: font-semibold from global;
+}
+
+.shippingAddress {
+    composes: grid from global;
+}
+
+.shippingMethodHeading {
+    composes: font-semibold from global;
+}
+
+.orderInfoContainer {
+    composes: border-2 from global;
+    composes: border-grey-border from global;
+    composes: rounded-md from global;
+    composes: grid from global;
+    composes: lg_grid-flow-col from global;
+    composes: gap-8 from global;
+    composes: py-6 from global;
+    composes: px-8 from global;
+}
+
+.continueButton {
+    composes: root_highPriority from '@app/components/overrides/Button/button.module.css';
+    composes: w-full from global;
+}

@@ -1,0 +1,384 @@
+.root {
+    composes: my-0 from global;
+}
+
+.root h2 {
+    @apply font-headingBold;
+}
+
+:global(.contact-us #main) {
+    @apply bg-white
+        md_bg-transparent;
+}
+
+.root input {
+    @apply py-[12px];
+}
+
+.root input:focus {
+    @apply bg-transparent;
+}
+
+.root input:active {
+    @apply bg-transparent;
+}
+.root > div:nth-child(1) {
+    @apply m-0;
+}
+
+.root > div:nth-child(2) > div:nth-child(1) {
+    @apply md_flex-shrink-0;
+}
+
+.title {
+    composes: text-4xl from global;
+    composes: font-normal from global;
+    composes: !text-left from global;
+    composes: w-[100vw] from global;
+    composes: h-[186px] from global;
+    composes: md_h-[217px] from global;
+    composes: bg-purple-lighter from global;
+    composes: relative from global;
+    composes: left-[50%] from global;
+    composes: right-[50%] from global;
+    composes: flex from global;
+    margin-left: -50vw;
+    margin-right: -50vw;
+}
+
+.root :global(.titleBlock) {
+    @apply md_px-0;
+}
+
+.title > div {
+    @apply m-0
+        pl-4
+        md_!pl-[60px]
+        pt-[80px]
+        md_pt-[70px]
+        md_container;
+}
+
+.title > div > div > div {
+    @apply !flex-row
+        items-baseline
+        gap-1;
+}
+
+.title p {
+    @apply text-black
+        text-4xl
+        md_text-5xl
+        leading-[48px];
+}
+
+.title > div > div > div > div:nth-child(1) h2 {
+    @apply text-black
+        text-4xl
+        leading-[48px]
+        md_text-5xl;
+}
+
+.subtitle {
+    composes: mb-4 from global;
+}
+
+.content {
+    composes: container from global;
+    composes: flex from global;
+    composes: justify-start from global;
+    composes: flex-wrap from global;
+    composes: md_flex-nowrap from global;
+    composes: md_grid from global;
+    composes: md_grid-flow-col from global;
+    composes: lg_flex from global;
+    composes: w-[fit-content] from global;
+    composes: flex-col-reverse from global;
+    composes: md_flex-row from global;
+    composes: pt-[65px] from global;
+    composes: pb-[5%] from global;
+    composes: md_py-[60px] from global;
+    composes: lg_py-[120px] from global;
+}
+
+[class*='contactPage-content'] {
+    @apply w-full;
+}
+
+.content > div:nth-of-type(1) {
+    @apply w-full
+        md_w-[fit-content];
+}
+
+.content > div:nth-of-type(2) {
+    @apply w-full
+        md_w-[fit-content];
+}
+
+.formContainer p {
+    @apply text-black;
+}
+
+.formContainer a {
+    @apply font-bold;
+}
+
+.form {
+    composes: grid from global;
+    composes: pt-8 from global;
+}
+
+.form label {
+    @apply hidden;
+}
+
+.form input {
+    @apply text-black;
+}
+
+.form input::placeholder {
+    @apply text-black;
+}
+
+.form textarea::placeholder {
+    @apply text-black;
+}
+
+.formErrors {
+    composes: border-red-500 from global;
+    composes: border-solid from global;
+    composes: border-t-0 from global;
+    composes: border-r-0 from global;
+    composes: border-b-0 from global;
+    composes: border-l-[5px] from global;
+    composes: py-4 from global;
+    composes: pr-0 from global;
+    composes: pl-4 from global;
+    composes: grid from global;
+    composes: col-span-1 from global;
+}
+
+.submitLoadingContainer {
+    composes: absolute from global;
+    composes: top-0 from global;
+    composes: left-0 from global;
+    composes: w-full from global;
+    composes: h-full from global;
+    composes: z-10 from global;
+    composes: bg-white from global;
+    composes: bg-opacity-75 from global;
+}
+
+.loadingContainer {
+    composes: absolute from global;
+    composes: top-[25%] from global;
+    composes: left-0 from global;
+    composes: w-full from global;
+    composes: z-10 from global;
+    composes: bg-white from global;
+    composes: md_bg-grey-lightest from global;
+    composes: bg-opacity-75 from global;
+}
+
+.buttonsContainer {
+    composes: px-0 from global;
+    composes: py-4 from global;
+    composes: text-center from global;
+    composes: md_text-left from global;
+}
+
+.bannerBlock {
+    composes: flex from global;
+    composes: flex-col from global;
+    composes: justify-start from global;
+    composes: text-start from global;
+}
+
+.bannerBlock > div {
+    @apply m-0 p-0;
+}
+
+.bannerBlock > div:nth-of-type(2) {
+    @apply md_pt-4;
+}
+
+.root :global .bannerRowOne > div {
+    @apply !flex-row items-baseline
+        text-2xl
+        mb-4
+        md_text-4xl;
+}
+
+.root :global .bannerRowOne,
+.root :global .bannerRowTwo {
+    @apply px-0;
+}
+
+.root :global .sideBannerRowTwo,
+.root :global .sideBannerRowOne {
+    @apply px-0 md_px-4;
+}
+
+.root :global .bannerRowOne > div h2 {
+    @apply text-2xl
+        md_text-4xl;
+}
+
+.root :global .bannerRowTwo p {
+    @apply items-baseline
+        text-base
+        md_text-lg;
+}
+
+.root form div {
+    @apply mb-4;
+}
+
+.root form div:nth-last-of-type(2) {
+    @apply mb-2;
+}
+
+.root form div:nth-last-of-type(2) div {
+    @apply mb-0;
+}
+
+.root form div:nth-last-of-type(2) div textarea {
+    @apply h-[70px];
+}
+
+.root form div:nth-last-of-type(1) {
+    @apply py-0;
+}
+
+.sideBannerBlock {
+    composes: md_w-full from global;
+    composes: md_bg-white from global;
+    composes: flex from global;
+    composes: flex-col from global;
+    composes: justify-start from global;
+    composes: md_pt-[130px] from global;
+    composes: md_pb-[130px] from global;
+    composes: md_pl-[50px] from global;
+    composes: md_pr-[50px] from global;
+}
+
+.root > div:nth-of-type(2) {
+    @apply md_w-full;
+}
+
+.formContainer {
+    @apply md_flex-shrink
+        relative
+        md_ml-[7%]
+        lg_ml-[10%]
+        md_mr-[3%];
+}
+
+.formContainer > div:nth-of-type(1) {
+    @apply m-0;
+}
+
+.buttonsContainer button {
+    @apply w-[100%]
+        bg-transparent
+        text-black
+        border-black
+        border border-solid
+        border-opacity-[0.15]
+        outline-none;
+}
+
+.buttonsContainer button:hover {
+    @apply text-white
+        bg-black;
+}
+
+.buttonsContainer button:focus {
+    @apply text-white
+        bg-black;
+}
+
+.buttonsContainer button:active {
+    @apply text-white
+        bg-black;
+}
+
+.content > div:nth-of-type(1) {
+    @apply m-0;
+}
+
+.sideBannerBlock > div {
+    @apply m-0
+        p-0;
+}
+
+.sideBannerBlock p {
+    @apply text-black;
+}
+
+.root :global .sideBannerRowOne > div {
+    @apply !flex-row
+        mb-4
+        items-baseline;
+}
+
+.root :global .sideBannerRowOne h2 {
+    @apply text-2xl;
+}
+
+.root :global .sideBannerRowOne p {
+    @apply text-2xl;
+}
+
+.root :global .sideBannerRowOne > div {
+    @apply flex-wrap;
+}
+
+.root :global .sideBannerRowTwo {
+    @apply md_pt-8;
+}
+
+.root :global .sideBannerRowTwo > div > div:nth-of-type(2) {
+    @apply mt-10
+        md_mt-6;
+}
+
+.root :global .sideBannerRowTwo > div > div:nth-of-type(2) p {
+    @apply text-2xl
+        leading-10
+        md_font-bold
+        md_text-lg
+        md_leading-7;
+}
+
+.root :global .sideBannerRowTwo > div > div:nth-of-type(3) p {
+    @apply md_text-xs;
+}
+
+:root :global .bannerRowOne > div:first-child {
+    @apply md_flex-wrap;
+}
+
+[class*='contactPage-sideBannerBlock'] > div[class*='richContent-root'] {
+    @apply md_max-w-[300px];
+}
+
+/* This is a fix applied for the text under the e-mail input field
+when 2 validations are applied. */
+[class*='contactPage-form'] > div[class*='field-root']:nth-of-type(2) p {
+    @apply flex;
+}
+
+[class*='contactPage-form'] > div[class*='field-root'] p {
+    @apply text-[red];
+}
+
+/* This is a fix applied for a special -*- mark to match a required e-mail input field
+when 2 validations are applied. */
+[class*='contactPage-form'] > div[class*='field-root']:nth-of-type(2) [class*='textInput-isRequired'] {
+    @apply flex;
+}
+
+.headingContainer {
+    composes: headingContainer from '@app/RootComponents/CMS/cms.module.css';
+}

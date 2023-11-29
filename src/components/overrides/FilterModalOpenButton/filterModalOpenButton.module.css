@@ -1,0 +1,8 @@
+.filterButton {
+    composes: root_normalPriority from '@app/components/overrides/Button/button.module.css';
+    composes: w-full from global;
+    composes: gap-x-[10px] from global;
+    composes: border-opacity-20 from global;
+
+    composes: lg_hidden from global;
+}

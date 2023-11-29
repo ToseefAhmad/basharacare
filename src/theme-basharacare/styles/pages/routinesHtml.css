@@ -1,0 +1,55 @@
+.cms-routines #main {
+    @apply bg-category-face m-0 p-0;
+}
+
+.cms-routines article {
+    @apply p-0;
+}
+
+.cms-routines .header-row {
+    @apply border-b-4 border-white mix-blend-multiply;
+}
+
+.cms-routines .content-row {
+    @apply border-t-[5px] border-white lg_py-[105px] py-[50px] overflow-hidden;
+}
+
+.cms-routines h1 {
+    @apply flex items-center;
+}
+
+.cms-routines h1 img {
+    @apply w-[43px] h-[43px] hover_animate-spin;
+}
+
+.cms-routines .routine-links ul {
+    @apply grid grid-flow-col gap-[15px] justify-start whitespace-nowrap overflow-auto;
+}
+
+.cms-routines .routine-links ul::-webkit-scrollbar {
+    @apply h-[2px];
+}
+
+.cms-routines .routine-links ul::-webkit-scrollbar-thumb {
+    @apply bg-black;
+}
+
+.cms-routines .routine-links ul li {
+    @apply w-[min-content] relative mb-1 min-h-[35px];
+}
+
+.cms-routines .routine-links ul li a {
+    @apply no-underline font-normal hover_underline;
+}
+
+.cms-routines .routine-links ul li:first-child a {
+    @apply font-semibold;
+}
+
+.cms-routines .routine-links ul li::before {
+    @apply content-none;
+}
+
+.cms-routines .routine-links ul li:hover::before {
+    @apply h-1 w-1 bg-black rounded-sm absolute bottom-0 left-[50%] mx-auto mt-4 content-[''];
+}

@@ -1,0 +1,44 @@
+.root {
+    composes: grid from global;
+    composes: gap-2 from global;
+    composes: w-full from global;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+}
+
+.field {
+    grid-column-end: span 2;
+}
+
+.email,
+.passwordLabel {
+    composes: field;
+}
+
+.buttons {
+    composes: field;
+    display: grid;
+    gap: 1rem;
+    grid-auto-flow: column;
+    justify-self: center;
+    padding: 1rem;
+}
+
+.changePasswordButtonContainer {
+    padding-top: 1rem;
+}
+
+@media (max-width: 960px) {
+    .firstname,
+    .lastname,
+    .password,
+    .newPassword,
+    .dob {
+        grid-column: 1 / span 2;
+    }
+}
+
+.selectField span {
+    @apply mt-0
+        h-[56px];
+}

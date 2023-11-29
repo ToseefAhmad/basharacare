@@ -1,0 +1,1 @@
+export { handleCustomerGroupLink } from './customerGroupLink';

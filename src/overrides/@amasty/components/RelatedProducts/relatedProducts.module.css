@@ -1,0 +1,55 @@
+.sliderTitle {
+    composes: flex from global;
+    composes: flex-wrap from global;
+    composes: font-sans from global;
+    composes: px-2 from global;
+}
+
+.sliderTitleBold {
+    composes: font-headingBold from global;
+
+    @apply ltr_mr-2 rtl_ml-2;
+}
+
+.relatedProductsTitle {
+    composes: text-4xl from global;
+    composes: font-sans from global;
+    composes: mb-5 from global;
+    composes: flex from global;
+}
+
+.relatedProducts {
+    composes: rtl_justify-right from global;
+    composes: container from global;
+    composes: overflow-hidden from global;
+    composes: w-full from global;
+    composes: pb-20 from global;
+
+    @apply lg_pb-27;
+    @apply px-4 lg_px-0;
+}
+
+.relatedProducts a {
+    @apply no-underline;
+}
+
+.productBrandName {
+    @apply text-base font-bold text-xs;
+    composes: hover_opacity-80 from global;
+    composes: tracking-widest from global;
+    composes: text-purple-lighter from global;
+    composes: font-sans from global;
+    composes: uppercase from global;
+}
+
+.productName {
+    composes: text-sm from global;
+    composes: lg_text-base from global;
+    composes: font-sans from global;
+    composes: font-semibold from global;
+    composes: text-center from global;
+    composes: leading-[1.75rem] from global;
+    composes: pt-1.25 from global;
+    composes: hover_opacity-80 from global;
+    composes: hover_no-underline from global;
+}

@@ -1,0 +1,74 @@
+.root {
+    composes: flex-start from global;
+    composes: border-2 from global;
+    composes: border-purple from global;
+    composes: rounded-md from global;
+    composes: shadow-none from global;
+    composes: cursor-pointer from global;
+    composes: grid from global;
+    composes: py-4 from global;
+    composes: px-6 from global;
+    composes: gap-y-2 from global;
+    composes: transition-colors from global;
+    composes: duration-300 from global;
+    composes: hover_border-grey from global;
+    composes: focus_shadow-2xl from global;
+    composes: focus_shadow-slate-purple from global;
+}
+
+.root_selected {
+    composes: root;
+    composes: shadow-2xl from global;
+
+    @apply border-grey
+        cursor-default;
+}
+
+.root_updated {
+    animation: flash var(--venia-global-anim-bounce) 640ms 2;
+
+    composes: root_selected;
+}
+
+@keyframes flash {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.actionsContainer {
+    composes: flex from global;
+}
+
+.editButton {
+    composes: ml-[auto] from global;
+
+    composes: rtl_mr-[auto] from global;
+}
+
+.defaultBadge {
+    composes: w-[max-content] from global;
+    composes: px-4 from global;
+    composes: py-1 from global;
+    composes: mb-1 from global;
+    composes: border-2 from global;
+    composes: border-grey from global;
+    composes: rounded-md from global;
+    composes: text-xs from global;
+    composes: font-semibold from global;
+}
+
+.name {
+    composes: font-semibold from global;
+}
+
+.address {
+    composes: grid from global;
+    composes: gap-2 from global;
+}

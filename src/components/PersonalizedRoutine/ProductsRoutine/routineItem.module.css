@@ -1,0 +1,139 @@
+.root {
+    composes: grid from global;
+    composes: mb-5 from global;
+    composes: lg_mb-0 from global;
+}
+
+.itemsCard {
+    composes: pb-5 from global;
+    composes: pt-5 from global;
+    composes: md_pt-12.5 from global;
+    composes: p-3 from global;
+    composes: bg-white from global;
+    composes: grid from global;
+    composes: grid-cols-2 from global;
+    composes: md_grid-cols-1 from global;
+
+    composes: max-h-[min-content] from global;
+    composes: min-h-[230px] from global;
+    composes: md_min-h-[400px] from global;
+}
+
+.imageContainer {
+    composes: mx-2.5 from global;
+    composes: md_mx-12.5 from global;
+    composes: md_mb-7.5 from global;
+}
+
+.images {
+    composes: grid from global;
+}
+
+.image {
+    composes: block from global;
+    composes: h-full from global;
+    composes: object-contain from global;
+    composes: w-full from global;
+    composes: hover_opacity-80 from global;
+}
+
+.imageLoaded {
+    composes: loaded from '@magento/venia-ui/lib/components/Image/image.module.css';
+    composes: opacity-100 from global;
+}
+
+.imageNotLoaded {
+    composes: notLoaded from '@magento/venia-ui/lib/components/Image/image.module.css';
+    composes: opacity-0 from global;
+}
+
+.imagePlaceholder {
+    composes: image;
+    composes: bg-grey from global;
+}
+
+.namePriceContainer {
+    composes: grid from global;
+    composes: text-left from global;
+    composes: self-start from global;
+}
+
+.brandName {
+    @apply text-base
+        font-bold
+        md_text-xs
+        text-brown;
+    composes: hover_opacity-80 from global;
+    composes: hover_underline from global;
+    composes: tracking-widest from global;
+    composes: font-sans from global;
+    composes: uppercase from global;
+}
+
+.name {
+    composes: text-sm from global;
+    composes: font-semibold from global;
+    composes: mb-[5px] from global;
+}
+
+.description {
+    composes: border from global;
+    composes: border-grey-lighter from global;
+    composes: md_hover_border-grey-light from global;
+    composes: focus_outline-none from global;
+    composes: focus_border-black from global;
+    composes: w-full from global;
+    composes: bg-transparent from global;
+}
+
+.addToCartButtonWrapper {
+    composes: w-[133px] from global;
+    composes: h-10 from global;
+    composes: justify-self-end from global;
+    composes: rtl_justify-self-start from global;
+
+    composes: lg_w-[160px] from global;
+}
+
+.addToCartButtonWrapper {
+    composes: w-[133px] from global;
+
+    composes: lg_w-[160px] from global;
+}
+
+.addToCartButtonWrapper:empty {
+    @apply hidden;
+}
+
+.addToCart {
+    composes: root from '@magento/venia-ui/lib/components/clickable.module.css';
+    composes: uppercase from global;
+    composes: font-semibold from global;
+    composes: tracking-1px from global;
+    composes: duration-[250ms] from global;
+    composes: transition-colors from global;
+    composes: ease-linear from global;
+    composes: disabled_bg-grey-lighter from global;
+    composes: disabled_text-grey from global;
+    composes: disabled_cursor-not-allowed from global;
+    composes: disabled_hover_bg-grey-lighter from global;
+    composes: disabled_hover_text-grey from global;
+
+    composes: text-white from global;
+    composes: bg-black from global;
+    composes: xl_hover_bg-white from global;
+    composes: xl_hover_text-black from global;
+    composes: xl_hover_border from global;
+    composes: xl_hover_border-black from global;
+    composes: xl_hover_border-solid from global;
+    composes: xl_focus_bg-purple from global;
+    composes: xl_active_bg-purple from global;
+    composes: outline-none from global;
+
+    composes: h-full from global;
+    composes: w-full from global;
+}
+
+.text {
+    composes: text-sm from global;
+}

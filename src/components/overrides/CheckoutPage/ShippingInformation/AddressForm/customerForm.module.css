@@ -1,0 +1,67 @@
+.root {
+    composes: grid-cols-2 from global;
+    composes: grid from global;
+    composes: gap-4 from global;
+    composes: w-full from global;
+}
+
+.field {
+    composes: col-span-2 from global;
+}
+
+.formMessage,
+.email,
+.country,
+.street0,
+.street1,
+.city,
+.region,
+.postcode,
+.telephone {
+    composes: field;
+}
+
+.defaultShipping {
+    composes: field;
+    composes: pt-4 from global;
+}
+
+.firstname,
+.lastname {
+    composes: col-span-2 from global;
+    composes: lg_col-span-1 from global;
+}
+
+.buttons {
+    composes: pb-4 from global;
+    composes: field;
+    composes: grid from global;
+    composes: gap-4 from global;
+    composes: grid-flow-col from global;
+    composes: self-center from global;
+    composes: p-4 from global;
+}
+
+.textInput {
+    composes: input from '@app/components/overrides/TextInput/textInput.module.css';
+
+    @apply h-10;
+}
+
+.countryRoot {
+    composes: w-full from global;
+}
+
+.countryRoot select {
+    @apply w-full appearance-none  outline-none;
+}
+
+.cityRoot {
+    composes: countryRoot;
+}
+
+.cityInput {
+    composes: input from '@app/components/overrides/Select/select.module.css';
+
+    @apply h-[40px];
+}

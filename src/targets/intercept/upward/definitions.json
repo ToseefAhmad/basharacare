@@ -1,0 +1,87 @@
+{
+    "veniaResponse": {
+        "when": {
+            "2": {
+                "matches": "request.url.pathname",
+                "pattern": "^/(sw\\.js)",
+                "use": "veniaStaticRoot"
+            },
+            "3": {
+                "matches": "fileExtension",
+                "pattern": "(js|json|png|jpg|gif|svg|ico|css|txt|woff|woff2)",
+                "use": "veniaStatic"
+            }
+        }
+    },
+    "veniaSecurityHeaders": {
+        "inline": {
+            "content-security-policy": {
+                "template": {
+                    "when": {
+                        "1": {
+                            "use": {
+                                "inline": "style-src 'self' blob: https: 'unsafe-inline' {{ backend }}; img-src data: http: https: blob: *.yieldify.com *.yieldify-production.com; object-src 'none'; base-uri 'none'; child-src 'self' *.yieldify.com 'about:blank'; font-src 'self' fonts.gstatic.com use.typekit.net applepay.cdn-apple.com cdn.tamara.co cdn.tabby.ai *.yieldify-production.com; frame-src assets.braintreegateway.com *.youtube.com *.youtu.be *.vimeo.com *.google.com *.paypal.com *.adyen.com *.googletagmanager.com *.mxapis.com *.facebook.com *.hotjar.com *.snapchat.com *.addthis.com *.creativecdn.com *.yieldify.com 'about:blank'; default-src: *.yieldify.com *.yieldify-production.com; script-src: *.yieldify.com 'unsafe-inline'; connect-src: *.yieldify.com *.yieldify-production.com; connect-src: blob;"
+                            }
+                        }
+                    },
+                    "default": {
+                        "inline": "style-src 'self' blob: https: 'unsafe-inline' {{ backend }}; img-src data: http: https: blob: *.yieldify.com *.yieldify-production.com; object-src 'none'; base-uri 'none'; child-src 'self' *.yieldify.com 'about:blank'; font-src 'self' fonts.gstatic.com use.typekit.net applepay.cdn-apple.com cdn.tamara.co cdn.tabby.ai *.yieldify-production.com; frame-src assets.braintreegateway.com *.youtube.com *.youtu.be *.vimeo.com *.google.com *.paypal.com *.adyen.com *.googletagmanager.com *.mxapis.com *.facebook.com *.hotjar.com *.snapchat.com *.addthis.com *.creativecdn.com *.yieldify.com 'about:blank'; default-src: *.yieldify.com *.yieldify-production.com; script-src: *.yieldify.com 'unsafe-inline'; connect-src: *.yieldify.com *.yieldify-production.com; connect-src: blob;"
+                    }
+                }
+            }
+        }
+    },
+    "veniaAppShell": {
+        "inline": {
+            "headers": {
+                "inline": {
+                    "upward-response": {
+                        "inline": "true"
+                    }
+                }
+            },
+            "body": {
+                "provide": {
+                    "gtmId": "gtmId.value",
+                    "fbPixelId": "fbPixelId.value",
+                    "tikTokPixelId": "tikTokPixelId.value"
+                }
+            }
+        }
+    },
+    "staticFromRoot": {
+        "inline": {
+            "body": {
+                "file": {
+                    "template": {
+                        "inline": "./static-files/{{ filename }}"
+                    }
+                }
+            }
+        }
+    },
+    "veniaStaticRoot": {
+        "resolver": "directory",
+        "directory": {
+            "resolver": "inline",
+            "inline": "."
+        }
+    },
+    "veniaPageType": {
+        "resolver": "inline",
+        "inline": {
+            "data": {
+                "additional": {
+                    "3": {
+                        "type": "shop_by_attribute",
+                        "fetch": "url_page"
+                    },
+                    "4": {
+                        "type": "shop_by_attribute_option",
+                        "fetch": "option_id,description,filter_code,url_alias,meta_title,meta_description,meta_keywords,value,image,top_cms_block_identifier,bottom_cms_block_identifier,is_new_arrivals"
+                    }
+                }
+            }
+        }
+    }
+}

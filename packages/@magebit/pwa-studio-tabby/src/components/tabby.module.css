@@ -1,0 +1,7 @@
+.root {
+    composes: mt-4 from global;
+}
+
+.billingAddressCheckbox {
+    composes: mt-4 from global;
+}

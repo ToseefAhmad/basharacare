@@ -1,0 +1,35 @@
+.root {
+    composes: hidden from global;
+    composes: text-white from global;
+    composes: relative from global;
+    composes: h-12 from global;
+}
+
+/* Large screen styles */
+.root {
+    composes: lg_block from global;
+    composes: lg_hover_opacity-75 from global;
+    composes: lg_ltr_ml-2.5 from global;
+    composes: lg_rtl_mr-2.5 from global;
+}
+
+.iconRoot {
+    composes: root from '@magento/venia-ui/lib/components/Icon/icon.module.css';
+}
+
+.counter {
+    composes: top-2.5 from global;
+    composes: absolute from global;
+    composes: left-2.5 from global;
+    composes: font-semibold from global;
+    composes: box-border from global;
+    composes: py-0 from global;
+    composes: px-1 from global;
+    composes: bg-blend-normal from global;
+    composes: rounded-full from global;
+    composes: text-xxxs from global;
+    composes: text-black from global;
+    composes: bg-white from global;
+    composes: min-w-3 from global;
+    composes: h-3 from global;
+}

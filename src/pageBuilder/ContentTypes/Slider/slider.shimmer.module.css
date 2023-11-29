@@ -1,0 +1,7 @@
+.shimmerRoot {
+    composes: root_rectangle from '~@magento/venia-ui/lib/components/Shimmer/shimmer.module.css';
+    composes: root from '~@magento/pagebuilder/lib/ContentTypes/Slider/slider.module.css';
+
+    @apply block
+        min-h-[200px];
+}

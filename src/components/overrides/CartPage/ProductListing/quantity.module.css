@@ -1,0 +1,86 @@
+.root {
+    --stroke: var(--venia-global-color-gray-600);
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 4rem 1fr;
+    align-items: center;
+    justify-items: center;
+
+    composes: border from global;
+    composes: border-grey-lighter from global;
+}
+.rootHidden {
+    composes: root;
+    composes: invisible from global;
+}
+
+.wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.label:not(:focus):not(:active) {
+    position: absolute;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    clip: rect(0 0 0 0);
+    clip-path: inset(100%);
+    white-space: nowrap;
+}
+
+.button {
+    align-items: center;
+    display: inline-flex;
+    height: 100%;
+    justify-content: center;
+    width: 2rem;
+
+    composes: px-3.5 from global;
+    composes: text-black from global;
+    composes: bg-transparent from global;
+}
+
+.button:hover {
+    --stroke: rgb(var(--venia-global-color-gray-900));
+    border-color: rgb(var(--stroke));
+}
+
+.button:disabled,
+.button:disabled:hover {
+    --stroke: rgb(var(--venia-global-color-gray-400));
+    border-color: rgb(var(--venia-global-color-gray-400));
+}
+
+.button:disabled {
+    cursor: not-allowed;
+}
+
+.button:focus {
+    outline: none;
+}
+
+.button_decrement {
+    composes: button;
+}
+
+.button_increment {
+    composes: button;
+}
+
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    touch-action: manipulation;
+    composes: text-black from global;
+}
+
+.input {
+    composes: input from '@magento/venia-ui/lib/components/TextInput/textInput.module.css';
+    composes: py-0 from global;
+    composes: text-center from global;
+    composes: border-none from global;
+    composes: font-semibold from global;
+}

@@ -1,0 +1,61 @@
+.root {
+    composes: grid from global;
+    composes: lg_grid-cols-5 from global;
+    composes: gap-4 from global;
+    composes: lg_gap-2 from global;
+    composes: border-t from global;
+    composes: border-black/20 from global;
+    composes: pt-7.5 from global;
+    composes: text-sm from global;
+    composes: border-t from global;
+}
+
+.root_expanded {
+    composes: root;
+}
+
+.createdLabel,
+.productNameLabel,
+.ratingLabel,
+.reviewLabel {
+    composes: lg_hidden from global;
+    composes: text-black/40 from global;
+    composes: font-semibold from global;
+    composes: text-sm from global;
+}
+
+.createdContainer,
+.productNameContainer,
+.ratingContainer,
+.reviewContainer {
+    composes: overflow-hidden from global;
+    composes: grid from global;
+    composes: grid-cols-[40%1fr] from global;
+    composes: lg_grid-cols-1 from global;
+}
+
+.seeDetailsContainer {
+    composes: text-left from global;
+    composes: lg_text-right from global;
+    composes: rtl_lg_text-left from global;
+    composes: mb-auto from global;
+    composes: underline from global;
+}
+
+.productName {
+    composes: font-semibold from global;
+}
+
+.brandName {
+    composes: uppercase from global;
+    composes: font-semibold from global;
+    composes: text-xs from global;
+    composes: tracking-widest from global;
+    composes: text-purple from global;
+}
+
+.ratingContainer {
+    composes: lg_mt-2 from global;
+    composes: items-center from global;
+    composes: lg_items-start from global;
+}

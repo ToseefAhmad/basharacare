@@ -1,0 +1,32 @@
+mutation AmBlogLeaveComment(
+  $email: String
+  $name: String
+  $message: String!
+  $postId: Int!
+  $replyTo: Int
+) {
+  AmBlogLeaveComment(
+    input: {
+      name: $name
+      email: $email
+      message: $message
+      post_id: $postId
+      reply_to: $replyTo
+    }
+  ) {
+    comment {
+      comment_id
+      post_id
+      store_id
+      status
+      customer_id
+      reply_to
+      message
+      name
+      email
+      session_id
+      updated_at
+      created_at
+    }
+  }
+}

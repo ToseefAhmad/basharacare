@@ -1,0 +1,145 @@
+.root {
+    composes: widgetRoot from '../root.module.css';
+    composes: pb-8 from global;
+}
+
+.title {
+    composes: pb-5 from global;
+}
+
+.slider {
+    composes: root from '@magento/pagebuilder/lib/ContentTypes/Slider/slider.module.css';
+}
+
+.post {
+    @apply lg_ltr_mr-3
+        lg_ltr_ml-0
+        lg_rtl_ml-3
+        lg_rtl_mr-0;
+    @apply mx-4;
+}
+
+.images {
+    composes: block from global;
+    composes: mb-[0.4rem] from global;
+    composes: relative from global;
+    composes: pt-[66.67%] from global;
+}
+
+.imageContainer {
+    background: none;
+    composes: w-full from global;
+    composes: h-full from global;
+    composes: left-0 from global;
+    composes: top-0 from global;
+    composes: overflow-hidden from global;
+    composes: absolute from global;
+}
+
+.imagePlaceholder {
+    composes: hidden from global;
+}
+
+.imageContainer img:first-of-type {
+    @apply absolute;
+    @apply w-full;
+    @apply h-full;
+}
+
+.image {
+    composes: w-full from global;
+    composes: h-full from global;
+    composes: min-w-[1rem] from global;
+}
+
+.date {
+    composes: date from '../PostPage/post.module.css';
+}
+
+.postTitle {
+    composes: text-base from global;
+    composes: font-semibold from global;
+    composes: justify-center from global;
+    composes: leading-5 from global;
+}
+
+.postTitle:hover {
+    @apply underline;
+}
+
+.widgetTitle {
+    composes: flex from global;
+    composes: flex-wrap from global;
+    composes: font-sans from global;
+    composes: text-4xl from global;
+    composes: mt-0 from global;
+    composes: mb-10 from global;
+    composes: px-4 from global;
+
+    @apply lg_px-0;
+}
+
+.widgetTitleBold {
+    composes: font-headingBold from global;
+
+    @apply ltr_ml-2
+        rtl_mr-2;
+}
+
+.shortContent {
+    composes: shortContent from '../PostPage/post.module.css';
+}
+.footer {
+    composes: pt-1 from global;
+}
+
+.more {
+    composes: more from '../PostPage/post.module.css';
+}
+
+.slider :global ul > li > button {
+    @apply p-0
+        block
+        w-full
+        h-[2px]
+        text-[0px]
+        bg-grey-lighter
+        rounded-[2px]
+        outline-none
+        shadow-none
+        cursor-pointer
+        duration-300;
+}
+
+.slider :global ul {
+    @apply p-0;
+}
+
+.slider :global ul li {
+    @apply p-0
+        flex
+        h-auto
+        flex-grow;
+}
+
+.slider :global ul li::before {
+    @apply bg-none w-0 mr-0;
+}
+
+.slider :global .slick-line {
+    @apply !flex;
+    @apply mt-4
+        lg_mt-8;
+    @apply px-4
+        lg_px-0;
+    @apply mb-[1px];
+}
+
+.slider :global .slick-line .slick-active button {
+    @apply bg-black
+        lg_hover_bg-black;
+}
+
+.slider :global .slick-line button {
+    @apply md_hover_bg-black;
+}

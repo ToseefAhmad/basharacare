@@ -1,0 +1,199 @@
+.root {
+    composes: pt-15 from global;
+    composes: px-0 from global;
+    composes: pb-20 from global;
+
+    composes: lg_pb-[205px] from global;
+    composes: lg_pt-[90px] from global;
+}
+
+@media (min-width: 1240px) {
+    .body {
+        grid-template:
+            'samples summary' min-content
+            ' items summary' 1fr
+            /1fr 480px !important;
+    }
+}
+
+.body {
+    grid-template-areas:
+        'samples'
+        'rewardMessage'
+        'summary'
+        'checkoutButton'
+        'items';
+
+    composes: grid from global;
+
+    composes: lg_gap-x-[50px] from global;
+}
+
+.heading_container {
+    composes: mb-[47px] from global;
+    composes: block from global;
+    composes: lg_block from global;
+}
+
+.heading {
+    composes: text-4xl from global;
+    composes: lg_text-5xl from global;
+    composes: font-semibold from global;
+    composes: lg_leading-[72px] from global;
+}
+
+.stockStatusMessageContainer:empty {
+    @apply hidden;
+}
+
+.items_container {
+    grid-area: items;
+}
+
+.sampleContainer {
+    grid-area: samples;
+    composes: h-[min-content] from global;
+}
+
+.summaryContainer {
+    grid-area: summary;
+}
+
+.summary {
+    composes: bg-white from global;
+    composes: px-5 from global;
+    composes: pt-5 from global;
+    composes: pb-[1px] from global;
+    composes: mb-5 from global;
+
+    composes: lg_px-[60px] from global;
+    composes: lg_pt-[54px] from global;
+    composes: lg_pb-[60px] from global;
+    composes: lg_sticky from global;
+    composes: lg_top-[50px] from global;
+}
+
+.summaryTitle {
+    composes: text-lg from global;
+    composes: font-semibold from global;
+    composes: mb-[1px] from global;
+}
+
+.itemHeader {
+    grid-template-columns: 1fr 100px 135px 52px;
+
+    composes: lg_grid from global;
+    composes: font-sans from global;
+    composes: font-semibold from global;
+    composes: text-sm from global;
+    composes: text-black from global;
+    composes: text-opacity-50 from global;
+    composes: py-[7px] from global;
+
+    composes: hidden from global;
+}
+
+.checkoutButton_container {
+    composes: h-full from global;
+    composes: pb-5 from global;
+}
+
+.checkoutButton_container button {
+    @apply w-full min-h-[60px];
+}
+
+.checkoutButtonMobile {
+    grid-area: checkoutButton;
+    composes: lg_hidden from global;
+    composes: static from global;
+}
+
+.checkoutButtonMobilePadding {
+    composes: pb-[80px] from global;
+}
+
+.checkoutButtonMobileFixed {
+    composes: fixed from global;
+    composes: bottom-0 from global;
+    composes: left-0 from global;
+    composes: right-0 from global;
+    composes: z-30 from global;
+
+    composes: mx-[18px] from global;
+}
+
+.checkoutButtonDesktop {
+    composes: hidden from global;
+    composes: lg_block from global;
+}
+
+.shimmerSummary {
+    composes: root from '@magento/venia-ui/lib/components/Shimmer/shimmer.module.css';
+    composes: h-[150px] from global;
+    composes: mb-3 from global;
+}
+
+.shimmerTotal {
+    composes: root from '@magento/venia-ui/lib/components/Shimmer/shimmer.module.css';
+    composes: h-[60px] from global;
+    composes: mb-3 from global;
+}
+
+.shimmerCheckout {
+    composes: root from '@magento/venia-ui/lib/components/Shimmer/shimmer.module.css';
+    composes: h-[60px] from global;
+    composes: mb-3 from global;
+    composes: hidden from global;
+    composes: lg_block from global;
+}
+
+.shimmerCheckoutButtonMobile {
+    composes: root from '@magento/venia-ui/lib/components/Shimmer/shimmer.module.css';
+    composes: h-[60px] from global;
+    composes: mb-3 from global;
+    composes: lg_hidden from global;
+}
+
+.samplesShimmer {
+    composes: root from '@magento/venia-ui/lib/components/Shimmer/shimmer.module.css';
+    composes: h-[80px] from global;
+}
+
+.rewardMessageContainer {
+    composes: min-h-[120px] from global;
+    composes: border-t border-black border-opacity-20 from global;
+    composes: grid from global;
+    composes: items-center from global;
+    composes: text-sm from global;
+}
+
+.rewardMessageDesktop {
+    composes: hidden from global;
+    composes: lg_block from global;
+}
+
+.rewardMessageMobile {
+    grid-area: rewardMessage;
+
+    composes: block from global;
+    composes: lg_hidden from global;
+}
+
+.sectionRoot {
+    composes: sectionRoot from './PriceAdjustments/priceAdjustments.module.css';
+}
+
+.sectionTitleContainer {
+    composes: sectionTitleContainer from './PriceAdjustments/priceAdjustments.module.css';
+}
+
+.sectionTitleWrapper {
+    composes: sectionTitleWrapper from './PriceAdjustments/priceAdjustments.module.css';
+}
+.sectionTitle {
+    composes: sectionTitle from './PriceAdjustments/priceAdjustments.module.css';
+}
+
+.sectionContents {
+    composes: sectionContents from './PriceAdjustments/priceAdjustments.module.css';
+}

@@ -1,0 +1,128 @@
+.cms-about-basharacare .about-basharacare-image-left img {
+    @apply
+        2sm_w-full
+        ml-auto
+        mr-auto
+        mt-0
+        mb-0
+        2sm_max-h-full
+        2sm_max-w-full
+        2sm_border-0;
+}
+
+.cms-about-basharacare .about-text-space:not(:last-child) {
+    @apply
+        mb-[40px];
+}
+
+.cms-about-basharacare .about-basharacare-image-left [class*='text-root'] {
+    @apply
+        mt-[80px]
+        mb-[80px]
+        ml-auto
+        mr-auto;
+}
+
+.cms-about-basharacare [class*='columnGroup-root']:nth-child(3) {
+    @apply
+        pb-[5%]
+        xs_flex-nowrap;
+}
+
+.cms-about-basharacare .about-basharacare-main-row .about-basharacare-text-right {
+    @apply
+        2sm_bg-white
+        2sm_pt-[15%]
+        2sm_pr-[11%]
+        2sm_pb-[15%]
+        2sm_pl-[21%]
+        2sm_ml-[27%]
+        2sm_mr-[5%]
+        text-2xl
+        2sm_box-border;
+}
+
+.cms-about-basharacare .about-basharacare-main-row {
+    @apply
+        2sm_flex
+        2sm_justify-between
+        2sm_relative;
+}
+
+.cms-about-basharacare .about-basharacare-column-two {
+    @apply
+        2sm_!w-full
+        2sm_box-border
+        2sm_flex
+        2sm_justify-between;
+}
+
+.cms-about-basharacare .about-text-space {
+    @apply
+        2sm_max-w-[650px]
+        2sm_mt-0
+        2sm_mb-0
+        2sm_ml-auto
+        2sm_mr-auto;
+}
+
+.cms-about-basharacare .about-column-right-padding {
+    @apply 2sm_pl-[95px];
+}
+
+.cms-about-basharacare .left-padding-arabic {
+    @apply xs_pr-[95px];
+}
+
+.cms-about-basharacare .about-basharacare-image-left {
+    @apply
+        2sm_left-[5%]
+        2sm_top-[51%]
+        2sm_translate-y-[-50%]
+        2sm_absolute 2sm_!w-[38%]
+        order-1
+        mt-[80px]
+        mb-[80px]
+        ml-auto
+        mr-auto
+        2sm_mt-0
+        2sm_mb-0
+        2sm_ml-0
+        2sm_mr-0;
+}
+
+.cms-about-basharacare [class*='columnGroup-root']:nth-child(2) {
+    @apply
+        2sm_flex
+        2sm_mt-[10%]
+        2sm_ml-[27%]
+        2sm_mr-[27%]
+        2sm_mb-0;
+}
+
+.cms-about-basharacare [class*='columnGroup-root']:nth-child(3) {
+    @apply
+        2sm_flex
+        2sm_mt-0
+        2sm_ml-[27%]
+        2sm_mr-[27%]
+        2sm_mb-[5%];
+}
+
+.cms-about-basharacare .about-text-space:not(:last-child) {
+    @apply
+        2sm_mb-[30px]
+        desktop_mb-[40px];
+}
+
+.cms-about-basharacare .about-text-heading {
+    @apply text-2xl;
+}
+
+.cms-about-basharacare .about-national-image {
+    @apply max-w-[196px];
+}
+
+.cms-about-basharacare :global(.richContent-root-mh5) {
+    @apply mb-0;
+}

@@ -1,0 +1,52 @@
+.root {
+    display: grid;
+    gap: 0.5rem 1.5rem;
+    grid-template-columns: 1fr;
+}
+
+/*
+ *  Desktop-specific styles.
+ */
+@media (min-width: 961px) {
+    .root {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .fullWidthField {
+        grid-column-end: span 2;
+    }
+
+    .lastname,
+    .country,
+    .default_address_check {
+        composes: fullWidthField;
+    }
+}
+
+.country select {
+    @apply w-full;
+}
+
+.countryRoot {
+    composes: w-full from global;
+}
+
+.countryRoot select {
+    @apply w-full appearance-none  outline-none;
+}
+
+.textInput {
+    composes: input from '@app/components/overrides/TextInput/textInput.module.css';
+
+    @apply h-[54px];
+}
+
+.cityRoot {
+    composes: countryRoot;
+}
+
+.cityInput {
+    composes: input from '@app/components/overrides/Select/select.module.css';
+
+    @apply h-[54px];
+}

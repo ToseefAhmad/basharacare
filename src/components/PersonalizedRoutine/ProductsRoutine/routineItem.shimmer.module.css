@@ -1,0 +1,35 @@
+.root {
+    composes: grid from global;
+}
+
+.itemCardShimmer {
+    composes: root from '@magento/venia-ui/lib/components/Shimmer/shimmer.module.css';
+
+    composes: h-[390px] from global;
+    composes: desktop_h-[355px] from global;
+}
+
+.itemAddToCartShimmer {
+    composes: root from '@magento/venia-ui/lib/components/Shimmer/shimmer.module.css';
+
+    composes: w-[133px] from global;
+    composes: h-10 from global;
+    composes: justify-self-end from global;
+    composes: rtl_justify-self-start from global;
+    composes: lg_w-[160px] from global;
+}
+
+.qtyShimmer {
+    composes: root from '@magento/venia-ui/lib/components/Shimmer/shimmer.module.css';
+    composes: block from global;
+    composes: h-10 from global;
+    composes: my-7.5 from global;
+    composes: w-[100px] from global;
+}
+
+.addToCardButton {
+    composes: root from '@magento/venia-ui/lib/components/Shimmer/shimmer.module.css';
+    composes: block from global;
+    composes: h-[60px] from global;
+    composes: w-full from global;
+}

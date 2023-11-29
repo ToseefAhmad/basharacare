@@ -1,0 +1,49 @@
+/* Styles for "add" view. */
+.entryForm,
+.entryFormError {
+    composes: grid from global;
+    composes: pb-3 from global;
+}
+
+.entryFormError input {
+    @apply border-red;
+}
+
+.entryFormError input:focus {
+    @apply border-grey;
+}
+
+.entryFormError p {
+    @apply text-red font-semibold;
+}
+
+.couponFieldEnterCode {
+    composes: m-0 from global;
+    composes: mb-2 from global;
+}
+.couponFieldEnterCode input {
+    @apply h-10;
+}
+
+.fieldLabel {
+    composes: text-sm from global;
+    composes: font-semibold from global;
+    composes: mb-3 from global;
+}
+
+.rewardFieldApply {
+    composes: flex from global;
+    composes: gap-2 from global;
+    composes: min-h-10 from global;
+}
+.rewardFieldApply button {
+    @apply min-w-[130px] h-full;
+}
+
+.rewardPointsAvailable {
+    composes: mb-2 from global;
+}
+
+.rewardMessageBalance {
+    composes: font-semibold from global;
+}

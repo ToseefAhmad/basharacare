@@ -1,0 +1,32 @@
+.root {
+    composes: mb-20 from global;
+}
+
+.title h2 {
+    @apply inline-block
+        first_pr-1
+        first_rtl_pl-1
+        last_font-light
+        last_font-sans
+        pb-7.5;
+}
+
+.tableHeader {
+    composes: hidden from global;
+    composes: lg_grid from global;
+    composes: grid-cols-6 from global;
+    composes: border-b from global;
+    composes: border-black/20 from global;
+    composes: mb-7.5 from global;
+    composes: font-semibold from global;
+    composes: text-sm from global;
+}
+
+.tableHeader span {
+    @apply opacity-40;
+}
+
+.orderHistoryTable {
+    composes: grid from global;
+    composes: gap-y-4 from global;
+}

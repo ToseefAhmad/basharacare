@@ -1,0 +1,54 @@
+.payment-wrapper {
+    @apply relative
+        px-[10px]
+        md_px-[20px]
+        py-[10%]
+        2sm_py-0;
+}
+
+.payment-wrapper p {
+    @apply text-black;
+}
+
+.payment-wrapper > div > div {
+    @apply flex justify-between items-center flex-wrap relative;
+}
+
+.payment-wrapper .content-wrapper {
+    @apply bg-white w-auto
+        md_ml-[27%] md_mr-[calc(5%-2px)]
+        md_py-[11%] md_pl-[21%] md_pr-[7%];
+    @apply w-auto !important;
+}
+
+.payment-wrapper .content-wrapper h3 {
+    @apply mt-0 mb-3 font-sans font-normal text-2xl;
+}
+
+.payment-wrapper .content-wrapper h3 strong {
+    @apply font-albraSemibold font-bold;
+}
+
+.payment-wrapper .content-wrapper p {
+    @apply mb-[20px] leading-[1.7];
+}
+
+.payment-wrapper .content-wrapper p strong {
+    @apply text-lg;
+}
+
+.payment-wrapper .image-wrapper {
+    @apply static order-1 mx-auto text-center;
+    @apply mt-[70px] mb-[120px] !important;
+    @apply md_absolute mt-0 mb-0 md_order-[0] md_left-[calc(5%-2px)] md_top-[50%] md_z-[1] md_mx-auto md_my-[0]
+        md_translate-y-[-50%];
+    @apply md_w-[38%] md_my-0 !important;
+}
+
+.payment-wrapper .image-wrapper picture {
+    @apply text-center;
+}
+
+.payment-wrapper .image-wrapper picture img {
+    @apply inline-block;
+}

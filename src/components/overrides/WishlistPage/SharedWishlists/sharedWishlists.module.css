@@ -1,0 +1,20 @@
+.root {
+    composes: mt-7.5 from global;
+}
+
+.title {
+    composes: mb-7.5 from global;
+    composes: text-xl from global;
+    composes: font-semibold from global;
+}
+
+.tableHeader {
+    composes: hidden from global;
+    composes: mt-5 from global;
+    composes: lg_grid from global;
+    composes: grid-cols-6 from global;
+    composes: border-b from global;
+    composes: border-black/20 from global;
+    composes: font-semibold from global;
+    composes: text-sm from global;
+}

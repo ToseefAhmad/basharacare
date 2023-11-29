@@ -1,0 +1,35 @@
+.root {
+    composes: grid from global;
+
+    @apply items-baseline;
+    composes: grid-cols-2 from global;
+    composes: gap-x-5 from global;
+    composes: gap-y-2 from global;
+}
+
+.comments {
+    composes: col-span-full from global;
+}
+
+.errorMessage {
+    composes: col-span-full from global;
+    composes: text-red from global;
+}
+
+.selectInput {
+    composes: input from '@app/components/overrides/Select/select.module.css';
+
+    @apply ltr_pr-9
+        ltr_pl-4
+        rtl_pl-9
+        rtl_pr-4
+        w-full;
+}
+
+.selectInput option {
+    @apply flex justify-between;
+}
+
+::selection {
+    @apply bg-black;
+}

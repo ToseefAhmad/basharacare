@@ -1,0 +1,50 @@
+.root {
+  composes: widgetRoot from '../root.module.css';
+}
+
+.title {
+  composes: widgetTitle from '../root.module.css';
+}
+
+.postRoot {
+  display: flex;
+  overflow: hidden;
+  line-height: 1.25rem;
+}
+
+.postRoot + .postRoot {
+  margin-top: 1.25rem;
+}
+
+.images {
+  margin-right: 0.625rem;
+  display: block;
+}
+
+.images img:first-of-type {
+  max-height: 60px;
+}
+
+.image {
+  height: auto;
+  min-height: 1rem;
+}
+
+.postTitle {
+  font-size: 1rem;
+}
+
+.postTitle:hover {
+  text-decoration: underline;
+}
+
+.shortContent {
+  max-width: 100%;
+  overflow: hidden;
+  padding-top: 0.25rem;
+  font-size: 0.875rem;
+}
+
+.date {
+  composes: date from '../PostPage/post.module.css';
+}

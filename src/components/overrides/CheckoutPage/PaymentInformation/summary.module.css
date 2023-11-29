@@ -1,0 +1,44 @@
+.root {
+    composes: grid from global;
+    composes: p-8 from global;
+    composes: gap-[1.125rem] from global;
+}
+
+.heading_container {
+    composes: grid from global;
+    composes: grid-flow-col from global;
+    composes: grid-rows-[1fr] from global;
+}
+
+.heading {
+    composes: font-semibold from global;
+}
+
+.card_details_container {
+    composes: flex from global;
+    composes: justify-between from global;
+}
+
+.paymentIcon {
+    composes: w-[50px] from global;
+}
+
+.editButton {
+    color: rgb(var(--venia-brand-color-1-700));
+    padding: 1rem;
+    margin: -1rem;
+    text-align: right;
+}
+
+.editIcon {
+    stroke: rgb(var(--venia-brand-color-1-700));
+}
+
+/*
+ *  Mobile-specific styles.
+ */
+@media (max-width: 960px) {
+    .editButtonText {
+        display: none;
+    }
+}

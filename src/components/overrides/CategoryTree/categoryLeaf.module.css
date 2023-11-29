@@ -1,0 +1,28 @@
+.root {
+    composes: items-center from global;
+    composes: flex from global;
+    composes: my-0 from global;
+    composes: mx-5 from global;
+}
+
+.target {
+    composes: items-center from global;
+    composes: flex from global;
+    composes: flex-auto from global;
+    composes: h-12 from global;
+    composes: justify-start from global;
+    composes: my-0 from global;
+    composes: -mx-5 from global;
+    composes: py-0 from global;
+    composes: px-6 from global;
+    composes: w-full from global;
+}
+
+.text {
+    composes: inline-block from global;
+    composes: truncate from global;
+
+    composes: text-2xl from global;
+    composes: leading-[33px] from global;
+    composes: font-semibold from global;
+}

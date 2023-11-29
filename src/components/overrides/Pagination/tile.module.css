@@ -1,0 +1,8 @@
+.root {
+    composes: root from '@app/components/CircleButton/circleButton.module.css';
+}
+
+.root_active {
+    composes: root;
+    composes: border-black from global;
+}

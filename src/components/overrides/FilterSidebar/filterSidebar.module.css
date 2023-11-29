@@ -1,0 +1,38 @@
+.root {
+    composes: border-t border-b from global;
+    composes: border-black from global;
+    composes: border-opacity-20 from global;
+    composes: bg-inherit from global;
+    composes: bottom-0 from global;
+    composes: hidden from global;
+    composes: w-full from global;
+
+    composes: lg_grid from global;
+}
+
+.blocks {
+    composes: divide-y from global;
+    composes: divide-black from global;
+    composes: divide-opacity-20 from global;
+}
+
+.body {
+    composes: overflow-auto from global;
+}
+
+.action {
+    composes: lg_hidden from global;
+}
+
+.clearAll {
+    composes: border from global;
+    composes: border-grey-border from global;
+}
+
+.clearAllButton {
+    composes: h-6 from global;
+    composes: font-semibold from global;
+    composes: uppercase from global;
+    composes: text-xs from global;
+    composes: px-4 from global;
+}

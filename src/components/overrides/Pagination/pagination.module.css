@@ -1,0 +1,21 @@
+.root {
+    grid-auto-columns: minmax(36px, auto);
+
+    composes: h-9 from global;
+    composes: justify-between from global;
+    composes: grid from global;
+    composes: grid-flow-col from global;
+    composes: justify-between from global;
+}
+
+.navTiles {
+    grid-auto-columns: minmax(36px, auto);
+
+    composes: grid from global;
+    composes: grid-flow-col from global;
+    composes: gap-3 from global;
+}
+
+.buttonBack {
+    transform: rotateY(180deg);
+}

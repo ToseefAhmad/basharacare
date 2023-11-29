@@ -1,0 +1,51 @@
+.title {
+    composes: mb-10 from global;
+}
+
+.title h2 {
+    @apply inline-block
+        first_pr-1
+        first_rtl_pl-1
+        last_font-light
+        last_font-sans;
+}
+
+.additionalTitle {
+    composes: gap-1 from global;
+    composes: mt-20 from global;
+    composes: col-start-1 from global;
+    composes: col-end-4 from global;
+}
+
+.additionalTitle span {
+    @apply  last_font-light
+        last_font-sans
+        text-2xl
+        first_pr-2
+        first_rtl_pl-2;
+    @apply font-headingBold;
+}
+
+.content {
+    composes: sm_grid from global;
+    composes: lg_grid-cols-3 from global;
+}
+
+.addButton {
+    composes: root_normalPriority from '../Button/button.module.css';
+    composes: mt-5 from global;
+    composes: lg_mt-12.5 from global;
+    composes: w-full from global;
+    composes: lg_w-[450px] from global;
+    composes: mb-12 from global;
+    composes: lg_mb-20 from global;
+}
+
+.addButton:focus {
+    outline: none;
+}
+
+.noAdditional {
+    composes: mt-7.5 from global;
+    composes: lg_mt-10 from global;
+}

@@ -1,0 +1,20 @@
+.productPriceCurrency {
+    composes: text-lg from global;
+    composes: md_text-xl from global;
+    composes: font-semibold from global;
+    composes: font-headingBold from global;
+}
+
+.name {
+    composes: text-base from global;
+    composes: text-sm from global;
+    composes: font-sans from global;
+    composes: font-semibold from global;
+    composes: text-center from global;
+    composes: leading-[1.75rem] from global;
+    composes: pt-1.25 from global;
+    composes: hover_opacity-80 from global;
+    composes: max-h-16 from global;
+    composes: overflow-hidden from global;
+    composes: hover_underline from global;
+}

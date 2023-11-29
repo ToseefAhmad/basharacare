@@ -1,0 +1,80 @@
+.postRoot {
+    composes: grid from global;
+    composes: grid-flow-row from global;
+    composes: lg_w-fit from global;
+    composes: m-auto from global;
+    overflow: hidden;
+}
+
+.images {
+    composes: min-h-[120px] from global;
+    composes: lg_min-h-[217px] from global;
+    composes: md_h-[217px] from global;
+}
+
+.images img:first-of-type {
+    @apply max-h-[120px]
+        lg_max-h-[220px];
+}
+
+.image {
+    @apply object-cover lg_w-fit lg_h-full;
+}
+
+.imageContainer {
+    composes: min-h-[120px] from global;
+    composes: lg_min-h-[217px] from global;
+}
+
+.imageContainer img {
+    @apply max-h-[120px]
+        md_max-h-[217px]
+        lg_w-full;
+}
+
+.date {
+    composes: text-xs from global;
+    composes: text-grey-light from global;
+}
+
+.postTagsRoot,
+.postTagsRootAnimated {
+    @apply mt-2
+        mb-2.5
+        ml-[25px]
+        rtl_mr-[25px];
+}
+
+.postTagsRootAnimated a,
+.postTagsRoot a {
+    @apply text-grey-light font-normal;
+}
+
+.postTitle {
+    @apply min-h-15 xxxs_min-h-22.5;
+    composes: lg_h-min-30 from global;
+    composes: lg_h-15 from global;
+    composes: py-2.5 from global;
+    composes: lg_m-[25px] from global;
+    composes: lg_text-2xl from global;
+}
+
+.postContent {
+    composes: px-[25px] from global;
+    composes: pb-[25px] from global;
+}
+
+@media (max-width: 768px) {
+    :global(.slick-active) .postTagsRootAnimated {
+        animation: marquee 10s linear infinite;
+    }
+
+    :global(.slick-active) .postTagsRootAnimated:active {
+        animation-play-state: paused;
+    }
+}
+
+@keyframes marquee {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(-100%, 0); }
+}

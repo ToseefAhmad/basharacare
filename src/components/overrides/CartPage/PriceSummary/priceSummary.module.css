@@ -1,0 +1,88 @@
+/* stylelint-disable max-line-length */
+.root {
+    composes: border-t border-black border-opacity-20 from global;
+    composes: pt-7.5 from global;
+    composes: mb-[25px] from global;
+}
+
+.errorText {
+    composes: text-red from global;
+    composes: text-sm from global;
+}
+
+.lineItems {
+    grid-template-columns: 1fr auto;
+
+    composes: grid from global;
+    composes: gap-[12px] from global;
+    composes: mb-[36px] from global;
+    composes: border-b border-black border-opacity-20 from global;
+    composes: pb-[26px] from global;
+}
+
+.lineItemLabel {
+    composes: self-start from global;
+    composes: text-sm from global;
+    composes: font-semibold from global;
+}
+
+.price {
+    composes: self-end from global;
+    composes: text-sm from global;
+    composes: text-right from global;
+
+    composes: rtl_text-left from global;
+}
+.orderTotalContainer {
+    composes: flex from global;
+    composes: justify-between from global;
+}
+
+.totalLabel {
+    composes: self-start from global;
+    composes: font-semibold from global;
+    composes: text-lg from global;
+    composes: font-headingBold from global;
+    composes: items-center from global;
+}
+
+.totalPrice {
+    composes: self-center from global;
+    composes: text-2xl from global;
+    composes: font-bold from global;
+    composes: font-headingBold from global;
+}
+
+.totalPrice span:first-child {
+    @apply text-xs font-sans font-semibold mx-[-2px];
+}
+
+.priceUpdating {
+    composes: price;
+    composes: opacity-0 from global;
+}
+
+.tabby {
+    composes: pt-3 from global;
+}
+
+.sectionRoot {
+    composes: sectionRoot from '@app/components/overrides/CartPage/PriceAdjustments/priceAdjustments.module.css';
+    composes: mt-3 from global;
+}
+
+.sectionTitleContainer {
+    composes: sectionTitleContainer from '@app/components/overrides/CartPage/PriceAdjustments/priceAdjustments.module.css';
+}
+
+.sectionTitleWrapper {
+    composes: sectionTitleWrapper from '@app/components/overrides/CartPage/PriceAdjustments/priceAdjustments.module.css';
+}
+
+.sectionTitle {
+    composes: sectionTitle from '@app/components/overrides/CartPage/PriceAdjustments/priceAdjustments.module.css';
+}
+
+.sectionContents {
+    composes: sectionContents from '@app/components/overrides/CartPage/PriceAdjustments/priceAdjustments.module.css';
+}

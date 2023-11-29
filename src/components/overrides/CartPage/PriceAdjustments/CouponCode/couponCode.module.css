@@ -1,0 +1,47 @@
+/* Styles for "add" view. */
+.entryForm,
+.entryFormError {
+    composes: grid from global;
+}
+
+.entryFormError input {
+    @apply border-red;
+}
+
+.entryFormError input:focus {
+    @apply border-red;
+}
+
+/* Styles for "removal" view. */
+.removeButton {
+    composes: root from '@app/components/overrides/LinkButton/linkButton.module.css';
+    composes: mx-4 from global;
+    composes: hover_underline from global;
+}
+
+.couponFieldApply {
+    composes: m-0 from global;
+    composes: p-0 from global;
+    composes: w-[130px] from global;
+}
+.couponFieldApply button {
+    @apply w-full;
+}
+
+.couponFieldEnterCode {
+    composes: m-0 from global;
+    composes: mb-2 from global;
+}
+.couponFieldEnterCode input {
+    @apply h-10;
+}
+
+.fieldLabel {
+    composes: text-sm from global;
+    composes: font-semibold from global;
+    composes: mb-3 from global;
+}
+
+.couponCode {
+    composes: font-semibold from global;
+}

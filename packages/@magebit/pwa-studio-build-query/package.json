@@ -1,0 +1,17 @@
+{
+  "name": "@magebit/pwa-studio-build-query",
+  "version": "0.0.1",
+  "description": "Generate query data necessary for pwa build",
+  "files": [
+    "lib/*"
+  ],
+  "main": "index.js",
+  "author": "Magebit <info@magbeit.com>",
+  "license": "MIT",
+  "bin": {
+    "buildQuery": "bin/buildQuery"
+  },
+  "peerDependencies": {
+    "@magento/pwa-buildpack": "^8.0.0"
+  }
+}

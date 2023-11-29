@@ -1,0 +1,158 @@
+.root {
+    composes: rtl_justify-right from global;
+    composes: overflow-hidden from global;
+    composes: w-full from global;
+    composes: pb-25 from global;
+    composes: z-[20] from global;
+}
+
+.title {
+    composes: text-4xl from global;
+    composes: font-sans from global;
+    composes: mx-4 from global;
+    composes: mb-5 from global;
+    composes: flex from global;
+}
+
+.products {
+    composes: flex from global;
+    composes: justify-start from global;
+    composes: w-full from global;
+    composes: min-w-min from global;
+}
+
+.root a {
+    @apply no-underline;
+}
+
+.slider {
+    composes: root from '~@magento/pagebuilder/lib/ContentTypes/Slider/slider.module.css';
+    composes: !px-0 from global;
+    composes: w-full from global;
+    composes: max-w-[100vw] from global;
+}
+
+.slider :global .slick-slide {
+    @apply visible !important;
+    @apply pb-[44px] !important;
+}
+
+.slider :global ul > li > button {
+    @apply p-0
+        block
+        w-full
+        h-[2px]
+        text-[0px]
+        bg-grey-lighter
+        rounded-[2px]
+        outline-none
+        shadow-none
+        cursor-pointer
+        duration-300;
+}
+
+.slider :global .slick-slider .slick-list {
+    @apply !pb-0;
+    @apply pt-5 lg_pt-12.5 !important;
+}
+
+.slider :global .slick-current {
+    @apply scale-110
+        xxxs_scale-100;
+}
+
+.slider :global .slick-arrow {
+    @apply opacity-100
+        lg_transition-opacity
+        bg-transparent;
+}
+
+.slider :global ul {
+    @apply p-0;
+}
+
+.slider :global ul li {
+    @apply p-0
+        flex
+        h-auto
+        flex-grow;
+}
+
+.slider :global ul li::before {
+    @apply bg-none w-0 mr-0 ml-0;
+}
+
+.slider :global .slick-line {
+    @apply mb-[-10px]
+        !flex;
+    @apply mb-[1px]
+        !mx-20;
+}
+
+.slider :global .slick-line .slick-active button {
+    @apply bg-black lg_hover_bg-black;
+}
+
+.slider :global .slick-line button {
+    @apply md_hover_bg-black;
+}
+
+.sliderProduct :global .slick-line {
+    @apply mt-[4px]
+        mb-0;
+}
+
+.slider :global .slick-slider .slick-arrow {
+    @apply w-[33px]
+        h-[33px]
+        top-[99.5%]
+        z-[9];
+}
+
+.slider :global .slick-slider .slick-arrow::before {
+    content: '';
+}
+
+.slider :global .slick-slider .slick-prev {
+    @apply left-[5px];
+}
+
+.slider :global .slick-slider .slick-next {
+    @apply right-5;
+}
+
+.lessItemsSlider :global .slick-slide {
+    @apply w-[260px] !important;
+}
+
+.root :global .slick-track {
+    @apply grid
+        grid-flow-col
+        my-5;
+}
+
+.root :global .slick-slide:nth-child(3) div {
+    @apply desktop_scale-110;
+}
+
+.root :global .slick-slide:nth-child(3) div div > * {
+    @apply desktop_scale-90;
+}
+
+.root :global .slick-active:not(:nth-child(3)) > div > div {
+    @apply hover_shadow-xl;
+}
+
+.shimmerRoot {
+    composes: rtl_justify-right from global;
+    composes: overflow-hidden from global;
+    composes: w-full from global;
+    composes: pt-5 from global;
+    composes: pb-[144px] from global;
+}
+
+.sliderShimmer {
+    composes: root from '~@magento/pagebuilder/lib/ContentTypes/Slider/slider.module.css';
+    composes: ml-2.5 from global;
+    composes: lg_ml-5 from global;
+}

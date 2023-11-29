@@ -1,0 +1,18 @@
+.root {
+    composes: mb-[100px] from global;
+}
+
+.galleryRoot {
+    composes: root from '@app/components/overrides/Gallery/gallery.module.css';
+}
+
+.items > div > ul {
+    @apply grid
+        gap-x-[10px]
+        gap-y-[50px]
+        grid-cols-2
+        mb-3
+        md_grid-cols-3
+        md_gap-x-[30px]
+        md_gap-y-[60px];
+}

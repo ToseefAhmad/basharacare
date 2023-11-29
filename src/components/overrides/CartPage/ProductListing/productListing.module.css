@@ -1,0 +1,17 @@
+.root {
+    composes: grid from global;
+    composes: bg-grey-lightest from global;
+    composes: border-t border-b border-solid border-black border-opacity-20 from global;
+    composes: divide-y divide-black divide-opacity-20 from global;
+    composes: mt-15 from global;
+
+    composes: lg_mt-0 from global;
+}
+
+.shimmerRoot {
+    composes: root from '@magento/venia-ui/lib/components/Shimmer/shimmer.module.css';
+    composes: h-[270px] from global;
+
+    composes: lg_mb-[2px] from global;
+    composes: lg_h-[200px] from global;
+}

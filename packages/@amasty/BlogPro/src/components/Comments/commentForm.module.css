@@ -1,0 +1,36 @@
+.form {
+  width: 100%;
+  max-width: 430px;
+}
+
+.input {
+  margin-bottom: 1.25rem;
+}
+
+.actions button + button {
+  margin-left: 1rem;
+}
+
+.loginRoot {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.loginBtn {
+  outline: none;
+  text-decoration: underline;
+}
+
+.gdpr {
+  grid-area: gdpr;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+.gdpr p {
+  display: block;
+  width: 100%;
+  order: 10;
+}

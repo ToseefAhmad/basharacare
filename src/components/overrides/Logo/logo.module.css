@@ -1,0 +1,11 @@
+.imageContainer {
+    composes: relative from global;
+    composes: w-[180px] from global;
+    composes: h-15 from global;
+}
+
+/* Large screen styles */
+.imageContainer {
+    composes: lg_w-[161px] from global;
+    composes: lg_h-[46px] from global;
+}

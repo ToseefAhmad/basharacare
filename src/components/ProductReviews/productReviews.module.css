@@ -1,0 +1,27 @@
+.root {
+    composes: pt-7.5 from global;
+    composes: lg_pt-[70px] from global;
+}
+
+.tableHeader {
+    composes: hidden from global;
+    composes: lg_grid from global;
+    composes: grid-cols-5 from global;
+    composes: pb-2.5 from global;
+    composes: font-semibold from global;
+    composes: text-sm from global;
+}
+
+.tableHeader span {
+    @apply opacity-40;
+}
+
+.productReviewsTable {
+    composes: grid from global;
+    composes: gap-y-4 from global;
+    composes: mb-20 from global;
+}
+
+.productReviewsEmpty {
+    composes: mt-5 from global;
+}

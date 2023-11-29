@@ -1,0 +1,239 @@
+.root {
+    composes: block from global;
+    composes: relative from global;
+    composes: touch-pan-y from global;
+    composes: select-none from global;
+    composes: min-h-[310px] from global;
+    composes: lg_hover_shadow-tileShadowDarker from global;
+}
+
+.bannerRoot {
+    composes: root from '@magento/pagebuilder/lib/ContentTypes/Banner/banner.module.css';
+    composes: min-h-[inherit] from global;
+}
+.bannerLink {
+    composes: link from '@magento/pagebuilder/lib/ContentTypes/Banner/banner.module.css';
+    composes: min-h-[inherit] from global;
+
+    @apply hover_no-underline;
+}
+.bannerWrapper {
+    composes: wrapper from '@magento/pagebuilder/lib/ContentTypes/Banner/banner.module.css';
+
+    composes: min-h-[inherit] from global;
+}
+.bannerPosterOverlay {
+    composes: flex from global;
+    composes: md_pt-[48px] from global;
+    composes: content-center from global;
+    composes: items-center from global;
+    composes: flex-col from global;
+    composes: max-w-[1240px] from global;
+    composes: mx-auto from global;
+    composes: px-[40px] from global;
+    composes: lg_px-[80px] from global;
+    composes: desktop_px-[18px] from global;
+}
+
+.bannerPosterOverlay :global h2 {
+    @apply mt-5 lg_mt-10;
+}
+
+.bannerPosterOverlay :global h3 {
+    @apply mt-5 lg_mt-10;
+}
+
+.root :global .slick-slider {
+    @apply min-h-[inherit];
+}
+
+.root :global .slick-list {
+    @apply block
+        m-0
+        overflow-hidden
+        p-0
+        relative
+        min-h-[inherit];
+}
+
+.root :global .slick-list:focus {
+    @apply outline-none;
+}
+
+.root :global .slick-list.dragging {
+    @apply cursor-pointer;
+}
+
+.root :global .slick-track {
+    @apply block
+        left-0
+        mx-[auto]
+        relative
+        top-0
+        min-h-[inherit];
+}
+
+.root :global .slick-track .slick-slide > div {
+    @apply min-h-[inherit];
+}
+
+.root :global .slick-track::before,
+.root :global .slick-track::after {
+    @apply content-['']
+        table;
+}
+
+.root :global .slick-track::after {
+    @apply clear-both;
+}
+
+:global .slick-loading .slick-track {
+    @apply hidden;
+}
+
+.root :global .slick-slide {
+    @apply min-h-[inherit]
+        hidden
+        float-left
+        h-full;
+}
+
+.root :global .slick-slide img {
+    @apply block;
+}
+.root :global .slick-slide.slick-loading img {
+    @apply hidden;
+}
+
+.root :global .slick-slide.dragging img {
+    @apply pointer-events-none;
+}
+
+:global .slick-initialized .slick-slide {
+    @apply block
+        invisible;
+}
+
+:global .slick-initialized .slick-slide.slick-active {
+    @apply visible;
+}
+
+:global .slick-loading .slick-slide {
+    @apply hidden;
+}
+
+.root :global .slick-vertical .slick-loading {
+    @apply border
+        border-solid
+        border-transparent
+        block
+        h-[auto];
+}
+
+.root :global .slick-slider .slick-track,
+.root :global .slick-slider .slick-list {
+    transform: translate3d(0, 0, 0);
+}
+
+.root :global .slick-arrow.slick-hidden {
+    @apply hidden;
+}
+
+.root :global .slick-prev,
+.root :global .slick-next {
+    transition: 0.3s;
+
+    @apply opacity-0 !important;
+}
+
+.root :global .slick-prev {
+    @apply left-0
+        md_left-1
+        lg_left-5
+        !important;
+}
+
+.root :global .slick-next {
+    @apply right-0
+        md_right-1
+        lg_right-5
+        !important;
+}
+
+.root:hover :global .slick-prev,
+.root:hover :global .slick-next {
+    @apply opacity-60 !important;
+}
+
+.root :global .slick-prev,
+.root :global .slick-next {
+    transform: translate(0, -50%);
+
+    @apply border-0
+        bg-white
+        rounded-[50%]
+        opacity-50
+        border-r-[50px]
+        text-[transparent]
+        cursor-pointer
+        block
+        text-[0px]
+        h-10
+        leading-[0]
+        outline-none
+        p-0
+        absolute
+        top-[50%]
+        w-10
+        z-20;
+}
+
+.root :global .slick-dots {
+    @apply relative
+        bottom-[67px]
+        justify-end
+        gap-3
+        lg_container
+        my-0;
+    @apply flex px-[18px] md_px-20 !important;
+}
+.root :global .slick-dots li {
+    @apply before_content-none
+        cursor-pointer;
+}
+
+.root :global .slick-dots li button {
+    filter: brightness(100%);
+    content-visibility: hidden;
+    transition: 0.5s;
+
+    @apply w-5 md_w-[80px]  desktop_w-[143px] lg_w-[100px] h-[2px]  !important;
+    @apply outline-none
+        bg-grey-lighter
+        shadow-none
+        cursor-pointer
+        block
+        h-[15px]
+        p-0
+        w-[15px];
+}
+.root :global .slick-dots li button:hover {
+    filter: brightness(80%);
+}
+.root :global .slick-dots li button:focus {
+    @apply outline-[1];
+}
+
+.root :global .slick-dots li button:active,
+.root :global .slick-dots li button:focus,
+.root :global .slick-dots li button:not(.primary) {
+    @apply shadow-none;
+}
+
+.root :global .slick-dots li.slick-active button {
+    @apply bg-[#1c1918];
+}
+
+.root :global .slick-current {
+    @apply z-[1];
+}

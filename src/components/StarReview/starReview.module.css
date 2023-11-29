@@ -1,0 +1,46 @@
+.root {
+    composes: mb-7.5 from global;
+}
+
+.title {
+    composes: mb-2.5 from global;
+    composes: font-semibold from global;
+}
+
+.starContainer {
+    composes: flex from global;
+    composes: gap-1 from global;
+    composes: lg_gap-[5px] from global;
+}
+
+.starContainer button:focus {
+    -webkit-tap-highlight-color: transparent;
+}
+
+.star {
+    composes: text-black from global;
+    composes: bg-white from global;
+}
+
+.active {
+    composes: text-black from global;
+}
+
+.inactive {
+    composes: text-grey-lighter from global;
+    composes: hover_text-black from global;
+}
+
+.activeTemporary {
+    composes: active;
+}
+
+.inactiveTemporary {
+    composes: inactive;
+}
+
+.errorMessage {
+    composes: text-red-error from global;
+    composes: text-sm from global;
+    composes: mt-2 from global;
+}

@@ -1,0 +1,125 @@
+.root {
+    composes: grid from global;
+    composes: grid-cols-3 from global;
+    composes: grid-flow-row-dense from global;
+    composes: gap-x-2 from global;
+    composes: opacity-100 from global;
+    composes: pt-5 from global;
+    composes: pb-3.5 from global;
+
+    composes: delay-75 from global;
+    composes: duration-300 from global;
+    composes: transition-opacity from global;
+    composes: ease-in-out from global;
+
+    composes: first-of-type_border-t from global;
+    composes: first-of-type_border-solid from global;
+    composes: first-of-type_border-grey from global;
+    composes: first-of-type_border-opacity-50 from global;
+
+    composes: border-b from global;
+    composes: border-grey from global;
+    composes: border-opacity-50 from global;
+    composes: last-of-type_border-none from global;
+}
+
+.root_disabled {
+    composes: root;
+    composes: opacity-50 from global;
+}
+
+.thumbnailContainer {
+    composes: col-start-1 from global;
+    composes: col-span-1 from global;
+    composes: row-start-1 from global;
+    composes: row-span-3 from global;
+}
+
+.thumbnail {
+    composes: w-[75px] from global;
+    composes: h-[75px] from global;
+}
+
+.thumbnail > img {
+    @apply object-scale-down
+        bg-white
+        h-[75px]
+        w-[75px];
+}
+
+.name {
+    composes: font-semibold from global;
+    composes: col-start-2 from global;
+    composes: col-span-1 from global;
+    composes: row-start-1 from global;
+    composes: row-span-1 from global;
+    composes: mb-2 from global;
+    composes: w-[132px] from global;
+
+    composes: text-sm from global;
+    composes: leading-[16.8px] from global;
+}
+
+.options {
+    composes: grid from global;
+    composes: gap-2 from global;
+    composes: col-start-2 from global;
+    composes: col-span-1 from global;
+    composes: row-start-2 from global;
+    composes: row-span-2 from global;
+}
+
+.quantity {
+    composes: col-start-2 from global;
+    composes: col-span-2 from global;
+    composes: row-start-3 from global;
+    composes: row-span-1 from global;
+
+    composes: w-[77px] from global;
+    composes: ml-9 from global;
+}
+
+.quantity > form > div {
+    @apply grid-cols-3;
+}
+
+.quantity input {
+    @apply px-0
+        w-6;
+}
+
+.price {
+    composes: col-start-2 from global;
+    composes: col-span-2 from global;
+    composes: row-start-2 from global;
+    composes: row-span-1 from global;
+
+    composes: justify-self-end from global;
+}
+
+.stockStatus {
+    composes: text-red from global;
+    composes: text-semibold from global;
+    composes: col-start-2 from global;
+    composes: row-start-4 from global;
+}
+
+.deleteButton {
+    composes: col-start-3 from global;
+    composes: col-span-1 from global;
+    composes: row-start-1 from global;
+    composes: row-span-1 from global;
+
+    composes: justify-self-end from global;
+    composes: self-start from global;
+}
+
+.currency {
+    composes: text-xxs from global;
+    composes: font-semibold from global;
+}
+
+.priceNumber {
+    composes: text-xl from global;
+    composes: font-bold from global;
+}

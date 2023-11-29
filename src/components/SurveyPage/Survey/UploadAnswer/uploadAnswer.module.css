@@ -1,0 +1,15 @@
+.root {
+    composes: border from global;
+    composes: p-4 from global;
+    composes: text-center from global;
+    composes: rounded from global;
+    composes: border-grey-border from global;
+}
+
+.hidden {
+    composes: hidden from global;
+}
+
+.preview img {
+    @apply max-w-[150px] mx-auto;
+}

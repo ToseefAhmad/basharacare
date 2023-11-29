@@ -1,0 +1,51 @@
+.root {
+    composes: bg-grey-lightest from global;
+    composes: text-black from global;
+    position: relative;
+    z-index: 1;
+}
+
+.root_masked {
+    composes: root;
+}
+
+.page {
+    margin: 0 auto;
+    composes: container from global;
+    min-height: 40rem;
+}
+
+.hidden {
+    composes: hidden from global;
+}
+
+.page_masked {
+    composes: page;
+}
+
+.page.fullWidth {
+    @apply md_max-w-100width p-0;
+}
+
+/* Styling for CMS Pages */
+:global(.cms-page) .page {
+    @apply max-w-100width p-0;
+}
+
+@media (min-height: 640px) {
+    .page {
+        min-height: 48rem;
+    }
+}
+
+@media (min-height: 768px) {
+    .page {
+        min-height: 60rem;
+    }
+}
+
+@media (min-height: 960px) {
+    .page {
+        min-height: 72rem;
+    }
+}

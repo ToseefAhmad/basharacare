@@ -1,0 +1,47 @@
+.root {
+    /* stylelint-disable-next-line custom-property-pattern */
+    --leftViewportElement: 0;
+    /* stylelint-disable-next-line custom-property-pattern, length-zero-no-unit */
+    --scrollBarWidth: var(--global-scrollbar-width, 0px);
+}
+
+.contained {
+    composes: root;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 100%;
+    composes: container from global;
+}
+
+.fullBleed {
+    composes: root;
+
+    @apply w-[calc(100vw-var(--scrollBarWidth))]
+        ml-[50%]
+        relative
+        left-1/2
+        right-1/2
+        ml-[-50vw]
+        mr-[-50vw];
+}
+
+.videoOverlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -99;
+    transform: translate3d(0, 0, 0);
+}
+
+.root :global [id*='jarallax-container'] video,
+.root :global [id*='jarallax-container'] iframe {
+    visibility: hidden;
+}
+
+@media only screen and (max-width: 768px) {
+    .root {
+        background-attachment: scroll !important;
+    }
+}

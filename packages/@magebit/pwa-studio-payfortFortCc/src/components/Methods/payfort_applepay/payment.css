@@ -1,0 +1,71 @@
+.root {
+    padding-top: 1.125rem;
+}
+
+.title {
+    font-weight: var(--venia-global-fontWeight-semibold);
+}
+
+.mailingAddressTitle {
+    font-weight: var(--venia-global-fontWeight-semibold);
+    padding-top: 1rem;
+}
+
+.note {
+    padding: 1rem 0;
+}
+
+.formatAddress {
+    padding: 0.5rem 0;
+}
+
+.addressLine {
+    display: block;
+    padding-bottom: 0.5rem;
+}
+
+.applePayButton span {
+    margin-left: 5px;
+    margin-right: 5px;
+    line-height: 1.5;
+}
+
+.applePayButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    overflow: hidden;
+    appearance: none;
+    border: none;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    --apple-pay-button-width: 100%;
+    --apple-pay-button-height: 50px;
+    --apple-pay-button-border-radius: 3px;
+    --apple-pay-button-padding: 0px 0px;
+    --apple-pay-button-box-sizing: border-box;
+}
+
+.applePayButton:focus {
+    outline: 0;
+}
+
+.applePayButtonLight {
+    background-color: #fff;
+    color: #000;
+}
+
+.applePayButtonLight:hover {
+    background-color: #eee;
+}
+
+.applePayButtonDark {
+    background-color: #000;
+    color: #fff;
+}
+
+.applePayButtonDark:hover {
+    background-color: #111;
+}

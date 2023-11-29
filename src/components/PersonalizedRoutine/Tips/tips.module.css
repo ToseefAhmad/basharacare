@@ -1,0 +1,89 @@
+.root {
+    composes: text-left from global;
+    composes: flex from global;
+    composes: mb-6 from global;
+    composes: md_mb-14 from global;
+    composes: items-center from global;
+    composes: justify-between from global;
+}
+
+.rootRtl {
+    composes: text-right from global;
+    composes: flex from global;
+    composes: mb-6 from global;
+    composes: md_mb-14 from global;
+
+    composes: justify-between from global;
+    composes: items-center from global;
+    composes: flex-row-reverse from global;
+}
+
+.imageWrapRtl {
+    composes: hidden from global;
+    composes: md_block from global;
+    composes: mr-[-25%] from global;
+    composes: w-[45%] from global;
+    composes: z-1 from global;
+}
+
+.imageWrap {
+    composes: hidden from global;
+    composes: md_block from global;
+    composes: ml-[-25%] from global;
+    composes: w-[45%] from global;
+    composes: z-1 from global;
+}
+
+.description {
+    composes: bg-white from global;
+    composes: flex from global;
+    composes: md_justify-center from global;
+    composes: flex-col from global;
+
+    composes: px-4 from global;
+    composes: py-10 from global;
+
+    composes: w-full from global;
+    composes: md_w-[75%] from global;
+    composes: md_py-24 from global;
+    composes: md_pl-24 from global;
+    composes: md_pr-[30%] from global;
+    composes: min-h-[715px] from global;
+    composes: md_min-h-[815px] from global;
+}
+
+.descriptionRtl {
+    composes: bg-white from global;
+    composes: flex from global;
+    composes: md_justify-center from global;
+    composes: flex-col from global;
+
+    composes: px-4 from global;
+    composes: py-10 from global;
+
+    composes: w-full from global;
+    composes: md_w-[75%] from global;
+    composes: md_py-24 from global;
+    composes: md_pr-24 from global;
+    composes: md_pl-[30%] from global;
+    composes: min-h-[715px] from global;
+    composes: md_min-h-[815px] from global;
+}
+
+.title {
+    composes: text-2xl from global;
+    composes: md_text-4xl from global;
+    composes: mb-5 from global;
+}
+
+.image {
+    composes: w-full from global;
+}
+
+.description p,
+.descriptionRtl p {
+    @apply text-sm
+        md_text-lg
+        text-black
+        leading-tight;
+}

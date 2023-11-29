@@ -1,0 +1,81 @@
+.input {
+    composes: input from '@app/components/overrides/TextInput/textInput.module.css';
+    composes: min-h-[56px] from global;
+}
+
+.input::placeholder {
+    @apply opacity-0 text-grey-light !important;
+}
+
+.input:focus::placeholder {
+    @apply opacity-100 !important;
+}
+
+.input:focus + .label {
+    display: none;
+}
+
+.input_error {
+    composes: input_error from '@app/components/overrides/TextInput/textInput.module.css';
+}
+
+.label {
+    composes: label from '@app/components/overrides/TextInput/textInput.module.css';
+}
+
+.dateLabel {
+    composes: label;
+    composes: bg-white from global;
+}
+
+.dateLabelGrey {
+    composes: label;
+    composes: bg-grey-lightest from global;
+}
+
+.hidden {
+    composes: hidden from global;
+}
+
+.inputRoot {
+    composes: inputRoot from '@app/components/overrides/TextInput/textInput.module.css';
+}
+
+.isRequired {
+    composes: isRequired from '@app/components/overrides/TextInput/textInput.module.css';
+}
+
+.fieldRoot {
+    composes: fieldRoot from '@app/components/overrides/TextInput/textInput.module.css';
+}
+
+.errorMsg {
+    composes: errorMsg from '@app/components/overrides/TextInput/textInput.module.css';
+}
+
+.after {
+    composes: items-center from global;
+    composes: flex from global;
+    composes: justify-content from global;
+    composes: pointer-events-none from global;
+    composes: w-8 from global;
+    composes: z-1 from global;
+}
+
+.after:empty {
+    @apply hidden;
+}
+
+.after {
+    grid-area: after;
+}
+
+.icon {
+    composes: md_hidden from global;
+    composes: bg-white from global;
+}
+
+.iconGrey {
+    composes: md_hidden from global;
+    composes: bg-grey-lightest from global;
+}

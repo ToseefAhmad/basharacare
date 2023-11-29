@@ -1,0 +1,158 @@
+.root {
+    composes: grid from global;
+    composes: relative from global;
+    composes: pt-5 from global;
+    composes: md_pt-0 from global;
+    grid-template: auto/auto;
+    grid-template-areas:
+        'main'
+        'thumbs';
+}
+
+.carouselContainer {
+    composes: overflow-hidden from global;
+    composes: grid from global;
+    composes: lg_mx-15 from global;
+    grid-area: main;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.imageContainer {
+    composes: relative from global;
+    composes: overflow-hidden from global;
+    composes: lg_w-83 from global;
+    composes: col-start-2 from global;
+    composes: col-end-5 from global;
+    composes: row-start-1 from global;
+    composes: row-end-1 from global;
+}
+
+.currentImage {
+    composes: block from global;
+    composes: h-full from global;
+    composes: max-w-full from global;
+    composes: max-h-full from global;
+    composes: object-contain from global;
+    composes: object-center from global;
+    composes: lg_object-top-center from global;
+}
+
+.currentImage_placeholder {
+    composes: currentImage;
+    background-color: rgb(var(--venia-global-color-gray));
+}
+
+.disabledButton {
+    composes: hidden from global;
+}
+
+.button {
+    composes: flex from global;
+    composes: z-1 from global;
+    composes: outline-none from global;
+    composes: row-start-1 from global;
+    composes: row-end-1 from global;
+}
+
+.previousButton {
+    composes: button;
+    composes: justify-start from global;
+    composes: col-start-1 from global;
+    composes: col-end-3 from global;
+}
+
+.nextButton {
+    composes: button;
+    composes: justify-end from global;
+    composes: col-start-4 from global;
+    composes: col-end-6 from global;
+}
+
+.chevron {
+    composes: root from '@magento/venia-ui/lib/components/Icon/icon.module.css';
+    composes: hidden from global;
+    composes: md_grid from global;
+    composes: xl_hidden from global;
+    composes: self-center from global;
+    composes: rtl_rotate-180 from global;
+    composes: bg-purple-lightest from global;
+    composes: w-15 from global;
+    composes: h-15 from global;
+    composes: justify-center from global;
+    composes: items-center from global;
+}
+
+.chevronIcon {
+    composes: stroke-current from global;
+    composes: text-white from global;
+    composes: h-8 from global;
+}
+
+.nextButton:active,
+.previousButton:active {
+    background-color: rgb(255 255 255 / 30%);
+    transition: 0.3s ease-in-out;
+}
+
+.nextButton:hover > .chevron,
+.previousButton:hover > .chevron {
+    @apply flex;
+}
+
+.authorizedRetailer {
+    composes: absolute from global;
+    composes: right-2 from global;
+    composes: rtl_right-auto from global;
+    composes: rtl_left-2 from global;
+    composes: xxs_right-1/4 from global;
+    composes: rtl_xxs_right-auto from global;
+    composes: rtl_xxs_left-1/4 from global;
+    composes: md_right-0 from global;
+    composes: rtl_md_right-auto from global;
+    composes: rtl_md_left-0 from global;
+    composes: top-5 from global;
+    composes: lg_top-0 from global;
+    composes: text-black from global;
+}
+
+.authorizedRetailerIcon {
+    composes: text-black from global;
+}
+
+.thumbnailList {
+    composes: flex from global;
+    composes: justify-center from global;
+    composes: flex-wrap from global;
+    composes: mt-4 from global;
+    composes: lg_mx-15 from global;
+}
+
+/* Image transitions */
+
+.fromRightEnter > div {
+    @apply translate-x-full;
+    @apply rtl_translate-x-reverse;
+}
+
+.fromRightEnterActive > div {
+    @apply transition-transform translate-x-0 duration-700;
+}
+
+.fromRightExitActive > div {
+    @apply transition-transform translate-x-reverse duration-700;
+    @apply rtl_translate-x-full;
+}
+
+.fromLeftEnter > div {
+    @apply translate-x-reverse;
+    @apply rtl_translate-x-full;
+}
+
+.fromLeftEnterActive > div {
+    @apply transition-transform translate-x-0 duration-700;
+}
+
+.fromLeftExitActive > div {
+    @apply transition-transform translate-x-full duration-700;
+    @apply rtl_translate-x-reverse;
+}

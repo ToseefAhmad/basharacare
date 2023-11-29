@@ -1,0 +1,21 @@
+.root {
+  composes: root from '@magento/venia-ui/lib/components/Breadcrumbs/breadcrumbs.module.css';
+  margin-left: 0;
+}
+
+.text {
+  composes: text from '@magento/venia-ui/lib/components/Breadcrumbs/breadcrumbs.module.css';
+}
+
+.divider {
+  composes: text;
+}
+
+.link {
+  composes: text;
+  text-decoration: underline;
+}
+
+.currentCategory {
+  composes: text;
+}

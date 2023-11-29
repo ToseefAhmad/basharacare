@@ -1,0 +1,312 @@
+.root {
+    composes: root from '@app/RootComponents/Category/category.module.css';
+}
+
+/* Add custom properties to main */
+
+:global(.attribute-page #main) {
+    @apply px-0
+        mx-0
+        max-w-full
+        bg-grey-lightest;
+}
+
+.noResult {
+    composes: flex from global;
+}
+
+.headerButtons {
+    composes: headerButtons from '@app/RootComponents/Category/category.module.css';
+}
+
+.heading {
+    composes: heading from '@app/RootComponents/Category/category.module.css';
+
+    @apply mb-1 md_mb-[33px];
+}
+
+.metaTitle {
+    composes: metaTitle from '@app/RootComponents/Category/category.module.css';
+}
+
+.sortedByRoot {
+    composes: sortedByRoot from '@app/RootComponents/Category/category.module.css';
+}
+
+.contentWrapper {
+    composes: contentWrapper from '@app/RootComponents/Category/category.module.css';
+
+    @apply pt-3 lg_pt-[30px] md_pt-[50px];
+}
+
+.gallery {
+    composes: mb-[100px] from global;
+}
+
+.sidebar {
+    composes: sidebar from '@app/RootComponents/Category/category.module.css';
+}
+
+.attributeBanner {
+    composes: bg-cover from global;
+    composes: bg-bottom from global;
+    composes: bg-no-repeat from global;
+    composes: pb-1 lg_pb-[30px] from global;
+}
+
+.breadcrumbRoot {
+    composes: root from '@app/components/overrides/Breadcrumbs/breadcrumbs.module.css';
+
+    @apply pt-1 pb-2;
+}
+
+.breadcrumbContainer {
+    composes: breadcrumbContainer from '@app/RootComponents/Category/category.module.css';
+
+    @apply py-2
+        px-0
+        lg_px-2.5;
+}
+
+.attributeTitle {
+    composes: container from global;
+    composes: mb-0 lg_mb-4 from global;
+    composes: px-[18px] from global;
+    composes: lg_px-[18px] from global;
+}
+
+.attributeHeadingShimmer {
+    composes: w-4/12 from global;
+    composes: h-[40px] from global;
+    composes: md_h-[82px] from global;
+}
+
+.actionRow {
+    composes: container from global;
+    composes: grid from global;
+    composes: gap-4 from global;
+    composes: lg_grid-cols-2 from global;
+    composes: pt-0 lg_pt-[30px] from global;
+    composes: md_min-h-[519px] from global;
+}
+
+.actionRowNoNewArrivals {
+    composes: actionRow;
+
+    @apply lg_grid-cols-1 md_min-h-[min-content];
+}
+
+.actionWhenNoArrivals {
+    composes: grid from global;
+    composes: grid-flow-col from global;
+    composes: gap-5 from global;
+}
+
+.descriptionContainer,
+.descriptionContainerNoArrivals {
+    composes: lg_max-w-[485px] from global;
+    composes: mt-3 from global;
+    composes: mb-5 from global;
+    composes: lg_mt-0 from global;
+    composes: lg_mb-[30px] from global;
+}
+
+.descriptionShimmer {
+    composes: h-[72px] from global;
+    composes: w-full from global;
+}
+
+.quickfilterShimmer {
+    composes: h-[120px] from global;
+    composes: w-full from global;
+}
+
+.learnMore {
+    composes: px-1 from global;
+    composes: font-semibold from global;
+    composes: hover_underline from global;
+}
+
+.learnAttribute {
+    composes: capitalize from global;
+}
+
+.currentFilterRoot {
+    composes: hidden from global;
+
+    composes: lg_flex from global;
+    composes: items-center from global;
+    composes: flex-wrap from global;
+    composes: gap-[5px] from global;
+}
+
+.cmsBlockContent h2 {
+    @apply normal-case;
+}
+
+.cmsBlockRoot {
+    @apply m-0;
+}
+
+.cmsBlockContainer {
+    composes: border-t from global;
+    composes: border-grey-border from global;
+    composes: mt-[100px] from global;
+    composes: pt-[30px] from global;
+}
+
+/* Slider styles */
+
+.arrivalsShimmer {
+    composes: h-[445px] pt-[22px] w-full from global;
+}
+
+.sliderRoot {
+    composes: rtl_justify-right from global;
+    composes: overflow-hidden from global;
+    composes: w-full from global;
+}
+
+.newArrivalsSliderInnerrTitle {
+    composes: text-base from global;
+    composes: uppercase from global;
+    composes: font-semibold from global;
+    composes: px-3 from global;
+    composes: mb-4 from global;
+}
+
+.newArrivalsSlider {
+    composes: root from '~@magento/pagebuilder/lib/ContentTypes/Slider/slider.module.css';
+    composes: !px-0 from global;
+}
+
+.newArrivalsSlider :global .slick-slide {
+    @apply visible !important;
+    @apply pb-8 pt-1 !important;
+}
+
+.newArrivalsSlider :global .slick-active {
+    @apply scale-110
+        xxxs_scale-100
+        rtl_scale-100
+        transition-all
+        duration-300;
+}
+
+.newArrivalsSlider :global .slick-arrow {
+    @apply lg_opacity-100
+        lg_transition-opacity
+        bg-transparent;
+}
+
+.sliderRoot [class*='lessItemsSlider'] :global .slick-track {
+    @apply flex;
+}
+
+.newArrivalsSlider:hover :global .slick-arrow {
+    @apply lg_opacity-100;
+}
+
+.newArrivalsSlider :global ul {
+    @apply p-0;
+}
+
+.newArrivalsSlider :global ul li {
+    @apply p-0
+        flex
+        h-auto
+        flex-grow;
+}
+
+.newArrivalsSlider :global ul li::before {
+    @apply bg-none
+        w-0
+        mr-0;
+}
+
+.newArrivalsSlider :global .slick-line .slick-active button {
+    @apply bg-black
+        lg_hover_bg-black;
+}
+
+.newArrivalsSlider :global .slick-line button {
+    @apply md_hover_bg-black;
+}
+
+.sliderProduct :global .slick-line {
+    @apply mt-[4px]
+        mb-0;
+}
+
+.newArrivalsSlider :global .slick-slider .slick-arrow {
+    @apply w-[33px]
+        h-[33px]
+        z-[9]
+        hover_opacity-60;
+}
+
+.newArrivalsSlider :global .slick-slider .slick-arrow::before {
+    content: '';
+}
+
+.newArrivalsSlider :global .slick-slider .slick-prev {
+    @apply top-[26px]
+        ltr_md_left-[80%]
+        ltr_lg_left-[75%];
+}
+
+.newArrivalsSlider :global .slick-slider .slick-next {
+    @apply top-[26px]
+        rtl_md_right-[80%]
+        rtl_lg_right-[75%];
+}
+
+.sliderRoot [class*='lessItemsSlider'] :global .slick-slider .slick-prev {
+    @apply top-[26px]
+        ltr_md_left-[80%]
+        ltr_lg_left-[75%];
+}
+
+.sliderRoot [class*='slider-lessItemsSlider'] :global .slick-slider .slick-next {
+    @apply top-[26px]
+        rtl_md_right-[80%]
+        rtl_lg_right-[75%];
+}
+
+/* slider gallery styles */
+
+.sliderItemRoot {
+    composes: grid from global;
+    composes: gap-1 from global;
+    composes: bg-white from global;
+    composes: max-h-[min-content] from global;
+    composes: w-auto from global;
+    composes: max-w-[240px] from global;
+    composes: mx-2.5 from global;
+    composes: px-4 from global;
+    composes: py-5 from global;
+    composes: shadow-xl from global;
+    composes: relative from global;
+    composes: hover_shadow-none from global;
+}
+
+.sliderItemReviews,
+.sliderItemBrand {
+    @apply !hidden;
+}
+
+.filterButtonFixedContainer {
+    composes: filterButtonFixedContainer from '@app/RootComponents/Category/category.module.css';
+}
+
+.filterButtonFixed {
+    composes: filterButton from '@app/components/overrides/FilterModalOpenButton/filterModalOpenButton.module.css';
+}
+
+.filterButtonFixedContainer .filterButtonFixed {
+    @apply bg-black text-white;
+}
+
+.filterButtonFixedHidden {
+    composes: filterButtonFixedHidden from '@app/RootComponents/Category/category.module.css';
+}

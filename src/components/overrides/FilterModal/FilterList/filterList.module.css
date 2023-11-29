@@ -1,0 +1,23 @@
+.items {
+    composes: max-h-[196px] from global;
+    composes: overflow-y-auto from global;
+    composes: pb-[30px] from global;
+    composes: grid from global;
+    composes: mb-10 from global;
+    composes: overscroll-contain from global;
+
+    composes: lg_max-h-[220px] from global;
+    composes: rtl_overflow-x-hidden from global;
+}
+
+.items::-webkit-scrollbar {
+    @apply w-[2px];
+}
+
+.items::-webkit-scrollbar-track {
+    @apply bg-grey-lighter;
+}
+
+.items::-webkit-scrollbar-thumb {
+    @apply bg-black;
+}

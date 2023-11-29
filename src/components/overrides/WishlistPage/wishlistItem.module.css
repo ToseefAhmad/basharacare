@@ -1,0 +1,150 @@
+.root {
+    composes: grid from global;
+    composes: mb-5 from global;
+    composes: lg_mb-0 from global;
+}
+
+.itemsCard {
+    composes: pb-5 from global;
+    composes: pt-12.5 from global;
+    composes: p-3 from global;
+    composes: bg-white from global;
+    composes: grid from global;
+
+    composes: max-h-[min-content] from global;
+    composes: min-h-[400px] from global;
+    composes: mb-5 from global;
+}
+
+.imageContainer {
+    composes: mx-12.5 from global;
+    composes: mb-7.5 from global;
+}
+
+.image {
+    composes: block from global;
+    composes: h-full from global;
+    composes: object-contain from global;
+    composes: w-full from global;
+    composes: hover_opacity-80 from global;
+}
+
+.imageLoaded {
+    composes: loaded from '@magento/venia-ui/lib/components/Image/image.module.css';
+    composes: opacity-100 from global;
+}
+
+.imageNotLoaded {
+    composes: notLoaded from '@magento/venia-ui/lib/components/Image/image.module.css';
+    composes: opacity-0 from global;
+}
+
+.imagePlaceholder {
+    composes: image;
+    composes: bg-grey from global;
+}
+
+.namePriceContainer {
+    composes: grid from global;
+}
+
+.brandName {
+    @apply text-base
+        font-bold
+        md_text-xs
+        text-brown;
+    composes: hover_opacity-80 from global;
+    composes: hover_underline from global;
+    composes: tracking-widest from global;
+    composes: font-sans from global;
+    composes: uppercase from global;
+}
+
+.name {
+    composes: text-sm from global;
+    composes: font-semibold from global;
+    composes: mb-[5px] from global;
+}
+
+.priceContainer {
+    composes: flex from global;
+    composes: gap-1 from global;
+    composes: md_gap-2 from global;
+    composes: items-baseline from global;
+}
+
+.price {
+    composes: text-xl from global;
+    composes: font-headingBold from global;
+    composes: font-black from global;
+    composes: max-h-[30px] from global;
+
+    composes: lg_text-lg from global;
+}
+
+.price span:first-child {
+    @apply text-xs
+        font-sans
+        font-semibold
+        lg_text-[10px]
+        lg_leading-[15px];
+}
+
+.discountedPrice {
+    composes: font-headingBold from global;
+    composes: font-black from global;
+    composes: line-through from global;
+
+    @apply md_text-sm text-xs h-5  line-through;
+}
+
+.description {
+    composes: border from global;
+    composes: border-grey-lighter from global;
+    composes: md_hover_border-grey-light from global;
+    composes: focus_outline-none from global;
+    composes: focus_border-black from global;
+    composes: w-full from global;
+    composes: bg-transparent from global;
+}
+
+.qty {
+    composes: mb-7.5 from global;
+}
+
+.qty input {
+    @apply w-7.5
+        h-7.5
+        ltr_ml-2.5
+        rtl_mr-2.5
+        text-center
+        border
+        border-grey-light
+        bg-grey-lightest;
+}
+.qty input::-webkit-inner-spin-button {
+    appearance: none;
+    margin: 0;
+}
+
+.actionContainer {
+    composes: mt-6 from global;
+}
+.deleteItem,
+.edit {
+    composes: text-sm from global;
+    composes: underline from global;
+}
+
+.edit {
+    composes: ltr_mr-5 from global;
+    composes: rtl_ml-5 from global;
+}
+
+.updateItemButtonWrapper button {
+    @apply w-full h-15 bg-purple-lighter;
+}
+
+.addToCartButtonWrapper button {
+    @apply w-full h-15;
+}

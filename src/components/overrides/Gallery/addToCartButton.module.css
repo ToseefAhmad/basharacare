@@ -1,0 +1,37 @@
+.root {
+    composes: root from '@magento/venia-ui/lib/components/clickable.module.css';
+    composes: uppercase from global;
+    composes: font-semibold from global;
+    composes: tracking-1px from global;
+    composes: duration-[250ms] from global;
+    composes: transition-colors from global;
+    composes: ease-linear from global;
+    composes: disabled_bg-grey-lighter from global;
+    composes: disabled_text-grey from global;
+    composes: disabled_cursor-not-allowed from global;
+    composes: disabled_hover_bg-grey-lighter from global;
+    composes: disabled_hover_text-grey from global;
+
+    composes: text-white from global;
+    composes: bg-black from global;
+    composes: xl_hover_bg-white from global;
+    composes: xl_hover_text-black from global;
+    composes: xl_hover_border from global;
+    composes: xl_hover_border-black from global;
+    composes: xl_hover_border-solid from global;
+    composes: xl_focus_bg-purple from global;
+    composes: xl_active_bg-purple from global;
+    composes: outline-none from global;
+
+    composes: h-full from global;
+    composes: w-full from global;
+}
+
+.icon {
+    composes: hidden from global;
+    composes: stroke-white from global;
+}
+
+.text {
+    composes: text-sm from global;
+}

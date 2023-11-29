@@ -1,0 +1,58 @@
+.wrapper {
+    grid-template-areas: 'input icon';
+    grid-template-columns: auto 2.25rem;
+
+    composes: inline-grid from global;
+    composes: grid-flow-col from global;
+    composes: h-full from global;
+}
+
+.input,
+.input_error {
+    grid-area: input-start / input-start / input-end / icon-end;
+
+    @apply ltr_pr-[calc(2.25rem-1px)]
+        rtl_pl-[calc(2.25rem-1px)];
+
+    /* Hide default icon select */
+    text-overflow: '';
+
+    /* stylelint-disable */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    composes: appearance-none from global;
+    composes: indent-px from global;
+
+    composes: input from '@magento/venia-ui/lib/components/Field/field.module.css';
+
+    composes: bg-white from global;
+    composes: border from global;
+    composes: border-black from global;
+    composes: border-opacity-20 from global;
+    composes: outline-white from global;
+    composes: ltr_pl-[15px] from global;
+    composes: rtl_pr-[15px] from global;
+    composes: h-full from global;
+    composes: w-[324px] from global;
+    composes: h-[56px] from global;
+
+    composes: lg_w-[361px] from global;
+}
+
+.input:disabled {
+    @apply pointer-events-none;
+}
+
+.input_error {
+    composes: border-red from global;
+}
+
+.fieldIconsRoot {
+    grid-template-areas: 'before input after';
+    grid-template-columns: auto 1fr auto;
+
+    composes: inline-grid from global;
+    composes: grid-flow-col from global;
+    composes: min-h-[42px] from global;
+    composes: w-full from global;
+}

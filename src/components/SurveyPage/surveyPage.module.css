@@ -1,0 +1,351 @@
+:global(.survey-page #main) {
+    @apply max-w-none
+        p-0
+        bg-grey-lightest;
+}
+
+.root {
+    composes: min-h-[500px] from global;
+    composes: relative from global;
+}
+
+.hidden {
+    composes: hidden from global;
+}
+
+.reset {
+    composes: rtl_rotate-180 from global;
+}
+
+.line {
+    composes: block from global;
+    composes: w-full from global;
+    composes: h-px from global;
+    composes: bg-black-20 from global;
+    composes: mt-7.5 from global;
+}
+
+.background {
+    composes: relative from global;
+    composes: md_absolute from global;
+    composes: w-full from global;
+    composes: h-37 from global;
+    composes: md_h-[287px] from global;
+    composes: bg-no-repeat from global;
+    composes: bg-cover from global;
+    composes: bg-top from global;
+    background-image: url('/static-files/images/survey/background.jpg');
+}
+
+.container {
+    composes: sm_container from global;
+    composes: pb-[160px] from global;
+}
+
+.formContainer {
+    composes: max-w-[700px] from global;
+    composes: mx-auto from global;
+    composes: lg_translate-y-12.5 from global;
+    composes: p-0 from global;
+    composes: px-mobile from global;
+    composes: py-12.5 from global;
+    composes: md_p-12.5 from global;
+    composes: bg-white from global;
+}
+
+.tabListContainer {
+    composes: flex from global;
+    composes: overflow-x-auto from global;
+    composes: overflow-y-hidden from global;
+    composes: items-center from global;
+    composes: space-x-2.5 from global;
+    composes: w-[min-content] from global;
+    composes: mx-auto from global;
+    composes: py-1.25 from global;
+    composes: pb-4 from global;
+    composes: max-w-[100%] from global;
+    composes: overflow-x-auto from global;
+}
+
+.tab {
+    composes: border from global;
+    composes: border-solid from global;
+    composes: rounded-[50%] from global;
+    composes: h-[22px] from global;
+    composes: w-[22px] from global;
+    composes: appearance-none from global;
+    composes: md_hover_cursor-not-allowed from global;
+}
+
+.tabCurrent {
+    composes: tab;
+
+    @apply md_hover_bg-black
+        md_hover_cursor-pointer;
+}
+
+.tabActive {
+    composes: tab;
+
+    @apply md_hover_bg-black
+        md_hover_cursor-pointer;
+}
+
+.tabSubmitted {
+    composes: tab;
+
+    @apply bg-black
+        md_hover_cursor-pointer;
+}
+
+.tab span {
+    @apply p-1.3;
+    content: url('/static-files/icons/survey/eclipse-white.svg');
+}
+
+.tabActive span {
+    content: url('/static-files/icons/survey/eclipse-black.svg');
+}
+
+.tabSubmitted span {
+    content: url('/static-files/icons/survey/check.svg');
+}
+
+.tab:hover span,
+.tabActive:hover span,
+.tabSubmitted:hover span {
+    content: url('/static-files/icons/survey/eclipse-white.svg');
+}
+
+.tabTitle {
+    composes: mt-[10px] from global;
+    composes: mb-[5px] from global;
+}
+
+.contentContainer {
+    composes: pt-12.5 from global;
+}
+
+.counter {
+    composes: font-bold from global;
+    composes: text-sm from global;
+}
+
+.pageTitle {
+    composes: mt-[10px] from global;
+    composes: mb-[7px] from global;
+
+    composes: flex from global;
+    composes: items-center from global;
+    composes: gap-4 from global;
+    composes: font-sans from global;
+}
+
+.pageTitle:first-child {
+    @apply font-headingBold
+        mt-[5px];
+}
+
+.description {
+    composes: text-base from global;
+    composes: leading-[27.2px] from global;
+    composes: tracking-[0.5%] from global;
+}
+
+.answersContainer {
+    composes: pt-7.5 from global;
+}
+
+.containerButton {
+    composes: hover_no-underline from global;
+    composes: w-full from global;
+    composes: ltr_text-left from global;
+    composes: rtl_text-right from global;
+    composes: focus_outline-none from global;
+}
+
+.checkboxRoot {
+    composes: root from '@app/components/overrides/Checkbox/checkbox.module.css';
+    composes: gap-y-0 from global;
+    composes: focus_outline-none from global;
+}
+
+.radioGroup {
+    composes: grid from global;
+    composes: md_grid-cols-3 from global;
+    composes: grid-cols-2 from global;
+    composes: gap-1.25 from global;
+    composes: focus_outline-none from global;
+}
+
+.radioLabel {
+    composes: text-sm from global;
+    composes: focus_outline-none from global;
+}
+
+.imageAnswerContainer {
+    composes: flex from global;
+    composes: flex-wrap from global;
+    composes: gap-1 from global;
+    composes: focus_outline-none from global;
+}
+
+.imageAnswer {
+    composes: p-5 from global;
+    composes: bg-grey-lighter2 from global;
+    composes: focus_outline-none from global;
+}
+
+.imageCheckbox {
+    composes: root from '@app/components/overrides/Checkbox/checkbox.module.css';
+    composes: pt-1.4 from global;
+    composes: pb-1.25 from global;
+    composes: ml-[-6px] from global;
+    composes: focus_outline-none from global;
+}
+
+.answerDescription {
+    composes: text-sm from global;
+    composes: ml-7.5 from global;
+    grid-column: 1 / -1;
+    composes: w-full from global;
+}
+
+.answerCheckboxDescription {
+    composes: answerDescription;
+    composes: ml-14 from global;
+}
+
+.imageAnswerDescription {
+    composes: text-sm from global;
+    composes: max-w-[157px] from global;
+}
+
+.loadedImage {
+    composes: container from '@magento/venia-ui/lib/components/Image/image.module.css';
+    composes: relative from global;
+    composes: max-h-[157px] from global;
+    composes: mb-[8px] from global;
+}
+
+.answerImage {
+    composes: image from '@magento/venia-ui/lib/components/Image/image.module.css';
+    composes: h-[157px] from global;
+    composes: object-cover from global;
+}
+
+.textAreaContainer {
+    composes: container from '@app/components/overrides/TextArea/textArea.module.css';
+    composes: mt-7.5 from global;
+}
+
+.textAreaInput {
+    composes: input from '@app/components/overrides/TextArea/textArea.module.css';
+    composes: h-[70px] from global;
+}
+
+.actionContainer {
+    composes: block from global;
+    composes: sm_flex from global;
+    composes: justify-between from global;
+    composes: pt-12.5 from global;
+    composes: space-y-5 from global;
+    composes: sm_space-y-0 from global;
+}
+
+.backAction {
+    composes: flex from global;
+    composes: items-center from global;
+    composes: space-x-3.5 from global;
+    composes: cursor-pointer from global;
+    composes: hover_underline from global;
+    composes: mx-auto from global;
+    composes: sm_mx-0 from global;
+}
+
+.backActionLabel {
+    composes: font-semibold from global;
+}
+
+.nextAction {
+    composes: root_highPriority from '@app/components/overrides/Button/button.module.css';
+    composes: order-2 from global;
+    composes: min-w-full from global;
+    composes: sm_min-w-[248px] from global;
+}
+
+.separator {
+    composes: h-px from global;
+    composes: bg-black-20 from global;
+    composes: w-2.5 from global;
+}
+
+.header {
+    composes: max-h-[min-content] from global;
+    composes: lg_mb-[50px] from global;
+    composes: mb-[30px] from global;
+}
+
+.headerContainer {
+    composes: container from global;
+    composes: max-h-[min-content] from global;
+    composes: pt-[64px] from global;
+
+    composes: bg-no-repeat from global;
+    composes: bg-center from global;
+    composes: ltr_bg-right from global;
+    composes: rtl_bg-left from global;
+    composes: bg-contain from global;
+    composes: mix-blend-multiply from global;
+
+    @apply px-[18px];
+}
+
+.descriptionTitleShimmer {
+    composes: root from '@magento/venia-ui/lib/components/Shimmer/shimmer.module.css';
+    composes: w-full from global;
+    composes: h-[80px] from global;
+    composes: mb-[2px] from global;
+}
+
+.descriptionShimmer {
+    composes: root from '@magento/venia-ui/lib/components/Shimmer/shimmer.module.css';
+    composes: w-full from global;
+    composes: h-[16px] from global;
+    composes: mb-[86px] from global;
+}
+
+.action {
+    composes: h-[25px] from global;
+    composes: grid from global;
+    composes: content-center from global;
+    composes: uppercase from global;
+    composes: text-xs from global;
+    composes: px-4 from global;
+    composes: font-semibold from global;
+    composes: hover_text-grey from global;
+}
+
+.switchAuthState {
+    composes: font-bold from global;
+    composes: underline from global;
+}
+
+.sucessPageRoot p {
+    @apply mb-2;
+}
+
+.sucessPageRoot h4 {
+    @apply mb-3;
+}
+
+.successText {
+    composes: whitespace-pre-line from global;
+}
+
+.discoverMoreButtonWrapper {
+    composes: w-full from global;
+    composes: flex from global;
+    composes: justify-center from global;
+    composes: mt-4 from global;
+}

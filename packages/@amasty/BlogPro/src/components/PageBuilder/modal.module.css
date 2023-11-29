@@ -1,0 +1,59 @@
+.root {
+  composes: root from '@magento/venia-ui/lib/components/Navigation/navigation.module.css';
+}
+
+.left {
+  left: 0;
+  right: auto;
+  transform: translate3d(-100%, 0, 0);
+}
+
+.root_open {
+  composes: root_open from '@magento/venia-ui/lib/components/Navigation/navigation.module.css';
+}
+
+.left.root_open {
+  transform: translate3d(0, 0, 0);
+}
+
+.body {
+  composes: body from '@magento/venia-ui/lib/components/Navigation/navigation.module.css';
+  padding: 1rem 1.25rem;
+}
+
+.header {
+  composes: header from '@magento/venia-ui/lib/components/Navigation/navigation.module.css';
+}
+
+.title {
+  composes: title from '@magento/venia-ui/lib/components/Navigation/navHeader.module.css';
+}
+
+.swipeBtnContainer {
+  grid-area: swipeBtn;
+  position: relative;
+}
+
+.swipeBtn {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 114px;
+  right: 1rem;
+  z-index: 1;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  outline: none;
+  cursor: pointer;
+  background-color: rgb(var(--blog-pro-main-color));
+}
+
+.swipeBtn:after {
+  content: '';
+  width: 26px;
+  height: 26px;
+  display: block;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjYiIGhlaWdodD0iMjYiIHZpZXdCb3g9IjAgMCAyNiAyNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEwLjg5MzkgM0g0LjEwNjE1QzMuNDk1MjQgMyAzIDMuNTE3NzUgMyA0LjE1NjQyVjEwLjg0MzZDMyAxMS40ODIzIDMuNDk1MjQgMTIgNC4xMDYxNSAxMkgxMC44OTM5QzExLjUwNDggMTIgMTIgMTEuNDgyMyAxMiAxMC44NDM2VjQuMTU2NDJDMTIgMy41MTc3NSAxMS41MDQ4IDMgMTAuODkzOSAzWiIgZmlsbD0id2hpdGUiLz4KPHBhdGggZD0iTTIxLjg5MzkgM0gxNS4xMDYxQzE0LjQ5NTIgMyAxNCAzLjUxNzc1IDE0IDQuMTU2NDJWMTAuODQzNkMxNCAxMS40ODIzIDE0LjQ5NTIgMTIgMTUuMTA2MSAxMkgyMS44OTM5QzIyLjUwNDggMTIgMjMgMTEuNDgyMyAyMyAxMC44NDM2VjQuMTU2NDJDMjMgMy41MTc3NSAyMi41MDQ4IDMgMjEuODkzOSAzWiIgZmlsbD0id2hpdGUiLz4KPHBhdGggZD0iTTEwLjg5MzkgMTRINC4xMDYxNUMzLjQ5NTI0IDE0IDMgMTQuNTE3NyAzIDE1LjE1NjRWMjEuODQzNkMzIDIyLjQ4MjMgMy40OTUyNCAyMyA0LjEwNjE1IDIzSDEwLjg5MzlDMTEuNTA0OCAyMyAxMiAyMi40ODIzIDEyIDIxLjg0MzZWMTUuMTU2NEMxMiAxNC41MTc3IDExLjUwNDggMTQgMTAuODkzOSAxNFoiIGZpbGw9IndoaXRlIi8+CjxwYXRoIGQ9Ik0yMS44OTM5IDE0SDE1LjEwNjFDMTQuNDk1MiAxNCAxNCAxNC41MTc3IDE0IDE1LjE1NjRWMjEuODQzNkMxNCAyMi40ODIzIDE0LjQ5NTIgMjMgMTUuMTA2MSAyM0gyMS44OTM5QzIyLjUwNDggMjMgMjMgMjIuNDgyMyAyMyAyMS44NDM2VjE1LjE1NjRDMjMgMTQuNTE3NyAyMi41MDQ4IDE0IDIxLjg5MzkgMTRaIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K);
+}

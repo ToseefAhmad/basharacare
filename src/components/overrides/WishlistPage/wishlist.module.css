@@ -1,0 +1,48 @@
+.shareFormContentCollapsed {
+    composes: hidden from global;
+}
+
+.shareFormContent {
+    composes: grid from global;
+    composes: py-12.5 from global;
+}
+
+.shareWishlistButton {
+    composes: ltr_mr-5 from global;
+    composes: rtl_ml-5 from global;
+}
+
+.actionButtons {
+    composes: flex from global;
+    composes: mb-7.5 from global;
+}
+
+.emptyListText {
+    composes: my-7.5 from global;
+}
+
+.editor {
+    @apply border
+        border-grey-lighter
+        md_hover_border-grey-light
+        p-3.5
+        h-auto min-h-[200px] max-h-[400px];
+}
+
+.fieldset {
+    composes: p-2.5 from global;
+    composes: mb-10 from global;
+    composes: mx-0 from global;
+    composes: border from global;
+    composes: border-grey-lighter from global;
+}
+
+.legend {
+    composes: p-0 from global;
+    composes: text-lg from global;
+    composes: font-semibold from global;
+}
+
+.wishlistId {
+    composes: text-base from global;
+}

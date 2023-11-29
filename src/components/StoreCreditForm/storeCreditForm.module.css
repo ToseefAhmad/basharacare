@@ -1,0 +1,25 @@
+.form {
+    composes: relative from global;
+}
+
+.label {
+    composes: block from global;
+    composes: text-sm from global;
+    composes: font-semibold from global;
+    composes: mb-2 from global;
+}
+
+.root_normalPriority {
+    composes: root_normalPriority from '@app/components/overrides/Button/button.module.css';
+    composes: text-xs from global;
+    composes: bg-orange-storeCredits from global;
+    composes: text-white from global;
+    composes: border-transparent from global;
+    composes: xl_hover_bg-white from global;
+    composes: xl_hover_border-orange-storeCredits from global;
+    composes: xl_hover_text-orange-storeCredits from global;
+}
+
+.form .root_normalPriority {
+    @apply p-2;
+}

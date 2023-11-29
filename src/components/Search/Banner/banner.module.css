@@ -1,0 +1,40 @@
+.title {
+    composes: uppercase from global;
+    composes: max-h-[min-content] from global;
+    composes: md_pt-[58px] from global;
+    composes: pt-2 from global;
+    composes: md_mb-3.5 from global;
+    composes: mb-5.5 from global;
+    composes: text-lg from global;
+    composes: bg-no-repeat from global;
+    composes: bg-center from global;
+    composes: ltr_bg-right from global;
+    composes: rtl_bg-left from global;
+    composes: bg-contain from global;
+    composes: mix-blend-multiply from global;
+}
+
+.container {
+    composes: container from global;
+}
+
+.root .container {
+    @apply xl_px-0;
+}
+
+.link {
+    composes: link from '@app/components/overrides/Breadcrumbs/breadcrumbs.module.css';
+}
+
+.divider {
+    composes: divider from '@app/components/overrides/Breadcrumbs/breadcrumbs.module.css';
+}
+
+.currentBreadcrumb {
+    composes: currentProduct from '@app/components/overrides/Breadcrumbs/breadcrumbs.module.css';
+}
+
+.breadcrumbRoot {
+    @apply py-2 pt-[21px];
+    @apply text-sm;
+}

@@ -1,0 +1,29 @@
+@import './fonts/fonts.css';
+@import './styles/global/base.css';
+@import './styles/global/utilities.css';
+
+/* CMS Pages styles */
+@import './styles/pages/my-account.css';
+@import './styles/pages/delivery.css';
+@import './styles/pages/faq.css';
+@import './styles/pages/about-basharacare.css';
+@import './styles/pages/returns-cancellation-policy.css';
+@import './styles/pages/privacy-and-security.css';
+@import './styles/pages/affiliates.css';
+@import './styles/pages/reward-points.css';
+@import './styles/pages/home-page.css';
+@import './styles/pages/payment-ways.css';
+@import './styles/pages/routinesHtml.css';
+@import './styles/pages/cms-pages.css';
+@import './styles/pages/take-the-test.css';
+
+/* CMS Block styles */
+@import './styles/blocks/contact-us.css';
+@import './styles/blocks/header-top-promo.css';
+@import './styles/blocks/attribute-page-block.css';
+@import './styles/blocks/step-product-wrapper.css';
+@import './styles/blocks/mobile-nav.css';
+@import './styles/blocks/online-banner.css';
+@import './styles/blocks/routines-page-slider.css';
+
+@tailwind components;

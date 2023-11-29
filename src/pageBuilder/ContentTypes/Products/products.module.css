@@ -1,0 +1,3 @@
+.root {
+    composes: grid from global;
+}

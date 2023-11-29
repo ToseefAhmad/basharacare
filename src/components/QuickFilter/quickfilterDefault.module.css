@@ -1,0 +1,21 @@
+.root {
+    composes: h-6 from global;
+    composes: w-[min-content] from global;
+    composes: uppercase from global;
+    composes: whitespace-nowrap from global;
+    composes: font-semibold from global;
+    composes: text-xs from global;
+    composes: py-[3px] from global;
+    composes: px-4 from global;
+    composes: border from global;
+    composes: border-grey-border from global;
+    composes: flex from global;
+    composes: items-center from global;
+    composes: outline-none from global;
+}
+
+.rootActive {
+    composes: root;
+
+    @apply bg-black text-white;
+}

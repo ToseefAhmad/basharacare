@@ -1,0 +1,52 @@
+.root {
+    composes: md_text-center from global;
+}
+
+.title {
+    composes: inline-flex from global;
+    composes: items-center from global;
+
+    composes: font-sans from global;
+    composes: text-3xl from global;
+    composes: leading-tight from global;
+    composes: md_text-6xl from global;
+    composes: md_leading-normal from global;
+}
+
+.title :global svg {
+    @apply mx-5
+        w-[30px]
+        md_w-[50px];
+}
+
+.subTitle {
+    composes: text-3xl from global;
+    composes: leading-tight from global;
+    composes: mb-6 from global;
+    composes: md_text-6xl from global;
+    composes: md_leading-normal from global;
+    composes: md_mb-14 from global;
+}
+
+.gallery {
+    composes: grid from global;
+}
+
+.items {
+    composes: grid from global;
+    composes: gap-x-[10px] from global;
+    composes: gap-y-[10px] from global;
+    composes: grid-cols-1 from global;
+    composes: mb-3 from global;
+
+    composes: md_grid-cols-4 from global;
+    composes: md_gap-x-[30px] from global;
+    composes: md_gap-y-[60px] from global;
+}
+
+.actionButtons {
+    composes: flex from global;
+    composes: mt-7.5 from global;
+    composes: mb-14 from global;
+    composes: md_mb-36 from global;
+}

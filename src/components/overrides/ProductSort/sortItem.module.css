@@ -1,0 +1,24 @@
+.root {
+    composes: items-center from global;
+    composes: flex from global;
+    composes: w-full from global;
+}
+
+.content {
+    grid-template-columns: 1fr;
+
+    composes: items-center from global;
+    composes: grid from global;
+    composes: gap-3 from global;
+    composes: grid-flow-col from global;
+    composes: h-10 from global;
+    composes: px-3 from global;
+    composes: w-full from global;
+}
+
+.text {
+    composes: white-space-nowrap from global;
+    composes: text-left from global;
+
+    composes: rtl_text-right from global;
+}

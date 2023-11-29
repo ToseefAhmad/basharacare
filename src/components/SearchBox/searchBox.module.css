@@ -1,0 +1,53 @@
+.root {
+    composes: text-black from global;
+    composes: max-w-[170px] from global;
+    composes: md_text-white from global;
+    composes: md_max-w-[150px] from global;
+
+    @apply relative;
+}
+
+.label {
+    composes: hidden from global;
+}
+
+.icon {
+    composes: absolute from global;
+    composes: ltr_left-2 from global;
+    composes: rtl_right-2 from global;
+    composes: top-[45%] from global;
+    composes: md_top-1/2 from global;
+    composes: -translate-y-1/2 from global;
+}
+
+.input {
+    composes: bg-white from global;
+    composes: md_bg-black from global;
+    composes: border from global;
+    composes: border-solid from global;
+    composes: border-grey-light-border from global;
+    composes: md_border-white from global;
+    composes: focus_outline-none from global;
+    composes: px-2 from global;
+    composes: ltr_pl-7 from global;
+    composes: rtl_pr-7 from global;
+    composes: md_pl-6 from global;
+    composes: w-full from global;
+    composes: min-h-[30px] from global;
+    composes: md_min-h-[20px] from global;
+
+    @apply text-menu;
+}
+
+.hidden {
+    composes: hidden from global;
+}
+
+.resetIcon {
+    composes: absolute from global;
+    composes: ltr_right-2 from global;
+    composes: rtl_left-2 from global;
+    composes: top-[55%] from global;
+    composes: md_top-[55%] from global;
+    composes: -translate-y-1/2 from global;
+}

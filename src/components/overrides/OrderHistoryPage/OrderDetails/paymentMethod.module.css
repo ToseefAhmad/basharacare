@@ -1,0 +1,13 @@
+.root {
+    composes: grid from global;
+    composes: gap-y-1.5 from global;
+}
+
+.heading {
+    composes: text-lg from global;
+    composes: font-semibold from global;
+}
+
+.payment_type {
+    grid-row: 2 / span 1;
+}

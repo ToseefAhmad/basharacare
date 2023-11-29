@@ -1,0 +1,18 @@
+/** The "thumbnail" is a round pil button below the product image in mobile or
+ * as a thumbnail to the left of the product image in desktop.
+ */
+.root {
+    composes: bg-grey-lightest from global;
+    composes: flex-1 from global;
+    composes: h-0.5 from global;
+    composes: w-auto from global;
+}
+
+.rootSelected {
+    composes: root;
+    background-color: rgb(var(--venia-global-color-text));
+}
+
+.image {
+    display: none;
+}

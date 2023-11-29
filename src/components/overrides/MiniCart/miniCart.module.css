@@ -1,0 +1,227 @@
+.root {
+    composes: text-black from global;
+
+    composes: opacity-0 from global;
+    composes: transition-opacity from global;
+    composes: hidden from global;
+}
+
+.root_open {
+    composes: h-0 from global;
+    composes: absolute from global;
+    composes: top-full from global;
+
+    composes: mobile_rtl_left-[4px] from global;
+    composes: mobile_ltr_right-[4px] from global;
+
+    composes: opacity-100 from global;
+    composes: transition-opacity from global;
+    composes: visible from global;
+    composes: z-3 from global;
+}
+
+.contents {
+    composes: bg-grey-lighter2 from global;
+    composes: rounded-sm from global;
+    composes: shadow-sm from global;
+    composes: grid from global;
+    composes: text-black from global;
+
+    composes: min-h-[320px] from global;
+    composes: max-h-[560px] from global;
+    composes: overflow-hidden from global;
+    composes: absolute from global;
+
+    composes: ltr_-right-1 from global;
+    composes: rtl_-left-1 from global;
+
+    composes: top-1 from global;
+
+    composes: transition-transform from global;
+    composes: duration-200 from global;
+    composes: ease-in from global;
+
+    composes: w-72 from global;
+
+    /* Large screen styles */
+    composes: lg_max-h-[760px] from global;
+}
+
+.contents_open {
+    composes: contents;
+    composes: duration-200 from global;
+    composes: ease-in from global;
+    composes: bg-grey-lighter2 from global;
+    composes: z-[3] from global;
+    composes: top-0 from global;
+
+    /* Large screen styles */
+    composes: lg_w-[390px] from global;
+    composes: shadow-2xl from global;
+}
+
+.header {
+    composes: flex from global;
+
+    composes: text-xs from global;
+    composes: font-semibold from global;
+    composes: my-0 from global;
+    composes: mx-4 from global;
+    composes: pt-4 from global;
+    composes: px-2 from global;
+    composes: pb-2 from global;
+    composes: gap-x-4 from global;
+    composes: h-25 from global;
+
+    /* Large screen styles */
+    composes: lg_grid from global;
+    composes: lg_grid-cols-3 from global;
+}
+
+.stockStatusMessageContainer {
+    composes: col-span-2 from global;
+}
+
+.stockStatusMessageContainer:empty {
+    @apply hidden;
+}
+
+.body {
+    composes: max-h-[364px] from global;
+    composes: overflow-y-auto from global;
+    composes: px-6 from global;
+    composes: ltr_mr-2 from global;
+    composes: rtl_ml-2 from global;
+
+    /* Large screen styles */
+    composes: lg_max-h-[407px] from global;
+}
+
+.body::-webkit-scrollbar {
+    @apply w-1.5
+        bg-grey-lighter
+        rounded-md;
+}
+
+.body::-webkit-scrollbar-thumb {
+    @apply bg-black
+        rounded-md;
+}
+
+.body::-webkit-scrollbar-thumb:hover {
+    @apply bg-grey-dark;
+}
+
+.bodySmallHeight {
+    composes: max-h-[260px] from global;
+    composes: overflow-y-auto from global;
+    composes: px-6 from global;
+}
+
+.quantity {
+    composes: opacity-100 from global;
+    composes: delay-75 from global;
+    composes: duration-300 from global;
+    composes: transition-opacity from global;
+    composes: ease-in-out from global;
+
+    composes: ml-7 from global;
+}
+
+.quantity_loading {
+    composes: quantity;
+    composes: opacity-50 from global;
+}
+
+.price {
+    composes: opacity-100 from global;
+    composes: delay-75 from global;
+    composes: duration-300 from global;
+    composes: transition-opacity from global;
+    composes: ease-in-out from global;
+}
+
+.price_loading {
+    composes: quantity;
+    composes: opacity-50 from global;
+}
+
+.footer {
+    composes: items-center from global;
+    composes: border-t from global;
+    composes: border-solid from global;
+    composes: border-grey from global;
+    composes: border-opacity-50 from global;
+    composes: grid from global;
+    composes: gap-2 from global;
+    composes: text-sm from global;
+    composes: my-0 from global;
+    composes: mx-4 from global;
+    composes: min-h-[3rem] from global;
+    composes: overflow-hidden from global;
+    composes: p-4 from global;
+}
+
+.checkoutButton {
+    composes: root_highPriority from '../Button/button.module.css';
+    composes: col-span-1 from global;
+    composes: w-[210px] from global;
+    composes: h-[63px] from global;
+    composes: m-auto from global;
+    composes: border-none from global;
+
+    composes: text-base from global;
+    composes: font-semibold from global;
+}
+
+.editCartButton {
+    composes: underline from global;
+    composes: text-sm from global;
+}
+
+.emptyCart {
+    composes: flex from global;
+    composes: flex-col from global;
+    composes: text-sm from global;
+}
+
+.emptyCart > div {
+    @apply border-none;
+}
+
+.emptyMessage {
+    composes: mx-auto from global;
+    composes: font-bold from global;
+    composes: mt-3 from global;
+}
+
+.iconRoot {
+    composes: root from '@magento/venia-ui/lib/components/Icon/icon.module.css';
+
+    composes: text-white from global;
+    composes: w-9 from global;
+    composes: h-9 from global;
+
+    /* Large screen styles */
+    composes: lg_w-[36px] from global;
+}
+
+.closeButton {
+    composes: h-9 from global;
+    composes: w-9 from global;
+
+    composes: mt-3.5 from global;
+    composes: ml-2.5 from global;
+}
+
+.cartTitle {
+    composes: ml-1.25 from global;
+    composes: mt-2.5 from global;
+
+    composes: text-[28px] from global;
+    composes: font-semibold from global;
+    composes: leading-[44.8px] from global;
+
+    /* Large screen styles */
+    composes: lg_w-37 from global;
+}

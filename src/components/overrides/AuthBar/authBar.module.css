@@ -1,0 +1,28 @@
+.root {
+    composes: bg-white from global;
+    composes: grid from global;
+    composes: grid-flow-col from global;
+    composes: h-16 from global;
+}
+
+.contents {
+    composes: items-center from global;
+    composes: justify-between from global;
+    composes: grid from global;
+    composes: grid-flow-col from global;
+    composes: grid-col-2 from global;
+    composes: justify-start from global;
+    composes: px-6 from global;
+    composes: py-1 from global;
+    composes: uppercase from global;
+    composes: font-semibold from global;
+}
+
+.signIn {
+    composes: root from '../LinkButton/linkButton.module.css';
+}
+
+.icon {
+    composes: flex from global;
+    composes: rtl_rotate-180 from global;
+}

@@ -1,0 +1,102 @@
+.root {
+    composes: relative from global;
+    composes: flex from global;
+    composes: items-center from global;
+    composes: text-black from global;
+    composes: text-sm from global;
+    composes: leading-none from global;
+    composes: min-h-12 from global;
+    composes: py-2 from global;
+    composes: px-5 from global;
+
+    composes: lg_text-base from global;
+}
+
+.container {
+    padding-bottom: env(safe-area-inset-bottom, 0);
+    grid-template-columns: 1fr min-content min-content;
+
+    composes: relative from global;
+    composes: w-full from global;
+    composes: grid from global;
+    composes: items-center from global;
+    composes: justify-between from global;
+    composes: gap-10 from global;
+}
+
+.messageContainer {
+    composes: flex from global;
+    composes: items-center from global;
+    composes: justify-center from global;
+    composes: gap-2.5 from global;
+}
+
+.messageContainer svg {
+    @apply stroke-current;
+}
+
+.infoToast {
+    composes: bg-[orange] from global;
+}
+
+.infoToast .progress {
+    @apply bg-[orange];
+}
+
+.warningToast {
+    composes: bg-[#FFE4C4] from global;
+}
+
+.warningToast .progress {
+    @apply bg-[#FFE4C4];
+}
+
+.errorToast {
+    composes: bg-red from global;
+}
+
+.errorToast .progress {
+    @apply bg-red;
+}
+
+.successToast {
+    composes: bg-purple-lightest from global;
+}
+
+.successToast .progress {
+    @apply bg-purple;
+}
+
+.progress {
+    animation: progress-bar;
+
+    composes: absolute from global;
+    composes: bottom-0 from global;
+    composes: left-0 from global;
+    composes: w-0 from global;
+    composes: ease-linear from global;
+
+    composes: rtl_right-0 from global;
+
+    @apply h-[2px];
+}
+
+@keyframes progress-bar {
+    0% {
+        width: 100%;
+    }
+
+    100% {
+        width: 0;
+    }
+}
+
+.actions {
+    composes: flex from global;
+    composes: gap-4 from global;
+    composes: flex-nowrap from global;
+}
+
+.actions button {
+    @apply font-bold hover_text-white whitespace-nowrap;
+}

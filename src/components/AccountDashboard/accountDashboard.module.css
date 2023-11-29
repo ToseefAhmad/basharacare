@@ -1,0 +1,53 @@
+.title h2 {
+    @apply inline-block
+        first_pr-2
+        first_rtl_pl-2
+        last_font-light
+        last_font-sans
+        rtl_first_font-albraSemibold
+        rtl_first_font-semibold
+        rtl_last_font-normal;
+}
+
+.title {
+    composes: pb-7.5 from global;
+}
+
+.content h4 {
+    @apply inline-block
+        first_pr-2
+        first_rtl_pl-2
+        ltr_last_font-light
+        ltr_last_font-sans
+        text-2xl
+        pb-5;
+}
+
+.headingRegular {
+    composes: font-light from global;
+
+    @apply font-sans;
+}
+
+.content {
+    composes: grid from global;
+    composes: grid-flow-row from global;
+    composes: md_grid-cols-2 from global;
+    composes: gap-y-4 from global;
+}
+
+.action {
+    composes: text-sm from global;
+    composes: underline from global;
+    composes: flex from global;
+    composes: gap-2 from global;
+}
+
+.newslettersWrapper .subscriptionText {
+    @apply text-sm
+        xxxxs_text-base;
+}
+.newslettersWrapper {
+    composes: mb-[60px] from global;
+    composes: lg_mb-0 from global;
+}

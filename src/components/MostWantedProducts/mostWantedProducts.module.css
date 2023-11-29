@@ -1,0 +1,22 @@
+.sliderTitle {
+    composes: grid from global;
+    composes: lg_flex from global;
+    composes: grid-cols-auto1fr from global;
+    composes: gap-2 from global;
+    composes: text-4xl from global;
+    composes: font-sans from global;
+    composes: lg_mx-4 from global;
+    composes: mb-5 from global;
+}
+
+.sliderTitleBold {
+    composes: font-headingBold from global;
+    composes: mx-2 from global;
+}
+
+.mostWantedProductsRoot {
+    composes: rtl_justify-right from global;
+    composes: overflow-hidden from global;
+    composes: w-full from global;
+    composes: pb-25 from global;
+}

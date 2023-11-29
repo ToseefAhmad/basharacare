@@ -1,0 +1,490 @@
+.root {
+    composes: m-0 from global;
+    composes: p-0 from global;
+}
+
+.root > div {
+    @apply m-0;
+}
+
+.root div {
+    @apply p-0;
+}
+
+.root :global(.footerWrapper > div) {
+    @apply m-0;
+}
+
+.root :global(.footerWrapper [class*='richContent-root']:first-child) {
+    @apply m-0
+        container
+        mx-auto
+        md_my-0;
+}
+
+.root :global(.footerWrapper [class*='richContent-root']:nth-of-type(2)) {
+    @apply m-0
+        mx-auto
+        md_my-0;
+}
+
+/* Footer upper part with links */
+.root :global(.wrap-cols) {
+    @apply container
+        flex
+        h-auto
+        pb-0
+        !px-4
+        md_pb-0
+        md_h-[auto]
+        md_pt-0
+        md_mb-[60px]
+        md_w-full
+        md_max-w-[1240px];
+}
+
+.root :global(.wrap-cols > div > div) {
+    @apply flex-wrap
+        flex-row
+        md_justify-between
+        px-4
+        md_px-0;
+}
+
+.root :global(.wrap-cols > div > div) {
+    @apply px-0;
+}
+
+.root :global(.wrap-cols > div) {
+    @apply w-full
+        md_px-4;
+}
+
+.root :global(.wrap-cols button) {
+    @apply outline-none
+        bg-transparent
+        text-black
+        text-left
+        text-base
+        not-italic
+        font-normal
+        leading-[170%]
+        px-0
+        py-0;
+}
+
+.root :global(.wrap-cols button:focus, .wrap-cols button:active) {
+    @apply !border-transparent;
+}
+
+.root :global(.wrap-cols ul) {
+    @apply md_block;
+}
+
+.root :global(.wrap-cols button:hover) {
+    @apply !border-transparent;
+}
+
+.root :global(.wrap-cols button:focus) {
+    @apply !bg-transparent
+        !border-none
+        !border-0
+        !border-transparent;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.root :global(.wrap-cols button:active) {
+    @apply !bg-transparent;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.root :global(.wrap-cols button span:focus) {
+    @apply !bg-transparent
+        !border-none
+        !border-0
+        !border-transparent;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.root :global(.wrap-cols button span:active) {
+    @apply !bg-transparent;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.root :global(.menuButton) {
+    @apply border-b
+        border-[rgba(0,0,0,0.2)]
+        pb-6
+        md_pb-1;
+}
+
+.root :global(.menuButton > div) {
+    @apply w-full
+        m-0;
+}
+
+.root :global(.menuButton button) {
+    @apply normal-case
+        md_pointer-events-none
+        w-full;
+}
+
+.root :global(.menuButton button span) {
+    @apply flex
+        w-full
+        justify-between;
+}
+
+.root :global(.menuButton button:focus ~ .col-content) {
+    @apply block;
+}
+
+.root :global(.col-links) {
+    @apply pt-[1.875rem]
+        pb-0
+        ml-0
+        mr-0
+        md_border-b-0
+        md_ml-0
+        md_mr-0
+        md_p-0
+        md_pb-0
+        md_pt-[0.9375rem]
+        !w-full
+        md_!w-auto;
+}
+
+.root :global(.menuButton) {
+    @apply w-full
+        pl-0
+        row-start-1
+        row-end-1
+        col-start-1
+        col-end-1
+        md_pl-0;
+}
+
+.root :global(.arrowDown) {
+    @apply pl-0
+        row-start-1
+        row-end-1
+        col-start-2
+        col-end-2;
+}
+
+.root :global(.col-links ul) {
+    @apply px-0
+        py-0
+        row-start-2
+        row-end-2
+        col-start-1
+        col-end-2;
+}
+
+.root :global(.col-links:first-child) {
+    @apply md_px-0
+        md_!w-full;
+}
+
+.root :global(.pagebuilder-column) {
+    @apply md_!max-w-[max-content];
+}
+
+.root :global(.col-links ul) {
+    @apply pl-[0px]
+        md_pt-[1.5625rem]
+        md_pl-0;
+}
+
+@media (min-width: 768px) {
+    .root :global(.col-links:first-child ul) {
+        columns: auto 2;
+    }
+}
+
+.root :global(.col-links:nth-child(2)) {
+    @apply md_block
+        md_!w-full;
+}
+
+.root :global(.col-links:nth-child(3)) {
+    @apply md_block
+        md_!w-full;
+}
+
+.root :global(.col-links:nth-child(4)) {
+    @apply md_block
+        md_!w-full;
+}
+
+.root :global(.col-links h6) {
+    @apply text-base
+        not-italic
+        font-normal
+        leading-[170%]
+        md_border-b-[0.0625rem]
+        md_border-solid
+        md_border-[rgba(0,0,0,0.2)]
+        md_pb-[10px];
+}
+
+.root :global(.col-links ul) {
+    @apply list-none
+        md_pl-0;
+}
+
+.root :global(.col-links ul li) {
+    @apply w-[auto];
+}
+
+.root :global(.col-links ul li a:link) {
+    @apply text-base
+        not-italic
+        font-semibold
+        leading-[170%]
+        no-underline;
+}
+
+.root :global(.col-links ul li a:hover) {
+    @apply text-base
+        not-italic
+        font-semibold
+        leading-[170%]
+        no-underline;
+}
+
+.root :global(.arrowDown) {
+    @apply block
+        md_hidden;
+}
+
+.root :global(ul li::before) {
+    @apply hidden;
+}
+
+/* Footer bottom part with contacts and social media */
+
+.root :global(.contactsContainer) {
+    @apply bg-black
+        text-white
+        h-auto
+        md_h-auto
+        rtl_ml-0
+        rtl_translate-x-0;
+}
+
+.root :global(.contactsContainer p) {
+    @apply m-0
+        text-white
+        opacity-100;
+}
+
+.root :global(.contactsContainer div) {
+    @apply m-0;
+}
+
+.root :global(.contactsContainer a:link) {
+    @apply no-underline;
+}
+
+.root :global(.contactsContainer a:hover) {
+    @apply no-underline;
+}
+
+.root :global(.contacts > div) {
+    @apply w-full
+        !m-0;
+}
+
+.root :global(.contacts) {
+    @apply h-auto;
+}
+
+.root :global(.contacts > div > div) {
+    @apply md_flex
+        md_flex-nowrap;
+}
+
+.root :global(.contactsContainer) {
+    @apply md_pt-0
+        md_h-[71px];
+}
+
+.root :global(.footerBottomPart) {
+    @apply m-[20px]
+        md_m-0
+        md_p-0
+        md_pt-[17px]
+        md_px-[6%]
+        md_mx-[1%];
+}
+
+.root :global(.footerBottomPart) a {
+    @apply text-white;
+}
+
+.root :global(.footerBottomPart > div > div > div > div > .pagebuilder-column:nth-of-type(2)) {
+    @apply md_ml-0;
+}
+
+.root :global(.footerBottomPart > div > div > div > div) {
+    @apply md_justify-between;
+}
+
+.root :global(.bottomContainer > div > div > div:nth-of-type(1)) {
+    @apply max-w-[70%]
+        md_max-w-[70%]
+        !w-full
+        md_!w-[60%];
+}
+
+.root :global(.bottomContainer > div > div > div:nth-of-type(2)) {
+    @apply max-w-[30%]
+        md_max-w-[30%]
+        md_!w-[20%]
+        md_ml-[10%]
+        !w-full
+        items-end;
+}
+
+.root :global(.footerContacts) {
+    @apply pl-[5%]
+        md_pl-0
+        rtl_pl-0
+        rtl_pr-[0%];
+}
+
+.root :global(.footerContacts > div > div > div > div > div) {
+    @apply md_!w-[max-content]
+        md_mr-[1vw]
+        !w-full;
+}
+
+.root :global(.footerContacts > div > div > div > div > div:first-child) {
+    @apply md_pl-0;
+}
+
+.root :global(.footerContacts > div > div > div > div > div) {
+    @apply mb-[5px]
+        md_mb-0;
+}
+
+.root :global(.footerContacts > div > div > div > div div a) {
+    @apply font-bold;
+}
+
+.root :global .smlContainer > div {
+    @apply !flex-row
+        !justify-end
+        pr-4
+        pl-0
+        rtl_pl-4
+        rtl_pr-0
+        md_pr-0
+        md_pl-0
+        md_rtl_pl-0
+        md_rtl_pr-0;
+}
+
+.root :global .smlContainer > div > div {
+    @apply w-[max-content]
+        md_w-[fit-content]
+        max-w-full
+        md_max-w-[fit-content]
+        flex-row
+        md_flex-col
+        justify-end;
+}
+
+.root :global .smlContainer > div > div > div {
+    @apply w-[70px]
+        max-w-[70px];
+}
+
+.root :global .smlContainer > div > div > div:nth-of-type(1) {
+    @apply !flex-row
+        !justify-end;
+}
+
+.root :global(.footerSML) {
+    @apply max-w-[fit-content];
+}
+
+.root :global(.footerSML > div > div > div > div > div) {
+    @apply md_!w-[max-content]
+        md_mr-[1vw];
+}
+
+.root :global(.footerSocialIconsContainer a) {
+    @apply font-normal;
+}
+
+.root :global .footerSocialIconsContainer > div > div {
+    @apply flex-row
+        justify-between;
+}
+
+.root :global(.footerSocialIconsContainer > div > div > div) {
+    @apply md_!w-[fit-content]
+        !w-[fit-content]
+        !max-w-[fit-content]
+        md_mr-[2vw];
+}
+
+.root :global(.footerSocialIconsContainer > div > div > div:nth-of-type(2n)) {
+    @apply !hidden
+        md_!block;
+}
+
+.root :global(.footerSocialIconsContainer > div > div > div:nth-of-type(2n + 1)) {
+    @apply !block
+        md_!hidden;
+}
+
+.root :global(.footerSocialIconsContainer > div > div > div:first-child) {
+    @apply pl-0;
+}
+
+.root :global(.textFollowUs p) {
+    @apply block
+        md_hidden;
+}
+
+/* Footer Accordion toggle class */
+
+@media (max-width: 767px) {
+
+    .root :global .active-tab .col-content ul {
+        @apply block;
+    }
+
+    .root :global(.col-links .col-content) {
+        @apply opacity-0
+            h-0
+            overflow-hidden;
+        transition: opacity 2s ease-out;
+    }
+
+    .root :global .active-tab .col-content {
+        @apply border-b
+            border-black/20
+            opacity-100
+            h-auto;
+    }
+
+    .root :global .active-tab .menuButton button span::after {
+        content: url('./Arrow.svg');
+
+        @apply rotate-180;
+    }
+
+    .root :global .menuButton button span::after {
+        content: url('./Arrow.svg');
+
+        @apply rotate-0;
+    }
+
+    .root :global(.footerContacts) {
+        @apply rtl_pr-[5%];
+    }
+}

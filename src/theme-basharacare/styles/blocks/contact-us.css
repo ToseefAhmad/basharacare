@@ -1,0 +1,12 @@
+.cms-faq .contact-us .pagebuilder-column {
+    @apply
+        pt-[9.3%]
+        lg_px-[12.5%]
+        pb-[95px]
+        lg_pb-[6.5%];
+}
+
+.contact-us h2:not(.titleH2),
+.contact-us #main p {
+    @apply m-0;
+}

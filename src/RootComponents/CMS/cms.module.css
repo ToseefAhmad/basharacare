@@ -1,0 +1,48 @@
+.root {
+    composes: px-5 from global;
+    composes: pt-[65px] from global;
+    composes: pb-[5%] from global;
+    composes: md_py-[60px] from global;
+    composes: lg_py-[120px] from global;
+}
+
+:global(.cms-home) .root {
+    @apply pt-0;
+}
+
+.headingContainer {
+    composes: bg-purple-lighter from global;
+    composes: pb-7.5 from global;
+    composes: pt-27 from global;
+    composes: border-b-[5px] from global;
+    composes: border-solid from global;
+    composes: border-white from global;
+}
+
+.root_empty,
+.root_1column,
+.root_2columnsLeft,
+.root_2columnsRight,
+.root_3columns,
+.root_cmsFullWidth,
+.root_categoryFullWidth,
+.root_productFullWidth {
+    composes: root;
+}
+
+.routineHtmlBreadcrumbRoot {
+    composes: root from '@app/components/overrides/Breadcrumbs/breadcrumbs.module.css';
+
+    @apply bg-category-face p-0;
+}
+
+.routineHtmlBreadcrumbContainer {
+    composes: container from global;
+
+    @apply px-[18px]
+        py-2;
+}
+
+.routineHtmlBreadcrumbShimmerContainer {
+    composes: routineHtmlBreadcrumbContainer;
+}

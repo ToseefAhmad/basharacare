@@ -1,0 +1,59 @@
+.root {
+    composes: max-w-[450px] from global;
+    composes: pb-25 from global;
+}
+
+.field {
+    composes: grid from global;
+    composes: pb-7.5 from global;
+}
+
+.reviewField {
+    composes: grid from global;
+    composes: pb-0 from global;
+}
+
+.inputArea {
+    composes: px-4 from global;
+    composes: w-full from global;
+    composes: border from global;
+    composes: border-grey-lighter from global;
+}
+
+.root input:focus,
+.root textarea:focus {
+    @apply outline-none;
+}
+
+.root input::placeholder,
+.root textarea::placeholder {
+    @apply text-black;
+}
+
+.formLabel {
+    composes: text-2xl from global;
+    composes: font-semibold from global;
+    composes: leading-8 from global;
+    composes: mb-7.5 from global;
+}
+
+.inputLabel {
+    composes: pb-2.5 from global;
+    composes: font-semibold from global;
+}
+
+.nameInput {
+    composes: inputArea;
+    composes: h-[46px] from global;
+}
+
+.summaryInput {
+    composes: inputArea;
+    composes: h-[46px] from global;
+}
+
+.reviewInput {
+    composes: inputArea;
+    composes: h-17 from global;
+    composes: pt-6 from global;
+}

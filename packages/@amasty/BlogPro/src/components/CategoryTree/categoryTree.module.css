@@ -1,0 +1,25 @@
+.root {
+  composes: widgetRoot from '../root.module.css';
+}
+
+.title {
+  composes: widgetTitle from '../root.module.css';
+}
+
+.tree {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.tree .tree {
+  margin-left: 1.25rem;
+  color: rgb(var(--venia-global-color-text-alt));
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.count {
+  margin-left: 0.25rem;
+}

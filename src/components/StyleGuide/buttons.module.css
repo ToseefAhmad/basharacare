@@ -1,0 +1,138 @@
+.root {
+    composes: mt-36 from global;
+    composes: outline-none from global;
+    composes: focus_outline-none from global;
+}
+
+.box {
+    composes: displayBox from './styleGuide.module.css';
+    composes: flex from global;
+    composes: flex-col from global;
+    composes: place-content-around from global;
+    composes: relative from global;
+}
+
+.box button {
+    @apply mb-5;
+}
+
+.box button:last-child {
+    @apply mb-0;
+}
+
+.labelsBox {
+    composes: flex from global;
+    composes: flex-col from global;
+    composes: place-content-around from global;
+}
+
+.container {
+    composes: flex from global;
+    composes: flex-wrap from global;
+}
+
+.container .lcolumnabelsBox,
+.container .box {
+    @apply ltr_mr-12.5;
+    @apply mb-12.5;
+    @apply rtl_ml-12.5;
+}
+
+.stateLabel {
+    composes: greyLabel from './styleGuide.module.css';
+    composes: leading-[70px] from global;
+}
+
+.label {
+    composes: label from './styleGuide.module.css';
+}
+
+.column {
+    composes: flex from global;
+    composes: flex-col from global;
+}
+
+.column > * {
+    @apply mb-5;
+}
+
+.boxLabel {
+    composes: absolute from global;
+    composes: -top-7 from global;
+    composes: left-1/2 from global;
+    composes: text-grey from global;
+    transform: translateX(-50%); /* Doesn't seem to work with tailwind */
+}
+
+.bannerBtn {
+    composes: root_bannerPriority from '@app/components/overrides/Button/button.module.css';
+    composes: w-[300px] from global;
+    composes: h-[73px] from global;
+}
+
+.bannerBtnHover {
+    composes: root from '@app/components/overrides/Button/button.module.css';
+    composes: bg-purple-lighter from global;
+    composes: py-2.5 from global;
+    composes: h-[73px] from global;
+    composes: text-black from global;
+
+    @apply text-xl;
+}
+
+.bannerBtnActive {
+    composes: root from '@app/components/overrides/Button/button.module.css';
+    composes: py-2.5 from global;
+    composes: h-[73px] from global;
+    composes: bg-purple from global;
+    composes: text-white from global;
+
+    @apply text-xl;
+}
+
+.normalBtn {
+    composes: root_normalPriority from '@app/components/overrides/Button/button.module.css';
+    composes: w-[198px] from global;
+    composes: h-[46px] from global;
+}
+
+.normalBtnActive {
+    composes: root from '@app/components/overrides/Button/button.module.css';
+    composes: py-3.5 from global;
+    composes: bg-black from global;
+    composes: text-white from global;
+    composes: md_hover_bg-black from global;
+    composes: md_hover_text-white from global;
+}
+
+.lowBtn {
+    composes: root_lowPriority from '@app/components/overrides/Button/button.module.css';
+    composes: w-[160px] from global;
+    composes: h-[40px] from global;
+}
+
+.lowBtnActive {
+    composes: root from '@app/components/overrides/Button/button.module.css';
+    composes: py-3 from global;
+    composes: bg-purple from global;
+    composes: text-white from global;
+}
+
+.lowBtnHover {
+    composes: root from '@app/components/overrides/Button/button.module.css';
+    composes: py-3 from global;
+    composes: bg-purple-lighter from global;
+    composes: text-black from global;
+}
+
+.circleBtnHover {
+    composes: root from '@app/components/CircleButton/circleButton.module.css';
+    composes: border-black from global;
+}
+
+.circleBtnActive {
+    composes: root from '@app/components/CircleButton/circleButton.module.css';
+    composes: text-white from global;
+    composes: bg-black from global;
+    composes: border-black from global;
+}

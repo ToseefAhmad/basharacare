@@ -1,0 +1,14 @@
+.root {
+    composes: flex from global;
+    composes: mb-[13px] from global;
+    composes: w-full from global;
+}
+
+.countryRoot {
+    grid-area: country;
+    composes: w-full from global;
+}
+
+.countryRoot select {
+    @apply w-full appearance-none;
+}

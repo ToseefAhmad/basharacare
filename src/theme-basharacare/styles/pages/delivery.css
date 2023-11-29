@@ -1,0 +1,23 @@
+.cms-delivery .delivery-page-section {
+    @apply lg_max-w-[720px] px-4 lg_px-0;
+}
+
+.cms-delivery .delivery-page-section-first {
+    @apply lg_mt-[30px];
+}
+
+.cms-delivery .delivery-page-section h4 {
+    @apply text-[22px];
+}
+
+.cms-delivery .delivery-page-section-first h4 {
+    @apply lg_mt-0;
+}
+
+.cms-delivery .delivery-page-text {
+    @apply lg_pt-10;
+}
+
+.cms-delivery .delivery-page-section-last {
+    @apply lg_mb-[140px];
+}

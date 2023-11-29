@@ -1,0 +1,104 @@
+.cms-affiliates .about-basharacare-image-left img {
+    @apply
+        2sm_w-full
+        ml-auto
+        mr-auto
+        mt-0
+        mb-0
+        2sm_max-h-full
+        2sm_max-w-full
+        2sm_border-0;
+}
+
+.cms-affiliates .about-text-space:not(:last-child) {
+    @apply
+        mb-[40px];
+}
+
+.cms-affiliates .about-basharacare-image-left [class*='text-root'] {
+    @apply
+        mt-[80px]
+        mb-[80px]
+        ml-auto
+        mr-auto;
+}
+
+.cms-affiliates [class*='columnGroup-root']:nth-child(3) {
+    @apply
+        pb-[5%]
+        xs_flex-nowrap;
+}
+
+.cms-affiliates .about-basharacare-main-row .about-basharacare-text-right {
+    @apply
+        2sm_bg-white
+        2sm_pt-[11%]
+        2sm_pr-[25.5%]
+        2sm_pb-[11%]
+        2sm_pl-[7%]
+        2sm_ml-[3%]
+        2sm_mr-[27%]
+        2sm_box-border;
+}
+
+.cms-affiliates .about-basharacare-main-row {
+    @apply
+        2sm_flex
+        2sm_justify-between
+        2sm_relative
+        !mb-[7.5%];
+}
+
+.cms-affiliates .about-basharacare-column-two {
+    @apply
+        2sm_!w-full
+        2sm_box-border
+        2sm_flex
+        2sm_justify-between;
+}
+
+.cms-affiliates .about-column-right-padding {
+    @apply 2sm_pl-[95px];
+}
+
+.cms-affiliates .about-basharacare-image-left {
+    @apply
+        2sm_right-[4%]
+        2sm_top-[49%]
+        2sm_translate-y-[-50%]
+        2sm_absolute 2sm_!w-[38%]
+        order-1
+        mt-[60px]
+        mb-[60px]
+        ml-auto
+        mr-auto
+        2sm_mt-0
+        2sm_mb-0
+        2sm_ml-0
+        2sm_mr-0;
+}
+
+.cms-affiliates [class*='columnGroup-root']:nth-child(2) {
+    @apply
+        2sm_flex
+        2sm_mt-[10%]
+        2sm_ml-[27%]
+        2sm_mr-[27%]
+        2sm_mb-0;
+}
+
+.cms-affiliates [class*='columnGroup-root']:nth-child(3) {
+    @apply
+        2sm_flex
+        2sm_mt-0
+        2sm_ml-[27%]
+        2sm_mr-[27%]
+        2sm_mb-[5%];
+}
+
+.cms-affiliates :global(.richContent-root-mh5) {
+    @apply mb-0;
+}
+.cms-affiliates [class*='cms-root_1column']:nth-child(2) {
+    @apply pl-0 pr-0 pt-[65px] pb-0 2sm_pt-28 2sm_pb-[2%];
+}

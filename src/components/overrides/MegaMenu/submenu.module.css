@@ -1,0 +1,94 @@
+.submenu {
+    composes: hidden from global;
+}
+
+.submenu_active {
+    grid-template-columns: 1fr min-content;
+
+    composes: grid from global;
+    composes: grid-flow-col from global;
+    composes: shadow from global;
+    composes: bg-white from global;
+    composes: absolute from global;
+    composes: top-[48px] from global;
+    composes: text-black from global;
+    composes: container from global;
+    composes: left-0 from global;
+    composes: right-0 from global;
+    composes: z-20 from global;
+}
+
+.column {
+    composes: flex from global;
+    composes: flex-col from global;
+    composes: justify-between from global;
+    composes: gap-y-6 from global;
+}
+
+.allLink {
+    composes: text-sm from global;
+    composes: underline from global;
+    composes: font-semibold from global;
+    composes: hover_opacity-60 from global;
+}
+
+.specialists {
+    composes: flex from global;
+    composes: flex-col from global;
+    composes: text-center from global;
+    composes: pt-14 from global;
+    composes: pb-24 from global;
+    composes: px-20 from global;
+}
+
+.chat {
+    composes: mb-5 from global;
+}
+
+.chatTitle {
+    composes: text-sm from global;
+}
+
+.chatLink {
+    composes: font-headingBold from global;
+    composes: hover_opacity-60 from global;
+}
+
+.blogTitlePrimary {
+    composes: font-sans from global;
+}
+
+.blogTitleSecondary {
+    composes: font-headingBold from global;
+    composes: mb-4 from global;
+    composes: hover_opacity-60 from global;
+}
+
+.blogImageLink {
+    composes: grid from global;
+    composes: items-center from global;
+    composes: justify-center from global;
+}
+
+.submenuItems {
+    composes: grid from global;
+    composes: grid-flow-col from global;
+    composes: grid-cols-4 from global;
+    composes: h-full from global;
+    composes: pt-14 from global;
+    composes: pb-24 from global;
+    composes: gap-x-7 from global;
+    composes: px-20 from global;
+}
+
+.listTitle {
+    composes: text-base from global;
+    composes: font-headingBold from global;
+    composes: mb-3 from global;
+}
+
+.listItem {
+    composes: text-sm from global;
+    composes: hover_no-underline from global;
+    composes: hover_opacity-60 from global;
+}

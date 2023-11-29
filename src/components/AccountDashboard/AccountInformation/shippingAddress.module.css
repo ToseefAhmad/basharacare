@@ -1,0 +1,20 @@
+.root p {
+    @apply opacity-100
+        text-black;
+}
+
+.title {
+    composes: font-semibold from global;
+    composes: text-lg from global;
+    composes: pb-1 from global;
+}
+
+.content {
+    composes: mb-3 from global;
+}
+
+.action {
+    composes: text-sm from global;
+    composes: underline from global;
+    composes: mt-5 from global;
+}

@@ -1,0 +1,52 @@
+.root {
+    composes: pt-10 from global;
+}
+.content::-webkit-scrollbar {
+    @apply w-[2px];
+}
+
+.content::-webkit-scrollbar-track {
+    @apply bg-grey-lighter;
+}
+
+.content::-webkit-scrollbar-thumb {
+    @apply bg-black;
+}
+
+.tabTitle {
+    composes: text-2xl from global;
+    composes: md_text-2.5xl from global;
+    composes: font-headingBold from global;
+    composes: py-5 from global;
+    composes: flex from global;
+    composes: justify-between from global;
+    composes: items-center from global;
+    composes: cursor-pointer from global;
+    composes: hover_text-grey-dark from global;
+}
+.content {
+    composes: mb-5 from global;
+    composes: lg_pb-10 from global;
+    composes: lg_mb-10 from global;
+    composes: lg_border-t-0 from global;
+    composes: max-h-[400px] from global;
+    composes: overflow-auto from global;
+    grid-column: 1 / -1;
+}
+
+.content_collapsed {
+    composes: hidden from global;
+}
+
+.textAreaContainer {
+    composes: lg_w-3/4 from global;
+}
+
+.textAreaContainer textarea {
+    @apply mt-3;
+    resize: none;
+}
+
+.textAreaContainer [class*='textArea-errorMsg'] {
+    @apply text-red-error;
+}

@@ -1,0 +1,101 @@
+.headingRegular {
+    composes: font-light from global;
+
+    @apply font-sans;
+}
+
+.textBlock {
+    composes: mb-15 from global;
+}
+
+.textBlockSmall {
+    composes: mb-8 from global;
+}
+
+.paragraphs {
+    composes: flex from global;
+    composes: flex-wrap from global;
+    composes: mt-36 from global;
+}
+
+.paragraph {
+    composes: flex-50 from global;
+    composes: mb-12.5 from global;
+    composes: max-w-lg from global;
+}
+
+.label {
+    composes: label from './styleGuide.module.css';
+}
+
+.pLarge {
+    @apply text-2.5xl;
+}
+
+.pBold {
+    composes: font-bold from global;
+}
+
+.buttons {
+    composes: flex from global;
+    composes: mt-36 from global;
+}
+
+.button {
+    composes: ltr_mr-22 from global;
+    composes: rtl_ml-22 from global;
+    composes: font-bold from global;
+}
+
+.btnLarge {
+    @apply text-xl;
+}
+
+.btnUpper {
+    composes: uppercase from global;
+    composes: font-semibold from global;
+}
+
+.btnSmall {
+    @apply text-sm;
+    composes: font-semibold from global;
+}
+
+.links {
+    composes: mt-36 from global;
+}
+
+.linkRows {
+    composes: flex from global;
+}
+
+.linkCol {
+    composes: flex from global;
+    composes: flex-col from global;
+    composes: ltr_mr-17 from global;
+    composes: rtl_ml-17 from global;
+}
+
+.linkRow {
+    composes: mb-6 from global;
+}
+
+.greyLabel {
+    composes: greylabel from './styleGuide.module.css';
+}
+
+.linkBold {
+    composes: font-bold from global;
+}
+
+.hover {
+    composes: underline from global;
+}
+
+.link {
+    @apply text-sm;
+}
+
+.linkSmall {
+    @apply text-xs;
+}

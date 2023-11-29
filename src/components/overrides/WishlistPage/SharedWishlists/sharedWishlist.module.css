@@ -1,0 +1,16 @@
+.root {
+    composes: md_grid from global;
+    composes: md_grid-cols-6 from global;
+    composes: border-b from global;
+    composes: border-black/20 from global;
+    composes: py-3 from global;
+}
+
+.viewWishlistButton button {
+    @apply hover_text-black/80
+        hover_underline;
+}
+
+.sharedEmail {
+    composes: break-words from global;
+}

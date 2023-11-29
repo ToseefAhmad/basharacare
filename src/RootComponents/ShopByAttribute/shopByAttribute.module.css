@@ -1,0 +1,122 @@
+:global(.shopByAttribute-page #main) {
+    @apply px-0
+        mx-0
+        max-w-full;
+}
+
+.attributeHeaderContainer {
+    composes: bg-purple-lighter from global;
+    composes: pt-[106px] from global;
+    composes: pb-4 from global;
+    composes: grid from global;
+}
+
+.headerTitle {
+    composes: container from global;
+    composes: flex from global;
+    composes: gap-6 from global;
+    composes: items-center from global;
+    composes: mb-[30px] from global;
+
+    @apply lg_px-[60px];
+}
+
+.buttonContainer {
+    composes: h-[50px] from global;
+    composes: container from global;
+    composes: flex from global;
+    composes: gap-x-1 from global;
+
+    @apply lg_px-[60px]
+        overflow-x-scroll;
+}
+
+.buttonContainer::-webkit-scrollbar {
+    @apply h-[2px] mx-[60px] max-w-[20px];
+}
+
+.buttonContainer::-webkit-scrollbar-button {
+    @apply w-[30px];
+}
+
+.buttonContainer::-webkit-scrollbar-thumb {
+    @apply bg-black;
+}
+
+.attributeFilterButton,
+.allButton {
+    @apply h-[40px]
+        relative
+        cursor-pointer
+        outline-none
+        uppercase
+        px-3
+        whitespace-nowrap;
+}
+
+.allButton {
+    composes: font-semibold from global;
+
+    @apply px-0;
+}
+
+.attributeFilterButton:focus {
+    @apply font-semibold;
+}
+
+.attributeFilterButton:hover::before,
+.attributeFilterButton:focus::before,
+.allButton:hover::before,
+.allButton:focus::before {
+    background-color: black;
+
+    @apply w-[4px]
+        h-[4px]
+        rounded-[50%]
+        m-[auto]
+        absolute
+        bottom-0
+        content-['']
+        left-[50%]
+        ml-[-2px];
+}
+
+.attributeGroupContainer {
+    composes: container from global;
+    composes: pt-[84px] from global;
+    composes: pb-[300px] from global;
+    composes: bg-grey-lightest from global;
+    composes: grid from global;
+    composes: gap-y-[100px] from global;
+    composes: grid-cols-1 from global;
+    composes: md_grid-cols-3 from global;
+
+    @apply lg_px-[60px];
+}
+
+.attributeGroup {
+    composes: flex from global;
+}
+
+.attributeGroupItem {
+    composes: text-sm from global;
+    composes: uppercase from global;
+}
+
+.attributeGroupItem a {
+    @apply no-underline hover_opacity-60;
+}
+
+.attributeKey {
+    composes: min-w-5 from global;
+    composes: ltr_pr-[30px] from global;
+    composes: rtl_pl-[30px] from global;
+}
+
+.attributeList {
+    composes: font-sans from global;
+}
+
+.loadingContainer {
+    composes: mt-[19%] from global;
+}

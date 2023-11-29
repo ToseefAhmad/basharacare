@@ -1,0 +1,8 @@
+.root {
+    grid-area: country;
+}
+
+.fieldLabel {
+    composes: text-base from global;
+    composes: font-sans from global;
+}

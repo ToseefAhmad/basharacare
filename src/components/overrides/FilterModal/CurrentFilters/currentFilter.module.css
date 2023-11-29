@@ -1,0 +1,19 @@
+.root {
+    composes: h-6 from global;
+    composes: items-center from global;
+    composes: bg-black from global;
+    composes: inline-grid from global;
+    composes: gap-[10px] from global;
+    composes: text-white from global;
+    composes: font-semibold from global;
+    composes: text-xs from global;
+    composes: whitespace-nowrap from global;
+    composes: px-3 from global;
+    composes: grid-flow-col from global;
+    composes: content-center from global;
+    composes: uppercase from global;
+}
+
+.removeIconClass {
+    composes: text-white from global;
+}

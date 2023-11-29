@@ -1,0 +1,7 @@
+.items {
+    composes: h-full from global;
+    composes: inline-flex from global;
+    composes: gap-[5px] from global;
+    composes: w-full from global;
+    composes: flex-wrap from global;
+}

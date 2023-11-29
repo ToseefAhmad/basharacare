@@ -1,0 +1,39 @@
+.root {
+    composes: pt-24 from global;
+}
+
+.notFound :global(.error-heading) {
+    @apply m-0 pt-5 font-bold;
+}
+
+.notFound :global(.page-not-found) {
+    @apply tracking-widest text-xl;
+}
+
+.notFound :global(.first-text-message) {
+    @apply pt-12;
+}
+
+.notFound :global(.contact-us-link) a {
+    @apply underline text-xl text-[#59b1d3];
+}
+
+.notFound :global(.contact-us-link):hover a {
+    @apply text-black;
+}
+
+.notFound :global(.apply-border) {
+    @apply h-[200px] my-0 mx-auto rounded-4xl p-6 relative border-2 border-grey !w-[300px];
+}
+
+.notFound :global(.error-information-column) {
+    @apply text-xl tracking-wide;
+}
+
+.notFound :global(.text-message):not(:first-child) {
+    @apply pt-2.5;
+}
+
+.notFound :global([class*='column-root']) {
+    @apply flex-none;
+}

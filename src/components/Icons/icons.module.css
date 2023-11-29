@@ -1,0 +1,3 @@
+.invert {
+    composes: rtl_rotate-180 from global;
+}

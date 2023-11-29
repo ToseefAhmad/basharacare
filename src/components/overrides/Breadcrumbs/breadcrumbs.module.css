@@ -1,0 +1,52 @@
+.root {
+    --whitespace-start: 1rem;
+    --whitespace-end: 10px;
+
+    composes: h-auto from global;
+    padding-left: var(--whitespace-start);
+    padding-top: var(--whitespace-start);
+    padding-bottom: var(--whitespace-end); /* Allow space for focus ring */
+    margin-bottom: calc(-1 * var(--whitespace-end)); /* Prevent focus ring space affecting the rest of the UI */
+    font-size: 0.875rem;
+
+    /* Permanent height to prevent pop-in. */
+    height: calc(0.875rem + var(--whitespace-start) + var(--whitespace-end));
+
+    /* !* Show ellipses when overflowing. *! */
+    composes: overflow-hidden from global;
+    composes: overflow-ellipsis from global;
+    composes: whitespace-nowrap from global;
+}
+
+.text {
+    composes: p-0.5 from global;
+}
+
+.divider {
+    composes: text;
+}
+
+.link {
+    composes: text;
+}
+
+.currentCategory {
+    composes: text;
+}
+
+.currentProduct {
+    composes: font-semibold from global;
+}
+
+.attributeoptionId {
+    composes: capitalize from global;
+}
+
+.shimmer {
+    composes: root_rectangle from '~@magento/venia-ui/lib/components/Shimmer/shimmer.module.css';
+    composes: align-top from global;
+    composes: py-0.5 from global;
+    composes: w-3/12 from global;
+    composes: h-[23.9px] from global;
+    composes: lg_w-2/12 from global;
+}

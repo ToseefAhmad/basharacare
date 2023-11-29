@@ -1,0 +1,89 @@
+.root {
+    composes: rtl_justify-right from global;
+    composes: container from global;
+    composes: w-full from global;
+    composes: !px-0 from global;
+    composes: pt-32 from global;
+    composes: lg_pt-48 from global;
+    composes: pb-20 from global;
+    composes: lg_pb-40 from global;
+
+    @apply bg-blue-lightest;
+}
+
+.slider :global .slick-track {
+    @apply grid
+        sm_block
+        grid-flow-col;
+}
+
+.root :global a {
+    @apply no-underline
+        outline-none;
+}
+
+.slider {
+    composes: root from '~@magento/pagebuilder/lib/ContentTypes/Slider/slider.module.css';
+    composes: px-0 from global;
+    composes: mx-[-1.125rem] from global;
+    composes: lg_mx-0 from global;
+}
+
+.slider :global .slick-slide {
+    @apply !visible
+        p-2.5
+        scale-100;
+}
+
+.slider :global .slick-slide img {
+    @apply m-0;
+}
+
+.slider :global .slick-slider .slick-list {
+    @apply pb-0 !important;
+    @apply pt-5 !important;
+}
+
+.slider :global .slick-active {
+    @apply xxxs_scale-100 transition-all duration-500;
+}
+
+.titleBold {
+    composes: text-4xl from global;
+    composes: lg_text-7xl from global;
+    composes: text-center from global;
+    composes: w-full from global;
+    composes: mb-4 from global;
+
+    composes: inline-flex from global;
+    composes: flex-wrap from global;
+    composes: lg_justify-center from global;
+    composes: items-center from global;
+}
+
+.titleBold :global span {
+    @apply mx-2
+        text-4xl
+        lg_text-[60px]
+        leading-tight
+        lg_mx-5;
+}
+
+.titleBold :global strong {
+    @apply text-4xl
+        lg_text-[60px]
+        leading-tight
+        font-headingBold;
+}
+
+.titleBold :global svg {
+    @apply w-[22px] lg_w-[38px];
+}
+
+.titleWrapper {
+    composes: lg_text-center from global;
+    composes: text-base from global;
+    composes: lg_text-xl from global;
+    composes: font-sans from global;
+    composes: font-semibold from global;
+}

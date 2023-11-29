@@ -1,0 +1,23 @@
+.root li::before {
+    @apply hidden;
+}
+
+.title {
+    composes: font-semibold from global;
+}
+
+.list li {
+    @apply font-sans my-5;
+}
+
+.list li:first-child {
+    @apply my-0 mb-5;
+}
+
+.list li:last-child {
+    @apply mb-0;
+}
+
+.listItem {
+    composes: flex from global;
+}

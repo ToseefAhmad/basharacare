@@ -1,0 +1,4 @@
+.loading {
+    composes: root from '@magento/venia-ui/lib/components/LoadingIndicator/indicator.module.css';
+    composes: text-center from global;
+}

@@ -1,0 +1,158 @@
+.wrapper {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+
+    composes: bg-clip-padding from global;
+    composes: overflow-hidden from global;
+}
+
+.overlay {
+    transition: background-color 500ms ease;
+
+    composes: p-[30px] from global;
+    composes: items-center from global;
+    composes: flex from global;
+    composes: flex-wrap from global;
+    composes: relative from global;
+}
+
+.videoOverlay {
+    composes: absolute from global;
+    composes: top-0 from global;
+    composes: bottom-0 from global;
+    composes: left-0 from global;
+    composes: right-0 from global;
+    composes: z-0 from global;
+}
+
+.viewportElement {
+    transform: translate3d(0, 0, 0);
+
+    composes: h-full from global;
+    composes: w-[1px] from global;
+    composes: absolute from global;
+    composes: left-0 from global;
+    composes: rtl_right-0 from global;
+    composes: top-0 from global;
+    composes: z-[-100] from global;
+}
+
+.content {
+    composes: min-h-[50px] from global;
+    composes: max-w-[368px] from global;
+    composes: self-center from global;
+    composes: md_self-start from global;
+    composes: text-center from global;
+    composes: md_text-left from global;
+
+    composes: md_rtl_text-right from global;
+    composes: md_mt-[56px] from global;
+}
+
+.content p {
+    @apply hidden
+        md_block
+        font-semibold;
+}
+
+.content h1 {
+    @apply leading-[72px];
+}
+.content p {
+    @apply h-[54px];
+}
+
+.content h1:last-of-type {
+    @apply font-sans
+        mt-[-10px]
+        mb-[29px];
+}
+
+.button {
+    text-align: inherit;
+    transition: opacity 500ms ease;
+    word-break: break-word;
+    composes: md_rtl_ml-[70px] from global;
+    composes: min-h-[50px] from global;
+    composes: max-w-[368px] from global;
+    composes: absolute from global;
+    composes: left-0 from global;
+    composes: bottom-0 from global;
+    composes: h-[70px] from global;
+    composes: text-xl from global;
+    composes: lg_static from global;
+    composes: md_self-start from global;
+    composes: md_mt-[68px] from global;
+    composes: rtl_right-0 from global;
+    composes: md_mb-7.5 from global;
+}
+
+.button button {
+    @apply w-[233px]
+        md_w-[300px]
+        h-full;
+}
+
+.root:hover .buttonHover {
+    @apply opacity-100;
+}
+
+.buttonHover {
+    composes: button;
+    composes: opacity-0 from global;
+}
+
+.posterOverlay {
+    composes: overlay;
+    composes: content-center from global;
+    composes: justify-center from global;
+}
+
+.posterOverlayHover {
+    composes: posterOverlay;
+    composes: !bg-transparent from global;
+}
+
+.collageLeftOverlay {
+    composes: overlay;
+    composes: mr-[auto] from global;
+    composes: max-w-[540px] from global;
+
+    composes: rtl_ml-[auto] from global;
+}
+
+.collageLeftOverlayHover {
+    composes: collageLeftOverlay;
+    composes: !bg-transparent from global;
+}
+
+.collageCenteredOverlay {
+    composes: overlay;
+    composes: mx-[auto] from global;
+    composes: max-w-[540px] from global;
+}
+
+.collageCenteredOverlayHover {
+    composes: collageCenteredOverlay;
+    composes: !bg-transparent from global;
+}
+
+.collageRightOverlay {
+    composes: overlay;
+    composes: ml-[auto] from global;
+    composes: max-w-[540px] from global;
+
+    composes: rtl_mr-[auto] from global;
+}
+
+.collageRightOverlayHover {
+    composes: collageRightOverlay;
+    composes: !bg-transparent from global;
+}
+
+.root :global [id*='jarallax-container'] video,
+.root :global [id*='jarallax-container'] iframe,
+.root :global [id*='jarallax-container'] img {
+    @apply m-[auto] !important;
+    transform: none !important;
+}

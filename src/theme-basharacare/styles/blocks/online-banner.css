@@ -1,0 +1,136 @@
+.online-banner-wrapper {
+    @apply bg-white
+        pb-10
+        lg_pb-[170px];
+}
+.online-banner-wrapper .html-label {
+    @apply z-[5];
+}
+
+.online-banner-wrapper .header-text-wrapper h2 {
+    @apply text-4xl
+        lg_text-5xl
+        font-albraSemibold
+        font-bold
+        first_pt-20
+        last_pb-7.5
+        lg_last_pb-20
+        last_font-light
+        last_font-sans
+        m-0;
+}
+
+.online-banner-wrapper .header-text-wrapper img {
+    @apply hidden
+        lg_block
+        m-auto;
+}
+
+.online-banner-wrapper .explore {
+    @apply flex
+        flex-row;
+}
+
+.online-banner-wrapper .explore::after {
+    @apply rtl_rotate-180;
+    content: url('src/theme-basharacare/icons/arrow-subscribe.svg');
+}
+
+.online-banner-wrapper h3 {
+    @apply m-0
+        font-semibold;
+}
+.online-banner-wrapper .second-heading {
+    @apply lg_whitespace-nowrap;
+}
+
+.online-banner-wrapper .banner-categories img {
+    @apply m-0 w-full max-h-[200px];
+}
+
+.online-banner-wrapper .banner-categories a {
+    @apply no-underline;
+}
+
+.online-banner-wrapper .header-text-wrapper {
+    @apply xxxs_px-[20%] ;
+    @apply md_px-5  !important;
+    @apply lg_px-20 !important;
+}
+
+.online-banner-wrapper .banner-categories .label {
+    @apply w-[63%]
+        md_w-fit
+        -mt-12.5
+        px-4
+        py-2
+        z-10
+        rtl_mr-auto;
+}
+
+.online-banner-wrapper .banner-categories [class*='columnGroup-root'] {
+    @apply md_grid
+        grid-flow-col !important;
+}
+
+.online-banner-wrapper .banner-categories .pagebuilder-column {
+    @apply md_!w-full;
+}
+
+.online-banner-wrapper .label.face-care {
+    @apply bg-brown-light
+        lg_ml-[3px]
+        ltr_lg_mr-[3px];
+}
+
+.online-banner-wrapper .category-name {
+    @apply text-3xl
+        lg_text-[37px]
+        pb-2;
+}
+
+.online-banner-wrapper .label.body-care {
+    @apply bg-blue-lightest
+        ml-auto
+        rtl_mr-0
+        md_rtl_mr-auto
+        md_ml-0 ;
+}
+
+.online-banner-wrapper .label.hair-care {
+    @apply bg-purple-lighter;
+}
+
+.online-banner-wrapper .explore.hair-care {
+    @apply bg-purple-lighter
+        lg_ml-0;
+}
+
+.online-banner-wrapper .explore {
+    @apply items-center
+        grid
+        grid-cols-auto1fr
+        gap-2.5;
+}
+
+.online-banner-wrapper .explore p {
+    @apply m-0
+        font-semibold
+        text-sm
+        text-black;
+}
+
+.online-banner-wrapper .banner-categories {
+    @apply xxxs_px-[20%] ;
+    @apply md_px-5  !important;
+    @apply lg_px-20 !important;
+}
+
+.online-banner-wrapper .banner-categories .pagebuilder-column {
+    @apply relative
+        hover_opacity-80;
+}
+
+.online-banner-wrapper .banner-categories > div > div {
+    @apply gap-4;
+}

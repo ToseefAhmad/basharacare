@@ -1,0 +1,59 @@
+.root {
+    border-bottom: 2px solid rgb(var(--venia-global-color-gray-400));
+}
+
+.root {
+    @apply md_border-0;
+}
+
+.contents_container {
+    composes: pb-7.5 from global;
+    composes: ltr_pr-14.5 from global;
+    composes: rtl_pl-14.5 from global;
+    composes: leading-[170%] from global;
+}
+
+.contents_container:empty {
+    @apply hidden;
+}
+
+.contents_container_closed {
+    composes: contents_container;
+    display: none;
+}
+
+.title {
+    composes: text-2xl from global;
+    composes: font-headingBold from global;
+    composes: font-semiBold from global;
+    composes: lg_max-w-[750px] from global;
+    composes: ltr_text-left from global;
+    composes: rtl_text-right from global;
+}
+
+.title_container {
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    margin: 0;
+}
+
+.title_wrapper {
+    composes: flex from global;
+    composes: justify-between from global;
+    composes: space-x-8 from global;
+    composes: rtl_space-x-reverse from global;
+    composes: content-center from global;
+    composes: py-[25px] from global;
+    composes: lg_py-7.5 from global;
+}
+
+@media only screen and (min-width: 768px) {
+    .title_container {
+        all: unset;
+    }
+}
+
+:global .conditional-accordion :local .title_wrapper > *:nth-child(2) {
+    @apply inline-flex md_hidden;
+}

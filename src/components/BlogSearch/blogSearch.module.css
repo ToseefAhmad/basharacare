@@ -1,0 +1,28 @@
+.hidden {
+    composes: hidden from global;
+}
+
+.input {
+    composes: text-black from global;
+    composes: ltr_pl-7 from global;
+    composes: rtl_pr-7 from global;
+    composes: py-1.3 from global;
+    composes: border from global;
+    composes: w-full from global;
+    composes: outline-none from global;
+    composes: focus_border-black from global;
+    composes: md_hover_border-grey-light from global;
+
+    @apply border-grey-border2;
+    @apply text-base;
+}
+
+.icon {
+    composes: icon from '@app/components/SearchBox/searchBox.module.css';
+    composes: text-black from global;
+}
+
+.searchBoxRoot {
+    composes: relative from global;
+    composes: w-full from global;
+}

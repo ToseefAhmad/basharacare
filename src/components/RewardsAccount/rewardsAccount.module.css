@@ -1,0 +1,139 @@
+.root {
+    @apply text-black block;
+}
+
+.rootHidden {
+    composes: hidden from global;
+}
+
+.root :global(.reward-points-block) {
+    @apply px-0;
+}
+
+.root :global(.reward-points-page-block) {
+    @apply px-0;
+}
+
+.root :global(.how-to-get-cols-block) {
+    @apply px-0;
+}
+
+.root :global(.how-to-get-cols) {
+    @apply pb-2;
+}
+
+.root :global(.how-to-get-block) {
+    @apply px-0;
+}
+
+.root :global(.how-to-use-and-work-block) {
+    @apply px-0;
+}
+
+.root :global(.how-to-use-and-work-block) {
+    @apply px-0;
+}
+
+.root :global(.reward-points-page-block) {
+    @apply pt-0;
+}
+
+.root :global(.reward-points-info-blockOne) {
+    @apply pb-0;
+}
+
+.root :global(.reward-points-info-text) p {
+    @apply p-5 md_p-0;
+}
+
+.root img {
+    @apply m-0;
+}
+
+.root :global(.reward-points-info-text) p {
+    @apply opacity-100
+        text-black
+        text-[22px]
+        leading-[33px];
+}
+
+.rewardPointsTitle h3 {
+    @apply inline-block
+        first_pr-1
+        first_rtl_pl-1
+        last_font-light
+        last_font-sans
+        text-3xl
+        mt-4;
+}
+
+.rewardsPointsWrapper {
+    composes: flex from global;
+    composes: pl-5 from global;
+    composes: md_pl-0 from global;
+}
+
+.rewardsPointsWrapper .pointAmount {
+    @apply font-semibold
+        font-albraSemibold
+        text-3xl
+        mt-4
+        ltr_ml-1
+        rtl_mr-1;
+}
+
+.historyTitle {
+    composes: mb-5 from global;
+}
+
+.historyTitle h4 {
+    @apply inline-block
+        first_pr-1
+        first_rtl_pl-1
+        last_font-light
+        last_font-sans
+        text-2xl;
+}
+
+.creditingHistory li {
+    @apply py-2.5
+        px-5
+        bg-white
+        mb-3
+        grid
+        grid-flow-col
+        lg_grid-cols-[14%auto];
+}
+
+.historyPoints {
+    composes: font-semibold from global;
+}
+
+.referralsImage {
+    composes: md_absolute from global;
+    composes: z-[9] from global;
+    composes: lg_ltr_left-[5%] from global;
+    composes: top-[20%] from global;
+    composes: md_w-[38%] from global;
+}
+
+.referralsImage img {
+    @apply m-auto;
+}
+
+.referralsWrapper {
+    composes: md_flex from global;
+    composes: mt-15 from global;
+    composes: md_mt-[150px] from global;
+    composes: relative from global;
+}
+
+.form {
+    composes: bg-white from global;
+    composes: md_px-[15%] from global;
+    composes: md_pl-[25%] from global;
+    composes: md_py-[10%] from global;
+    composes: ltr_ml-auto from global;
+    composes: rtl_mr-auto from global;
+    composes: p-5 from global;
+}

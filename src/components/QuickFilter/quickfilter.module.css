@@ -1,0 +1,44 @@
+.body {
+    composes: h-[min-content] from global;
+}
+
+.title {
+    composes: font-semibold from global;
+    composes: uppercase from global;
+    composes: text-sm from global;
+    composes: mb-1 md_mb-4 from global;
+}
+
+.list {
+    composes: h-full from global;
+}
+
+.clearAll {
+    composes: root from '@app/components/QuickFilter/quickfilterDefault.module.css';
+
+    @apply bg-black
+        flex
+        items-center;
+}
+
+.clearAllInactive {
+    composes: root from '@app/components/QuickFilter/quickfilterDefault.module.css';
+
+    @apply bg-transparent
+        flex
+        items-center;
+}
+
+.clearAll button {
+    @apply text-white
+        uppercase
+        font-semibold
+        outline-none;
+}
+
+.clearAllInactive button {
+    @apply text-black
+        uppercase
+        font-semibold
+        outline-none;
+}

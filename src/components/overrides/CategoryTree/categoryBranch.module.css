@@ -1,0 +1,89 @@
+.root {
+    composes: root from './categoryLeaf.module.css';
+}
+
+.attributeListContainer {
+    composes: hidden from global;
+}
+
+.attributeListContainer_visible {
+    composes: flex from global;
+    composes: flex-col from global;
+    composes: w-full from global;
+}
+
+.target {
+    composes: target from './categoryLeaf.module.css';
+    composes: outline-none from global;
+}
+
+.target_hidden {
+    composes: hidden from global;
+}
+
+.text {
+    composes: text from './categoryLeaf.module.css';
+}
+
+.attributeList {
+    composes: hidden from global;
+}
+
+.attributeList_visible {
+    composes: block from global;
+}
+
+.title {
+    composes: text-2xl from global;
+    composes: font-semibold from global;
+    composes: py-5 from global;
+}
+
+.titleListItem {
+    composes: border-b from global;
+    composes: border-black from global;
+    composes: border-opacity-20 from global;
+}
+
+.attribute {
+    composes: font-semibold from global;
+    composes: text-sm from global;
+    composes: mb-2.5 from global;
+}
+
+.sectionTitle {
+    composes: font-sans from global;
+    composes: text-2xl from global;
+}
+
+.sectionTitleWrapper {
+    composes: flex from global;
+    composes: justify-between from global;
+    composes: space-x-8 from global;
+    composes: rtl_space-x-reverse from global;
+    composes: content-center from global;
+    composes: py-[20px] from global;
+}
+
+.sectionRoot {
+    composes: border-b from global;
+    composes: border-grey-border from global;
+}
+
+.sectionAttributeList {
+    composes: grid from global;
+    composes: gap-y-1 from global;
+}
+
+.attributeLink {
+    composes: text-sm from global;
+    composes: font-semibold from global;
+    composes: hover_opacity-60 from global;
+}
+
+.allLink {
+    composes: text-xs from global;
+    composes: font-bold from global;
+    composes: underline from global;
+    composes: mt-4 from global;
+}

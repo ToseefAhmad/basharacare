@@ -1,0 +1,71 @@
+.root {
+    composes: border-2 from global;
+    composes: border-grey-border from global;
+    composes: rounded-md from global;
+    composes: p-4 from global;
+    composes: lg_p-8 from global;
+}
+
+.root_editMode {
+    composes: root;
+    composes: border-0 from global;
+}
+
+.root_updated {
+    composes: root;
+    animation: flash var(--venia-global-anim-bounce) 640ms 2;
+}
+
+@keyframes flash {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.cardHeader {
+    grid-template-columns: 1fr;
+
+    composes: grid from global;
+    composes: grid-flow-col from global;
+}
+
+.cardTitle {
+    composes: font-semibold from global;
+}
+
+.editButton {
+    composes: p-1 from global;
+    composes: -m-1 from global;
+    composes: text-blue-facebook from global;
+}
+
+.editWrapper {
+    composes: grid from global;
+    composes: p-4 from global;
+    composes: gap-y-2 from global;
+}
+
+.editTitle {
+    composes: text-lg from global;
+    composes: uppercase from global;
+}
+
+.editIcon {
+    composes: stroke-blue-facebook from global;
+}
+
+.loading {
+    composes: root from '@magento/venia-ui/lib/components/LoadingIndicator/indicator.module.css';
+    composes: text-center from global;
+}
+
+.editText {
+    composes: hidden from global;
+    composes: md_block from global;
+}

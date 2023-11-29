@@ -1,0 +1,222 @@
+.root {
+    grid-template-rows: 1fr min-content;
+
+    composes: h-full from global;
+    composes: grid from global;
+}
+
+.brandName {
+    @apply text-base
+        font-bold
+        md_text-xs
+        text-purple-lighter;
+    composes: hover_opacity-80 from global;
+    composes: hover_underline from global;
+    composes: tracking-widest from global;
+    composes: font-sans from global;
+    composes: uppercase from global;
+    composes: break-all from  global;
+}
+
+.cardContent {
+    grid-template-rows: min-content min-content 1fr min-content;
+
+    composes: pb-[7px] from global;
+    composes: bg-white from global;
+    composes: grid from global;
+    composes: h-full from global;
+
+    composes: max-h-[min-content] from global;
+    composes: lg_pb-5 from global;
+    composes: lg_pt-0 from global;
+}
+
+.cardContentShimmer {
+    composes: h-[390px] from global;
+
+    composes: desktop_h-[355px] from global;
+}
+
+.imageContainer {
+    composes: block from global;
+    composes: w-[150px] from global;
+    composes: h-[150px] from global;
+    composes: mb-[30px] from global;
+}
+
+.images {
+    composes: grid from global;
+    composes: h-full from global;
+    composes: justify-center from global;
+    composes: relative from global;
+    composes: hover_text-black from global;
+}
+
+.image {
+    transition: opacity 512ms ease-out;
+
+    composes: block from global;
+    composes: h-full from global;
+    composes: object-contain from global;
+    composes: w-full from global;
+    composes: hover_opacity-60 from global;
+    composes: hover_scale-125 from global;
+}
+
+.imageLoaded {
+    composes: loaded from '@magento/venia-ui/lib/components/Image/image.module.css';
+    composes: opacity-100 from global;
+}
+
+.imageNotLoaded {
+    composes: notLoaded from '@magento/venia-ui/lib/components/Image/image.module.css';
+    composes: opacity-0 from global;
+}
+
+.imagePlaceholder {
+    composes: image;
+    composes: bg-grey from global;
+}
+
+.actionsContainer {
+    composes: w-[133px] from global;
+    composes: h-10 from global;
+    composes: justify-self-end from global;
+    composes: rtl_justify-self-start from global;
+
+    composes: lg_w-[160px] from global;
+}
+
+.actionsContainerShimmer {
+    composes: w-[133px] from global;
+
+    composes: lg_w-[160px] from global;
+}
+
+.actionsContainer:empty {
+    @apply hidden;
+}
+
+.namePriceContainer {
+    composes: flex from global;
+    composes: flex-col from global;
+    composes: h-full from global;
+    composes: justify-between from global;
+    composes: px-[10px] from global;
+
+    composes: lg_px-4 from global;
+}
+
+.name {
+    composes: text-sm from global;
+    composes: font-semibold from global;
+    composes: mb-[5px] from global;
+    composes: max-h-16 from global;
+    composes: overflow-hidden from global;
+}
+
+.priceContainer {
+    composes: flex from global;
+    composes: gap-1 from global;
+    composes: md_gap-2 from global;
+    composes: items-baseline from global;
+}
+
+.price {
+    composes: text-xl from global;
+    composes: font-headingBold from global;
+    composes: font-black from global;
+    composes: max-h-[30px] from global;
+
+    composes: lg_text-lg from global;
+}
+
+.price span:first-child {
+    @apply text-xs font-sans font-semibold lg_text-[10px] lg_leading-[15px];
+}
+
+.discountedPrice {
+    composes: font-headingBold from global;
+    composes: font-black from global;
+    composes: line-through from global;
+
+    @apply md_text-sm text-xs h-5  line-through;
+}
+
+.discountedPrice span:first-child {
+    @apply mobile_hidden;
+}
+
+.unavailableContainer {
+    composes: items-center from global;
+    composes: bg-red from global;
+    composes: text-grey from global;
+    composes: gap-2 from global;
+    composes: grid from global;
+    composes: italic from global;
+    composes: justify-content-start from global;
+    composes: p-2 from global;
+    composes: w-full from global;
+    composes: text-sm from global;
+}
+
+.reviewContainer {
+    composes: h-[21px] from global;
+    composes: px-[10px] from global;
+
+    composes: lg_px-4 from global;
+}
+
+.wishlistButtonContainer {
+    composes: grid from global;
+    composes: justify-end from global;
+    composes: h-[52px] from global;
+    composes: p-2 from global;
+    z-index: 5;
+    composes: z-[5] from global;
+
+    composes: lg_p-0 from global;
+}
+
+.wishlistRoot {
+    z-index: 5;
+    composes: z-[5] from global;
+
+    composes: grid from global;
+    composes: justify-end from global;
+    composes: p-2 from global;
+    composes: relative from global;
+    composes: top-2 from global;
+    composes: md_top-5 from global;
+    composes: top-2 from global;
+    composes: md_right-5 from global;
+    composes: rtl_md_-right-3 from global;
+    composes: outline-none from global;
+}
+
+.wishlistRootSelected {
+    composes: wishlistRoot;
+}
+
+.wishlistRootSelected svg {
+    stroke: black;
+    fill: black;
+}
+
+.reviewRoot {
+    composes: flex from global;
+    composes: items-center from global;
+    composes: justify-between from global;
+}
+
+.reviewLink {
+    composes: hidden from global;
+    composes: text-xs from global;
+
+    composes: desktop_block from global;
+    composes: lg_text-base from global;
+}
+
+:global(.ais-Highlight-highlighted) {
+    @apply bg-purple-lightest not-italic font-bold;
+}

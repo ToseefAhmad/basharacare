@@ -1,0 +1,52 @@
+.title {
+    composes: justify-self-center from global;
+    composes: flex from global;
+    composes: pt-6 from global;
+    composes: text-[30px] from global;
+    composes: 2sm_leading-[48px] from global; /* stylelint-disable-line unit-no-unknown */
+    composes: 2sm_text-[40px] from global; /* stylelint-disable-line unit-no-unknown */
+    composes: leading-[36px] from global;
+    composes: 2sm_pt-0 from global; /* stylelint-disable-line unit-no-unknown */
+}
+
+.form {
+    composes: grid from global;
+    composes: gap-y-8 from global;
+    composes: mt-[40px] from global;
+}
+
+.form label {
+    @apply font-bold;
+}
+
+.buttonsContainer {
+    composes: justify-start from global;
+    composes: !block from global;
+
+    @apply 2sm_!flex 2sm_flex;
+}
+
+.buttonsContainer button {
+    @apply w-full p-[18px] bg-transparent text-black text-[17px] max-w-[450px] border border-solid border-black;
+}
+
+.buttonsContainer button:hover {
+    @apply bg-black text-white;
+}
+
+.firstTitle {
+    composes: font-headingBold from global;
+}
+
+.link {
+    composes: float-right from global;
+    composes: font-sm from global;
+    composes: underline from global;
+    composes: self-auto	from global;
+    composes: ltr_ml-auto from global;
+    composes: rtl_mr-auto from global;
+    composes: mt-4 from global;
+    composes: self-center from global;
+
+    @apply 2sm_mt-0;
+}

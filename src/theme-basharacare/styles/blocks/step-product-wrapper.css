@@ -1,0 +1,56 @@
+.cms-home .step-product-wrapper {
+    @apply bg-brown-light
+        pt-20
+        lg_pt-[190px]
+        border-t-[7px]
+        border-white;
+}
+
+.cms-home .step-product-wrapper .explore-button {
+    @apply text-right
+        !self-center
+        items-center
+        lg_items-end
+        my-5
+        lg_my-0
+        md_mx-2.5;
+}
+
+.step-product-header-wrapper .explore-button > div {
+    @apply ltr_md_ml-auto
+        md_rtl_mr-auto;
+}
+
+.step-product-wrapper .explore-button button {
+    @apply lg_w-[200px];
+}
+
+.cms-home .step-product-wrapper .step-product-block-title {
+    @apply !grid
+        grid-flow-col
+        gap-3
+        lg_ml-4
+        rtl_lg_mr-4
+        items-center
+        !place-content-center;
+    @apply lg_place-content-start !important;
+}
+
+.cms-home .step-product-wrapper .step-product-block-title h2 {
+    @apply !my-0;
+}
+
+.cms-home .step-product-wrapper > div > div {
+    @apply px-0 lg_px-4.5;
+}
+.cms-home .step-product-header-wrapper {
+    @apply lg_mb-7.5;
+}
+
+.cms-home .step-product-wrapper .slick-slider .slick-arrow {
+    @apply hidden;
+}
+
+.cms-home .step-product-slider-wrapper .slick-track .slick-slide:nth-child(3) {
+    @apply xl_z-[11];
+}

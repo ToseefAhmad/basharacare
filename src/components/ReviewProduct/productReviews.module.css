@@ -1,0 +1,40 @@
+.root {
+    composes: flex from global;
+    composes: items-center from global;
+    composes: gap-[32px] from global;
+}
+
+.starsContainer {
+    composes: flex from global;
+    composes: items-center from global;
+    composes: gap-[6px] from global;
+
+    composes: lg_gap-[10px] from global;
+}
+
+.reviewLink {
+    composes: flex from global;
+    composes: gap-[3px] from global;
+}
+
+.reviewsRating {
+    composes: flex from global;
+    composes: items-baseline from global;
+    composes: font-headingBold from global;
+    composes: font-bold from global;
+    composes: text-sm from global;
+
+    composes: lg_text-lg from global;
+}
+
+.reviewsRating span:last-child {
+    @apply text-[10px]
+        leading-[10px]
+        lg_text-xs;
+}
+
+.reviewLink {
+    composes: text-xs from global;
+
+    composes: lg_text-base from global;
+}

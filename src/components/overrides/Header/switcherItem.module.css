@@ -1,0 +1,26 @@
+.root {
+    composes: items-center from global;
+    composes: flex from global;
+
+    /* Large screen styles */
+    composes: lg_h-9 from global;
+}
+
+.content {
+    composes: items-center from global;
+    composes: flex from global;
+
+    /* composes: text-left from global; */
+    composes: font-semibold from global;
+    composes: uppercase from global;
+
+    /* Large screen styles */
+    composes: lg_font-normal from global;
+    composes: lg_text-sm from global;
+    composes: lg_normal-case from global;
+    composes: lg_leading-5 from global;
+}
+
+.content svg {
+    @apply lg_hidden;
+}

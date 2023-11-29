@@ -1,0 +1,51 @@
+.formRoot {
+    composes: grid from global;
+    composes: gap-2 from global;
+    composes: gap-2 from global;
+    composes: py-5 from global;
+    composes: px-10  from global;
+}
+
+.formRoot input[type='date'] {
+    @apply h-[54px];
+}
+
+/* to remove placeholder because it messes up styling  */
+.formRoot input[type='date']::placeholder {
+    @apply hidden;
+}
+
+.message {
+    composes: text-sm from global;
+}
+
+.actions {
+    composes: grid from global;
+    composes: gap-4 from global;
+    composes: grid-flow-row from global;
+    composes: md_grid-flow-col from global;
+    composes: justify-center from global;
+    composes: mt-4 from global;
+    composes: text-center from global;
+}
+
+.cancelButton {
+    composes: root_normalPriority from '../Button/button.module.css';
+}
+
+.submitButton {
+    composes: root_normalPriority from '../Button/button.module.css';
+    composes: col-start-auto from global;
+    composes: md_col-start-2 from global;
+}
+
+.selectField select {
+    @apply w-full
+        outline-none
+        bg-transparent;
+}
+
+.subscribe {
+    composes: -ml-1.25 from global;
+    composes: rtl_-mr-1.25 from global;
+}

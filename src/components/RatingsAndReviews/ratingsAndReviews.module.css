@@ -1,0 +1,31 @@
+.root {
+    composes: container from global;
+}
+
+.title {
+    composes: flex from global;
+    composes: justify-center from global;
+    composes: sm_justify-start from global;
+    composes: flex-wrap from global;
+    composes: text-4xl from global;
+    composes: md_text-5xl from global;
+    composes: pt-20 from global;
+    composes: md_pt-25 from global;
+    composes: pb-12.5 from global;
+    composes: md_pb-15 from global;
+}
+
+.titleBold {
+    composes: font-headingBold from global;
+    composes: mr-2 from global;
+    composes: rtl_mr-0 from global;
+    composes: rtl_ml-2 from global;
+    composes: pt-0.5 from global;
+}
+
+.reviews {
+    composes: mb-10 from global;
+    composes: max-w-[700px] from global;
+    composes: border-b from global;
+    composes: border-grey-lighter from global;
+}

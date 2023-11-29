@@ -1,0 +1,8 @@
+.root {
+    composes: divide-y from global;
+    composes: divide-black from global;
+    composes: divide-opacity-20 from global;
+    composes: w-full from global;
+}
+
+/* .root_mobile {} */

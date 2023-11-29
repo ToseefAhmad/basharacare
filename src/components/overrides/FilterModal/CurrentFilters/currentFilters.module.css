@@ -1,0 +1,13 @@
+.root {
+    composes: flex from global;
+    composes: flex-wrap from global;
+    composes: gap-x-2 from global;
+    composes: gap-y-1 from global;
+    composes: py-2 from global;
+    composes: ltr_pr-5 from global;
+    composes: rtl_pl-5 from global;
+}
+
+.root:empty {
+    @apply hidden;
+}

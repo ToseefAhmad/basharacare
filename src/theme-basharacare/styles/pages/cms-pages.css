@@ -1,0 +1,7 @@
+.cms-page:not(.cms-home) main {
+    @apply bg-white md_bg-grey-lightest;
+}
+
+.footerWrapper {
+    @apply bg-grey-lightest;
+}

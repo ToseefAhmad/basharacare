@@ -1,0 +1,80 @@
+.root {
+    composes: flex from global;
+    composes: justify-between from global;
+    composes: mt-36 from global;
+}
+
+.blackBox {
+    composes: p-5 from global;
+    composes: bg-black from global;
+    composes: flex from global;
+    composes: justify-between from global;
+    composes: w-[300px] from global;
+    composes: text-white from global;
+}
+
+.displayBox {
+    composes: displayBox from './styleGuide.module.css';
+
+    composes: flex from global;
+    composes: flex-wrap from global;
+    composes: justify-between from global;
+    composes: w-[200px] from global;
+}
+
+.displayBox > * {
+    flex: 50%;
+    margin-bottom: 30px;
+}
+
+.starDisplayBox {
+    composes: displayBox from './styleGuide.module.css';
+    composes: w-[129px] from global;
+}
+
+.star {
+    composes: mr-px from global;
+}
+
+.stars {
+    composes: mb-9 from global;
+}
+
+.starBrownActive {
+    composes: text-brown from global;
+}
+
+.starBrownInactive {
+    composes: text-brown-light from global;
+}
+
+.starBlueActive {
+    composes: text-blue-light from global;
+}
+
+.starBlueInactive {
+    composes: text-blue-lightest from global;
+}
+
+.starPurpleActive {
+    composes: text-purple-darker from global;
+}
+
+.starPurpleInactive {
+    composes: text-purple-lightest from global;
+}
+
+.starBlack {
+    composes: text-black from global;
+}
+
+.actionIcons {
+    composes: flex from global;
+    composes: flex-wrap from global;
+    composes: justify-start from global;
+}
+
+.actionIcons > * {
+    flex: 33%;
+    margin-bottom: 15px;
+}

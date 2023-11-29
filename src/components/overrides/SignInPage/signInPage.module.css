@@ -1,0 +1,46 @@
+.root {
+    composes: mb-17 from global;
+    composes: lg_mb-[150px] from global;
+}
+.title h1 {
+    @apply inline-block
+        first_pr-2
+        first_rtl_pl-2
+        last_font-light
+        last_font-sans;
+}
+
+.title {
+    composes: lg_mt-[110px] from global;
+    composes: mt-10 from global;
+    composes: mb-7.5 from global;
+    composes: lg_mb-10 from global;
+}
+
+.noticeMessageRewards,
+.noticeMessageSubscribe {
+    composes: bg-purple-lighter from global;
+    composes: py-4.5 from global;
+    composes: px-4 from global;
+}
+.noticeMessageRewards a,
+.noticeMessageSubscribe a {
+    @apply font-semibold
+        ml-2;
+}
+
+.noticeMessageRewards {
+    composes: mb-5 from global;
+}
+
+.contentContainer {
+    composes: mt-17 from global;
+    composes: sm_grid from global;
+    composes: grid-cols-2 from global;
+    composes: sm_gap-x-[5%] from global;
+    composes: lg_gap-x-[20%] from global;
+}
+
+.root input::placeholder {
+    @apply text-black;
+}

@@ -1,0 +1,171 @@
+.root {
+    composes: root from '@magento/venia-ui/lib/components/clickable.module.css';
+    composes: px-4 from global;
+    composes: uppercase from global;
+    composes: font-semibold from global;
+    composes: tracking-1px from global;
+    compsoes: duration-[250ms] from global;
+    composes: transition-colors from global;
+    composes: ease-linear from global;
+    composes: disabled_bg-grey-lighter from global;
+    composes: disabled_text-grey from global;
+    composes: disabled_cursor-not-allowed from global;
+    composes: disabled_hover_bg-grey-lighter from global;
+    composes: disabled_hover_text-grey from global;
+    composes: xl_disabled_bg-grey-lighter from global;
+    composes: xl_disabled_text-grey from global;
+    composes: xl_disabled_cursor-not-allowed from global;
+    composes: xl_disabled_hover_bg-grey-lighter from global;
+    composes: xl_disabled_hover_text-grey from global;
+    composes: focus_outline-none from global;
+    composes: active_outline-none from global;
+    composes: outline-none from global;
+
+    /* stylelint-disable property-no-vendor-prefix */
+    -webkit-appearance: none;
+}
+
+.root:focus {
+    -webkit-appearance: none;
+
+    @apply outline-none;
+}
+
+.content {
+    composes: inline-grid from global;
+    composes: grid-flow-col from global;
+    composes: gap-1.25 from global;
+    composes: items-center from global;
+    composes: justify-center from global;
+    composes: justify-items-center from global;
+}
+
+/* derived classes */
+.root_lowPriority {
+    composes: root;
+
+    @apply text-sm;
+    composes: py-3 from global;
+    composes: text-white from global;
+    composes: bg-black from global;
+    composes: xl_hover_bg-purple-lighter from global;
+    composes: xl_hover_text-black from global;
+    composes: xl_focus_bg-purple from global;
+    composes: xl_active_bg-purple from global;
+    composes: xl_active_text-white from global;
+    composes: focus_outline-none from global;
+    composes: outline-none from global;
+}
+
+.root_normalPriority {
+    composes: root;
+    composes: py-3.5 from global;
+    composes: text-black from global;
+    composes: bg-transparent from global;
+    composes: border from global;
+    composes: border-solid from global;
+    composes: border-black from global;
+    composes: xl_hover_text-white from global;
+    composes: xl_hover_bg-black from global;
+    composes: xl_active_text-white from global;
+    composes: xl_active_bg-black from global;
+    composes: xl_focus_bg-black from global;
+    composes: xl_focus_text-white from global;
+    composes: focus_outline-none from global;
+    composes: outline-none from global;
+}
+
+.root_highPriority {
+    composes: root;
+    composes: py-3.5 from global;
+    composes: text-white from global;
+    composes: bg-black from global;
+    composes: xl_hover_bg-purple-lighter from global;
+    composes: xl_hover_text-black from global;
+    composes: xl_focus_bg-purple from global;
+    composes: xl_active_bg-purple from global;
+    composes: focus_outline-none from global;
+    composes: outline-none from global;
+}
+
+.root_bannerPriority {
+    composes: root;
+    composes: py-2.5 from global;
+    composes: text-white from global;
+    composes: bg-black from global;
+    composes: xl_hover_bg-purple-lighter from global;
+    composes: xl_hover_text-black from global;
+    composes: xl_focus_bg-purple from global;
+    composes: xl_focus_text-white from global;
+    composes: xl_active_bg-purple from global;
+    composes: xl_active_text-white from global;
+    composes: focus_outline-none from global;
+    composes: outline-none from global;
+
+    @apply text-xl;
+    composes: px-16 from global;
+    composes: py-5 from global;
+}
+
+.root_routinePriority {
+    composes: root;
+    composes: py-2.5 from global;
+    composes: text-black from global;
+    composes: bg-purple-lighter from global;
+    composes: xl_hover_bg-black from global;
+    composes: xl_hover_text-white from global;
+    composes: xl_focus_bg-purple from global;
+    composes: xl_focus_text-white from global;
+    composes: xl_active_bg-purple from global;
+    composes: xl_active_text-white from global;
+    composes: focus_outline-none from global;
+    composes: outline-none from global;
+
+    @apply text-base md_text-xl;
+    composes: px-8 from global;
+    composes: md_px-16 from global;
+    composes: py-5 from global;
+}
+
+.root_cartPriority {
+    composes: root;
+    composes: xl_max-w-[360px] from global;
+    composes: max-w-full from global;
+    composes: py-3.5 from global;
+    composes: text-white from global;
+    composes: bg-black from global;
+    composes: hover_bg-white from global;
+    composes: hover_text-black from global;
+    composes: border-2 from global;
+    composes: border-black from global;
+    composes: border-solid from global;
+    composes: h-15 from global;
+    composes: focus_outline-none from global;
+    composes: outline-none from global;
+}
+
+.root_reviewFormPriority {
+    composes: root;
+    composes: w-full from global;
+    composes: py-3.5 from global;
+    composes: text-white from global;
+    composes: text-xl from global;
+    composes: bg-black from global;
+    composes: hover_bg-white from global;
+    composes: hover_text-black from global;
+    composes: border-2 from global;
+    composes: border-black from global;
+    composes: border-solid from global;
+    composes: h-15 from global;
+    composes: mt-12.5 from global;
+    composes: focus_outline-none from global;
+    composes: outline-none from global;
+}
+
+.root_linkPriority {
+    composes: text-sm from global;
+}
+
+.fullWidth {
+    composes: w-full from global;
+}

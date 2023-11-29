@@ -1,0 +1,29 @@
+.root {
+  display: flex;
+  align-items: center;
+  padding: 0 0 1rem 0;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: rgb(var(--venia-global-color-text-alt));
+}
+
+.icon {
+  font-size: 0.7rem;
+  outline: none;
+  margin: 0 0.5rem 0 1.25rem;
+  color: rgb(var(--venia-global-color-text));
+}
+
+.icon svg {
+  stroke-width: 1px;
+}
+
+.plusIconActive,
+.plusIcon:hover {
+  color: rgb(var(--blog-pro-main-color-dark));
+}
+
+.minusIconActive,
+.minusIcon:hover {
+  color: rgb(var(--venia-global-color-error));
+}

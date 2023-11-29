@@ -1,0 +1,44 @@
+.accordionRoot {
+    composes: my-4 from global;
+}
+
+.questionContent {
+    composes: my-5 from global;
+}
+
+.questionContent_collapsed {
+    composes: hidden from global;
+}
+
+.fullAnswerButton {
+    composes: cursor-pointer from global;
+    composes: hover_text-grey-dark from global;
+    composes: underline from global;
+    composes: text-sm from global;
+    composes: table-cell from global;
+}
+
+.sectionTitleWrapper {
+    composes: pt-0 from global;
+    composes: grid from global;
+    composes: grid-flow-col from global;
+    composes: gap-x-4 from global;
+    composes: hover_cursor-pointer from global;
+    composes: hover_text-grey-dark from global;
+    composes: ltr_text-left from global;
+    composes: rtl_text-right from global;
+}
+
+.sectionRot {
+    composes: b-0 from global;
+}
+
+.iconRoot {
+    composes: grid from global;
+    composes: items-center from global;
+    composes: justify-self-end from global;
+}
+
+.shortAnswerContent {
+    composes: pt-4 from global;
+}

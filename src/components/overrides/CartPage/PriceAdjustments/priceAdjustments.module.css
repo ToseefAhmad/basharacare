@@ -1,0 +1,30 @@
+.accordionRoot {
+    composes: border-none from global;
+}
+
+.sectionRoot {
+    composes: border-none from global;
+    composes: min-h-[35px] from global;
+}
+
+.sectionTitleContainer {
+    composes: w-full from global;
+    composes: min-h-[35px] from global;
+}
+
+.sectionTitleWrapper {
+    composes: flex from global;
+    composes: justify-between from global;
+    composes: min-h-[35px] from global;
+    composes: gap-x-6 from global;
+}
+.sectionTitle {
+    composes: text-sm from global;
+    composes: text-sans from global;
+    composes: font-semibold from global;
+}
+
+.sectionContents {
+    composes: px-0 from global;
+    composes: pb-4 from global;
+}

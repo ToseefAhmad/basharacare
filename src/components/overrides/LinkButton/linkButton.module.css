@@ -1,0 +1,4 @@
+.root {
+    composes: root from '@magento/venia-ui/lib/components/clickable.module.css';
+    composes: text-black from global;
+}

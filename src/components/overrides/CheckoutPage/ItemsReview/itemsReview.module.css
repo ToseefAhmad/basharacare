@@ -1,0 +1,29 @@
+.items_review_container {
+    composes: min-h-8 from global;
+    composes: border-2 from global;
+    composes: border-grey-border from global;
+    composes: rounded-md from global;
+}
+
+.items_container {
+    composes: grid from global;
+    composes: py-6 from global;
+    composes: px-8 from global;
+}
+
+.total_quantity_amount {
+    composes: font-semibold from global;
+    composes: mr-[5px] from global;
+    composes: rtl_ml-[5px] from global;
+}
+
+.reviewButtonContainer {
+    composes: mt-4 from global;
+}
+
+.showAllText {
+    composes: text-blue-facebook from global;
+}
+.showAllArrowDown {
+    composes: stroke-blue-facebook from global;
+}

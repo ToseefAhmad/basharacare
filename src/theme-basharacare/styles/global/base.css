@@ -1,0 +1,83 @@
+@tailwind base;
+
+@layer base {
+    html {
+        @apply max-w-100width;
+    }
+
+    body {
+        @apply overflow-x-hidden;
+    }
+
+    h1 {
+        @apply text-4xl md_text-5xl;
+        @apply font-headingBold;
+    }
+
+    h2 {
+        @apply text-3.8xl
+            md_text-4xl;
+        @apply font-headingBold;
+    }
+
+    h3 {
+        @apply text-2xl
+            md_text-3xl;
+        @apply font-headingBold;
+    }
+
+    h4 {
+        @apply text-base
+            md_text-2xl;
+        @apply font-headingBold;
+    }
+
+    h5 {
+        @apply text-sm
+            md_text-sm;
+        @apply font-semibold;
+    }
+
+    a {
+        @apply md_hover_underline;
+    }
+
+    p {
+        @apply text-black-paragraph;
+        @apply leading-6.5;
+    }
+
+    ol {
+        list-style: auto;
+
+        @apply pl-5;
+    }
+
+    ol li {
+        @apply pl-1.25;
+    }
+}
+
+.page-narrow {
+    @apply mx-auto my-0 px-0 pt-6 md_pt-10;
+    @apply w-full md_w-[720px] !important;
+}
+
+.page-style1 {
+    @apply text-black opacity-100;
+}
+
+.page-style1,
+.page-style1 p {
+    @apply opacity-100 mb-[0.2rem] text-[1.12rem] text-black;
+}
+
+.page-style1 .text1 {
+    margin-bottom: 2.5rem;
+}
+
+@media only screen and (max-width: 768px) {
+    .page-style1 .conditional-accordion {
+        --conditional-accordion-enable: 1;
+    }
+}

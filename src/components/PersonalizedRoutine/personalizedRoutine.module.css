@@ -1,0 +1,266 @@
+.couponCodeWrap {
+    composes: mx-[-1.125rem] from global;
+    composes: md_mx-0 from global;
+    composes: bg-purple-lighter from global;
+    composes: py-10 from global;
+    composes: px-5 from global;
+    composes: md_py-20 from global;
+    composes: flex from global;
+    composes: mt-8 from global;
+    composes: mb-16 from global;
+    composes: md_my-24 from global;
+    composes: items-center from global;
+    composes: justify-center from global;
+}
+
+.couponCode {
+    composes: max-w-[550px] from global;
+}
+
+.couponCodeTitle {
+    composes: text-3xl from global;
+    composes: md_text-6xl from global;
+    composes: mb-4 from global;
+    composes: md_mb-5 from global;
+}
+
+.couponCodeDescription {
+    composes: text-base from global;
+    composes: leading-normal from global;
+    composes: md_text-lg from global;
+    composes: text-black from global;
+}
+
+.routineWrap {
+    composes: md_text-center from global;
+}
+
+.routineTitle {
+    composes: inline-flex from global;
+    composes: items-center from global;
+
+    composes: font-sans from global;
+    composes: text-3xl from global;
+    composes: leading-tight from global;
+    composes: md_text-6xl from global;
+    composes: md_leading-normal from global;
+}
+
+.routineTitle :global svg {
+    @apply mx-5
+        w-[30px]
+        md_w-[50px];
+}
+
+.routineSubTitle {
+    composes: text-3xl from global;
+    composes: leading-tight from global;
+    composes: mb-6 from global;
+    composes: md_text-6xl from global;
+    composes: md_leading-normal from global;
+    composes: md_mb-14 from global;
+}
+
+.skinConsultantBlock :global .container {
+    @apply px-0;
+}
+
+.skinConsultantBlock h2 {
+    @apply text-3xl
+        mt-4
+        mb-2
+        md_text-4xl
+        md_mt-0
+        md_mb-5;
+}
+
+.skinConsultantBlock :global h5 {
+    @apply text-sm
+        md_text-lg
+        !mb-5
+        !mt-0;
+}
+
+.skinConsultantBlock :global p {
+    @apply text-sm
+        md_text-base
+        text-black;
+}
+
+.skinConsultantBlock img {
+    @apply w-full !m-0;
+}
+
+.rootBlock {
+    composes: m-0 from global;
+}
+
+.skinAdditionalBlock,
+.skinAdditionalBlockRtl {
+    @apply !m-0;
+}
+
+.skinAdditionalBlock :global .pagebuilder-column:first-child,
+.skinAdditionalBlockRtl :global .pagebuilder-column:last-child {
+    @apply md_pr-6
+        mb-6;
+}
+
+.skinAdditionalBlock :global .pagebuilder-column:last-child,
+.skinAdditionalBlockRtl :global .pagebuilder-column:first-child {
+    @apply md_pl-6
+        mb-6;
+}
+
+.skinAdditionalBlock :global h3,
+.skinAdditionalBlockRtl :global h3 {
+    @apply my-0;
+}
+
+.skinAdditionalBlock :global li {
+    @apply mb-4 relative pl-7.5;
+}
+
+.skinAdditionalBlockRtl :global li {
+    @apply mb-4 relative pr-7.5;
+}
+
+.skinAdditionalBlock :global li::before {
+    @apply absolute mt-1 left-0;
+}
+
+.skinAdditionalBlockRtl :global li::before {
+    @apply absolute mt-1 right-0;
+}
+
+.skinAdditionalBlock :global p {
+    @apply text-sm
+        text-black;
+}
+
+.skinAdditionalBlock :global .tips-description {
+    @apply py-5 px-6 md_pt-10 md_pb-14 md_pr-14;
+}
+
+.skinAdditionalBlock :global h4 {
+    @apply mt-0
+        mb-2.5
+        md_mb-4;
+}
+
+.skinAdditionalBlock :global .container {
+    @apply px-0
+        md_mb-[140px]
+        md_mt-[100px];
+}
+
+.skinQuestionsBlock :global .container {
+    @apply px-0;
+}
+
+.skinQuestionsBlock :global h1 {
+    @apply my-10
+        md_mb-[60px]
+        text-left
+        text-3xl
+        md_text-6xl;
+}
+
+.skinQuestionsBlock :global h3 {
+    @apply text-3xl
+        md_text-4xl
+        my-2
+        md_my-4;
+}
+
+.skinQuestionsBlock :global h4 {
+    @apply font-sans
+        text-base
+        md_text-lg
+        font-semibold
+        my-2.5;
+}
+
+.skinQuestionsBlock :global picture img {
+    @apply w-full
+        my-10
+        md_mx-0;
+}
+
+.skinQuestionsBlock :global p {
+    @apply text-black
+        leading-tight
+        text-base
+        md_leading-normal
+        md_text-2xl
+        mb-1
+        md_mb-2;
+}
+
+.myLastTest {
+    composes: my-10 from global;
+}
+
+.myLastTestTitle {
+    composes: text-3xl from global;
+    composes: md_text-4xl from global;
+    composes: my-2 from global;
+    composes: md_my-4 from global;
+}
+
+.myLastTestAnswer {
+    composes: my-5 from global;
+}
+
+.emptyBlockRoot :global .take-skin-test-primary-column {
+    @apply mb-12.5
+        lg_mt-12.5;
+}
+
+.emptyBlockRoot :global .take-skin-test-primary-column {
+    @apply sm_mr-8;
+}
+
+.emptyBlockRoot :global .take-skin-test-primary-column {
+    @apply sm_ml-8;
+}
+
+.emptyBlockRoot :global .take-skin-test-primary-column .description {
+    @apply lg_w-[85%];
+}
+
+.emptyBlockRoot :global .take-skin-test-primary-column .title {
+    @apply font-albraSemibold
+        font-normal
+        font-sans
+        text-4xl
+        lg_text-5xl
+        mb-7.5
+        xl_w-[85%];
+}
+
+.emptyBlockRoot :global .take-skin-test-primary-column .title p {
+    @apply leading-none text-black;
+}
+
+.emptyBlockRoot :global .take-skin-test-primary-column .description p {
+    @apply text-black;
+}
+
+.emptyBlockRoot :global .take-skin-test-primary-column .title strong {
+    @apply font-albraSemibold text-black;
+}
+
+.emptyBlockRoot :global .take-skin-test-primary-column .take-test-btn {
+    @apply mt-3.5
+        w-full
+        lg_min-w-[300px]
+        lg_w-[300px]
+        pt-5
+        m-0;
+}
+
+.emptyBlockRoot :global .take-skin-test-primary-column .take-test-btn button {
+    @apply w-full
+        h-[70px];
+}

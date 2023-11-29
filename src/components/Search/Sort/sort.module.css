@@ -1,0 +1,39 @@
+.root {
+    composes: root from '@app/components/overrides/ProductSort/productSort.module.css';
+}
+
+.menu {
+    composes: menu from '@app/components/overrides/ProductSort/productSort.module.css';
+}
+
+.sortButton {
+    composes: sortButton from '@app/components/overrides/ProductSort/productSort.module.css';
+}
+
+.menuItem {
+    composes: menuItem from '@app/components/overrides/ProductSort/productSort.module.css';
+}
+
+.desktopText {
+    composes: desktopText from '@app/components/overrides/ProductSort/productSort.module.css';
+}
+
+.sortText {
+    composes: sortText from '@app/components/overrides/ProductSort/productSort.module.css';
+}
+
+.currentSort {
+    composes: currentSort from '@app/components/overrides/ProductSort/productSort.module.css';
+}
+
+.mobileText {
+    composes: mobileText from '@app/components/overrides/ProductSort/productSort.module.css';
+}
+
+.desktopIconWrapper {
+    composes: desktopIconText from '@app/components/overrides/ProductSort/productSort.module.css';
+}
+
+.desktopIcon {
+    composes: desktopIcon from '@app/components/overrides/ProductSort/productSort.module.css';
+}

@@ -1,0 +1,20 @@
+.registerButton {
+    composes: root_highPriority from '@app/components/overrides/Button/button.module.css';
+    composes: hover_no-underline from global;
+    composes: min-h-[60px] from global;
+    composes: lg_min-w-[360px] from global;
+    composes: mt-7.5 from global;
+    composes: w-full from global;
+    composes: lg_w-3/4 from global;
+}
+
+.descriptionText {
+    composes: text-black from global;
+    composes: mt-4 from global;
+}
+
+.title {
+    composes: text-2.5xl from global;
+    composes: lg_text-3xl from global;
+    composes: font-medium from global;
+}

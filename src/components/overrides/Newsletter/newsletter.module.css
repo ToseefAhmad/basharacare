@@ -1,0 +1,189 @@
+.root {
+    composes: bg-white from global;
+    composes: w-full from global;
+}
+
+.newsletterContainer {
+    background-image: url('./Images/newsLetterBG.png');
+
+    @apply container
+        px-mobile
+        md_max-w-[fit-content]
+        md_pb-25
+        md_flex
+        md_flex-wrap
+        bg-no-repeat
+        md_bg-newsletter-ltr
+        md_rtl_bg-newsletter-rtl;
+}
+
+.newsletterContainer > div {
+    @apply md_flex-grow
+        md_w-[50%];
+}
+
+.newsletterContainer > div:nth-of-type(3) {
+    @apply md_w-auto
+        md_pl-[50%]
+        md_flex-grow-0
+        md_rtl_pl-0
+        md_rtl_pr-[50%]
+        md_mt-[-32px];
+}
+
+.newsletterContainer > div > .content > div {
+    @apply my-0
+        px-0;
+}
+
+.newsletterContainer [class*='row-contained'] {
+    @apply px-0;
+}
+
+.content {
+    composes: h-auto from global;
+}
+
+.content p {
+    @apply text-[1.375rem]
+        leading-[120%]
+        text-black
+        font-normal;
+}
+
+.root :global(.infoText) {
+    @apply mt-[1.0625rem]
+        md_mt-0
+        md_text-[1.125rem]
+        md_pl-10;
+}
+
+.root :global(.infoText p) {
+    @apply mb-0
+        md_text-[1.125rem]
+        md_leading-[135%];
+}
+
+.root :global(.infoText p:nth-child(1n + 2)) {
+    @apply mt-3.5
+        md_mt-0;
+}
+
+.root :global(.newsFollow .titleH2) {
+    @apply text-[2.5rem]
+        normal-case
+        text-left
+        pt-17
+        md_font-semibold
+        md_pl-10
+        rtl_text-justify;
+}
+
+.form {
+    composes: flex from global;
+    composes: w-full from global;
+    composes: mb-1 from global;
+
+    @apply mt-[2.1875rem]
+        md_mt-0
+        md_pr-10
+        md_pt-32.5;
+}
+
+.newsletterContainer > .form {
+    @apply mt-[2.1875rem]
+        md_flex-grow
+        md_w-[50%]
+        md_mt-[10.8125rem]
+        md_mb-25;
+}
+
+.form {
+    composes: h-[46px] from global;
+}
+
+.form > div {
+    @apply flex-grow
+        mb-0;
+}
+
+.form > div > p {
+    @apply text-[red]
+        opacity-100
+        block
+        !mx-0
+        my-0
+        w-[fit-content]
+        max-w-[fit-content]
+        leading-none
+        pt-1;
+}
+
+.form input {
+    @apply border-black
+        border-r-0
+        mb-0
+        py-2.5
+        px-2.5
+        rtl_border-r
+        rtl_border-l-0
+        rounded-none
+        h-[46px];
+}
+
+.root .input [class*='textInput-label'] {
+    @apply top-[11px]
+        ltr_left-[11px]
+        rtl_right-[11px];
+}
+
+.form input:focus {
+    @apply border-black;
+}
+
+.form input:hover {
+    @apply border-black;
+}
+
+.form button {
+    @apply h-[46px]
+        border border-solid
+        border-black
+        border-l-0
+        mb-0
+        pr-[0.625rem]
+        pl-[0.625rem]
+        outline-none
+        rtl_border-l
+        rtl_border-r-0
+        rtl_pr-0
+        rtl_pl-[0.625rem];
+}
+
+.root :global(.formInfo) {
+    @apply mt-4
+        pb-12.5
+        md_pb-0
+        md_mt-0;
+}
+
+.root :global(.formInfo p) {
+    @apply text-justify
+        text-[0.75rem]
+        leading-[1.25rem]
+        md_mr-[-10%]
+        md_mt-[-40px]
+        ltr_3sm_mt-[-16px]
+        rtl_3md_mt-[-16px]
+        rtl_md_mr-[20%]
+        rtl_md_ml-[-20%];
+}
+
+.inputResponse {
+    composes: text-sm from global;
+    composes: mt-0.5 from global;
+}
+
+.inputError {
+    composes: text-[red] from global;
+}

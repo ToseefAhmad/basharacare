@@ -1,0 +1,25 @@
+.trigger {
+    composes: trigger from '@app/components/overrides/FilterModal/filterBlock.module.css';
+}
+
+.header {
+    composes: header from '@app/components/overrides/FilterModal/filterBlock.module.css';
+}
+
+.name {
+    composes: name from '@app/components/overrides/FilterModal/filterBlock.module.css';
+}
+
+.list {
+    composes: items from '@app/components/overrides/FilterModal/FilterList/filterList.module.css';
+}
+
+.item {
+    composes: -ml-1 from global;
+}
+
+.slider {
+    composes: pt-4 from global;
+    composes: pb-0 from global;
+    composes: mb-0 from global;
+}

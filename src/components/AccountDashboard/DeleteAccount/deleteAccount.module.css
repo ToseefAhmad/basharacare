@@ -1,0 +1,8 @@
+.title {
+    composes: text-2xl from global;
+    composes: mb-4 from global;
+}
+
+.buttonContainer {
+    composes: my-4 from global;
+}

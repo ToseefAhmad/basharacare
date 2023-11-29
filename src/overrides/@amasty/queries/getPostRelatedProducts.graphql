@@ -1,0 +1,48 @@
+query getPostRelatedProducts($postId: Int!) {
+    amBlogPostRelatedProducts(postId: $postId) {
+        items {
+            __typename
+            categories {
+                uid
+                breadcrumbs {
+                    category_uid
+                }
+            }
+            description {
+                html
+            }
+            short_description {
+                html
+            }
+            brand_name
+            brand_url
+            id
+            name
+            price {
+                regularPrice {
+                    amount {
+                        currency
+                        value
+                    }
+                }
+            }
+            price_range {
+                maximum_price {
+                    regular_price {
+                        value
+                        currency
+                    }
+                    final_price {
+                        value
+                        currency
+                    }
+                }
+            }
+            sku
+            small_image {
+                url
+            }
+            url_key
+        }
+    }
+}

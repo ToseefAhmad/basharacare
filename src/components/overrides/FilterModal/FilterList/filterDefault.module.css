@@ -1,0 +1,8 @@
+.root {
+    composes: flex from global;
+    composes: gap-1 from global;
+    composes: text-sm from global;
+
+    composes: -ml-1 from global;
+    composes: rtl_-mr-1 from global;
+}

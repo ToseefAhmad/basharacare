@@ -1,0 +1,21 @@
+.root {
+    grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
+
+    composes: grid from global;
+    composes: gap-2 from global;
+}
+
+.radioContainer {
+    grid-template-areas: 'input label';
+    grid-template-columns: min-content 1fr;
+
+    composes: grid from global;
+    composes: grid-flow-col from global;
+    composes: content-center from global;
+    composes: mt-[-3px] from global;
+    composes: gap-x-1 from global;
+}
+
+.shippingCondition {
+    composes: text-sm font-semibold from global;
+}

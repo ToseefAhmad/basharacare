@@ -1,0 +1,70 @@
+.sidebar {
+    composes: sidebar from '@app/RootComponents/Category/category.module.css';
+}
+
+.container {
+    composes: container from global;
+    composes: w-full from global;
+    composes: lg_grid from global;
+    composes: xl_gap-x-[111px] from global;
+    composes: lg_gap-x-[20px] from global;
+    composes: container from global;
+    composes: pb-[160px] from global;
+}
+
+.root .container {
+    @apply xl_px-0;
+}
+
+@media (min-width: 1024px) {
+    .container {
+        grid-template-columns: min-content 1fr;
+    }
+}
+
+.heading {
+    composes: heading from '@app/RootComponents/Category/category.module.css';
+    composes: container from global;
+}
+
+.root .heading {
+    @apply xl_px-0;
+}
+
+.sort {
+    composes: headerButtons from '@app/RootComponents/Category/category.module.css';
+}
+
+.banner {
+    composes: categoryHeader from '@app/RootComponents/Category/category.module.css';
+    composes: bg-grey-lightest from global;
+}
+
+.currentRefinements {
+    composes: hidden from global;
+    composes: md_block from global;
+}
+
+.noResults {
+    composes: text-center from global;
+}
+
+.hidden {
+    composes: hidden from global;
+}
+
+.filterButtonFixedContainer {
+    composes: filterButtonFixedContainer from '@app/RootComponents/Category/category.module.css';
+}
+
+.filterButtonFixed {
+    composes: filterButton from '@app/components/overrides/FilterModalOpenButton/filterModalOpenButton.module.css';
+}
+
+.filterButtonFixedContainer .filterButtonFixed {
+    @apply bg-black text-white;
+}
+
+.filterButtonFixedHidden {
+    composes: filterButtonFixedHidden from '@app/RootComponents/Category/category.module.css';
+}

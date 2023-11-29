@@ -1,0 +1,6 @@
+.starContainer {
+    composes: flex from global;
+    composes: gap-1 from global;
+
+    composes: lg_gap-[5px] from global;
+}

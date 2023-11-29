@@ -1,0 +1,160 @@
+.cms-privacy-and-security .about-basharacare-image-left img {
+    @apply
+        w-full
+        ml-auto
+        mr-auto
+        mt-0
+        mb-0
+        2sm_max-h-full
+        2sm_max-w-full
+        2sm_border-0;
+}
+
+.cms-privacy-and-security [class*='richContent-root']:nth-child(1) {
+    @apply
+        2sm_pl-[20px]
+        2sm_pr-[20px]
+        pl-0
+        pr-0;
+}
+
+.cms-privacy-and-security .about-text-space:not(:last-child) {
+    @apply
+        mb-[40px];
+}
+
+.cms-privacy-and-security .about-basharacare-image-left [class*='text-root'] {
+    @apply
+        mt-[80px]
+        mb-[80px]
+        ml-auto
+        mr-auto;
+}
+
+.cms-privacy-and-security [class*='columnGroup-root']:nth-child(3) {
+    @apply
+        pb-[5%]
+        flex-nowrap;
+}
+
+.cms-privacy-and-security [class*='column-root']:nth-child(2) {
+    @apply !w-full;
+}
+
+.cms-privacy-and-security .about-basharacare-main-row .about-basharacare-text-right {
+    @apply
+        2sm_bg-white
+        2sm_pt-[11%]
+        2sm_pr-[9%]
+        desktop_pr-[6%]
+        2sm_pb-[11%]
+        2sm_pl-[21%]
+        2sm_ml-[25%]
+        desktop_ml-[25%]
+        2sm_mr-[-3%]
+        desktop_mr-[0%]
+        desktop_mr-[5%]
+        text-base
+        2sm_box-border;
+}
+
+.cms-privacy-and-security .about-basharacare-main-row {
+    @apply
+        2sm_flex
+        2sm_justify-between
+        2sm_relative;
+}
+
+.cms-privacy-and-security .about-basharacare-column-two {
+    @apply
+        2sm_!w-full
+        2sm_box-border
+        2sm_flex
+        2sm_justify-between;
+}
+
+.cms-privacy-and-security .about-text-space {
+    @apply
+        2sm_max-w-[650px]
+        2sm_mt-0
+        2sm_mb-0;
+}
+
+.cms-privacy-and-security .about-column-right-padding {
+    @apply 2sm_pl-[95px];
+}
+
+.cms-privacy-and-security .left-padding-arabic {
+    @apply 2sm_pr-[95px];
+}
+
+.cms-privacy-and-security .about-basharacare-image-left {
+    @apply
+        2sm_left-[-2%]
+        desktop_left-[3%]
+        2sm_top-[50%]
+        2sm_translate-y-[-50%]
+        desktop_!w-[38%]
+        2sm_absolute
+        2sm_!w-[41%]
+        order-1
+        !w-[100%]
+        ml-auto
+        mt-[70px]
+        mr-auto
+        mb-[80px]
+        2sm_ml-0
+        2sm_mr-0
+        2sm_mt-0
+        2sm_mb-0
+        xs_!max-w-[70%]
+        !w-[90%];
+}
+
+.cms-privacy-and-security [class*='columnGroup-root']:nth-child(2) {
+    @apply
+        2sm_flex
+        2sm_mt-[10%]
+        2sm_ml-[27%]
+        2sm_mr-[27%]
+        2sm_mb-0;
+}
+
+.cms-privacy-and-security [class*='columnGroup-root']:nth-child(3) {
+    @apply
+        2sm_flex
+        2sm_mt-0
+        2sm_ml-[27%]
+        2sm_mr-[27%]
+        2sm_mb-[5%];
+}
+
+.cms-privacy-and-security [class*='richContent-root'] h4 {
+    @apply
+        mt-0
+        mb-4
+        text-2xl;
+}
+
+.cms-privacy-and-security .about-text-heading {
+    @apply text-2xl;
+}
+
+.cms-privacy-and-security .about-national-image {
+    @apply w-[196px];
+}
+
+.cms-privacy-and-security :global(.richContent-root-mh5) {
+    @apply mb-0;
+}
+
+.cms-privacy-and-security .text-bottom-column p {
+    @apply leading-5;
+}
+
+.cms-privacy-and-security [class*='cms-root_1column'] {
+    @apply pt-[65px]
+        pb-[5%]
+        md_py-[60px]
+        lg_py-[120px];
+}

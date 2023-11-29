@@ -1,0 +1,60 @@
+.root {
+    grid-template-areas: 'input label';
+    grid-template-columns: min-content 1fr;
+
+    composes: items-center from global;
+    composes: color-grey from global;
+    composes: grid from global;
+    composes: gap-3 from global;
+    composes: grid-flow-col from global;
+    composes: m-0 from global;
+    composes: items-center from global;
+}
+
+.input_base {
+    composes: m-0 from global;
+    composes: z-[2] from global;
+}
+
+.input {
+    grid-area: input;
+    /* stylelint-disable property-no-vendor-prefix */
+    -webkit-appearance: none;
+
+    composes: appearance-none from global;
+    composes: input_base;
+    composes: bg-none from global;
+    composes: bg-clip-content from global;
+    composes: self-center from global;
+    composes: border-[6px] from global;
+    composes: border-[transparent] from global;
+    composes: h-5 from global;
+    composes: w-5 from global;
+}
+
+.icon {
+    grid-area: input;
+    composes: appearance-none from global;
+    composes: self-center from global;
+    composes: z-[1] from global;
+    composes: h-5 from global;
+    composes: w-5 from global;
+}
+
+.icon svg {
+    @apply h-5 w-5 stroke-[grey];
+}
+
+.input:checked {
+    -webkit-appearance: none;
+
+    @apply bg-grey appearance-none;
+}
+
+.input:checked + .icon svg {
+    @apply stroke-[grey];
+}
+
+.input_shimmer {
+    composes: input_base;
+}

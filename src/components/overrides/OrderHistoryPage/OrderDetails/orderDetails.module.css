@@ -1,0 +1,45 @@
+.root {
+    composes: grid from global;
+}
+.orderInformationFooter {
+    composes: lg_grid from global;
+    composes: lg_grid-cols-3 from global;
+    composes: pt-7.5 from global;
+    composes: border-t from global;
+    composes: border-black/20 from global;
+    composes: gap-y-12.5 from global;
+}
+
+.orderTotalContainer {
+    composes: lg_ml-auto from global;
+    composes: my-7.5 from global;
+}
+
+.orderInformationTitle {
+    composes: col-span-3 from global;
+    composes: mb-7.5 from global;
+    composes: lg_mb-0 from global;
+}
+
+.orderInformationTitle h2 {
+    @apply inline-block
+        text-3xl
+        first_pr-1
+        first_rtl_pl-1
+        last_font-light
+        last_font-sans
+        lg_pb-7.5
+        lg_pb-0;
+}
+.billingInformationContainer,
+.paymentMethodContainer {
+    composes: row-start-3 from global;
+}
+
+.shippingInformationContainer,
+.shippingMethodContainer,
+.billingInformationContainer,
+.paymentMethodContainer {
+    composes: pb-7.5 from global;
+    composes: lg_pb-0 from global;
+}

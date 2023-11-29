@@ -1,0 +1,25 @@
+.root {
+    composes: mb-17 from global;
+    composes: lg_mb-[150px] from global;
+}
+
+.title h1 {
+    @apply maxMobile_grid
+        inline-block
+        last_font-light
+        last_font-sans;
+}
+
+.title .firstWord {
+    @apply font-semibold
+        font-albraSemibold
+        pr-2
+        rtl_pl-2;
+}
+
+.title {
+    composes: lg_mt-[110px] from global;
+    composes: mt-10 from global;
+    composes: mb-7.5 from global;
+    composes: lg_mb-10 from global;
+}

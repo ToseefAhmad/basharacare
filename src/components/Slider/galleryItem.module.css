@@ -1,0 +1,149 @@
+.root {
+    composes: bg-white from global;
+    composes: h-[355px] from global;
+    composes: w-auto from global;
+    composes: max-w-[240px] from global;
+    composes: mx-2.5 from global;
+    composes: px-4 from global;
+    composes: py-5 from global;
+    composes: shadow-xl from global;
+    composes: relative from global;
+    composes: hover_shadow-none from global;
+}
+
+.root section {
+    @apply w-full flex justify-center;
+}
+
+.emptyReview {
+    composes: w-full from global;
+    composes: h-5 from global;
+}
+
+.review,
+.rating {
+    composes: hidden from global;
+}
+
+.imageBlock {
+    composes: relative from global;
+}
+
+.imageRoot {
+    composes: grid from global;
+    composes: relative from global;
+    composes: pt-3 from global;
+    composes: pb-4 from global;
+    grid-template: auto/auto;
+    grid-template-areas: 'main';
+    grid-template-columns: 1fr;
+}
+
+.smallImage {
+    composes: h-30 from global;
+    composes: lg_h-35 from global;
+}
+
+.extraSmallImage {
+    composes: h-25 from global;
+    composes: lg_h-30 from global;
+}
+
+.largeImage {
+    composes: h-40 from global;
+}
+
+.imageContainer {
+    composes: grid from global;
+    composes: overflow-hidden from global;
+    composes: w-25 from global;
+    composes: col-start-1 from global;
+    composes: col-end-1 from global;
+    composes: row-start-1 from global;
+    composes: row-end-1 from global;
+    composes: hover_opacity-80 from global;
+    grid-area: main;
+}
+
+.imageContainer img {
+    @apply h-full;
+}
+
+.currentImage {
+    composes: block from global;
+    composes: w-full from global;
+    composes: h-full from global;
+    composes: object-contain from global;
+    composes: object-center from global;
+}
+
+.currentImage_placeholder {
+    composes: currentImage;
+    background-color: rgb(var(--venia-global-color-gray));
+}
+
+.image img {
+    @apply static top-auto bottom-auto;
+}
+
+.brandName {
+    @apply text-base font-bold text-xs;
+    composes: hover_opacity-80 from global;
+    composes: hover_underline from global;
+    composes: tracking-widest from global;
+    composes: text-purple-lighter from global;
+    composes: font-sans from global;
+    composes: uppercase from global;
+}
+
+.name {
+    composes: text-sm from global;
+    composes: lg_text-base from global;
+    composes: font-sans from global;
+    composes: font-semibold from global;
+    composes: text-center from global;
+    composes: leading-[1.75rem] from global;
+    composes: pt-1.25 from global;
+    composes: hover_opacity-80 from global;
+    composes: max-h-16 from global;
+    composes: overflow-hidden from global;
+}
+
+.price {
+    composes: text-xl from global;
+    composes: font-headingBold from global;
+    composes: font-black from global;
+    composes: max-h-[30px] from global;
+
+    composes: lg_text-lg from global;
+}
+
+.productPriceCurrency {
+    composes: font-semibold from global;
+    composes: text-xs from global;
+    composes: md_text-xxs from global;
+}
+
+.productPriceNumber {
+    composes: text-lg from global;
+    composes: md_text-xl from global;
+    composes: font-semibold from global;
+    composes: font-headingBold from global;
+}
+
+.priceContainer {
+    composes: absolute from global;
+    composes: bottom-4 from global;
+    composes: flex from global;
+    composes: gap-1 from global;
+    composes: md_gap-2 from global;
+    composes: items-baseline from global;
+}
+
+.discountedPrice {
+    composes: font-headingBold from global;
+    composes: font-black from global;
+    composes: line-through from global;
+
+    @apply md_text-sm text-xs h-5  line-through;
+}

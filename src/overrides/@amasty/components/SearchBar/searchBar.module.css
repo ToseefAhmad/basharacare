@@ -1,0 +1,19 @@
+.root {
+    @apply pt-8;
+    @apply border-b;
+    @apply border-b-[5px];
+    @apply border-white;
+}
+
+.filterContainer {
+    composes: container from global;
+
+    @apply px-4 lg_px-12;
+}
+
+.filterTypes {
+    composes: flex from global;
+    composes: items-center from global;
+
+    @apply mb-6.5;
+}

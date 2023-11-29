@@ -1,0 +1,114 @@
+.root {
+    composes: absolute from global;
+    composes: top-[56px] from global;
+    composes: ltr_-right-4 from global;
+    composes: lg_ltr_right-0 from global;
+    composes: rtl_-left-4 from global;
+    composes: lg_rtl_left-0 from global;
+    composes: bg-grey-lighter2 from global;
+    composes: z-[4] from global;
+    composes: text-black from global;
+
+    composes: w-[300px] from global;
+    composes: min-h-[300px] from global;
+    composes: p-7.5 from global;
+
+    composes: flex from global;
+    composes: flex-col from global;
+
+    /* Large screen styles */
+    composes: lg_top-[52px] from global;
+    composes: lg_rtl_right-[-390px] from global;
+    composes: lg_w-[420px] from global;
+}
+
+.heading {
+    composes: text-[19px] from global;
+    composes: mb-5 from global;
+    composes: leading-[30px] from global;
+}
+
+.productContainer {
+    composes: border-t from global;
+    composes: border-solid from global;
+    composes: border-black from global;
+    composes: border-opacity-30 from global;
+
+    composes: py-5 from global;
+    composes: min-h-[150px] from global;
+
+    composes: flex from global;
+}
+
+.thumbnail {
+    composes: ltr_mr-5 from global;
+    composes: rtl_ml-5 from global;
+
+    /* Large screen styles */
+    composes: lg_min-w-[100px] from global;
+}
+
+.thumbnail img {
+    @apply max-h-37
+        object-contain;
+}
+
+.productDetailsContainer {
+    composes: flex from global;
+    composes: flex-col from global;
+
+    composes: w-[110px] from global;
+
+    /* Large screen styles */
+    composes: lg_w-full from global;
+}
+
+.productName {
+    composes: text-sm from global;
+    composes: font-semibold from global;
+}
+
+.productQuantity {
+    composes: text-xxs from global;
+}
+
+.price {
+    composes: text-sm from global;
+    composes: font-bold from global;
+    composes: flex from global;
+}
+
+.buttonContainer {
+    composes: flex from global;
+    composes: flex-col from global;
+
+    composes: mt-5 from global;
+    composes: pt-5 from global;
+    composes: border-t from global;
+    composes: border-solid from global;
+    composes: border-black from global;
+    composes: border-opacity-30 from global;
+}
+
+.buttonRoot {
+    composes: root_highPriority from '@app/components/overrides/Button/button.module.css';
+    composes: w-full from global;
+    composes: h-16 from global;
+    composes: outline-none from global;
+}
+
+.linkContainer {
+    composes: flex from global;
+    composes: ltr_flex-row from global;
+    composes: rtl_flex-row-reverse from global;
+    composes: justify-center from global;
+    composes: mt-5 from global;
+    composes: w-full from global;
+}
+
+.link {
+    composes: font-semibold from global;
+}
+.link:focus {
+    @apply outline-none !important;
+}

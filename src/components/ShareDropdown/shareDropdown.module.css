@@ -1,0 +1,90 @@
+.root {
+    composes: relative from global;
+    composes: z-10 from global;
+    composes: font-sans from global;
+    composes: hover_cursor-pointer from global;
+}
+
+.root :global(.at-share-btn-elements) {
+    @apply grid
+        gap-1.3
+        ltr_mr-1
+        rtl_mr-1;
+}
+
+.root :global(.at-share-btn-elements) a {
+    @apply m-0 grid;
+    grid-template-columns: 20px 1fr;
+}
+
+.icon {
+    composes: cursor-pointer from global;
+    composes: flex from global;
+}
+
+.icon:hover + .socialLinks {
+    @apply block;
+}
+
+.shareText {
+    composes: mx-1 from global;
+}
+
+.socialLinks {
+    composes: hidden from global;
+    composes: hover_block from global;
+    composes: absolute from global;
+    composes: top-0 from global;
+    composes: py-10 from global;
+    composes: pt-7.5 from global;
+    composes: ltr_pl-10 from global;
+    composes: rtl_pr-10 from global;
+    composes: rtl_pl-1 from global;
+
+    @apply ltr_right-[-1rem] rtl_left-[-1rem];
+}
+
+:global(.at-share-btn) {
+    width: 5rem;
+}
+
+.link {
+    composes: w-20 from global;
+    composes: mb-[3px] from global;
+    composes: text-white from global;
+    composes: text-xs from global;
+    composes: flex from global;
+    composes: items-center from global;
+    composes: relative from global;
+    composes: top-0 from global;
+    composes: px-1 from global;
+    transition: top ease 0.15s;
+}
+
+.link:hover {
+    @apply top-[-5px] opacity-75;
+}
+
+a:hover {
+    @apply no-underline;
+}
+
+.facebook {
+    composes: link;
+    composes: bg-blue-facebook from global;
+}
+
+.twitter {
+    composes: link;
+    composes: bg-blue-twitter from global;
+}
+
+.pinterest {
+    composes: link;
+    composes: bg-red-pinterest from global;
+}
+
+.whatsapp {
+    composes: link;
+    composes: bg-green-whatsapp from global;
+}

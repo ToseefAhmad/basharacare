@@ -1,0 +1,74 @@
+.root {
+  composes: widgetRoot from '../root.module.css';
+  padding-bottom: 1.875rem;
+}
+
+.title {
+  composes: heading from '../root.module.css';
+  padding-bottom: 1.25rem;
+}
+
+.carousel {
+  composes: root from '@magento/pagebuilder/lib/ContentTypes/Slider/slider.module.css';
+  margin: 0 -0.66rem;
+}
+
+.post {
+  padding: 0 0.66rem;
+}
+
+.images {
+  display: block;
+  margin-bottom: 0.4rem;
+  position: relative;
+  padding-top: 66.67%;
+}
+
+.imageContainer {
+  background: none;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  position: absolute;
+}
+
+.imageContainer img:first-of-type {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.image {
+  height: 100%;
+  width: auto;
+  min-width: 1rem;
+}
+
+.date {
+  composes: date from '../PostPage/post.module.css';
+}
+
+.postTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.25;
+  justify-content: center;
+}
+
+.postTitle:hover {
+  text-decoration: underline;
+}
+
+.widgetTitle {
+  composes: widgetTitle from '../root.module.css';
+}
+
+.footer {
+  padding: 0.875rem 0;
+}
+
+.more {
+  composes: more from '../PostPage/post.module.css';
+}

@@ -1,0 +1,24 @@
+@tailwind utilities;
+
+@layer utilities {
+    .container {
+        @apply px-mobile lg_max-w-desktop;
+    }
+
+    /* Utility class for full bleed container */
+    .full-bleed {
+        @apply w-[calc(100vw-var(--scrollBarWidth))]
+            ml-[50%]
+            relative
+            left-1/2
+            right-1/2
+            ml-[-50vw]
+            mr-[-50vw];
+    }
+
+    /* Take default scroll bar width variable or set 0px instead */
+    body {
+        /* stylelint-disable-next-line length-zero-no-unit, custom-property-pattern */
+        --scrollBarWidth: var(--global-scrollbar-width, 0px);
+    }
+}

@@ -1,0 +1,81 @@
+.input {
+    composes: border from global;
+    composes: border-solid from global;
+    composes: border-grey-lighter from global;
+    composes: p-[14px] from global;
+    composes: md_hover_border-grey-light from global;
+    composes: focus_outline-none from global;
+    composes: focus_border-black from global;
+    composes: w-full from global;
+    composes: bg-transparent from global;
+}
+
+.input::placeholder {
+    @apply opacity-0 text-grey-light !important;
+}
+
+.input:focus::placeholder {
+    @apply opacity-100 !important;
+}
+
+.input:focus + .label {
+    display: none;
+}
+
+.input_error {
+    composes: input;
+    composes: border-red from global;
+}
+
+.label {
+    composes: absolute from global;
+    composes: top-3.5 from global;
+    composes: ltr_left-3.5 from global;
+    composes: rtl_right-3.5 from global;
+    composes: pointer-events-none from global;
+}
+
+.hidden {
+    composes: hidden from global;
+}
+
+.inputRoot {
+    composes: relative from global;
+    composes: w-full from global;
+    composes: flex from global;
+    align-items: center;
+    grid-column: before-start / after-end;
+    grid-row: input-start / input-end;
+}
+
+.isRequired {
+    composes: block from global;
+    composes: h-[4px] from global;
+    composes: w-[4px] from global;
+    composes: rtl_left-1.3 from global;
+    composes: ltr_right-1.3 from global;
+    composes: bg-red from global;
+    composes: rounded-full from global;
+    composes: absolute from global;
+    composes: top-1.3 from global;
+}
+
+.fieldRoot {
+    display: inline-grid;
+    grid-auto-flow: column;
+    grid-template-areas: 'before input after';
+    grid-template-columns: auto 1fr auto;
+    width: 100%;
+}
+
+.errorMsg {
+    composes: text-red from global;
+    composes: mr-auto from global;
+    composes: text-left from global;
+    composes: rtl-text-right from global;
+    composes: rtl_ml-auto from global;
+    composes: ltr_ml-1 from global;
+    composes: rtl_mr-1 from global;
+
+    @apply text-sm;
+}

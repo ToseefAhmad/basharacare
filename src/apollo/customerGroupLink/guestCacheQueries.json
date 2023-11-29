@@ -1,0 +1,21 @@
+[
+    "GetProductLabelSettings",
+    "GetCategoryPageSize",
+    "GetCategoryInputFilters",
+    "getStoreConfigData",
+    "storeConfigData",
+    "GetProductReviews",
+    "GetCaptchaConfigData",
+    "GetStoreSwitcherConfigData",
+    "GetUrlResolverData",
+    "getAllStoreConfigs",
+    "GetAvailableStoresData",
+    "GetCookieBannerConfig",
+    "ResolveURL",
+    "GetIsEnabledMultiWishlists",
+    "GetBreadcrumbs",
+    "amBlogSetting",
+    "GetWishlistConfigForProductCE",
+    "amLabelSetting",
+    "GetAddThisPubId"
+]

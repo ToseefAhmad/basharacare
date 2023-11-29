@@ -1,0 +1,7 @@
+.root {
+    composes: mt-36 from global;
+}
+
+.label {
+    composes: label from './styleGuide.module.css';
+}

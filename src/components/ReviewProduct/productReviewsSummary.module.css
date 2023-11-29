@@ -1,0 +1,27 @@
+.block {
+    composes: flex from global;
+    composes: align-center from global;
+}
+
+.rating {
+    composes: font-headingBold from global;
+    composes: flex from global;
+    composes: items-baseline from global;
+    composes: leading-[1.8rem] from global;
+}
+
+.currentRating {
+    composes: rtl_text-xxs from global;
+}
+
+.maxRating {
+    composes: text-xxs from global;
+    composes: rtl_text-base from global;
+}
+
+.review {
+    composes: ml-[40px] from global;
+    composes: rtl_ml-0 from global;
+    composes: rtl_mr-[40px] from global;
+    composes: underline from global;
+}

@@ -1,0 +1,29 @@
+{
+    "veniaAppShell": {
+        "inline": {
+            "body": {
+                "template": {
+                    "file": {
+                        "inline": "./pwa/index.html"
+                    }
+                }
+            }
+        }
+    },
+    "staticFromRoot": {
+        "inline": {
+            "body": {
+                "file": {
+                    "template": {
+                        "inline": "./pwa/static-files/{{ filename }}"
+                    }
+                }
+            }
+        }
+    },
+    "veniaStaticRoot": {
+        "directory": {
+            "inline": "./pwa/"
+        }
+    }
+}

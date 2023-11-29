@@ -1,0 +1,11 @@
+.root {
+    composes: grid from global;
+    composes: gap-y-2 from global;
+    composes: pt-5 from global;
+}
+
+.address {
+    composes: grid from global;
+    composes: gap-2 from global;
+    composes: pt-5 from global;
+}

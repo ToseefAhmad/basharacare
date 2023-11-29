@@ -1,0 +1,36 @@
+.billing_address_fields_root {
+    composes: grid from global;
+    composes: gap-y-4 from global;
+    composes: gap-x-6 from global;
+    composes: py-4 from global;
+}
+
+.billing_address_fields_root_hidden {
+    composes: overflow-hidden from global;
+    composes: invisible from global;
+    composes: h-0 from global;
+    composes: opacity-0 from global;
+}
+
+.formErrorContainer {
+    composes: pt-6 from global;
+}
+
+.first_name,
+.last_name {
+    @apply col-span-1;
+}
+
+.country,
+.street1,
+.street2,
+.address_check,
+.city,
+.region,
+.phone_number {
+    @apply col-span-2;
+}
+
+.country select {
+    @apply w-full appearance-none;
+}

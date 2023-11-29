@@ -1,0 +1,48 @@
+.root {
+    composes: grid from global;
+    composes: gap-y-2 from global;
+    composes: text-center from global;
+}
+
+.root_hidden {
+    composes: root;
+    composes: hidden from global;
+}
+
+.header {
+    composes: font-sans from global;
+}
+
+.signInRoot {
+    composes: root from '@magento/venia-ui/lib/components/SignIn/signIn.module.css';
+
+    @apply px-2 md_px-8;
+}
+
+.forgotPasswordRoot {
+    composes: root from '@magento/venia-ui/lib/components/ForgotPassword/forgotPassword.module.css';
+
+    @apply px-0 md_px-8;
+}
+
+.createAccountRoot {
+    composes: root from '@magento/venia-ui/lib/components/CreateAccount/createAccount.module.css';
+
+    @apply px-2 md_px-8;
+}
+
+.closeSignin {
+    composes: justify-self-end from global;
+    composes: w-[min-content] from global;
+    composes: pt-2 from global;
+    composes: flex from global;
+    composes: place-content-center from global;
+
+    composes: hover_font-bold from global;
+}
+
+.signinButtonsContainer {
+    composes: grid from global;
+    composes: md_grid-cols-2 from global;
+    composes: gap-2 from global;
+}

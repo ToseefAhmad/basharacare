@@ -1,0 +1,8 @@
+mutation AmBlogLeaveVote($type: AmBlogPagVoteType!, $postId: Int!) {
+  AmBlogLeaveVote(input: { type: $type, post_id: $postId }) {
+    voted {
+      plus
+      minus
+    }
+  }
+}

@@ -1,0 +1,83 @@
+.root {
+    composes: border-t from global;
+    composes: border-grey-lighter from global;
+}
+
+.name {
+    composes: md_hidden from global;
+    composes: mt-7.5 from global;
+    composes: font-semibold from global;
+    composes: font-sans from global;
+    composes: text-lg from global;
+}
+
+.dateMobile {
+    composes: md_hidden from global;
+    composes: mt-4 from global;
+    composes: leading-6 from global;
+    composes: text-sm from global;
+    composes: text-grey-light from global;
+}
+
+.starRating {
+    composes: mt-5 from global;
+}
+
+.summary {
+    composes: mt-4.5 from global;
+    composes: font-semibold from global;
+    composes: text-2xl from global;
+    composes: flex from global;
+}
+
+.desktopNameBlock {
+    composes: hidden from global;
+    composes: md_flex from global;
+    composes: text-lg from global;
+    composes: font-semibold from global;
+    composes: text-grey-light from global;
+    composes: ltr_ml-4 from global;
+    composes: rtl_mr-4 from global;
+}
+
+.desktopName {
+    composes: ml-1 from global;
+}
+
+.reviewText {
+    composes: mt-4 from global;
+}
+
+.shortText {
+    composes: max-h-[100px] from global;
+    composes: md_max-h-[75px] from global;
+    composes: overflow-hidden from global;
+}
+
+.fullText {
+    composes: h-auto from global;
+}
+
+.standardText {
+    composes: h-auto from global;
+    composes: mb-7.5 from global;
+}
+
+.showMore {
+    composes: font-bold from global;
+    composes: mb-7.5 from global;
+}
+
+.desktopDate {
+    composes: hidden from global;
+    composes: md_block from global;
+    composes: mt-4 from global;
+    composes: mb-7.5 from global;
+    composes: leading-6 from global;
+    composes: text-sm from global;
+    composes: text-grey-light from global;
+}
+
+.hiddenItems {
+    composes: hidden from global;
+}

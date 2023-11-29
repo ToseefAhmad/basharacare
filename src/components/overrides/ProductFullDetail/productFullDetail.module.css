@@ -1,0 +1,405 @@
+.breadcrumbsRoot {
+    composes: flex from global;
+    composes: flex-wrap from global;
+    composes: w-full from global;
+    composes: justify-center from global;
+    composes: bg-purple-lighter from global;
+    composes: py-2 from global;
+    composes: text-sm from global;
+}
+
+.breadcrumbsContainer {
+    composes: container from global;
+}
+
+.breadcrumbShimmerRoot {
+    composes: breadcrumbsContainer;
+    composes: py-2 from global;
+}
+
+.root {
+    composes: container from global;
+    composes: bg-white from global;
+    composes: md_pt-15 from global;
+    composes: pb-15 from global;
+    composes: md_pb-37 from global;
+    composes: md_px-5 from global;
+    composes: md_items-start from global;
+    composes: md_grid from global;
+    composes: md_grid-flow-row from global;
+    composes: relative from global;
+    composes: w-full from global;
+    composes: md_w-auto from global;
+    composes: text-black from global;
+}
+
+:global(.product-page #main) {
+    @apply bg-white;
+    @apply max-w-full;
+    @apply p-0;
+}
+
+.root h1 {
+    @apply text-2xl font-semibold md_text-3xl;
+}
+
+.root h2 {
+    @apply text-base font-bold md_text-lg;
+}
+
+.root h3 {
+    @apply text-lg font-normal font-sans md_text-base;
+}
+
+.root p {
+    @apply text-sm md_text-base text-black;
+    @apply font-sans;
+    @apply leading-6;
+    @apply md_leading-7;
+    @apply opacity-100;
+}
+
+@media (min-width: 768px) {
+    .root {
+        grid-template: repeat(5, min-content) 1fr [fold]/ 1.5625fr 1fr;
+        grid-template-areas:
+            'images sticky-info'
+            'description .'
+            'faqQuestions .'
+            'tabs .'
+            'relatedProducts relatedProducts'
+            'viewedProducts viewedProducts';
+
+        composes: gap-x-[120px] from global;
+    }
+}
+.stickyInfo {
+    grid-area: sticky-info;
+    composes: md_sticky from global;
+    composes: md_top-[100px] from global;
+    composes: bg-white from global;
+    composes: md_bg-transparent from global;
+    composes: md_px-0 from global;
+    composes: border-t from global;
+    composes: border-white from global;
+    composes: md_border-0 from global;
+    composes: lg_min-h-[410px] from global;
+}
+
+.sectionTitle {
+    composes: items-center from global;
+    composes: flex from global;
+    composes: mb-6 from global;
+}
+
+.title {
+    composes: items-center from global;
+    composes: leading-normal from global;
+    composes: flex from global;
+    composes: justify-between from global;
+    composes: md_max-w-[360px] from global;
+    composes: max-w-full from global;
+    grid-area: title;
+}
+
+.productName {
+    composes: w-full from global;
+}
+
+.shortDescription {
+    composes: mt-2.5 from global;
+    composes: md_mt-5 from global;
+    composes: md_max-w-[360px] from global;
+}
+
+.reviews {
+    composes: mt-[14px] from global;
+    composes: md_mt-[13px] from global;
+    composes: md_max-w-[360px] from global;
+    composes: mb-3.5 from global;
+    grid-template-columns: 1fr max-content;
+}
+
+.reviewsContainer {
+    grid-area: reviews;
+}
+
+.brand {
+    composes: flex from global;
+    composes: justify-between from global;
+    composes: items-center from global;
+    composes: md_max-w-[360px] from global;
+    composes: max-w-full from global;
+    composes: pt-[38px] from global;
+    composes: pb-5 from global;
+    composes: md_pt-0 from global;
+    composes: md_pb-[23px] from global;
+    grid-area: brand;
+}
+
+.brandName {
+    @apply font-bold leading-6;
+    composes: text-base from global;
+    composes: md_text-lg from global;
+    composes: hover_opacity-80 from global;
+    composes: hover_underline from global;
+    composes: tracking-widest from global;
+    composes: text-purple-lighter from global;
+    composes: font-sans from global;
+    composes: uppercase from global;
+}
+
+.wishListDesktop {
+    composes: hidden from global;
+    composes: md_block from global;
+    composes: text-green-whatsapp from global;
+}
+
+.wishListMobile {
+    composes: md_hidden from global;
+    composes: block from global;
+}
+
+.wishListButton {
+    composes: gap-x-2 from global;
+    composes: inline-flex from global;
+    composes: items-center from global;
+    composes: min-w-12 from global;
+    composes: min-h-12 from global;
+}
+
+.wishlistRootSelected {
+    --selected-color: black;
+    --fill: var(--selected-color);
+    --stroke: var(--selected-color);
+
+    composes: no-underline from global;
+}
+
+.wishlistButton:active {
+    @apply outline-none;
+}
+
+.productActionContainer {
+    composes: grid from global;
+    composes: grid-flow-col from global;
+    composes: gap-3 from global;
+}
+
+.priceContainer {
+    composes: flex from global;
+    composes: gap-1 from global;
+    composes: md_gap-2 from global;
+    composes: items-baseline from global;
+}
+
+.price {
+    composes: font-headingBold from global;
+    composes: font-black from global;
+    composes: mt-5.5 from global;
+    composes: text-2.7xl from global;
+    composes: md_text-3xl from global;
+    composes: font-semibold from global;
+    composes: opacity-100 from global;
+    composes: items-baseline from global;
+    grid-area: price;
+}
+
+.discountedPrice {
+    composes: price;
+    composes: text-grey-dark from global;
+    composes: line-through from global;
+
+    @apply ltr_ml-2 rtl_mr-2;
+}
+
+.productPriceCurrency {
+    composes: font-semibold from global;
+    composes: text-sm from global;
+    composes: md_text-base from global;
+}
+
+.includingVatText {
+    composes: font-[ 'Roboto' ] from global;
+    composes: text-xs from global;
+    composes: text-grey-light from global;
+    composes: mx-2.5 from global;
+    composes: md_mx-1.25 from global;
+}
+
+.imageCarousel {
+    composes: relative from global;
+    composes: bg-white from global;
+    composes: pb-4 from global;
+    composes: rtl_md_mr-0 from global;
+    grid-area: images;
+    grid-column: 1 / 2;
+    grid-row: 1 / fold;
+}
+
+.imageCarouselShimmer {
+    composes: imageCarousel;
+}
+
+.imageCarouselShimmer img {
+    @apply w-full;
+}
+
+.options {
+    grid-area: quantity;
+}
+
+.formErrors {
+    grid-area: errors;
+}
+
+.quantity {
+    grid-area: quantity;
+    composes: mt-[33px] from global;
+    composes: md_mt-10 from global;
+}
+
+.quantityTitle {
+    composes: title from '@magento/venia-ui/lib/components/ProductOptions/option.module.css';
+}
+
+.actionsDesktop {
+    composes: mt-2.5 from global;
+    composes: max-w-[360px] from global;
+    composes: items-center from global;
+    composes: justify-center from global;
+    composes: hidden from global;
+    composes: md_flex from global;
+    composes: border-b-0 from global;
+    grid-area: cart;
+}
+
+.actionsMobile {
+    composes: bg-white from global;
+    composes: pt-2.5 from global;
+    composes: pb-5 from global;
+    composes: md_px-0 from global;
+    composes: w-full from global;
+    composes: items-center from global;
+    composes: justify-left from global;
+    composes: md_hidden from global;
+    composes: flex from global;
+    grid-area: cart;
+}
+
+.actionsMobileFixed {
+    composes: actionsMobile;
+    composes: z-10 from global;
+    composes: fixed from global;
+    composes: bottom-0 from global;
+    composes: ltr_left-0 from global;
+    composes: rtl_right-0 from global;
+    composes: px-4 from global;
+}
+
+.actionsMobileFixedHidden {
+    composes: hidden from global;
+}
+
+.quantityRoot {
+    composes: root from '@magento/venia-ui/lib/components/CartPage/ProductListing/quantity.module.css';
+    composes: max-w-[166px] from global;
+    composes: h-[46px] from global;
+    grid-template-columns: 1fr 6rem 1fr;
+}
+
+.unavailableContainer {
+    composes: items-center from global;
+    composes: grid from global;
+    composes: gap-x-2 from global;
+    composes: italics from global;
+    composes: grid-flow-col from global;
+    composes: justify-start from global;
+    composes: p-3 from global;
+    composes: w-full from global;
+    background-color: rgb(var(--venia-global-color-gray));
+    color: rgb(var(--venia-global-color-gray-700));
+}
+
+.configData {
+    composes: flex from global;
+    composes: md_max-w-[360px] from global;
+    composes: max-w-full from global;
+    composes: items-center from global;
+    composes: opacity-100 from global;
+    composes: mt-3.5 from global;
+    grid-area: configData;
+}
+
+.boxIcon {
+    composes: mr-2.5 from global;
+    composes: rtl_mr-0 from global;
+    composes: rtl_ml-2.5 from global;
+}
+
+.description {
+    grid-area: description;
+    composes: md_self-stretch from global;
+    composes: max-w-full from global;
+    composes: mt-10 from global;
+    composes: md_px-0 from global;
+}
+
+.descriptionTitle {
+    composes: text-4xl from global;
+    composes: font-headingBold from global;
+    composes: md_text-5xl from global;
+}
+
+.descriptionContent {
+    composes: mt-5 from global;
+    composes: md_mt-8 from global;
+}
+
+.descriptionContent a {
+    @apply text-grey
+        underline;
+}
+
+.tabs {
+    grid-area: tabs;
+    composes: max-w-full from global;
+}
+.faqQuestions {
+    grid-area: faqQuestions;
+    composes: max-w-full from global;
+}
+
+.relatedProducts {
+    composes: w-full from global;
+    composes: flex from global;
+    composes: justify-center from global;
+    composes: bg-grey-lightest from global;
+    grid-area: related-products;
+    composes: mb-2 from global;
+}
+
+.viewedProducts {
+    composes: relatedProducts;
+}
+
+.tabby {
+    composes: pt-5 from global;
+    composes: max-w-[360px] from global;
+}
+
+.deliveryInfo {
+    composes: grid from global;
+    composes: mt-2 from global;
+    composes: grid-flow-col from global;
+    composes: justify-start from global;
+    composes: items-center from global;
+    composes: uppercase from global;
+    composes: gap-3 from global;
+}
+
+.carouselContainer {
+    composes: carouselContainer from '@app/components/overrides/ProductImageCarousel/carousel.module.css';
+
+    @apply mx-0;
+}

@@ -1,0 +1,163 @@
+.root {
+    composes: rtl_justify-right from global;
+    composes: container from global;
+    composes: overflow-hidden from global;
+    composes: w-full from global;
+    composes: pb-25 from global;
+}
+
+.title {
+    composes: text-4xl from global;
+    composes: font-sans from global;
+    composes: mb-5 from global;
+    composes: flex from global;
+}
+
+.products {
+    composes: flex from global;
+    composes: justify-start from global;
+    composes: w-full from global;
+    composes: min-w-min from global;
+}
+
+.products div:first-of-type {
+    @apply ml-0 rtl_mr-0;
+}
+
+.slider :global .slick-track {
+    @apply grid
+        sm_block
+        grid-flow-col;
+}
+
+.root a {
+    @apply no-underline;
+}
+
+.slider {
+    composes: root from '~@magento/pagebuilder/lib/ContentTypes/Slider/slider.module.css';
+    composes: !px-0 from global;
+}
+
+.slider :global .slick-slide {
+    @apply visible !important;
+    @apply pb-[44px] !important;
+}
+
+.slider :global ul > li > button {
+    @apply p-0
+        block
+        w-full
+        h-[2px]
+        text-[0px]
+        bg-grey-lighter
+        rounded-[2px]
+        outline-none
+        shadow-none
+        cursor-pointer
+        duration-300;
+}
+
+.slider :global .slick-slider .slick-list {
+    @apply pb-0 !important;
+    @apply pt-5 !important;
+}
+
+.slider :global .slick-slide {
+    @apply scale-100;
+}
+
+.slider :global .slick-active {
+    @apply scale-110 xxxs_scale-100 transition-all duration-500;
+}
+
+.slider :global .slick-arrow {
+    @apply lg_opacity-0
+        lg_transition-opacity
+        bg-transparent;
+}
+
+.slider:hover :global .slick-arrow {
+    @apply lg_opacity-100;
+}
+
+.slider:not(.centeredSlider) :global div.slick-track {
+    @apply lg_ml-[132px];
+}
+
+.slider :global ul {
+    @apply p-0;
+}
+
+.slider :global ul li {
+    @apply p-0
+        flex
+        h-auto
+        flex-grow;
+}
+
+.slider :global ul li::before {
+    @apply bg-none
+        w-0
+        mr-0
+        ml-0;
+}
+
+.slider :global .slick-line {
+    @apply !flex
+        mx-[10%]
+        lg_mx-0
+        mt-[1px];
+    @apply lg_pr-[70px]
+        lg_pl-[70px];
+    @apply mb-[1px];
+}
+
+.slider :global .slick-line .slick-active button {
+    @apply bg-black lg_hover_bg-black;
+}
+
+.slider :global .slick-line button {
+    @apply md_hover_bg-black;
+}
+
+.sliderProduct :global .slick-line {
+    @apply mt-[4px]
+        mb-0;
+}
+
+.slider :global .slick-slider .slick-arrow {
+    @apply w-[33px]
+        opacity-100
+        h-[32px]
+        top-[430px]
+        z-[9];
+}
+
+.slider :global .slick-slider .slick-arrow::before {
+    content: '';
+}
+
+.slider :global .slick-slider .slick-prev {
+    @apply left-[5px];
+}
+
+.slider :global .slick-slider .slick-next {
+    @apply right-5
+        h-[33px];
+}
+
+.lessItemsSlider {
+    composes: slider;
+}
+
+.lessItemsSlider :global .slick-slide {
+    @apply w-[260px] !important;
+}
+
+.lessItemsSlider:not(.centeredSlider) :global div.slick-track {
+    @apply lg_ml-0 lg_mr-0;
+    @apply overflow-hidden;
+    @apply min-w-[1200px];
+    @apply grid-flow-col;
+}

@@ -1,0 +1,258 @@
+.cms-chat p {
+    @apply text-black m-0;
+}
+.cms-chat .container {
+    @apply lg_px-7.5;
+}
+
+.cms-chat picture img {
+    @apply mx-auto ;
+}
+
+.cms-chat main article {
+    @apply px-0;
+}
+
+.cms-chat .first-row {
+    @apply pb-15
+        lg_pb-[104px];
+}
+
+.cms-chat .take-skin-test-primary-column {
+    @apply mb-12.5
+        lg_mt-12.5;
+}
+
+[dir='ltr'] .take-skin-test-primary-column {
+    @apply sm_mr-8;
+}
+
+[dir='rtl'] .take-skin-test-primary-column {
+    @apply sm_ml-8;
+}
+
+.cms-chat .take-skin-test-primary-column .description {
+    @apply lg_w-[85%];
+}
+
+.cms-chat .take-skin-test-primary-column .title {
+    @apply font-albraSemibold
+        font-normal
+        font-sans
+        text-4xl
+        lg_text-5xl
+        mb-7.5
+        xl_w-[85%];
+}
+
+.cms-chat .take-skin-test-primary-column .title p {
+    @apply leading-none;
+}
+
+.cms-chat .take-skin-test-primary-column .title strong {
+    @apply font-albraSemibold;
+}
+
+.cms-chat .take-skin-test-primary-column .take-test-btn {
+    @apply mt-3.5
+        w-full
+        lg_min-w-[300px]
+        lg_w-[300px]
+        pt-5
+        m-0;
+}
+
+.cms-chat .team-image img {
+    @apply lg_m-0;
+}
+
+.cms-chat .take-skin-test-primary-column .take-test-btn button {
+    @apply w-full
+        h-[70px];
+}
+
+/* Second row */
+
+.cms-chat[dir='ltr'] .take-skin-test-secondary-column {
+    @apply sm_ml-8;
+}
+
+.cms-chat[dir='rtl'] .take-skin-test-secondary-column {
+    @apply sm_mr-8;
+}
+
+.cms-chat .second-row .pagebuilder-column {
+    @apply first_order-1
+        first_lg_order-2;
+}
+
+.cms-chat .take-skin-test-secondary-column {
+    @apply pt-20
+        lg_pt-30
+        md_order-2;
+}
+
+.cms-chat .take-skin-test-secondary-column .title {
+    @apply text-4xl
+        pb-7.5;
+}
+
+.cms-chat .take-skin-test-secondary-column .title strong {
+    @apply font-albraSemibold rtl_bg-red;
+}
+
+.cms-chat .take-skin-test-secondary-column .description-results-information {
+    @apply text-2.5xl py-7.5 leading-[36px];
+}
+
+.cms-chat .take-skin-test-secondary-column .description-results-information p {
+    @apply leading-[36px];
+}
+
+.cms-chat .take-skin-test-secondary-column .take-test-btn div {
+    @apply w-full;
+}
+
+.cms-chat .take-skin-test-secondary-column .take-test-btn button {
+    @apply w-full
+        lg_w-[160px]
+        h-[40px]
+        text-sm
+        leading-none;
+}
+
+.cms-chat .results-analyse-row {
+    @apply my-7.5
+        bg-purple-lighter
+        lg_my-11
+        py-30;
+}
+
+.results-analyse-row .content-column {
+    @apply lg_pt-30;
+}
+
+[dir='ltr'].cms-chat .results-analyse-row .content-column {
+    @apply sm_mr-8;
+}
+
+[dir='rtl'].cms-chat .results-analyse-row .content-column {
+    @apply sm_ml-8;
+}
+
+.cms-chat .results-analyse-row .title {
+    @apply text-4xl
+        font-sans
+        lg_w-[80%];
+}
+
+.cms-chat .results-analyse-row .title p {
+    @apply leading-9;
+}
+
+.cms-chat .results-analyse-row .title strong {
+    @apply font-albraSemibold;
+}
+
+.cms-chat .results-analyse-row .description {
+    @apply lg_w-[80%]
+        pt-7.5;
+}
+
+.cms-chat .ask-about-row .pagebuilder-column {
+    @apply first_order-1
+        first_lg_order-2;
+}
+
+.cms-chat .ask-about-row {
+    @apply pb-20 lg_pb-40;
+}
+
+[dir='ltr'].cms-chat .ask-about {
+    @apply sm_ml-8;
+}
+
+[dir='rtl'].cms-chat .ask-about {
+    @apply sm_mr-8;
+}
+
+.cms-chat .ask-about {
+    @apply pt-12.5
+        lg_pr-22
+        rtl_lg_pl-22
+        md_order-2;
+}
+
+.cms-chat .ask-about .title {
+    @apply text-4xl
+        leading-9;
+}
+
+.cms-chat .ask-about .title p {
+    @apply leading-9;
+}
+
+.cms-chat .ask-about .title strong {
+    @apply font-albraSemibold block lg_contents;
+}
+
+.cms-chat .ask-about .description-primary {
+    @apply py-7.5;
+}
+
+.cms-chat .ask-about .small-title {
+    @apply relative
+        pl-10
+        text-xl
+        mb-0
+        mt-7.5
+        font-sans
+        font-semibold;
+}
+
+[dir='rtl'].cms-chat .ask-about .small-title {
+    @apply pr-10;
+}
+
+[dir='rtl'].cms-chat .take-skin-test-primary-column .title strong {
+    @apply font-sans
+        font-medium;
+}
+
+[dir='rtl'].cms-chat .take-skin-test-primary-column .title p {
+    @apply font-medium;
+}
+
+.cms-chat .ask-about .small-title::before {
+    @apply mr-2.5
+        absolute
+        left-0;
+}
+
+[dir='rtl'].cms-chat .ask-about .small-title::before {
+    @apply mr-2.5
+        absolute
+        right-0;
+}
+
+.cms-chat .ask-about .small-title.contact::before {
+    content: url('/static-files/icons/contact.svg');
+}
+
+.cms-chat .ask-about .schedule-btn button {
+    @apply lg_w-[200px]
+        h-[40px]
+        text-sm
+        leading-none;
+}
+
+.cms-chat .ask-about .pro-tip-description {
+    @apply pt-7.5;
+}
+
+.cms-chat .first-row figure img,
+.cms-chat .second-row figure img,
+.cms-chat .results-analyse-row figure img,
+.cms-chat .ask-about-row figure img {
+    @apply xl_max-w-[510px];
+}

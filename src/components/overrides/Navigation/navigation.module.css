@@ -1,0 +1,149 @@
+/* animation helpers */
+
+.enter {
+    composes: duration-300 from global;
+    composes: ease-out from global;
+}
+
+.exit {
+    composes: duration-200 from global;
+    composes: ease-in from global;
+}
+
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.authModalRoot {
+    composes: block from global;
+    composes: mt-10 from global;
+}
+
+.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* module */
+
+.root {
+    composes: exit;
+
+    @apply hidden;
+
+    /* RTL */
+    composes: rtl_translate-x-100vw from global;
+}
+
+.root_open {
+    composes: root enter;
+    composes: bg-grey-lighter2 from global;
+    composes: bottom-0 from global;
+    composes: flex from global;
+    composes: flex-col from global;
+    composes: ltr_left-0 from global;
+    composes: rtl_right-0 from global;
+    composes: max-w-[425px] from global;
+    composes: overflow-hidden from global;
+    composes: fixed from global;
+    composes: top-0 from global;
+    composes: -translate-x-full from global;
+    composes: transition-all from global;
+    composes: w-full from global;
+    composes: z-3 from global;
+    composes: shadow from global;
+    composes: translate-x-0 from global;
+
+    /* RTL */
+    composes: rtl_translate-x-100vw-100% from global;
+}
+
+aside.root_open {
+    @apply opacity-100
+        visible;
+}
+
+.header {
+    composes: bg-grey-lighter2 from global;
+    composes: grid from global;
+    composes: grid-flow-col from global;
+    composes: gap-2 from global;
+    composes: justify-between from global;
+    composes: items-center from global;
+    composes: min-h-14 from global;
+    composes: z-1 from global;
+    composes: px-4.5 from global;
+    composes: py-[23px] from global;
+}
+
+.header button {
+    @apply w-12.5
+        h-12.5
+        rotate-180;
+}
+
+.body {
+    composes: exit visible;
+    composes: min-h-0 from global;
+    composes: overflow-auto from global;
+    composes: flex-grow from global;
+
+    composes: transition-all from global;
+}
+
+.body_masked {
+    composes: body enter hidden;
+}
+
+.footer {
+    composes: flex from global;
+    composes: flex-col from global;
+    composes: bg-white from global;
+}
+
+.modal {
+    composes: exit hidden;
+    composes: bg-white from global;
+    composes: bottom-0 from global;
+    composes: left-0 from global;
+    composes: overflow-auto from global;
+    composes: absolute from global;
+    composes: right-0 from global;
+    composes: top-14 from global;
+    composes: -translate-x-full from global;
+    composes: transition-all from global;
+}
+
+.modal_open {
+    composes: modal enter visible;
+    composes: translate-x-0 from global;
+}
+
+/* CMS block styling */
+
+.attributeGroups {
+    composes: flex-grow from global;
+    composes: mx-5 from global;
+}
+
+.attributeGroupsContent > div > div {
+    @apply flex
+        flex-col
+        font-normal;
+}
+
+.attributeGroupsContent > div > div > a {
+    @apply font-normal
+        mb-3.5;
+}
+
+.cmsBlockRoot {
+    @apply p-0
+        mt-[26px];
+}
+
+:global .mobile-nav-open {
+    @apply h-[100vh]
+        overflow-y-hidden;
+}

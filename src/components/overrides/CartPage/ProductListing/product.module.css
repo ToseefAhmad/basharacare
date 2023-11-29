@@ -1,0 +1,189 @@
+.root {
+    composes: grid from global;
+    composes: min-h-[275px] from global;
+    composes: pt-7.5 from global;
+    composes: pb-[26px] from global;
+
+    composes: lg_min-h-[201px] from global;
+    composes: lg_pt-7.5 from global;
+    composes: lg_pb-[27px] from global;
+}
+
+.item {
+    grid-template-rows: min-content 1fr;
+
+    composes: grid from global;
+    composes: lg_gap-y-5 from global;
+}
+
+@media (min-width: 1024px) {
+    .item {
+        grid-template-columns: 1fr 285px;
+        grid-template-rows: min-content 1fr !important;
+    }
+}
+
+.item_disabled {
+    composes: item;
+    composes: opacity-50 from global;
+}
+
+.imageRoot {
+    composes: h-[100px] from global;
+    composes: w-[100px] from global;
+}
+
+.image {
+    composes: h-full from global;
+    composes: object-contain from global;
+    composes: object-center from global;
+    composes: bg-white from global;
+}
+
+.details {
+    composes: flex from global;
+    composes: gap-[15px] from global;
+    composes: mb-[18px] from global;
+    composes: lg_items-center from global;
+
+    composes: lg_mb-0 from global;
+}
+
+.name {
+    composes: text-lg from global;
+    composes: font-semibold from global;
+    composes: leading-[22px] from global;
+    composes: font-headingBold from global;
+
+    composes: lg_pr-4 from global;
+}
+
+.priceQtySubtoal {
+    composes: flex from global;
+    composes: lg_grid from global;
+    composes: grid-flow-col from global;
+
+    composes: mb-5 from global;
+
+    @apply justify-between;
+
+    composes: lg_items-center from global;
+    grid-template-columns: 100px 135px 52px;
+    composes: lg_mb-0 from global;
+    composes: lg_mt-[6px] from global;
+}
+
+.priceContainer {
+    composes: flex from global;
+    composes: flex-col from global;
+}
+
+.priceLabel {
+    composes: text-black from global;
+    composes: opacity-50 from global;
+    composes: text-sm from global;
+    composes: font-semibold from global;
+    composes: mb-[6px] from global;
+
+    composes: lg_hidden from global;
+}
+.price {
+    composes: name;
+}
+
+.price span:first-child {
+    @apply text-sm font-sans lg_text-xs;
+}
+
+.quantityContainer {
+    composes: priceContainer;
+}
+
+.quantityEmptyContainer > div,
+.quantityEmptyContainer > span {
+    @apply hidden;
+}
+
+.quantityLabel {
+    composes: priceLabel;
+    composes: text-center from global;
+
+    @apply mb-0 !important;
+}
+
+.quantity {
+    composes: ltr_pr-5 from global;
+    composes: rtl_pl-5 from global;
+}
+
+.quantity form div {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media (min-width: 1024px) {
+    .quantity form div {
+        grid-template-columns: 1fr max-content 1fr;
+    }
+}
+
+.quantity input {
+    @apply p-0 w-7.5 h-7.5;
+}
+
+.quantity button {
+    @apply p-0;
+}
+
+.subtotalContainer {
+    composese: priceContainer;
+}
+.subtotalLabel {
+    composes: priceLabel;
+    composes: text-right from global;
+
+    composes: rtl_text-left from global;
+}
+
+.actions {
+    composes: flex from global;
+    composes: gap-5 from global;
+    composes: text-sm from global;
+}
+
+.actions button {
+    @apply hover_underline;
+}
+
+.actions button span {
+    @apply hidden;
+}
+
+.sectionText {
+    padding: 0.25rem 0.5rem;
+    font-size: var(--venia-typography-body-S-fontSize);
+    pointer-events: none;
+}
+
+.options {
+    grid-area: options;
+    font-size: var(--venia-typography-body-S-fontSize);
+    display: grid;
+    grid-gap: 0.125rem;
+}
+
+.optionLabel {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+}
+
+.stockStatusMessage {
+    color: rgb(var(--venia-global-color-error));
+    font-size: var(--venia-global-fontSize-100);
+    font-weight: var(--venia-global-fontWeight-semibold);
+    grid-area: stock;
+}
+
+.stockStatusMessage:empty {
+    display: none;
+}

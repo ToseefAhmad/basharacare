@@ -1,0 +1,73 @@
+.root {
+  composes: widgetRoot from '../root.module.css';
+}
+
+.title {
+  composes: widgetTitle from '../root.module.css';
+}
+.itemRoot .listRoot {
+  margin: 1.25rem 0 1.25rem 1.25rem;
+  border-left: 1px solid rgb(var(--venia-global-color-border));
+  padding: 0 0 0 1.25rem;
+}
+
+.itemRoot {
+  margin-bottom: 1.25rem;
+}
+
+.commentItem {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  margin-right: 1.25rem;
+}
+
+.icon {
+  composes: authorIcon from '../PostPage/post.module.css';
+}
+
+.userName {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-left: 0.5rem;
+}
+
+.date {
+  composes: date from '../PostPage/post.module.css';
+}
+
+.message {
+  padding: 0.875rem 0;
+}
+
+.replyBtn {
+  outline: none;
+  composes: more from '../PostPage/post.module.css';
+}
+
+.replyBtn:after {
+  content: none;
+}
+
+.willApprowal {
+  background: #f7f1de;
+  padding: 0.2rem 0.5rem;
+  color: #6f5f2f;
+  margin-top: 0.5rem;
+}
+
+.replyForm {
+  margin: 1.25rem 0 1.25rem 1.25rem;
+  border-left: 1px solid rgb(var(--venia-global-color-border));
+  padding: 0 0 0 1.25rem;
+}

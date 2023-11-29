@@ -1,0 +1,23 @@
+.root {
+    composes: my-30 from global;
+}
+
+.label {
+    @apply text-xl;
+
+    composes: opacity-100 from global;
+    composes: font-medium from global;
+    composes: mb-5 from global;
+}
+
+.greyLabel {
+    composes: text-grey from global;
+}
+
+.displayBox {
+    composes: p-5 from global;
+    composes: border-purple-border from global;
+    composes: border-dashed from global;
+    composes: rounded-5px from global;
+    composes: border from global;
+}

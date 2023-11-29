@@ -1,0 +1,61 @@
+.nav-list-row {
+    @apply px-6;
+}
+
+.nav-list-row p {
+    @apply mb-2;
+}
+
+.nav-list-row ul {
+    @apply my-0;
+}
+
+.nav-list-row li::before {
+    content: none !important;
+}
+
+.nav-list-row li {
+    @apply mb-[15px];
+}
+
+.nav-list-row a {
+    @apply font-normal
+        hover_underline
+        hover_opacity-60;
+}
+
+.nav-blog-row {
+    @apply px-0
+        h-[180px];
+}
+
+.nav-blog-row div {
+    @apply h-[180px]
+        !justify-center
+        !items-center;
+}
+
+.nav-text-field {
+    @apply bg-white
+        h-[min-content]
+        min-w-[250px]
+        max-w-[min-content]
+        grid
+        place-items-center
+        px-4
+        py-2
+        opacity-80
+        hover_opacity-100
+        !important;
+}
+
+.nav-text-field h3,
+.nav-text-field p {
+    @apply p-0
+        m-0
+        whitespace-nowrap;
+}
+
+.nav-text-field p:last-child a:last-child {
+    @apply hover_underline;
+}

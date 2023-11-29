@@ -1,0 +1,305 @@
+/* Resetting margin for main component on this page. */
+.cms-reward-points {
+    composes: my-0 from global;
+}
+
+.cms-reward-points {
+    @apply bg-white
+        md_bg-transparent;
+}
+
+.cms-reward-points main {
+    @apply bg-white
+        md_bg-grey-lightest;
+}
+
+.cms-reward-points p {
+    @apply text-black;
+}
+
+.cms-reward-points article {
+    @apply py-0;
+}
+
+/* Styling middle part */
+.cms-reward-points .reward-points-page-block {
+    @apply pt-[65px]
+        pb-[5%]
+        md_py-[60px]
+        lg_py-[120px];
+}
+
+.cms-reward-points .reward-points-info-blockOne {
+    @apply bg-white
+        md_!w-[80%]
+        md_py-[15%]
+        md_px-[10%];
+}
+
+[dir='ltr'].cms-reward-points .reward-points-info-blockOne {
+    @apply md_pr-[25%];
+}
+
+[dir='rtl'].cms-reward-points .reward-points-info-blockOne {
+    @apply md_pl-[25%];
+}
+
+[dir='ltr'].cms-reward-points .reward-points-info-blockTwo {
+    @apply md_ml-[-100px];
+}
+
+[dir='rtl'].cms-reward-points .reward-points-info-blockTwo {
+    @apply md_mr-[-100px];
+}
+
+.cms-reward-points .reward-points-info-blockTwo img {
+    @apply md_my-20;
+}
+
+.cms-reward-points .reward-points-info-title p {
+    @apply hidden
+        xxxxs_flex
+        opacity-100
+        leading-[25px]
+        text-4xl
+        md_text-4xl;
+}
+
+.cms-reward-points .reward-points-info-title {
+    @apply mb-[20px]
+        p-5
+        md_p-0;
+}
+
+.cms-reward-points .reward-points-info-text p {
+    @apply opacity-100
+        leading-[25px]
+        md_text-base;
+}
+
+.cms-reward-points .how-to-get-cols [class*='pagebuilder-column'] {
+    @apply max-w-[fit-content]
+        !w-[fit-content]
+        !justify-center;
+}
+
+.cms-reward-points .how-to-get-cols > div:nth-of-type(2) > div > div {
+    @apply pl-0;
+}
+
+.cms-reward-points .how-to-get-cols p {
+    @apply mb-0;
+}
+
+.cms-reward-points .how-to-get-cols p {
+    @apply mb-0;
+}
+
+.cms-reward-points .reward-points-shop-section-block {
+    @apply pl-0;
+}
+
+/* Styling bottom part */
+.cms-reward-points .reward-points-how-to-wrapper p {
+    @apply opacity-100;
+}
+
+.cms-reward-points .how-to-get-block {
+    @apply mt-[20px]
+        mb-[15px];
+}
+
+.cms-reward-points .how-to-get-block p {
+    @apply text-2xl;
+}
+
+.cms-reward-points .how-to-get-text-title p {
+    @apply text-sm
+        lg_text-lg
+        ml-2
+        mr-2;
+}
+
+.cms-reward-points .how-to-get-text p {
+    @apply text-sm
+        lg_text-lg
+        ml-2
+        ml-0;
+}
+
+.cms-reward-points .section-block > div > div > div > div {
+    @apply !flex-nowrap;
+}
+
+.cms-reward-points .how-to-use-block {
+    @apply mt-[20px]
+        mb-[15px];
+}
+
+.cms-reward-points .how-to-use-title p {
+    @apply text-2xl;
+}
+
+[dir='ltr'].cms-reward-points .how-to-use-text {
+    @apply md_pr-[125px];
+}
+
+[dir='ltr'].cms-reward-points .how-does-it-work-text {
+    @apply md_pr-[125px];
+}
+
+[dir='rtl'].cms-reward-points .how-to-use-text {
+    @apply md_pl-[125px];
+}
+
+[dir='rtl'].cms-reward-points .how-does-it-work-text {
+    @apply md_pl-[125px];
+}
+
+.cms-reward-points .how-to-use-text p {
+    @apply text-base
+        leading-[20px]
+        mt-[20px];
+}
+
+.cms-reward-points .how-it-works-block {
+    @apply mt-[20px]
+        mb-[15px];
+}
+
+.cms-reward-points .how-it-works-block > div:nth-of-type(2) > div > div {
+    @apply px-0;
+}
+
+.cms-reward-points .how-does-it-work-title p {
+    @apply text-2xl;
+}
+
+.cms-reward-points .how-does-it-work-currency p {
+    @apply text-sm
+        leading-[20px]
+        mt-[20px];
+}
+
+.cms-reward-points .how-does-it-work-text p {
+    @apply text-base
+        leading-[20px];
+}
+
+.cms-reward-points .reward-points-register-section-block > div > div div {
+    @apply !flex-row
+        items-center;
+}
+
+.cms-reward-points .reward-points-register-section-block > div > div > div {
+    flex-basis: max-content;
+}
+
+.cms-reward-points .how-to-get-image img {
+    @apply my-0;
+}
+
+.cms-reward-points .how-to-use-and-work-block {
+    @apply md_mt-[80px]
+        mb-[150px];
+}
+
+.cms-reward-points .how-does-it-work-currency p {
+    @apply my-0;
+}
+
+/* Padding reset for blocks. */
+.cms-reward-points .reward-points-block {
+    @apply px-0;
+}
+
+.cms-reward-points .reward-points-page-block {
+    @apply px-0;
+}
+
+.cms-reward-points .how-to-get-block {
+    @apply px-0;
+}
+
+.cms-reward-points .how-to-get-cols-block {
+    @apply px-0;
+}
+
+.cms-reward-points .how-to-use-and-work-block {
+    @apply px-0;
+}
+
+.cms-reward-points .how-it-works-block [class*='row-contained'] {
+    @apply px-0;
+}
+
+.cms-reward-points .how-to-get-cols [class*='row-contained'] {
+    @apply px-0;
+}
+
+.cms-reward-points .reward-points-info-image img {
+    @apply mx-auto;
+}
+
+/* This is a fix for 768px break point. */
+@media (min-width: 768px) {
+    .cms-reward-points .reward-points-page-block [class*='column-root'].reward-points-info-blockOne {
+        flex-basis: 0;
+    }
+}
+
+@media (min-width: 769px) {
+    .cms-reward-points .reward-points-page-block [class*='column-root'].reward-points-info-blockOne {
+        flex-basis: auto;
+    }
+}
+
+@media (min-width: 768px) {
+    .cms-reward-points .reward-points-page-block [class*='column-root'].reward-points-info-blockTwo {
+        flex-basis: 43%;
+    }
+}
+
+@media (min-width: 769px) {
+    .cms-reward-points .reward-points-page-block [class*='column-root'].reward-points-info-blockTwo {
+        flex-basis: auto;
+    }
+}
+
+/* Adjusting elements in columns. */
+.cms-reward-points .how-to-get-cols-block .how-to-get-cols {
+    @apply !flex-row
+        flex-wrap
+        content-center
+        text-[14px]
+        lg_text-[18px]
+        max-w-[80%];
+}
+
+.cms-reward-points .how-to-get-cols-block .how-to-get-cols .reward-points-how-to-section-img {
+    @apply w-[fit-content]
+        flex
+        justify-center
+        items-center;
+}
+
+.cms-reward-points .how-to-get-cols-block .how-to-get-cols .reward-points-how-to-section-img img {
+    @apply h-[fit-content]
+        m-0;
+}
+
+.cms-reward-points .how-to-get-cols-block .how-to-get-cols .reward-points-how-to-section-link {
+    @apply w-[fit-content]
+        justify-center
+        mx-2;
+}
+
+.cms-reward-points .how-to-get-cols-block .how-to-get-cols:nth-of-type(1) .reward-points-how-to-section-link {
+    @apply md_w-[110px]
+        lg_w-[135px];
+}
+
+.cms-reward-points .how-to-get-cols-block .how-to-get-cols:nth-of-type(5) .reward-points-how-to-section-link {
+    @apply md_w-[110px]
+        lg_w-[135px];
+}

@@ -1,0 +1,7 @@
+.root {
+    composes: block from global;
+}
+
+.paginationWrapper {
+    composes: my-7.5 from global;
+}
